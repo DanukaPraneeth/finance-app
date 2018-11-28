@@ -1,0 +1,121 @@
+<div class="animated fadeInUp">
+
+  <div class="col-sm-12">
+    <!--Form Container - START-->
+    <div class="form-container billInputContainer">
+      <div class="tbl-header">
+        Water Bill
+      </div>
+
+      <form class="form-horizontal" #billForm="ngForm" novalidate
+            (ngSubmit)="onSubmition(billForm)" autocomplete="off">
+        <div class="form-group row" [ngClass]="{'has-danger': isNameError}">
+          <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Bill Account Number"
+                   name="name"
+                   #nameRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefName"
+                   (input)="isNameUnique($event.target.value)">
+            <span class="error" *ngIf="isNameError">{{nameError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
+          <label class="control-label col-sm-2">Period <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Period"
+                   name="description"
+                   #descriptionRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefDescription"
+                   (input)="descriptionEmpty($event.target.value)">
+            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
+          <label class="control-label col-sm-2">Previous Reading <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Previous Reading"
+                   name="description"
+                   #descriptionRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefDescription"
+                   (input)="descriptionEmpty($event.target.value)">
+            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
+          <label class="control-label col-sm-2">Current Reading <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Current Reading"
+                   name="description"
+                   #descriptionRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefDescription"
+                   (input)="descriptionEmpty($event.target.value)">
+            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
+          <label class="control-label col-sm-2">No. of Units <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="No. of Units"
+                   name="description"
+                   #descriptionRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefDescription"
+                   (input)="descriptionEmpty($event.target.value)">
+            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
+          <label class="control-label col-sm-2">Amount <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Amount"
+                   name="description"
+                   #descriptionRef="ngModel"
+                   required
+                   [(ngModel)]="rateDefDescription"
+                   (input)="descriptionEmpty($event.target.value)">
+            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2 btnContainer">
+            <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
+            &nbsp;
+            <a class="btn btn-warning" (click)="reloadPage()">Clear</a>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+  <!--<button (click)="showit()">show</button>-->
+</div>

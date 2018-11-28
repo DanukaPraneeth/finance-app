@@ -1,0 +1,51 @@
+<div class="login-container animated fadeInDown" style="animation-delay: 1s">
+
+  <div class="logo-container">
+    RECORD<span class="man">APPLICATION</span>
+  </div>
+
+  <div class="form-container">
+    <h3 class="sign-in">Sign In</h3>
+    <!--login form START-->
+    <form #loginForm="ngForm" novalidate (ngSubmit)="onLoginClick(loginForm)">
+      <div class="form-fields">
+        <div class="form-group">
+          <input class="form-control"
+                 type="text"
+                 autocomplete="off"
+                 placeholder="Username"
+                 name="userName"
+                 #userNameRef="ngModel"
+                 required
+                 [(ngModel)]="userName">
+          <span class="error" *ngIf="userNameRef.errors?.required && (userNameRef.dirty || isSubmitted)">User name can not be empty</span>
+        </div>
+
+        <div class="form-group">
+          <input class="form-control"
+                 type="password"
+                 autocomplete="off"
+                 placeholder="Password"
+                 name="password"
+                 #passwordRef="ngModel"
+                 required
+                 [(ngModel)]="password">
+          <span class="error" *ngIf="passwordRef.errors?.required && (passwordRef.dirty || isSubmitted)">Password can not be empty</span>
+        </div>
+
+        <div class="action-container">
+          <button class="btn btn-primary login">LOGIN</button>
+          <label class="checkbox-lbl">
+            <input type="checkbox">
+            Remember
+            <span></span>
+          </label>
+        </div>
+      </div>
+
+
+    </form> <!--login form END-->
+
+  </div>
+
+</div>

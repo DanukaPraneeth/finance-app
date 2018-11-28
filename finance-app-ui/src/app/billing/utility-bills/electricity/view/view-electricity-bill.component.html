@@ -1,0 +1,29 @@
+<div class="animated fadeInUp">
+
+  <div class="table-wrapper">
+
+    <div class="tbl-header">
+      Electricity Bill Table
+    </div>
+
+    <div class="table">
+      <div class="tbl-row header">
+        <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
+      </div>
+      <div class="tbl-row" *ngFor="let item of dataSource">
+        <div class="tbl-cell">{{item.date}}</div>
+        <div class="tbl-cell">{{item.period}}</div>
+        <div class="tbl-cell">{{item.previousReading}}</div>
+        <div class="tbl-cell">{{item.currentReading}}</div>
+        <div class="tbl-cell">{{item.units}}</div>
+        <div class="tbl-cell">{{item.amount}}</div>
+        <div class="tbl-cell">{{item.certification}}</div>
+      </div>
+      <div class="no-rec-row tbl-row" *ngIf="dataSource.length == 0">
+        <span class="no-rec">No Records...</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
