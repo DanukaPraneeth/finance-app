@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/financedb?useSSL=false&amp;relaxAutoCommit=true
+    username: root
+    password: root
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
+        namingStrategy: org.hibernate.cfg.DefaultNamingStrategy
+        format_sql: true
