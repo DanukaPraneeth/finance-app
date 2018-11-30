@@ -22,3 +22,13 @@ export class ElectricityBill {
   amount: number;
   certification: string;
 }
+
+export class User {
+  userName: string;
+  password: string;
+}
+
+export class TempResponse {
+   success: boolean;
+   message: string;
+}
