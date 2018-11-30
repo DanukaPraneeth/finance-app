@@ -4,29 +4,28 @@ import javax.persistence.*;
 
 
 @Entity
-@Table (name = "staff2")
+@Table (name = "staff")
 public class Staff {
 //@SequenceGenerator(name="seq", initialValue=20, allocationSize=9999999, sequenceName = "SEQ")
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, unique = true)
     private Integer userKey;
-    private String name;
+    @Column(nullable = false, unique = true)
+    private String userName;
     private String password;
-    private String saltValue;
-    private int role;
+    private int userRole;
 
     public Staff(){
 
     }
 
-    public Staff( String name, String password, String saltValue, int role) {
+    public Staff( Integer userKey, String userName, String password, int userRole) {
         super();
-        this.name = name;
+        this.userKey = userKey;
+        this.userName = userName;
         this.password = password;
-        this.saltValue = saltValue;
-        this.role = role;
+        this.userRole = userRole;
     }
 
     public Integer getUserKey() {
@@ -37,12 +36,12 @@ public class Staff {
         this.userKey = userKey;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -53,19 +52,15 @@ public class Staff {
         this.password = password;
     }
 
-    public String getSaltValue() {
-        return saltValue;
+    public int getUserRole() {
+        return userRole;
     }
 
-    public void setSaltValue(String saltValue) {
-        this.saltValue = saltValue;
+    public void setUserRole(int userRole) {
+        this.userRole = userRole;
     }
 
-    public int getRole() {
-        return role;
-    }
-
-    public void setRole(int role) {
-        this.role = role;
+    public String toString(){
+        return userKey +", "+ userName +", "+password +", "+ userRole;
     }
 }

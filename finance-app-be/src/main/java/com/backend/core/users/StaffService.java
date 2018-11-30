@@ -18,9 +18,6 @@ public class StaffService {
     @Autowired
     private StaffRepo staffRepo;
 
-    @PersistenceContext
-    private EntityManager em;
-
     private int i = 0;
 
 /*    public List<Staff> newStaff = new ArrayList<Staff>(Arrays.asList(
@@ -44,7 +41,7 @@ public class StaffService {
     }
 
     public void addStaff(Staff employee){
-        employee.setName(String.valueOf(i++));
+//        employee.setUserName(String.valueOf(i++));
         System.out.println(employee.getUserKey());
         staffRepo.save(employee);
 //        if(employee.getUserKey() != null){
@@ -61,7 +58,13 @@ public class StaffService {
         staffRepo.delete(id);
     }
 
-    public List<Staff> getByName (String name){return staffRepo.findByName(name);}
+    public List<Staff> getByUserName (String userName){return staffRepo.findByUserName(userName);}
 
+    public Staff getTopByOrderByUserKeyDesc(){
+        return  staffRepo.findTopByOrderByUserKeyDesc();
+    }
 
+    public Staff getPasswordByUserName (String userName){
+        return staffRepo.findPasswordByUserName(userName);
+    }
 }
