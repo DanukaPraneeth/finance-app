@@ -9,13 +9,13 @@ CREATE TABLE staff_role (
 );
 
 CREATE TABLE staff (
-    user_key int NOT NULL AUTO_INCREMENT,
-    name varchar(255) NOT NULL,
+    user_key int NOT NULL,
+    user_name varchar(255) NOT NULL,
 	password varchar(255) NOT NULL,
-	salt_value varchar(255) NOT NULL,
-    role int,
+    user_role int,
+    UNIQUE (user_name),
     PRIMARY KEY (user_key),
-	FOREIGN KEY (role) REFERENCES staff_role(role_id)
+	FOREIGN KEY (user_role) REFERENCES staff_role(role_id)
 );
 
 CREATE TABLE examination_claims (
