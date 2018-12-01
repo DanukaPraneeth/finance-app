@@ -1,10 +1,10 @@
 export class LoginResponse {
-  isLoggedIn: boolean;
+  loggedIn: boolean;
   userName: string;
 }
 
 export class SignupResponse {
-  isSuccess: boolean;
+  success: boolean;
 }
 
 export class MenuItem {
@@ -40,5 +40,5 @@ export class TempResponse {
 export class Profile {
   userName: string;
   password: string;
-  role: number;
+  userRole: number;
 }

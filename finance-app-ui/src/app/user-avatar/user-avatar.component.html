@@ -1,28 +1,42 @@
-<div class="avatar-component"
-     (click)="onClick()"
-     [ngClass]="{'expand':dropDownStatus.isOpen}"
-     dropdown
-     [isOpen]="dropDownStatus.isOpen">
-  <div>
-    <div class="avatar" dropdownToggle>
-      <span class="icon material-icons">account_circle</span>
-    </div>
-  </div>
-  <div class="userName">{{loginInfo.userName}}</div>
+<!--<div class="avatar-component"-->
+     <!--(click)="onClick()"-->
+     <!--[ngClass]="{'expand':dropDownStatus.isOpen}"-->
+     <!--dropdown-->
+     <!--[isOpen]="dropDownStatus.isOpen">-->
   <!--<div>-->
-    <!--<span class="icon material-icons" [ngClass]="{'glyphicon-chevron-up':dropDownStatus.isOpen,'glyphicon-chevron-down':!dropDownStatus.isOpen}">arrow_drop_down</span>-->
+    <!--<div class="avatar" dropdownToggle>-->
+      <!--<span class="icon material-icons">account_circle</span>-->
+    <!--</div>-->
   <!--</div>-->
+  <!--<div class="userName">{{loginInfo.userName}}</div>-->
 
-  <ul class="dropdown-menu avatar-dropdown animated fadeIn" *dropdownMenu aria-labelledby="simple-dropdown">
-    <li>
-      <a class="dropdown-item" href="#">My Profile</a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="#">My Assignments</a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="" (click)="onMenuClick('doLogout')">Logout</a>
-    </li>
+  <!---->
+
+
+  <!--&lt;!&ndash;<ul class="dropdown-menu avatar-dropdown animated fadeIn" *dropdownMenu aria-labelledby="simple-dropdown">&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<a class="dropdown-item" href="#">My Profile</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<a class="dropdown-item" href="#">My Assignments</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>&ndash;&gt;-->
+      <!--&lt;!&ndash;<a class="dropdown-item" href="" (click)="onMenuClick('doLogout')">Logout</a>&ndash;&gt;-->
+    <!--&lt;!&ndash;</li>&ndash;&gt;-->
+  <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+
+
+
+<!--</div>-->
+<div class="btn-group" dropdown>
+  <button id="button-basic" dropdownToggle type="button" class="btn dropdownbutton dropdown-toggle"
+          aria-controls="dropdown-basic">
+    <span class="userName">{{loginInfo.userName}}</span>
+    <span class="caret"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+      role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" href="#">My Profile</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#" (click)="onMenuClick('doLogout')">LOGOUT</a></li>
   </ul>
-
 </div>

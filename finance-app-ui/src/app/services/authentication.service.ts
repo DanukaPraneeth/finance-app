@@ -21,8 +21,8 @@ export class AuthenticationService {
 
           const loginInfo = new LoginResponse();
 
-          if (data["isLoggedIn"] == true) {
-            loginInfo.isLoggedIn = true;
+          if (data["loggedIn"] == true) {
+            loginInfo.loggedIn = true;
             loginInfo.userName = data["userName"];
             this.loginUserInfo.next(loginInfo);
             sessionStorage.setItem("loginUserInfo", JSON.stringify(loginInfo));
@@ -36,7 +36,7 @@ export class AuthenticationService {
   signup(userName: string, password: string, roleVal: number){
     this._remoteService.signup(userName, btoa(password),roleVal)
         .subscribe((data: SignupResponse) => {
-          if (data["isSuccess"] == true) {
+          if (data["success"] == true) {
             this._router.navigate(["login"]);
           } else {
             this._router.navigate(["singnup"]);
