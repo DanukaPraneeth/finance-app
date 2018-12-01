@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {BehaviorSubject} from "rxjs/index";
-import {LoginResponse, TempResponse} from "../models/data-models";
+import {LoginResponse, SignupResponse, TempResponse} from "../models/data-models";
 import {Router} from "@angular/router";
 import {LoginRemoteDataService} from "../remote/login_remote-data.service";
 
@@ -29,6 +29,17 @@ export class AuthenticationService {
             this._router.navigate(["home"]);
           } else {
             sessionStorage.setItem("loginUserInfo", null);
+          }
+        });
+  }
+
+  signup(userName: string, password: string, roleVal: number){
+    this._remoteService.signup(userName, btoa(password),roleVal)
+        .subscribe((data: SignupResponse) => {
+          if (data["isSuccess"] == true) {
+            this._router.navigate(["login"]);
+          } else {
+            this._router.navigate(["singnup"]);
           }
         });
   }

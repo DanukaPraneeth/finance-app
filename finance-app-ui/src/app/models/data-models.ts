@@ -3,6 +3,10 @@ export class LoginResponse {
   userName: string;
 }
 
+export class SignupResponse {
+  isSuccess: boolean;
+}
+
 export class MenuItem {
   id: number;
   route: string;
@@ -31,4 +35,10 @@ export class User {
 export class TempResponse {
    success: boolean;
    message: string;
+}
+
+export class Profile {
+  userName: string;
+  password: string;
+  role: number;
 }

@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
-import {LoginResponse, User} from "../models/data-models";
+import {LoginResponse, Profile, User, SignupResponse} from "../models/data-models";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 
@@ -12,6 +12,7 @@ export class LoginRemoteDataService {
   private apiEndpoints: Object = {
     login: this.apiContext + "/authentication/login",
     logout: this.apiContext + "/authentication/logout",
+    signup: this.apiContext + "/authentication/signup",
     getUserDetails: this.apiContext + "/authentication/userdetails"
   };
 
@@ -38,6 +39,15 @@ export class LoginRemoteDataService {
     user.password = password;
     user.userName = userName;
     return this.http.post<LoginResponse>(this.apiEndpoints["login"], user, this.httpOptions);
+  }
+
+  signup (userName: string, password: string, role: number): Observable<SignupResponse> {
+
+    const profile = new Profile();
+    profile.password = password;
+    profile.userName = userName;
+    profile.role = role;
+    return this.http.post<SignupResponse>(this.apiEndpoints["signup"], profile, this.httpOptions);
   }
 
 }
