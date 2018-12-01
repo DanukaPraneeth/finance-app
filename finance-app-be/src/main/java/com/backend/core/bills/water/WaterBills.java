@@ -1,12 +1,13 @@
 package com.backend.core.bills.water;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "water_bills")
 public class WaterBills {
 
     @Id
+    @Column(name = "billno", nullable = false, unique = true)
     private int billNo;
     private String period;
     private int previousReading;
@@ -15,6 +16,7 @@ public class WaterBills {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
@@ -26,7 +28,7 @@ public class WaterBills {
 
     public WaterBills(int billNo, String period, int previousReading, int currentReading, int noOfUnits,
                       float amount, String certification, String certifiedDate,
-                        String datetime, int traineeStaffId, int userKey) {
+                      String datetime, int traineeStaffId, int userKey) {
         super();
         this.billNo=billNo;
         this.period = period;
