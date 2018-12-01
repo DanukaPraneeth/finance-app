@@ -6,8 +6,6 @@ import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app.component";
 import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
-import {FirstpageComponent} from "./firstpage/firstpage.component";
-import {SecondpageComponent} from "./secondpage/secondpage.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {AuthenticationService} from "./services/authentication.service";
 import {AppCommonService} from "./services/app-common.service";
@@ -31,8 +29,6 @@ import {LoginRemoteDataService} from "./remote/login_remote-data.service";
     AppComponent,
     LoginComponent,
     HomeComponent,
-    FirstpageComponent,
-    SecondpageComponent,
     HeaderComponent,
     HamburgerMenuComponent,
     UserAvatarComponent,

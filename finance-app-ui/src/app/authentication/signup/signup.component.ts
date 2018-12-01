@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../services/authentication.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-signup',
@@ -27,7 +28,7 @@ export class SignupComponent implements OnInit {
 
     roles: string [] = ["", "admin", "clerk", "other"];
 
-    constructor(private _authenticationService: AuthenticationService) {
+    constructor(private _authenticationService: AuthenticationService, private _router: Router) {
     }
 
     ngOnInit() {
@@ -121,6 +122,10 @@ export class SignupComponent implements OnInit {
                 break;
             }
         }
+    }
+
+    loginClick() {
+        this._router.navigate(["login"]);
     }
 
 }

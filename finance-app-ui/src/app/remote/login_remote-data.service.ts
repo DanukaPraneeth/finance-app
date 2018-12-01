@@ -7,13 +7,15 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 @Injectable()
 export class LoginRemoteDataService {
 
-  private apiContext = "api";
+
+  private url = new URL(window.location.href);
+  private apiContext = this.url.protocol + '//' + this.url.host + '/finance';
+  // private apiContext = "api";
 
   private apiEndpoints: Object = {
-    login: this.apiContext + "/authentication/login",
+    login: this.apiContext + "/staff/login",
     logout: this.apiContext + "/authentication/logout",
-    signup: this.apiContext + "/authentication/signup",
-    getUserDetails: this.apiContext + "/authentication/userdetails"
+    signup: this.apiContext + "/staff/signup",
   };
 
   private httpOptions = {
@@ -46,7 +48,7 @@ export class LoginRemoteDataService {
     const profile = new Profile();
     profile.password = password;
     profile.userName = userName;
-    profile.role = role;
+    profile.userRole = role;
     return this.http.post<SignupResponse>(this.apiEndpoints["signup"], profile, this.httpOptions);
   }
 
