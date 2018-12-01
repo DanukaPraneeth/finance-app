@@ -3,6 +3,10 @@ export class LoginResponse {
   userName: string;
 }
 
+export class SignupResponse {
+  isSuccess: boolean;
+}
+
 export class MenuItem {
   id: number;
   route: string;
@@ -21,4 +25,20 @@ export class ElectricityBill {
   units: number;
   amount: number;
   certification: string;
+}
+
+export class User {
+  userName: string;
+  password: string;
+}
+
+export class TempResponse {
+   success: boolean;
+   message: string;
+}
+
+export class Profile {
+  userName: string;
+  password: string;
+  role: number;
 }

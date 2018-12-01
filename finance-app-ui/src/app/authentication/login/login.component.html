@@ -5,7 +5,7 @@
   </div>
 
   <div class="form-container">
-    <h3 class="sign-in">Sign In</h3>
+    <h2 class="sign-in">Sign In</h2>
     <!--login form START-->
     <form #loginForm="ngForm" novalidate (ngSubmit)="onLoginClick(loginForm)">
       <div class="form-fields">
@@ -40,11 +40,14 @@
             Remember
             <span></span>
           </label>
+          <button class="btn btn-primary" (click)="onSignUpClick()">Sign Up</button>
         </div>
       </div>
 
 
-    </form> <!--login form END-->
+    </form>
+
+    <!--login form END-->
 
   </div>
 
