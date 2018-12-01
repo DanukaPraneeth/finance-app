@@ -1,7 +1,15 @@
 package com.backend.core.bills.electricity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "electricity_bills")
 public class ElectricityBill {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private long id;
+    @Column( name = "billno", nullable = false, unique = true)
     private String billNo;
     private String location;
     private int previousReading;
@@ -10,14 +18,18 @@ public class ElectricityBill {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
+
+    public ElectricityBill(){}
 
     public ElectricityBill(String billNo, String location, int previousReading,
                            int currentReading, int noOfUnits, float amount,
                            String certification, String certifiedDate, String datetime,
                            int traineeStaffId, int userKey) {
+        super();
         this.billNo = billNo;
         this.location = location;
         this.previousReading = previousReading;
