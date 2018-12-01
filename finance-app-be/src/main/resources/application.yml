@@ -6,9 +6,9 @@ spring:
     password: root
 
   jpa:
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
         current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
         namingStrategy: org.hibernate.cfg.DefaultNamingStrategy
-        format_sql: true
+#        format_sql: fasle
