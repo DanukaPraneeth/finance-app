@@ -7,7 +7,7 @@
         Electricity Bill
       </div>
 
-      <form class="form-horizontal" #billForm="ngForm" novalidate
+      <form class="form-horizontal" #electricityBillForm="ngForm" novalidate
             (ngSubmit)="onSubmition(billForm)" autocomplete="off">
         <div class="form-group row" [ngClass]="{'has-danger': isAccountNoError}">
           <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
@@ -19,23 +19,23 @@
                    name="name"
                    #nameRef="ngModel"
                    required
-                   [(ngModel)]="accountNo"
+                   [(ngModel)]="electricityBill.billNo"
                    (input)="isAccountNoValid($event.target.value)">
             <span class="error" *ngIf="isAccountNoError">{{accountNoError}}</span>
           </div>
         </div>
 
         <div class="form-group row" [ngClass]="{'has-danger': isPeriodError}">
-          <label class="control-label col-sm-2">Period in Days <span>*</span></label>
+          <label class="control-label col-sm-2">Period <span>*</span></label>
           <div class="col-sm-6">
             <input class="form-control"
-                   type="text"
+                   type="month"
                    autocomplete="off"
                    placeholder="Period"
-                   name="description"
+                   name="period"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="period"
+                   [(ngModel)]="electricityBill.period"
                    (input)="isPeriodValid($event.target.value)">
             <span class="error" *ngIf="isPeriodError">{{periodError}}</span>
           </div>
@@ -51,7 +51,7 @@
                    name="description"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="previousReading"
+                   [(ngModel)]="electricityBill.previousReading"
                    (input)="isPreviousReadingValid($event.target.value)">
             <span class="error" *ngIf="isPreviousReadingError">{{previousReadingError}}</span>
           </div>
@@ -67,7 +67,7 @@
                    name="description"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="currentReading"
+                   [(ngModel)]="electricityBill.currentReading"
                    (input)="isCurrentReadingValid($event.target.value)">
             <span class="error" *ngIf="isCurrentReadingError">{{currentReadingError}}</span>
           </div>
@@ -83,8 +83,8 @@
                    name="description"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="noOfUnits"
-                   (input)="isNoOfUnitsValid($event.target.value)">
+                   [(ngModel)]="electricityBill.noOfUnits"
+                   (input)="getNoOfUnits">
             <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
           </div>
         </div>
@@ -99,7 +99,7 @@
                    name="description"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="amount"
+                   [(ngModel)]="electricityBill.amount"
                    (input)="isAmountValid($event.target.value)">
             <span class="error" *ngIf="isAmountError">{{amountError}}</span>
           </div>
@@ -115,7 +115,7 @@
                    name="description"
                    #descriptionRef="ngModel"
                    required
-                   [(ngModel)]="location"
+                   [(ngModel)]="electricityBill.location"
                    (input)="isLocationValid($event.target.value)">
             <span class="error" *ngIf="isLocationError">{{locationError}}</span>
           </div>
@@ -125,7 +125,7 @@
           <div class="col-sm-4 col-sm-offset-2 btnContainer">
             <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
             &nbsp;
-            <a class="btn btn-warning" (click)="reloadPage()">Clear</a>
+            <a class="btn btn-warning" (click)="clearForm()">Clear</a>
           </div>
         </div>
 

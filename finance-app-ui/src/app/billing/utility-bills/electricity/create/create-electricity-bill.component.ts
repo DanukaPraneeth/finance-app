@@ -1,4 +1,7 @@
 import {Component, OnInit} from "@angular/core";
+import {ElectricityBill} from "../../../../models/data-models";
+import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: "app-create-electricity-bill",
@@ -24,28 +27,26 @@ export class CreateElectricityBillComponent implements OnInit {
   locationError: string;
   periodError: string;
 
+  private electricityBill: ElectricityBill;
 
 
-  previousReading: number;
-  currentReading: number;
-  noOfUnits: number;
-  amount: number;
-  location: string;
-  period: number;
-  accountNo: string;
-
-
-
-
-  constructor() {
+  constructor(private electricityBillsService: ElectricityBillsService, private _router: Router) {
   }
 
   ngOnInit() {
-
+    this.electricityBill = new ElectricityBill();
+    this.clearForm();
+    //this.electricityBill.noOfUnits = this.getNoOfUnits();
   }
 
   onSubmition(billForm) {
 //when form is submitted
+    this.electricityBill.certifiedDate = new Date(2018, 11, 24, 10, 33, 30, 0);
+    this.electricityBill.userKey = 1;
+    this.electricityBill.datetime = new Date(2018, 9, 24, 10, 33, 30, 0);
+    this.electricityBill.traineeStaffId = 1;
+    this.electricityBill.certification = "approved";
+    this.electricityBillsService.insertElectricityBill(this.electricityBill);
   }
 
   isAccountNoValid(accoutNo) {
@@ -64,6 +65,19 @@ export class CreateElectricityBillComponent implements OnInit {
   isLocationValid(location){}
   reloadPage(){}
 
+  getNoOfUnits(){
+    return this.electricityBill.noOfUnits = this.electricityBill.currentReading - this.electricityBill.previousReading;
+  }
 
+
+  private clearForm() {
+    this.electricityBill.amount = 0;
+    this.electricityBill.currentReading = 0;
+    this.electricityBill.previousReading = 0;
+    this.electricityBill.location = '';
+    this.electricityBill.period = '';
+    this.electricityBill.noOfUnits = 0;
+    this.electricityBill.billNo = '';
+  }
 
 }

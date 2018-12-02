@@ -22,6 +22,8 @@ import {SharedModule} from "./shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BillingModule} from "./billing/billing.module";
 import {HttpClientModule} from "@angular/common/http";
+import {ElectricityBillRemoteDataService} from "./remote/electricity_bill_remote.service"
+import {ElectricityBillsService} from "./services/electricity-bill.service"
 import {LoginRemoteDataService} from "./remote/login_remote-data.service";
 
 @NgModule({
@@ -55,6 +57,8 @@ import {LoginRemoteDataService} from "./remote/login_remote-data.service";
     AppGuard,
     LoginGuard,
     AuthenticationService,
+    ElectricityBillsService,
+    ElectricityBillRemoteDataService,
     LoginRemoteDataService,
     AppCommonService
   ],

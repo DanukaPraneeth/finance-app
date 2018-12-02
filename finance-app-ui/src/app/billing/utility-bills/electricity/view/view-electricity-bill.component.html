@@ -10,16 +10,17 @@
       <div class="tbl-row header">
         <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
       </div>
-      <div class="tbl-row" *ngFor="let item of dataSource">
-        <div class="tbl-cell">{{item.date}}</div>
-        <div class="tbl-cell">{{item.period}}</div>
+      <div class="tbl-row" *ngFor="let item of electrictyBillList">
+        <div class="tbl-cell">{{item.datetime}}</div>
+        <div class="tbl-cell">{{item.billNo}}</div>
         <div class="tbl-cell">{{item.previousReading}}</div>
         <div class="tbl-cell">{{item.currentReading}}</div>
-        <div class="tbl-cell">{{item.units}}</div>
+        <div class="tbl-cell">{{item.noOfUnits}}</div>
         <div class="tbl-cell">{{item.amount}}</div>
+        <div class="tbl-cell">{{item.location}}</div>
         <div class="tbl-cell">{{item.certification}}</div>
       </div>
-      <div class="no-rec-row tbl-row" *ngIf="dataSource.length == 0">
+      <div class="no-rec-row tbl-row" *ngIf="electrictyBillList.length == 0">
         <span class="no-rec">No Records...</span>
       </div>
 
