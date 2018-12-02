@@ -23,6 +23,9 @@ import {SignupComponent} from "./authentication/signup/signup.component";
 import {SharedModule} from "./shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BillingModule} from "./billing/billing.module";
+import {HttpClientModule} from "@angular/common/http";
+import {ElectricityBillRemoteDataService} from "./remotetemp/electricity_bill_remote.service"
+import {ElectricityBillsService} from "./services/electricity-bill.service"
 
 @NgModule({
   declarations: [
@@ -43,6 +46,7 @@ import {BillingModule} from "./billing/billing.module";
     BrowserModule,
     FormsModule,
     CommonModule,
+    HttpClientModule,
     ButtonsModule.forRoot(),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
@@ -56,7 +60,9 @@ import {BillingModule} from "./billing/billing.module";
     AppGuard,
     LoginGuard,
     AuthenticationService,
-    AppCommonService
+    AppCommonService,
+    ElectricityBillsService,
+    ElectricityBillRemoteDataService
   ],
   bootstrap: [AppComponent]
 })
