@@ -26,11 +26,12 @@ export class ElectricityBillsService {
     insertElectricityBill(electricityBill: ElectricityBill) {
         this._remoteService.insertElectricityBill(electricityBill)
             .subscribe((data: CreateBillResponse) => {
-                if (data["isSuccess"] == true) {
-                    this._router.navigate(["login"]);
-                } else {
-                    this._router.navigate(["singnup"]);
-                }
+                // if (data["success"] == true) {
+                //     this._router.navigate(["home"]);
+                // } else {
+                //     this._router.navigate(["singnup"]);
+                // }
+                this._router.navigate(["home"]);
             });
 
     }

@@ -26,8 +26,8 @@ export class ElectricityBill {
     billNo: string;
     location: string;
     certification: string;
-    certifiedDate: Date;
-    datetime: Date;
+    certifiedDate: string;
+    datetime: string;
     traineeStaffId: number;
     userKey: number;
 }
