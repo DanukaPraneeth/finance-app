@@ -1,6 +1,10 @@
 export class LoginResponse {
-    isLoggedIn: boolean;
-    userName: string;
+  loggedIn: boolean;
+  userName: string;
+}
+
+export class SignupResponse {
+  success: boolean;
 }
 
 export class MenuItem {
@@ -30,4 +34,20 @@ export class ElectricityBill {
 
 export class CreateBillResponse {
     success: boolean;
+}
+
+export class User {
+  userName: string;
+  password: string;
+}
+
+export class TempResponse {
+   success: boolean;
+   message: string;
+}
+
+export class Profile {
+  userName: string;
+  password: string;
+  userRole: number;
 }

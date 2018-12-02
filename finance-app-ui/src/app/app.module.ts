@@ -6,8 +6,6 @@ import {AppRoutingModule} from "./app-routing.module";
 import {AppComponent} from "./app.component";
 import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
-import {FirstpageComponent} from "./firstpage/firstpage.component";
-import {SecondpageComponent} from "./secondpage/secondpage.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {AuthenticationService} from "./services/authentication.service";
 import {AppCommonService} from "./services/app-common.service";
@@ -24,16 +22,15 @@ import {SharedModule} from "./shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BillingModule} from "./billing/billing.module";
 import {HttpClientModule} from "@angular/common/http";
-import {ElectricityBillRemoteDataService} from "./remotetemp/electricity_bill_remote.service"
+import {ElectricityBillRemoteDataService} from "./remote/electricity_bill_remote.service"
 import {ElectricityBillsService} from "./services/electricity-bill.service"
+import {LoginRemoteDataService} from "./remote/login_remote-data.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    FirstpageComponent,
-    SecondpageComponent,
     HeaderComponent,
     HamburgerMenuComponent,
     UserAvatarComponent,
@@ -60,9 +57,10 @@ import {ElectricityBillsService} from "./services/electricity-bill.service"
     AppGuard,
     LoginGuard,
     AuthenticationService,
-    AppCommonService,
     ElectricityBillsService,
-    ElectricityBillRemoteDataService
+    ElectricityBillRemoteDataService,
+    LoginRemoteDataService,
+    AppCommonService
   ],
   bootstrap: [AppComponent]
 })

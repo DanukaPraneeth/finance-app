@@ -49,7 +49,7 @@ public class StaffController {
 //        return staffService.getStaff(id);
 //    }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/staff")
+    @RequestMapping(method = RequestMethod.POST, value = "/staff/signup")
     public MessageResponse addStaff(@RequestBody String staffDetails) throws IOException{
 
         String passwrd = "";

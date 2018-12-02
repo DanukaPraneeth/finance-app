@@ -1,3 +1,74 @@
-<p>
-  signup works!
-</p>
+<div class="login-container animated fadeInDown" style="animation-delay: 1s">
+
+    <div class="logo-container">
+        RECORD<span class="man">APPLICATION</span>
+    </div>
+
+    <div class="form-container">
+        <h1 class="sign-in">Sign Up</h1>
+        <!--login form START-->
+        <form #loginForm="ngForm" novalidate (ngSubmit)="onSignUpClick(signupForm)">
+            <div class="form-fields">
+                <div class="form-group">
+                    <input class="form-control"
+                           type="text"
+                           autocomplete="off"
+                           placeholder="Username"
+                           name="userName"
+                           #userNameRef="ngModel"
+                           required
+                           [(ngModel)]="userName"
+                           (input)="uniqueUsername($event.target.value)">
+                    <span class="error" *ngIf="isUsernameError">{{usernameError}}</span>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control"
+                           type="password"
+                           autocomplete="off"
+                           placeholder="Password"
+                           name="password"
+                           #passwordRef="ngModel"
+                           required
+                           [(ngModel)]="password"
+                           (input)="errorPwd($event.target.value)">
+                    <span class="error" *ngIf="isPasswordError">{{passworError}}</span>
+                    <span class="warning" *ngIf="isPasswordWarning">{{passwordWarning}}</span>
+                </div>
+
+                <div class="form-group">
+                    <input class="form-control"
+                           type="password"
+                           autocomplete="off"
+                           placeholder="Repeat Password"
+                           name="password"
+                           #passwordRef="ngModel"
+                           required
+                           [(ngModel)]="repeatpassword"
+                           (input)="matchPwd($event.target.value)">
+                    <span class="error" *ngIf="isRepeatPasswordError">{{repeatPasswordError}}</span>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Select Role</label>
+                    <select class="form-control" (change)="onRoleSelected($event)" placeholder="Role">
+                        <option *ngFor="let opt of roles" [selected]="selectedRole == opt">
+                            {{opt}}
+                        </option>
+                    </select>
+                    <span class="error" *ngIf="isInvalidRole">Select a valid role</span>
+                </div>
+
+
+                <div class="action-container">
+                    <button class="btn btn-primary signup">SIGNUP</button>
+                    <button class="btn btn-light login" (click)="loginClick()">LOGIN</button>
+                </div>
+            </div>
+
+
+        </form> <!--login form END-->
+
+    </div>
+
+</div>

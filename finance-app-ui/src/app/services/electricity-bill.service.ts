@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-import {ElectricityBillRemoteDataService} from "../remotetemp/electricity_bill_remote.service";
+import {ElectricityBillRemoteDataService} from "../remote/electricity_bill_remote.service";
 import {CreateBillResponse, ElectricityBill} from "../models/data-models";
 
 

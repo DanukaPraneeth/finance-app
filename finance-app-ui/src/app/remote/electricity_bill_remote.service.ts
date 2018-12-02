@@ -7,7 +7,9 @@ import {map} from 'rxjs/operators';
 @Injectable()
 export class ElectricityBillRemoteDataService {
 
-    private apiContext = "http://demo0207630.mockable.io";
+    //private apiContext = "http://demo0207630.mockable.io";
+    private url = new URL(window.location.href);
+    private apiContext = this.url.protocol + '//' + this.url.host + '/finance';
 
     electricityBillsObservable: Observable<ElectricityBill[]>;
     private apiEndpoints: Object = {
