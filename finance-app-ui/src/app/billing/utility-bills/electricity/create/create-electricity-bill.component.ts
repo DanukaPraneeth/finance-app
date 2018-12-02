@@ -41,9 +41,8 @@ export class CreateElectricityBillComponent implements OnInit {
 
   onSubmition(billForm) {
 //when form is submitted
-    this.electricityBill.certifiedDate = new Date(2018, 11, 24, 10, 33, 30, 0);
+    this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
     this.electricityBill.userKey = 1;
-    this.electricityBill.datetime = new Date(2018, 9, 24, 10, 33, 30, 0);
     this.electricityBill.traineeStaffId = 1;
     this.electricityBill.certification = "approved";
     this.electricityBillsService.insertElectricityBill(this.electricityBill);
