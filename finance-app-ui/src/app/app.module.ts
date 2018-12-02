@@ -25,6 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {ElectricityBillRemoteDataService} from "./remote/electricity_bill_remote.service"
 import {ElectricityBillsService} from "./services/electricity-bill.service"
 import {LoginRemoteDataService} from "./remote/login_remote-data.service";
+import { ChartComponent } from './chart/chart.component';
+import { PiechartComponent } from './piechart/piechart.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import {LoginRemoteDataService} from "./remote/login_remote-data.service";
     MainMenuComponent,
     HasPermissionsDirective,
     BreadcrumbsComponent,
-    SignupComponent
+    SignupComponent,
+    ChartComponent,
+    PiechartComponent
   ],
   imports: [
     BrowserModule,
