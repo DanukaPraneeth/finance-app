@@ -1,7 +1,13 @@
 package com.backend.core.bills.stockinvoice;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "stock_invoice")
 public class StockInvoice {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int invoiceNo;
     private int orderNo;
     private int quantity;
@@ -10,14 +16,15 @@ public class StockInvoice {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public StockInvoice(int invoiceNo, int orderNo, int quantity, String payableTo,
+    public StockInvoice(int orderNo, int quantity, String payableTo,
                 String description, float amount, String certification, String certifiedDate,
                 String datetime, int traineeStaffId, int userKey) {
-        this.invoiceNo = invoiceNo;
+        super();
         this.orderNo = orderNo;
         this.quantity = quantity;
         this.payableTo = payableTo;
@@ -29,6 +36,8 @@ public class StockInvoice {
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
     }
+
+    public StockInvoice(){}
 
     public int getInvoiceNo() {
         return invoiceNo;

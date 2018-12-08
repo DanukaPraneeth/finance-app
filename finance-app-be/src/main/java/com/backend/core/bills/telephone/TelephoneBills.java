@@ -1,7 +1,13 @@
 package com.backend.core.bills.telephone;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "telephone_bills")
 public class TelephoneBills {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int billId;
     private String month;
     private String category;
@@ -9,14 +15,15 @@ public class TelephoneBills {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public TelephoneBills(int billId, String month, String category, String location,
+    public TelephoneBills(String month, String category, String location,
                           float amount, String certification, String certifiedDate,
                           String datetime, int traineeStaffId, int userKey) {
-        this.billId = billId;
+        super();
         this.month = month;
         this.category = category;
         this.location = location;
@@ -27,6 +34,8 @@ public class TelephoneBills {
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
     }
+
+    public TelephoneBills(){}
 
     public int getBillId() {
         return billId;

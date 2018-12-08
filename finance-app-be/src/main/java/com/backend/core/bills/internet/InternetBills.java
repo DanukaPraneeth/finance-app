@@ -1,7 +1,13 @@
 package com.backend.core.bills.internet;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "internet_bills")
 public class InternetBills {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int billId;
     private String month;
     private String category;
@@ -9,14 +15,15 @@ public class InternetBills {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public InternetBills(int billId, String month, String category, String duration,
+    public InternetBills(String month, String category, String duration,
                          float amount, String certification, String certifiedDate,
                          String datetime, int traineeStaffId, int userKey) {
-        this.billId = billId;
+        super();
         this.month = month;
         this.category = category;
         this.duration = duration;
@@ -26,6 +33,10 @@ public class InternetBills {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public InternetBills(){
+
     }
 
     public int getBillId() {

@@ -1,7 +1,14 @@
 package com.backend.core.bills.travelclaims;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "travel_claims")
 public class TravelClaims {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int billId;
     private String claimerId;
     private String name;
     private String designation;
@@ -10,6 +17,7 @@ public class TravelClaims {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
@@ -17,6 +25,7 @@ public class TravelClaims {
     public TravelClaims(String claimerId, String name, String designation, String description,
                         int period, float amount, String certification, String certifiedDate,
                         String datetime, int traineeStaffId, int userKey) {
+        super();
         this.claimerId = claimerId;
         this.name = name;
         this.designation = designation;
@@ -28,6 +37,16 @@ public class TravelClaims {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public TravelClaims(){}
+
+    public int getBillId() {
+        return billId;
+    }
+
+    public void setBillId(int billId) {
+        this.billId = billId;
     }
 
     public String getClaimerId() {

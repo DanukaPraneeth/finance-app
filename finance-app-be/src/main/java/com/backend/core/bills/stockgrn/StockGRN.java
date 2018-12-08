@@ -1,19 +1,26 @@
 package com.backend.core.bills.stockgrn;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "stock_grn")
 public class StockGRN {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int grnNo;
     private String description;
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public StockGRN(int grnNo, String description, float amount, String certification,
+    public StockGRN(String description, float amount, String certification,
                     String certifiedDate, String datetime, int traineeStaffId, int userKey) {
-        this.grnNo = grnNo;
+        super();
         this.description = description;
         this.amount = amount;
         this.certification = certification;
@@ -21,6 +28,10 @@ public class StockGRN {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public StockGRN(){
+
     }
 
     public int getGrnNo() {

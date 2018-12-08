@@ -1,7 +1,14 @@
 package com.backend.core.bills.examinationclaims;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "examination_claims")
 public class ExaminationClaims {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int examClaimId;
     private String lectureId;
     private String lectureName;
     private String designation;
@@ -9,6 +16,7 @@ public class ExaminationClaims {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
@@ -16,6 +24,7 @@ public class ExaminationClaims {
     public ExaminationClaims(String lectureId, String lectureName, String designation,
                  String description, float amount, String certification, String certifiedDate,
                  String datetime, int traineeStaffId, int userKey) {
+        super();
         this.lectureId = lectureId;
         this.lectureName = lectureName;
         this.designation = designation;
@@ -26,6 +35,18 @@ public class ExaminationClaims {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public ExaminationClaims(){
+
+    }
+
+    public int getExamClaimId() {
+        return examClaimId;
+    }
+
+    public void setExamClaimId(int examClaimId) {
+        this.examClaimId = examClaimId;
     }
 
     public String getLectureId() {

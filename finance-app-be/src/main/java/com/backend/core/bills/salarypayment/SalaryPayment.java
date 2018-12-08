@@ -1,7 +1,14 @@
 package com.backend.core.bills.salarypayment;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "salary_payment")
 public class SalaryPayment {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int paymentId;
     private String paymentType;
     private float amountPmntStaff;
     private float amountTmpStaff;
@@ -9,6 +16,7 @@ public class SalaryPayment {
     private float etfAmount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
@@ -16,6 +24,7 @@ public class SalaryPayment {
     public SalaryPayment(String paymentType, float amountPmntStaff, float amountTmpStaff,
                      float amountTmptStaff, float etfAmount, String certification,
                      String certifiedDate, String datetime, int traineeStaffId, int userKey) {
+        super();
         this.paymentType = paymentType;
         this.amountPmntStaff = amountPmntStaff;
         this.amountTmpStaff = amountTmpStaff;
@@ -26,6 +35,18 @@ public class SalaryPayment {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public SalaryPayment(){
+
+    }
+
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
     public String getPaymentType() {
