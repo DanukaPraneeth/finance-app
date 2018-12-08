@@ -1,18 +1,27 @@
 package com.backend.core.bills.bursary;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "bursary")
 public class Bursary {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int paymentId;
     private String month;
     private String description;
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
     public Bursary(String month, String description, float amount, String certification,
                    String certifiedDate, String datetime, int traineeStaffId, int userKey) {
+        super();
         this.month = month;
         this.description = description;
         this.amount = amount;
@@ -21,6 +30,16 @@ public class Bursary {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public Bursary(){}
+
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
     }
 
     public String getMonth() {

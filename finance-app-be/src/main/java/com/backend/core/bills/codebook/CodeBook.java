@@ -1,8 +1,14 @@
 package com.backend.core.bills.codebook;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "code_book")
 public class CodeBook {
 
-    private int desc_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int descId;
     private String faculty;
     private String payableTo;
     private String description;
@@ -11,14 +17,15 @@ public class CodeBook {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public CodeBook(int desc_id, String faculty, String payableTo, String description,
+    public CodeBook(String faculty, String payableTo, String description,
                     String code, String category, float amount, String certification,
                     String certifiedDate, String datetime, int traineeStaffId, int userKey) {
-        this.desc_id = desc_id;
+        super();
         this.faculty = faculty;
         this.payableTo = payableTo;
         this.description = description;
@@ -32,12 +39,14 @@ public class CodeBook {
         this.userKey = userKey;
     }
 
-    public int getDesc_id() {
-        return desc_id;
+    public CodeBook(){}
+
+    public int getDescId() {
+        return descId;
     }
 
-    public void setDesc_id(int desc_id) {
-        this.desc_id = desc_id;
+    public void setDescId(int descId) {
+        this.descId = descId;
     }
 
     public String getFaculty() {

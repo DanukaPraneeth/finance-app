@@ -9,7 +9,7 @@ CREATE TABLE staff_role (
 );
 
 CREATE TABLE staff (
-    user_key int NOT NULL,
+    user_key int NOT NULL AUTO_INCREMENT,
     user_name varchar(255) NOT NULL,
 	  password varchar(255) NOT NULL,
     user_role int,
@@ -19,6 +19,7 @@ CREATE TABLE staff (
 );
 
 CREATE TABLE examination_claims (
+    exam_claim_id int NOT NULL AUTO_INCREMENT,
     lecture_id varchar(20) NOT NULL,
     lecture_name varchar(255) NOT NULL,
     designation varchar(20),
@@ -29,9 +30,9 @@ CREATE TABLE examination_claims (
 	  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	  trainee_staff_id int,
 	  user_key int,
-    PRIMARY KEY (lecture_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    PRIMARY KEY (exam_claim_id),
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE salary_payment (
@@ -47,8 +48,8 @@ CREATE TABLE salary_payment (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (payment_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE water_bills (
@@ -64,8 +65,8 @@ CREATE TABLE water_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (billNo),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE advance_settle_event (
@@ -80,8 +81,8 @@ CREATE TABLE advance_settle_event (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (receipt_no),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE electricity_bills (
@@ -98,8 +99,8 @@ CREATE TABLE electricity_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE bursary (
@@ -113,8 +114,8 @@ CREATE TABLE bursary (
   	trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (payment_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE mahapola (
@@ -128,8 +129,8 @@ CREATE TABLE mahapola (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (payment_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE telephone_bills (
@@ -144,11 +145,12 @@ CREATE TABLE telephone_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (bill_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE travel_claims (
+    bill_id int NOT NULL AUTO_INCREMENT,
     claimer_id varchar(20) NOT NULL,
     name varchar(255) NOT NULL,
     designation varchar(20),
@@ -160,9 +162,9 @@ CREATE TABLE travel_claims (
   	date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   	trainee_staff_id int,
   	user_key int,
-  	PRIMARY KEY (claimer_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-  	FOREIGN KEY (user_key) REFERENCES staff(user_key)
+  	PRIMARY KEY (bill_id),
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+  	--	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE stock_grn (
@@ -175,8 +177,8 @@ CREATE TABLE stock_grn (
   	trainee_staff_id int,
   	user_key int,
     PRIMARY KEY (grn_no),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-  	FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+  	--	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE stock_invoice (
@@ -192,8 +194,8 @@ CREATE TABLE stock_invoice (
 	  trainee_staff_id int,
 	  user_key int,
     PRIMARY KEY (invoice_no),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE home_allowance (
@@ -209,8 +211,8 @@ CREATE TABLE home_allowance (
 	  trainee_staff_id int,
 	  user_key int,
     PRIMARY KEY (emp_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE internet_bills (
@@ -225,8 +227,8 @@ CREATE TABLE internet_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (bill_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE code_book (
@@ -243,8 +245,8 @@ CREATE TABLE code_book (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (desc_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-  	FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+  	--	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE advance_pay_event (
@@ -259,8 +261,8 @@ CREATE TABLE advance_pay_event (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (rec_id),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+--	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE house_rent (
@@ -276,6 +278,6 @@ CREATE TABLE house_rent (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (voucher_no),
-    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key),
-	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
+    FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
+	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );

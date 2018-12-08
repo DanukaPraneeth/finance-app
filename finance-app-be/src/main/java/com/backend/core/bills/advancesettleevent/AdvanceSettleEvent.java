@@ -1,21 +1,28 @@
 package com.backend.core.bills.advancesettleevent;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "advance_settle_event")
 public class AdvanceSettleEvent {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int settlementNo;
     private float refundAmount;
     private float additionalAmount;
     private float totalExpense;
     private String certification;
     private String certifiedDate;
+    @Column(name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public AdvanceSettleEvent(int settlementNo, float refundAmount, float additionalAmount,
+    public AdvanceSettleEvent(float refundAmount, float additionalAmount,
                               float totalExpense, String certification, String certifiedDate,
                               String datetime, int traineeStaffId, int userKey) {
-        this.settlementNo = settlementNo;
+        super();
         this.refundAmount = refundAmount;
         this.additionalAmount = additionalAmount;
         this.totalExpense = totalExpense;
@@ -25,6 +32,8 @@ public class AdvanceSettleEvent {
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
     }
+
+    public AdvanceSettleEvent(){}
 
     public int getSettlementNo() {
         return settlementNo;

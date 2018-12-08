@@ -1,7 +1,13 @@
 package com.backend.core.bills.homeallowance;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "home_allowance")
 public class HomeAllowance {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int empId;
     private String empName;
     private String designation;
@@ -10,14 +16,15 @@ public class HomeAllowance {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column (name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public HomeAllowance(int empId, String empName, String designation, String payableTo,
+    public HomeAllowance(String empName, String designation, String payableTo,
                          int qty, float amount, String certification, String certifiedDate,
                          String datetime, int traineeStaffId, int userKey) {
-        this.empId = empId;
+        super();
         this.empName = empName;
         this.designation = designation;
         this.payableTo = payableTo;
@@ -28,6 +35,10 @@ public class HomeAllowance {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public HomeAllowance(){
+
     }
 
     public int getEmpId() {

@@ -8,7 +8,7 @@ public class ElectricityBill {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private long id;
+    private int id;
     @Column( name = "billno", nullable = false, unique = true)
     private String billNo;
     private String location;
@@ -41,6 +41,14 @@ public class ElectricityBill {
         this.datetime = datetime;
         this.traineeStaffId = traineeStaffId;
         this.userKey = userKey;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBillNo() {
