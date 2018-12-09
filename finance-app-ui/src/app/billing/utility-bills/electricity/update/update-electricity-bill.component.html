@@ -1,0 +1,125 @@
+<div class="animated fadeInUp">
+
+  <!--<div class="col-sm-12">-->
+    <!--Form Container - START-->
+    <div class="form-container billInputContainer">
+
+      <form class="form-horizontal" #electricityBillForm="ngForm" novalidate
+            (ngSubmit)="onSubmition(billForm)" autocomplete="off">
+        <div class="form-group row" [ngClass]="{'has-danger': isAccountNoError}">
+          <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   readonly
+                   name="name"
+                   #nameRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.billNo">
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isPeriodError}">
+          <label class="control-label col-sm-2">Period <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   readonly
+                   name="period"
+                   #periodRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.period">
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isPreviousReadingError}">
+          <label class="control-label col-sm-2">Previous Reading <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="number"
+                   autocomplete="off"
+                   placeholder="Previous Reading"
+                   name="prevread"
+                   #prevreadRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.previousReading"
+                   (input)="isPreviousReadingValid($event.target.value)">
+            <span class="error" *ngIf="isPreviousReadingError">{{previousReadingError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isCurrentReadingError}">
+          <label class="control-label col-sm-2">Current Reading <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="number"
+                   autocomplete="off"
+                   placeholder="Current Reading"
+                   name="curread"
+                   #curreadRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.currentReading"
+                   (input)="isCurrentReadingValid($event.target.value)">
+            <span class="error" *ngIf="isCurrentReadingError">{{currentReadingError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isNoOfUnitsError}">
+          <label class="control-label col-sm-2">No. of Units <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="number"
+                   autocomplete="off"
+                   placeholder="No. of Units"
+                   name="units"
+                   required
+                   #unitsRef="ngModel"
+                   [(ngModel)]="electricityBill.noOfUnits">
+            <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isAmountError}">
+          <label class="control-label col-sm-2">Amount <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="number"
+                   autocomplete="off"
+                   placeholder="Amount"
+                   name="amount"
+                   #amountRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.amount"
+                   (input)="isAmountValid($event.target.value)">
+            <span class="error" *ngIf="isAmountError">{{amountError}}</span>
+          </div>
+        </div>
+
+        <div class="form-group row" [ngClass]="{'has-danger': isLocationError}">
+          <label class="control-label col-sm-2">Location <span>*</span></label>
+          <div class="col-sm-6">
+            <input class="form-control"
+                   type="text"
+                   autocomplete="off"
+                   readonly
+                   name="location"
+                   #locationRef="ngModel"
+                   required
+                   [(ngModel)]="electricityBill.location">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2 btnContainer">
+            <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
+            &nbsp;
+            <a class="btn btn-warning" (click)="clearForm()">Clear</a>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+</div>

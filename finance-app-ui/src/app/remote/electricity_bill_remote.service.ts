@@ -14,7 +14,8 @@ export class ElectricityBillRemoteDataService {
     electricityBillsObservable: Observable<ElectricityBill[]>;
     private apiEndpoints: Object = {
         electricitybills: this.apiContext + "/bills/electricitybill",
-        insertbill: this.apiContext + "/bills/electricitybill"
+        insertbill: this.apiContext + "/bills/electricitybill",
+        updatebill: this.apiContext + "/bills/electricitybill"
     };
 
     private httpOptions = {
@@ -55,5 +56,9 @@ export class ElectricityBillRemoteDataService {
 
     insertElectricityBill(electricityBill: ElectricityBill) {
         return this.http.post<CreateBillResponse>(this.apiEndpoints["insertbill"], electricityBill, this.httpOptions);
+    }
+
+    updateElectricityBill(electricityBill: ElectricityBill) {
+        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"], electricityBill, this.httpOptions);
     }
 }

@@ -4,6 +4,7 @@ import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {SignupComponent} from "./authentication/signup/signup.component";
+import {ViewElectricityBillComponent} from "./billing/utility-bills/electricity/view/view-electricity-bill.component";
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
     path: "signup",
     component: SignupComponent,
     canActivate: [LoginGuard]
+  },
+  {
+    path: "viewElectricityBills",
+    component: ViewElectricityBillComponent,
   },
   {
     path: "home",

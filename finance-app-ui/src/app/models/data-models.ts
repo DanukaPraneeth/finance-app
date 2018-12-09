@@ -36,6 +36,10 @@ export class CreateBillResponse {
     success: boolean;
 }
 
+export class UpdateBillResponse {
+    success: boolean;
+}
+
 export class User {
   userName: string;
   password: string;

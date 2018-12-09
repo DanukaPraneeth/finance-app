@@ -1,4 +1,4 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, OnInit, TemplateRef} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
@@ -13,6 +13,9 @@ export class ViewElectricityBillComponent implements OnInit {
 
   fieldSet: string [] = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification"];
   electrictyBillList: ElectricityBill [];
+  private dialogactionTitle: string;
+  private showUpdateBill: boolean;
+  private changingBill: ElectricityBill;
 
   constructor(private _electrictyBillService: ElectricityBillsService, private _router: Router) {
   }
@@ -20,6 +23,7 @@ export class ViewElectricityBillComponent implements OnInit {
   ngOnInit() {
     this.electrictyBillList = [];
     this.getElectrictyBills();
+    this.showUpdateBill = false;
   }
 
     private getElectrictyBills() {
@@ -31,5 +35,14 @@ export class ViewElectricityBillComponent implements OnInit {
                 console.log("Unsuccessfull request");
             }
         });
+    }
+
+    changeDialogTitle() {
+      this.changingBill.period = "November 2018";
+        return this.dialogactionTitle = 'Update an Electricity Bill';
+        }
+
+    clearModalContent() {
+        this.showUpdateBill = false;
     }
 }

@@ -12,6 +12,8 @@ import {BrowserModule} from "@angular/platform-browser";
 import {SharedModule} from "../shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/view-electricity-bill.component";
+import {UpdateElectricityBillComponent} from "./utility-bills/electricity/update/update-electricity-bill.component";
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/vie
     CommonModule,
     SharedModule,
     NgbModule,
-    BillingRoutingModule
+    BillingRoutingModule,
+      ModalModule.forRoot()
   ],
   declarations: [
     CreateElectricityBillComponent,
@@ -32,7 +35,8 @@ import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/vie
     CreateTelephoneBillComponent,
     AddbillComponent,
     ViewbillComponent,
-    ViewElectricityBillComponent
+    ViewElectricityBillComponent,
+    UpdateElectricityBillComponent
   ]
 })
 export class BillingModule {}

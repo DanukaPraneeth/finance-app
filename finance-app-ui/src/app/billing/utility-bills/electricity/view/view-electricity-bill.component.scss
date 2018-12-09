@@ -125,8 +125,12 @@ input:checked + .slider:before {
 }
 
 .modal {
-  top: 10%;
+  top: 20%;
   outline: none;
+  }
+
+.modal-content{
+  width: 1000px;
 }
 
 .tbl-header {

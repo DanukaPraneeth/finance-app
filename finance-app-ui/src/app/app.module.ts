@@ -27,6 +27,15 @@ import {ElectricityBillsService} from "./services/electricity-bill.service"
 import {LoginRemoteDataService} from "./remote/login_remote-data.service";
 import { ChartComponent } from './chart/chart.component';
 import { PiechartComponent } from './piechart/piechart.component';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule
+} from '@angular/material';
+import { ModalModule }  from "ngx-bootstrap/modal"
+
 
 @NgModule({
   declarations: [
@@ -55,8 +64,17 @@ import { PiechartComponent } from './piechart/piechart.component';
     SharedModule,
     NgbModule,
     BillingModule,
-    AppRoutingModule
+    AppRoutingModule,
+      MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+      ModalModule.forRoot()
   ],
+  exports: [
+        ModalModule
+    ],
   providers: [
     AppGuard,
     LoginGuard,

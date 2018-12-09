@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
 import {ElectricityBillRemoteDataService} from "../remote/electricity_bill_remote.service";
-import {CreateBillResponse, ElectricityBill} from "../models/data-models";
+import {CreateBillResponse, ElectricityBill, UpdateBillResponse} from "../models/data-models";
 
 
 @Injectable()
@@ -36,4 +36,15 @@ export class ElectricityBillsService {
 
     }
 
+    updateElectricityBill(electricityBill: ElectricityBill) {
+        this._remoteService.updateElectricityBill(electricityBill)
+            .subscribe((data: UpdateBillResponse) => {
+                // if (data["success"] == true) {
+                //     this._router.navigate(["home"]);
+                // } else {
+                //     this._router.navigate(["singnup"]);
+                // }
+                this._router.navigate(["home"]);
+            });
+    }
 }

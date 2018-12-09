@@ -124,8 +124,13 @@ input:checked + .slider:before {
   margin-left: 0.5em;
 }
 
+.modal {
+  top: 10%;
+  outline: none;
+}
+
 .tbl-header {
-  margin-top: 50px;
+  margin-top: 0px;
   font-weight: 600;
   font-size: 1.3em;
   padding: 5px 0px 30px;
