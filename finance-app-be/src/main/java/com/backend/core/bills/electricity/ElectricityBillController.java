@@ -21,6 +21,11 @@ public class ElectricityBillController {
         return electricityBillService.getElectricityBill(billNo);
     }
 
+    @RequestMapping("/bills/electricitybill/month/{month}")
+    public ElectricityBill getMahapolaBymonth(@PathVariable String month){
+        return electricityBillService.getElectricityBillByMonth(month);
+    }
+
     @RequestMapping(method = RequestMethod.POST, value = "/bills/electricitybill")
     public void addElectricityBill(@RequestBody ElectricityBill electricityBill){
         electricityBillService.addElectricityBill(electricityBill);

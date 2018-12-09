@@ -17,10 +17,14 @@ public class WaterBillController {
     }
 
     @RequestMapping("/bills/waterbill/{billNo}")
-    public WaterBills getWaterBill(@PathVariable int billNo){
+    public WaterBills getWaterBill(@PathVariable String billNo){
         return waterBillService.getwaterBill(billNo);
     }
 
+    @RequestMapping("/bills/waterbill/month/{month}")
+    public WaterBills getMahapolaBymonth(@PathVariable String month){
+        return waterBillService.getwaterBillByMonth(month);
+    }
     @RequestMapping(method = RequestMethod.POST, value = "/bills/waterbill")
     public void addWaterBill(@RequestBody WaterBills waterBill){
         waterBillService.addWaterBill(waterBill);
@@ -32,7 +36,7 @@ public class WaterBillController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/bills/waterbill/{billNo}")
-    public void removeWaterBill(@PathVariable int billNo){
+    public void removeWaterBill(@PathVariable String billNo){
         waterBillService.remveWaterBill(billNo);
     }
 }

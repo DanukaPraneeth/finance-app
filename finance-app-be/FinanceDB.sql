@@ -53,7 +53,8 @@ CREATE TABLE salary_payment (
 );
 
 CREATE TABLE water_bills (
-    billno int NOT NULL AUTO_INCREMENT,
+    id int NOT NULL AUTO_INCREMENT,
+    billno varchar(255),
     period varchar(255),
     previous_reading int NOT NULL,
     current_reading int NOT NULL,
@@ -64,7 +65,7 @@ CREATE TABLE water_bills (
 	  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	  trainee_staff_id int,
 	  user_key int,
-	  PRIMARY KEY (billNo),
+	  PRIMARY KEY (id),
     FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
 	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
@@ -89,6 +90,7 @@ CREATE TABLE electricity_bills (
     id int NOT NULL AUTO_INCREMENT,
     billno varchar(20) NOT NULL,
     location varchar(20),
+    month varchar(15),
     previous_reading int NOT NULL,
     current_reading int NOT NULL,
 	  no_of_units int NOT NULL,

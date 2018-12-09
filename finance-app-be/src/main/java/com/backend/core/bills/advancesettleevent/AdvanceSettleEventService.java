@@ -1,9 +1,8 @@
 package com.backend.core.bills.advancesettleevent;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.users.StaffController;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import java.util.List;
 @Service
 public class AdvanceSettleEventService {
 
-    private static Log log = LogFactory.getLog(StaffController.class);
+    private static Logger log = LoggerFactory.getLogger(AdvanceSettleEventService.class);
     @Autowired
     private AdvanceSettleEventRepo advanceSettleEventRepo;
     private MessageResponse messageResponse = new MessageResponse();
