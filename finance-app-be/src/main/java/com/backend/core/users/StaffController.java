@@ -39,10 +39,10 @@ public class StaffController {
     private MessageResponse message = new MessageResponse();
     private StaffLoginResponse loginResponse = new StaffLoginResponse();
 
-//    @RequestMapping("/staff")
-//    public List<Staff> getAllStaff(){
-//        return staffService.getAllStaff();
-//    }
+    @RequestMapping(method = RequestMethod.GET, value = "/staff/all")
+    public List<Staff> getAllStaff(){
+        return staffService.getAllStaff();
+    }
 //
 //    @RequestMapping("/staff/{id}")
 //    public Staff getStaff(@PathVariable int id){

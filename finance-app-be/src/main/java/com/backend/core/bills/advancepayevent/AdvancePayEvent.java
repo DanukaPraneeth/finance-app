@@ -1,7 +1,13 @@
 package com.backend.core.bills.advancepayevent;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "advance_pay_event")
 public class AdvancePayEvent {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int recId;
     private String recName;
     private String designation;
@@ -9,14 +15,19 @@ public class AdvancePayEvent {
     private float amount;
     private String certification;
     private String certifiedDate;
+    @Column(name = "date")
     private String datetime;
     private int traineeStaffId;
     private int userKey;
 
-    public AdvancePayEvent(int recId, String recName, String designation, String description,
+    public AdvancePayEvent(){
+
+    }
+
+    public AdvancePayEvent( String recName, String designation, String description,
                            float amount, String certification, String certifiedDate,
                            String datetime, int traineeStaffId, int userKey) {
-        this.recId = recId;
+        super();
         this.recName = recName;
         this.designation = designation;
         this.description = description;
