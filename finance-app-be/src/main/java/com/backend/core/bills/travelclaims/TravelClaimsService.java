@@ -1,9 +1,8 @@
 package com.backend.core.bills.travelclaims;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.users.StaffController;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import java.util.List;
 @Service
 public class TravelClaimsService {
 
-    private static Log log = LogFactory.getLog(StaffController.class);
+    private static Logger log = LoggerFactory.getLogger(TravelClaimsService.class);
     @Autowired
     private TravelClaimsRepo travelClaimsRepo;
     private MessageResponse messageResponse = new MessageResponse();
@@ -57,7 +56,7 @@ public class TravelClaimsService {
             travelClaimsRepo.save(TravelClaims);
             messageResponse.setSuccess(true);
         }catch (Exception e){
-            log.error("Error while updating bill record ", e);
+            log.error("Error while updating the bill record ", e);
             messageResponse.setSuccess(false);
         }
         return messageResponse;

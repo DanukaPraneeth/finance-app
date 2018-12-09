@@ -7,8 +7,10 @@ import javax.persistence.*;
 public class WaterBills {
 
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private int id;
     @Column(name = "billno", nullable = false, unique = true)
-    private int billNo;
+    private String billNo;
     private String period;
     private int previousReading;
     private int currentReading;
@@ -26,7 +28,7 @@ public class WaterBills {
 
     }
 
-    public WaterBills(int billNo, String period, int previousReading, int currentReading, int noOfUnits,
+    public WaterBills(String billNo, String period, int previousReading, int currentReading, int noOfUnits,
                       float amount, String certification, String certifiedDate,
                       String datetime, int traineeStaffId, int userKey) {
         super();
@@ -43,9 +45,9 @@ public class WaterBills {
         this.userKey = userKey;
     }
 
-    public int getBillNo() { return billNo; }
+    public String getBillNo() { return billNo; }
 
-    public void setBillNo(int billNo) { this.billNo = billNo;  }
+    public void setBillNo(String billNo) { this.billNo = billNo;  }
 
     public String getPeriod() {
         return period;
