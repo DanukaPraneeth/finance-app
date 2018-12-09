@@ -1,12 +1,17 @@
 <div class="animated fadeInUp" style="animation-delay: 0.1s">
   <div class="row">
     <div class="col-sm-12">
-      <div class="container-fluid InputContainer">
-        <div class="title">
-          Home Page
-
-          <br>
+      <div class="container-fluid InputContainer" *appHaspermission="1">
+        <div class="title" >
+          Pending Bill Certifications
         </div>
+        <div class="row">
+          <div class="col-md-3">
+            <app-certify-count></app-certify-count>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-8">
             <div class="title">Monthly Consumption</div>

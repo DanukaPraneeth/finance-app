@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class ViewElectricityBillComponent implements OnInit {
 
 
-  fieldSet: string [] = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification"];
+  fieldSet: string [] = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", ""];
   electrictyBillList: ElectricityBill [];
   private dialogactionTitle: string;
   private showUpdateBill: boolean;
@@ -39,10 +39,16 @@ export class ViewElectricityBillComponent implements OnInit {
 
     changeDialogTitle() {
       this.changingBill.period = "November 2018";
-        return this.dialogactionTitle = 'Update an Electricity Bill';
+      return this.dialogactionTitle = 'Update an Electricity Bill';
         }
 
     clearModalContent() {
         this.showUpdateBill = false;
+    }
+
+    onUpdateBillHandler(event:boolean) {
+        if (event) {
+            this.getElectrictyBills();
+        }
     }
 }

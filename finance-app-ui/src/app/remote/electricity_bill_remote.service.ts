@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {CreateBillResponse, ElectricityBill} from "../models/data-models";
 import {map} from 'rxjs/operators';
+import {el} from "@angular/platform-browser/testing/src/browser_util";
 
 @Injectable()
 export class ElectricityBillRemoteDataService {
@@ -59,6 +60,8 @@ export class ElectricityBillRemoteDataService {
     }
 
     updateElectricityBill(electricityBill: ElectricityBill) {
-        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"], electricityBill, this.httpOptions);
+        console.log("Id:"+electricityBill.id);
+        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + electricityBill.billNo,
+            electricityBill, this.httpOptions);
     }
 }

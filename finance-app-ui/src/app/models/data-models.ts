@@ -1,7 +1,9 @@
 export class LoginResponse {
   loggedIn: boolean;
   userName: string;
+  userRole: string;
 }
+
 
 export class SignupResponse {
   success: boolean;
@@ -18,6 +20,7 @@ export class MenuItem {
 }
 
 export class ElectricityBill {
+    id: number;
     period: string;
     previousReading: number;
     currentReading: number;

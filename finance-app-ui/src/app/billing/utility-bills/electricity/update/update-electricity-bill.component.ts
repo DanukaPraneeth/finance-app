@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
@@ -30,6 +30,8 @@ export class UpdateElectricityBillComponent implements OnInit {
     electricityBill: ElectricityBill;
     private disableAddButton: boolean;
 
+    @Output()
+    private onUpdateTask: EventEmitter<boolean> = new EventEmitter();
 
     constructor(private electricityBillsService: ElectricityBillsService, private _router: Router) {
     }
@@ -39,7 +41,7 @@ export class UpdateElectricityBillComponent implements OnInit {
         }
 
         ngAfterViewChecked() {
-    console.log("After view loaded : "+this.electricityBill.billNo);
+    console.log("After view loaded : "+this.electricityBill.id);
   }
 
     onSubmition(billForm) {
@@ -57,6 +59,7 @@ export class UpdateElectricityBillComponent implements OnInit {
             // this.electricityBill.traineeStaffId = 1;
             // this.electricityBill.certification = "approved";
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
+            this.onUpdateTask.emit(true);
         }else {
             if (this.electricityBill.billNo.length == 0){
                 this.isAccountNoError = true;
