@@ -33,7 +33,7 @@
                    autocomplete="off"
                    placeholder="Period"
                    name="period"
-                   #descriptionRef="ngModel"
+                   #periodRef="ngModel"
                    required
                    [(ngModel)]="electricityBill.period"
                    (input)="isPeriodValid($event.target.value)">
@@ -48,8 +48,8 @@
                    type="number"
                    autocomplete="off"
                    placeholder="Previous Reading"
-                   name="description"
-                   #descriptionRef="ngModel"
+                   name="prevread"
+                   #prevreadRef="ngModel"
                    required
                    [(ngModel)]="electricityBill.previousReading"
                    (input)="isPreviousReadingValid($event.target.value)">
@@ -64,8 +64,8 @@
                    type="number"
                    autocomplete="off"
                    placeholder="Current Reading"
-                   name="description"
-                   #descriptionRef="ngModel"
+                   name="curread"
+                   #curreadRef="ngModel"
                    required
                    [(ngModel)]="electricityBill.currentReading"
                    (input)="isCurrentReadingValid($event.target.value)">
@@ -80,11 +80,10 @@
                    type="number"
                    autocomplete="off"
                    placeholder="No. of Units"
-                   name="description"
-                   #descriptionRef="ngModel"
+                   name="units"
                    required
-                   [(ngModel)]="electricityBill.noOfUnits"
-                   (input)="getNoOfUnits">
+                   #unitsRef="ngModel"
+                   [(ngModel)]="electricityBill.noOfUnits">
             <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
           </div>
         </div>
@@ -96,8 +95,8 @@
                    type="number"
                    autocomplete="off"
                    placeholder="Amount"
-                   name="description"
-                   #descriptionRef="ngModel"
+                   name="amount"
+                   #amountRef="ngModel"
                    required
                    [(ngModel)]="electricityBill.amount"
                    (input)="isAmountValid($event.target.value)">
@@ -112,8 +111,8 @@
                    type="text"
                    autocomplete="off"
                    placeholder="Location"
-                   name="description"
-                   #descriptionRef="ngModel"
+                   name="location"
+                   #locationRef="ngModel"
                    required
                    [(ngModel)]="electricityBill.location"
                    (input)="isLocationValid($event.target.value)">
