@@ -1,7 +1,6 @@
 package com.backend.core.bills.advancepayevent;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.FacadeBillService;
 import com.backend.core.users.StaffController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
