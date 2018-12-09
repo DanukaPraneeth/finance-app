@@ -10,9 +10,12 @@ import {AuthenticationService} from "../services/authentication.service";
 })
 export class HomeComponent implements OnInit {
 
+  isEnabled: boolean;
+
   constructor(private _authenticationService: AuthenticationService) { }
 
   ngOnInit() {
+    this.isEnabled = false;
   }
 
   onLogoutClick() {

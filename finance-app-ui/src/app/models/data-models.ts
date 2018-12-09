@@ -1,7 +1,9 @@
 export class LoginResponse {
   loggedIn: boolean;
   userName: string;
+  userRole: string;
 }
+
 
 export class SignupResponse {
   success: boolean;
