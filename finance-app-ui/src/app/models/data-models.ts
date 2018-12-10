@@ -20,6 +20,7 @@ export class MenuItem {
 }
 
 export class ElectricityBill {
+    id: number;
     period: string;
     previousReading: number;
     currentReading: number;
@@ -35,6 +36,10 @@ export class ElectricityBill {
 }
 
 export class CreateBillResponse {
+    success: boolean;
+}
+
+export class UpdateBillResponse {
     success: boolean;
 }
 

@@ -24,13 +24,24 @@ import {HttpClientModule} from "@angular/common/http";
 import {ElectricityBillRemoteDataService} from "./remote/electricity_bill_remote.service";
 import {ElectricityBillsService} from "./services/electricity-bill.service";
 import {LoginRemoteDataService} from "./remote/login_remote-data.service";
-import {ChartComponent} from "./chart/chart.component";
-import {PiechartComponent} from "./piechart/piechart.component";
+
+import { ChartComponent } from './chart/chart.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCardModule,
+  MatGridListModule
+} from '@angular/material';
 import {HaspermissionDirective} from "./directives/haspermission.directive";
 import {CertifyCountComponent} from "./certifiy/certify-count/certify-count.component";
 import {CertifyListComponent} from "./certifiy/certify-list/certify-list.component";
 import {CertifyElectricityComponent} from "./certifiy/certifiy-bills/electricity/certify-electricity/certify-electricity.component";
 import {CertifyElectricityTableComponent} from "./certifiy/certifiy-bills/electricity/certify-electricity-table/certify-electricity-table.component";
+import {ReportsListComponent} from "./reports/reports-list/reports-list.component"
+import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component"
 
 @NgModule({
   declarations: [
@@ -49,7 +60,9 @@ import {CertifyElectricityTableComponent} from "./certifiy/certifiy-bills/electr
     CertifyCountComponent,
     CertifyListComponent,
     CertifyElectricityComponent,
-    CertifyElectricityTableComponent
+    CertifyElectricityTableComponent,
+      ReportsListComponent,
+      ReportsElectricityComponent
   ],
   imports: [
     BrowserModule,
@@ -64,8 +77,17 @@ import {CertifyElectricityTableComponent} from "./certifiy/certifiy-bills/electr
     SharedModule,
     NgbModule,
     BillingModule,
-    AppRoutingModule
+    AppRoutingModule,
+      MatButtonModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+      MatGridListModule
   ],
+  exports: [
+        ModalModule
+    ],
   providers: [
     AppGuard,
     LoginGuard,

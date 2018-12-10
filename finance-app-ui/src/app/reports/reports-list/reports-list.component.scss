@@ -125,21 +125,12 @@ input:checked + .slider:before {
 }
 
 .modal {
-  top: 20%;
+  top: 10%;
   outline: none;
-  background: rgba(0, 0, 0, 0.5)
-  }
-
-.modal-content{
-  width: 1000px;
-}
-
-.modal-backdrop {
-  display: none
 }
 
 .tbl-header {
-  margin-top: 0px;
+  margin-top: 50px;
   font-weight: 600;
   font-size: 1.3em;
   padding: 5px 0px 30px;
@@ -184,10 +175,7 @@ input:checked + .slider:before {
 
 .control-label span { color: #dd0d0d;}
 
-.btnContainer{
-  margin-top:5%;
-  padding-left: 150px;
-}
+.btnContainer{ margin-top:2%;}
 
 .control-label {
   text-align: right;
@@ -294,7 +282,7 @@ input:checked + .slider:before {
       }
 
       .btn{
-        margin-top: 20px;
+        margin-top: 10px;
         padding-top: 5px!important;
         padding-bottom: 5px !important;
       }

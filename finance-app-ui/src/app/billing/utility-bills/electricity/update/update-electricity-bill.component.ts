@@ -1,15 +1,14 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
 
 @Component({
-    selector: "app-create-electricity-bill",
-    templateUrl: "./create-electricity-bill.component.html",
-    styleUrls: ["./create-electricity-bill.component.scss"]
+    selector: "app-update-electricity-bill",
+    templateUrl: "./update-electricity-bill.component.html",
+    styleUrls: ["./update-electricity-bill.component.scss"]
 })
-export class CreateElectricityBillComponent implements OnInit {
-
+export class UpdateElectricityBillComponent implements OnInit {
 
     isAccountNoError: boolean;
     isPeriodError: boolean;
@@ -27,19 +26,23 @@ export class CreateElectricityBillComponent implements OnInit {
     locationError: string;
     periodError: string;
 
-    private electricityBill: ElectricityBill;
+    @Input()
+    electricityBill: ElectricityBill;
     private disableAddButton: boolean;
 
+    @Output()
+    private onUpdateTask: EventEmitter<boolean> = new EventEmitter();
 
     constructor(private electricityBillsService: ElectricityBillsService, private _router: Router) {
     }
 
     ngOnInit() {
-        this.electricityBill = new ElectricityBill();
-        this.clearForm();
         this.disableAddButton = false;
-        //this.electricityBill.noOfUnits = this.getNoOfUnits();
-    }
+        }
+
+        ngAfterViewChecked() {
+    console.log("After view loaded : "+this.electricityBill.id);
+  }
 
     onSubmition(billForm) {
 //when form is submitted
@@ -51,11 +54,12 @@ export class CreateElectricityBillComponent implements OnInit {
             this.electricityBill.amount != null &&
             this.electricityBill.location != null && this.electricityBill.location != "") {
 
-            this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
-            this.electricityBill.userKey = 1;
-            this.electricityBill.traineeStaffId = 1;
-            this.electricityBill.certification = "approved";
-            this.electricityBillsService.insertElectricityBill(this.electricityBill);
+            // this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
+            // this.electricityBill.userKey = 1;
+            // this.electricityBill.traineeStaffId = 1;
+            // this.electricityBill.certification = "approved";
+            this.electricityBillsService.updateElectricityBill(this.electricityBill);
+            this.onUpdateTask.emit(true);
         }else {
             if (this.electricityBill.billNo.length == 0){
                 this.isAccountNoError = true;
@@ -186,11 +190,6 @@ export class CreateElectricityBillComponent implements OnInit {
 
     reloadPage() {
     }
-
-    getNoOfUnits() {
-        return this.electricityBill.noOfUnits = this.electricityBill.currentReading - this.electricityBill.previousReading;
-    }
-
 
     private clearForm() {
         this.electricityBill.amount = null;

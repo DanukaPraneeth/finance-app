@@ -5,6 +5,8 @@ import {HomeComponent} from "./home/home.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {SignupComponent} from "./authentication/signup/signup.component";
 import {CertifyListComponent} from "./certifiy/certify-list/certify-list.component";
+import {ViewbillComponent} from "./billing/maincomponets/viewbill/viewbill.component";
+import {ReportsListComponent} from "./reports/reports-list/reports-list.component"
 
 const routes: Routes = [
   {
@@ -20,6 +22,16 @@ const routes: Routes = [
   {
     path: "certify",
     component: CertifyListComponent,
+    canActivate: [AppGuard]
+  },
+  {
+    path: "reports",
+    component: ReportsListComponent,
+    canActivate: [AppGuard]
+  },
+  {
+    path: "viewBill",
+    component: ViewbillComponent,
     canActivate: [AppGuard]
   },
   {
