@@ -25,78 +25,73 @@ import {ElectricityBillRemoteDataService} from "./remote/electricity_bill_remote
 import {ElectricityBillsService} from "./services/electricity-bill.service";
 import {LoginRemoteDataService} from "./remote/login_remote-data.service";
 
-import { ChartComponent } from './chart/chart.component';
-import { PiechartComponent } from './piechart/piechart.component';
+import {ChartComponent} from "./chart/chart.component";
+import {PiechartComponent} from "./piechart/piechart.component";
 import {
-  MatButtonModule,
-  MatMenuModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatCardModule,
-  MatGridListModule
-} from '@angular/material';
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule
+} from "@angular/material";
 import {HaspermissionDirective} from "./directives/haspermission.directive";
-import {CertifyCountComponent} from "./certifiy/certify-count/certify-count.component";
-import {CertifyListComponent} from "./certifiy/certify-list/certify-list.component";
-import {CertifyElectricityComponent} from "./certifiy/certifiy-bills/electricity/certify-electricity/certify-electricity.component";
-import {CertifyElectricityTableComponent} from "./certifiy/certifiy-bills/electricity/certify-electricity-table/certify-electricity-table.component";
-import {ReportsListComponent} from "./reports/reports-list/reports-list.component"
-import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component"
+import {CertifyCountComponent} from "./certify-count/certify-count.component";
+import {ReportsListComponent} from "./reports/reports-list/reports-list.component";
+import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    HomeComponent,
-    HeaderComponent,
-    HamburgerMenuComponent,
-    UserAvatarComponent,
-    MainMenuComponent,
-    BreadcrumbsComponent,
-    SignupComponent,
-    ChartComponent,
-    PiechartComponent,
-    HaspermissionDirective,
-    CertifyCountComponent,
-    CertifyListComponent,
-    CertifyElectricityComponent,
-    CertifyElectricityTableComponent,
-      ReportsListComponent,
-      ReportsElectricityComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    CommonModule,
-    ModalModule.forRoot(),
-    HttpClientModule,
-    ButtonsModule.forRoot(),
-    BsDropdownModule.forRoot(),
-    TooltipModule.forRoot(),
-    AlertModule.forRoot(),
-    SharedModule,
-    NgbModule,
-    BillingModule,
-    AppRoutingModule,
-      MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-      MatGridListModule
-  ],
-  exports: [
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        HomeComponent,
+        HeaderComponent,
+        HamburgerMenuComponent,
+        UserAvatarComponent,
+        MainMenuComponent,
+        BreadcrumbsComponent,
+        SignupComponent,
+        ChartComponent,
+        PiechartComponent,
+        HaspermissionDirective,
+        CertifyCountComponent,
+        ReportsListComponent,
+        ReportsElectricityComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        CommonModule,
+        ModalModule.forRoot(),
+        HttpClientModule,
+        ButtonsModule.forRoot(),
+        BsDropdownModule.forRoot(),
+        TooltipModule.forRoot(),
+        AlertModule.forRoot(),
+        SharedModule,
+        NgbModule,
+        BillingModule,
+        AppRoutingModule,
+        MatButtonModule,
+        MatMenuModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        MatGridListModule
+    ],
+    exports: [
         ModalModule
     ],
-  providers: [
-    AppGuard,
-    LoginGuard,
-    AuthenticationService,
-    ElectricityBillsService,
-    ElectricityBillRemoteDataService,
-    LoginRemoteDataService,
-    AppCommonService
-  ],
-  bootstrap: [AppComponent]
+    providers: [
+        AppGuard,
+        LoginGuard,
+        AuthenticationService,
+        ElectricityBillsService,
+        ElectricityBillRemoteDataService,
+        LoginRemoteDataService,
+        AppCommonService
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "/opt/apache-tomcat-8.0.43/webapps/report-backend/record-platform",
+            "outputPath": "/opt/apache-tomcat-8.0.46/webapps/report-backend/record-platform",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

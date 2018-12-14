@@ -13,30 +13,35 @@ import {SharedModule} from "../shared/shared.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/view-electricity-bill.component";
 import {UpdateElectricityBillComponent} from "./utility-bills/electricity/update/update-electricity-bill.component";
-import { ModalModule } from 'ngx-bootstrap/modal';
+import {ModalModule} from "ngx-bootstrap/modal";
+import {CertifyElectricityBillComponent} from "./utility-bills/electricity/certify/certify-electricity-bill.component";
+import {TooltipModule} from "ngx-bootstrap/tooltip";
 
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    BrowserModule,
-    FormsModule,
-    CommonModule,
-    SharedModule,
-    NgbModule,
-    BillingRoutingModule,
-      ModalModule.forRoot()
-  ],
-  declarations: [
-    CreateElectricityBillComponent,
-    CreateInternetBillComponent,
-    CreateWaterBillComponent,
-    CreateTelephoneBillComponent,
-    AddbillComponent,
-    ViewbillComponent,
-    ViewElectricityBillComponent,
-    UpdateElectricityBillComponent
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        BrowserModule,
+        FormsModule,
+        CommonModule,
+        SharedModule,
+        NgbModule,
+        BillingRoutingModule,
+        ModalModule.forRoot(),
+        TooltipModule.forRoot()
+    ],
+    declarations: [
+        CreateElectricityBillComponent,
+        CreateInternetBillComponent,
+        CreateWaterBillComponent,
+        CreateTelephoneBillComponent,
+        AddbillComponent,
+        ViewbillComponent,
+        ViewElectricityBillComponent,
+        UpdateElectricityBillComponent,
+        CertifyElectricityBillComponent
+    ]
 })
-export class BillingModule {}
+export class BillingModule {
+}
