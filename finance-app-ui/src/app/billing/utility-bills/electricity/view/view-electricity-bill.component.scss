@@ -222,7 +222,7 @@ input:checked + .slider:before {
     }
 
     &.header {
-      background-color: #7788aa;
+      background-color: #4717F6;
       font-weight: 600;
       color: white;
     }
@@ -334,3 +334,7 @@ input:checked + .slider:before {
 .tariff_des{ font-size: 9px !important;}
 
 .tariffdropname{color:#660066 }
+
+.tooltip {
+  background: black;
+}

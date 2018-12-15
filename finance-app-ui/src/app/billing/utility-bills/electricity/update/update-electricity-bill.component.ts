@@ -38,11 +38,11 @@ export class UpdateElectricityBillComponent implements OnInit {
 
     ngOnInit() {
         this.disableAddButton = false;
-        }
+    }
 
-        ngAfterViewChecked() {
-    console.log("After view loaded : "+this.electricityBill.id);
-  }
+    ngAfterViewChecked() {
+        console.log("After view loaded : " + this.electricityBill.id);
+    }
 
     onSubmition(billForm) {
 //when form is submitted
@@ -60,47 +60,47 @@ export class UpdateElectricityBillComponent implements OnInit {
             // this.electricityBill.certification = "approved";
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
             this.onUpdateTask.emit(true);
-        }else {
-            if (this.electricityBill.billNo.length == 0){
+        } else {
+            if (this.electricityBill.billNo.length == 0) {
                 this.isAccountNoError = true;
                 this.accountNoError = "Bill No cannot be empty"
-            }else{
+            } else {
                 this.isAccountNoError = false;
             }
-            if (this.electricityBill.period.length == 0){
+            if (this.electricityBill.period.length == 0) {
                 this.isPeriodError = true;
                 this.periodError = "Period cannot be empty"
-            }else{
+            } else {
                 this.isPeriodError = false;
             }
-            if (this.electricityBill.previousReading == null){
+            if (this.electricityBill.previousReading == null) {
                 this.isPreviousReadingError = true;
                 this.previousReadingError = "Previous Reading cannot be empty"
-            }else{
+            } else {
                 this.isPreviousReadingError = false;
             }
-            if (this.electricityBill.currentReading == null){
+            if (this.electricityBill.currentReading == null) {
                 this.isCurrentReadingError = true;
                 this.currentReadingError = "Current Reading cannot be empty"
-            }else{
+            } else {
                 this.isCurrentReadingError = false;
             }
-            if (this.electricityBill.noOfUnits == null){
+            if (this.electricityBill.noOfUnits == null) {
                 this.isNoOfUnitsError = true;
                 this.noOfUnitsError = "No of Units cannot be empty"
-            }else{
+            } else {
                 this.isNoOfUnitsError = false;
             }
-            if (this.electricityBill.amount == null){
+            if (this.electricityBill.amount == null) {
                 this.isAmountError = true;
                 this.amountError = "Amount cannot be empty"
-            }else{
+            } else {
                 this.isAmountError = false;
             }
-            if (this.electricityBill.location.length == 0){
+            if (this.electricityBill.location.length == 0) {
                 this.isLocationError = true;
                 this.locationError = "Bill No cannot be empty"
-            }else{
+            } else {
                 this.isLocationError = false;
             }
             this.disableAddButton = false;
