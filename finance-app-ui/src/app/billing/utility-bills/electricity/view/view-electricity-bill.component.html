@@ -1,74 +1,79 @@
-<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{backdrop: false}"
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+     [config]="{backdrop: false, ignoreBackdropClick: true}"
      aria-labelledby="myLargeModalLabel"
      aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title tbl-header pull-left">{{dialogactionTitle}}</h4>
-        <button type="button" class="close pull-right"
-                (click)="lgModal.hide(); clearModalContent()" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title tbl-header pull-left">{{modalTitle}}</h4>
+                <button type="button" class="close pull-right"
+                        (click)="lgModal.hide(); clearModalContent()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-        <app-update-electricity-bill
-                [electricityBill]="changingBill"
-                (onUpdateTask)="onUpdateBillHandler($event)"
-        (modalClose)="lgModal.hide(); clearModalContent()"></app-update-electricity-bill>
+                <app-update-electricity-bill
+                        *ngIf="showUpdateBill"
+                        [electricityBill]="changingBill"
+                        (onUpdateTask)="onUpdateBillHandler($event)"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-update-electricity-bill>
 
-         </div>
+                <app-certify-electricity-bill
+                        *ngIf="showCertifyBill"
+                        [bill]="changingBill"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-electricity-bill>
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-<ng-template #template>
-  <div class="modal-dialog modal-lg">
-    <div class="modal-header">
-    <h4 class="modal-title pull-left">Update Electricity Bill</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <app-update-electricity-bill
-    [electricityBill]="changingBill"></app-update-electricity-bill>
-  </div>
-  </div>
-</ng-template>
-
-
 
 <div class="animated fadeInUp">
 
-  <div class="table-wrapper">
+    <div class="table-wrapper">
 
-    <div class="tbl-header">
-      Electricity Bill Table
-    </div>
-
-    <div class="table">
-      <div class="tbl-row header">
-        <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
-      </div>
-      <div class="tbl-row" *ngFor="let item of electrictyBillList">
-        <div class="tbl-cell">{{item.datetime}}</div>
-        <div class="tbl-cell">{{item.billNo}}</div>
-        <div class="tbl-cell">{{item.previousReading}}</div>
-        <div class="tbl-cell">{{item.currentReading}}</div>
-        <div class="tbl-cell">{{item.noOfUnits}}</div>
-        <div class="tbl-cell">{{item.amount}}</div>
-        <div class="tbl-cell">{{item.location}}</div>
-        <div class="tbl-cell">{{item.certification}}</div>
-        <div class="tbl-cell">
-        <button mat-flat-button color="warn" (click)="showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();"> Update </button>
+        <div class="tbl-header">
+            Electricity Bill Table
         </div>
-      </div>
-      <div class="no-rec-row tbl-row" *ngIf="electrictyBillList.length == 0">
-        <span class="no-rec">No Records...</span>
-      </div>
 
+        <div class="table">
+            <div class="tbl-row header">
+                <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
+            </div>
+            <div class="tbl-row" *ngFor="let item of electrictyBillList">
+                <div class="tbl-cell">{{item.datetime}}</div>
+                <div class="tbl-cell">{{item.billNo}}</div>
+                <div class="tbl-cell">{{item.previousReading}}</div>
+                <div class="tbl-cell">{{item.currentReading}}</div>
+                <div class="tbl-cell">{{item.noOfUnits}}</div>
+                <div class="tbl-cell">{{item.amount}}</div>
+                <div class="tbl-cell">{{item.location}}</div>
+                <div class="tbl-cell">{{item.certification}}</div>
+                <div class="tbl-cell">
+                    <button class="btn btn-light"
+                            (click)="showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();"
+                            type="button"
+                            tooltip="Update"
+                            placement="top">
+                        <span class="icon material-icons">edit</span>
+                    </button>
+                </div>
+                <div class="tbl-cell">
+                    <button class="btn btn-light"
+                            (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
+                            type="button"
+                            tooltip="Certify"
+                            placement="top">
+                        <span class="icon material-icons">done</span>
+                    </button>
+                </div>
+            </div>
+            <div class="no-rec-row tbl-row" *ngIf="electrictyBillList.length == 0">
+                <span class="no-rec">No Records...</span>
+            </div>
+
+        </div>
     </div>
-  </div>
 
 </div>

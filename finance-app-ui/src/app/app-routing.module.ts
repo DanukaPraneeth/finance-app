@@ -4,7 +4,6 @@ import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {SignupComponent} from "./authentication/signup/signup.component";
-import {CertifyListComponent} from "./certifiy/certify-list/certify-list.component";
 import {ViewbillComponent} from "./billing/maincomponets/viewbill/viewbill.component";
 import {ReportsListComponent} from "./reports/reports-list/reports-list.component"
 
@@ -18,11 +17,6 @@ const routes: Routes = [
     path: "signup",
     component: SignupComponent,
     canActivate: [LoginGuard]
-  },
-  {
-    path: "certify",
-    component: CertifyListComponent,
-    canActivate: [AppGuard]
   },
   {
     path: "reports",
