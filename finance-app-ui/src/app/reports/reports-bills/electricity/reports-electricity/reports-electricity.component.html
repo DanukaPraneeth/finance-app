@@ -1,24 +1,51 @@
 <!--<div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>-->
 <!--<div id="chartdivx" style="width: 100%; height: 370px; margin-left:auto;margin-right:auto;"></div>-->
 
-<mat-grid-list cols="2" rowHeight="1:1">
+<mat-grid-list cols="2" gutterSize="10px" rowHeight="3:2.5">
   <mat-grid-tile>
     <mat-grid-tile-header>
       Monthly consumption of the Year
     </mat-grid-tile-header>
-    <div id="chartdiv" style="width: 90%;height: 80%;"></div>
+    <canvas mdbChart
+            [chartType]="chartTypeBar"
+            [datasets]="chartDatasetsBar"
+            [labels]="chartLabelsBar"
+            [colors]="chartColorsBar"
+            [options]="chartOptionsBar"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
   </mat-grid-tile>
   <mat-grid-tile>
     <mat-grid-tile-header>
       Consumption by Location
     </mat-grid-tile-header>
-    <div id="chartdivx" style="width: 90%;height: 80%;"></div>
-  </mat-grid-tile>
+    <canvas mdbChart
+      [chartType]="chartTypePie"
+      [datasets]="chartDatasetsPie"
+      [labels]="chartLabelsPie"
+      [colors]="chartColorsPie"
+      [options]="chartOptionsPie"
+      [legend]="true"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)">
+  </canvas>
+    </mat-grid-tile>
   <mat-grid-tile>
     <mat-grid-tile-header>
       Comparison with Last year
     </mat-grid-tile-header>
-    <div id="chartdivCompare" style="width: 90%;height: 80%;"></div>
+    <canvas mdbChart
+            [chartType]="chartTypeLine"
+            [datasets]="chartDatasetsLine"
+            [labels]="chartLabelsLine"
+            [colors]="chartColorsLine"
+            [options]="chartOptionsLine"
+            [legend]="true"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
   </mat-grid-tile>
   <mat-grid-tile>4</mat-grid-tile>
 </mat-grid-list>

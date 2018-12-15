@@ -1,219 +1,143 @@
-import {Component, NgZone, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
-import am4themes_animated from "@amcharts/amcharts4/themes/animated";
-
-am4core.useTheme(am4themes_animated);
 
 @Component({
-  selector: 'app-reports-electricity-bill',
-  templateUrl: './reports-electricity.component.html',
-  styleUrls: ['./reports-electricity.component.scss']
+    selector: 'app-reports-electricity-bill',
+    templateUrl: './reports-electricity.component.html',
+    styleUrls: ['./reports-electricity.component.scss']
 })
 export class ReportsElectricityComponent implements OnInit {
 
-  private pieChart: am4charts.PieChart;
-  private barChart: am4charts.XYChart;
-  private comparisonChart: am4charts.XYChart
+    private chartTypeBar: string;
+    private chartDatasetsBar: Array<any>;
+    private chartLabelsBar: Array<any>;
+    private chartColorsBar: Array<any>;
+    private chartOptionsBar: any;
+    private chartTypePie: string;
+    private chartDatasetsPie: Array<any>;
+    private chartLabelsPie: Array<any>;
+    private chartColorsPie: Array<any>;
+    private chartOptionsPie: any;
+    private chartTypeLine: string;
+    private chartDatasetsLine: Array<any>;
+    private chartLabelsLine: Array<any>;
+    private chartColorsLine: Array<any>;
+    private chartOptionsLine: any;
 
-  constructor(private zone: NgZone) {
-  }
+    constructor() {
+    }
 
-  ngOnInit() {
+    ngOnInit() {
 
-    this.createPieChart();
-    this.createBarChart();
-    this.createComaprisonChart();
+        this.createPieChart();
+        this.createBarChart();
+        this.createLineChart();
 
-  }
+    }
 
-  createPieChart(){
-    let chart = am4core.create("chartdivx", am4charts.PieChart);
-    chart.data = [{
-      "bill": "Library",
-      "value": 501.9
-    }, {
-      "bill": "Hall 01",
-      "value": 301.9
-    }, {
-      "bill": "Hall 02",
-      "value": 201.1
-    }, {
-      "bill": "Canteen 01",
-      "value": 165.8
-    }, {
-      "bill": "Auditorium",
-      "value": 139.9
-    }];
+    createPieChart() {
+        this.chartTypePie = 'pie';
 
-    let pieSeries = chart.series.push(new am4charts.PieSeries());
+        this.chartDatasetsPie = [
+            {data: [300, 50, 100, 40, 120], label: 'Electricity consumption by Location'}
+        ];
 
-    pieSeries.dataFields.value = "value";
-    pieSeries.dataFields.category = "bill";
-    this.pieChart = chart;
-  }
+        this.chartLabelsPie = ['Library', 'Hall 01', 'Hall 02', 'Canteen', 'Auditorium',];
 
-  createBarChart(){
-    this.zone.runOutsideAngular(() => {
-      let chart = am4core.create("chartdiv", am4charts.XYChart);
+        this.chartColorsPie = [
+            {
+                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+                borderWidth: 1,
+            }
+        ];
 
-      chart.paddingRight = 20;
+        this.chartOptionsPie = {
+            responsive: true
+        };
 
-      chart.data = [{
-        "country": "Jan",
-        "visits": 2025
-      }, {
-        "country": "Feb",
-        "visits": 1882
-      }, {
-        "country": "Mar",
-        "visits": 1809
-      }, {
-        "country": "Apr",
-        "visits": 1322
-      }, {
-        "country": "May",
-        "visits": 1114
-      }, {
-        "country": "Jun",
-        "visits": 984
-      }, {
-        "country": "Jul",
-        "visits": 711
-      }, {
-        "country": "Aug",
-        "visits": 665
-      }, {
-        "country": "Sep",
-        "visits": 580
-      }, {
-        "country": "Oct",
-        "visits": 443
-      }, {
-        "country": "Nov",
-        "visits": 441
-      }, {
-        "country": "Dec",
-        "visits": 395
-      }];
+    }
 
-      let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "country";
-      categoryAxis.renderer.grid.template.location = 0;
-      categoryAxis.renderer.minGridDistance = 30;
+    createBarChart() {
 
-      let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        this.chartTypeBar = 'bar';
 
-// Create series
-      let series = chart.series.push(new am4charts.ColumnSeries());
-      series.dataFields.valueY = "visits";
-      series.dataFields.categoryX = "country";
-      series.name = "Visits";
-      series.columns.template.tooltipText = "{categoryX}: [bold]{valueY}[/]";
-      series.columns.template.fillOpacity = .8;
+        this.chartDatasetsBar = [
+            {
+                data: [2105, 3259, 1680, 2181, 1956, 1855, 2105, 3259, 1680, 2181, 1956, 1855],
+                label: 'Electricity Consumption by Rupees'
+            }
+        ];
 
-      var columnTemplate = series.columns.template;
-      columnTemplate.strokeWidth = 2;
-      columnTemplate.strokeOpacity = 1;
+        this.chartLabelsBar = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+        this.chartColorsBar = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+            }
+        ];
 
-      this.barChart = chart;
-    });
-  }
+        this.chartOptionsBar = {
+            responsive: true
+        };
 
-  private createComaprisonChart() {
-    let chart = am4core.create("chartdivCompare", am4charts.XYChart);
+    }
 
-// Add data
-chart.data = [{
-  "month": "Jan",
-  "lastyear": 2500,
-  "thisyear": 2100
-},{
-  "month": "Feb",
-  "lastyear": 1800,
-  "thisyear": 2600
-},{
-  "month": "Mar",
-  "lastyear": 1900,
-  "thisyear": 2900
-},{
-  "month": "Apr",
-  "lastyear": 1700,
-  "thisyear": 2700
-},{
-  "month": "May",
-  "lastyear": 2900,
-  "thisyear": 1000
-},{
-  "month": "Jun",
-  "lastyear": 2500,
-  "thisyear": 2100
-},{
-  "month": "Jul",
-  "lastyear": 1800,
-  "thisyear": 2600
-},{
-  "month": "Aug",
-  "lastyear": 1900,
-  "thisyear": 2900
-},{
-  "month": "Sep",
-  "lastyear": 1700,
-  "thisyear": 2700
-},{
-  "month": "Oct",
-  "lastyear": 2900,
-  "thisyear": 1000
-},{
-  "month": "Nov",
-  "lastyear": 1700,
-  "thisyear": 2700
-},{
-  "month": "Dec",
-  "lastyear": 2900,
-  "thisyear": 1000
-}];
+    private createLineChart() {
+        this.chartTypeLine = 'line';
 
-// Create axes
-let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-categoryAxis.dataFields.category = "month";
-categoryAxis.renderer.inversed = true;
-categoryAxis.renderer.grid.template.location = 0;
-categoryAxis.renderer.cellStartLocation = 0.1;
-categoryAxis.renderer.cellEndLocation = 0.9;
+        this.chartDatasetsLine = [
+            {data: [65, 59, 80, 81, 56, 55, 40], label: '2017'},
+            {data: [28, 48, 40, 19, 86, 27, 90], label: '2018'}
+        ];
 
-let  valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-valueAxis.renderer.opposite = true;
+        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 
-// Create series
-function createSeries(field, name) {
-  let series = chart.series.push(new am4charts.ColumnSeries());
-  series.dataFields.valueX = field;
-  series.dataFields.categoryY = "month";
-  series.name = name;
-  series.columns.template.tooltipText = "{name}: [bold]{valueX}[/]";
-  series.columns.template.height = am4core.percent(100);
-  series.sequencedInterpolation = true;
+        this.chartColorsLine = [
+            {
+                backgroundColor: 'rgba(105, 0, 132, .2)',
+                borderColor: 'rgba(200, 99, 132, .7)',
+                borderWidth: 2,
+            },
+            {
+                backgroundColor: 'rgba(0, 137, 132, .2)',
+                borderColor: 'rgba(0, 10, 130, .7)',
+                borderWidth: 2,
+            }
+        ];
 
-  let valueLabel = series.bullets.push(new am4charts.LabelBullet());
-  valueLabel.label.text = "{valueX}";
-  valueLabel.label.horizontalCenter = "left";
-  valueLabel.label.dx = 10;
-  valueLabel.label.hideOversized = false;
-  valueLabel.label.truncate = false;
+        this.chartOptionsLine = {
+            responsive: true
+        };
 
-  let categoryLabel = series.bullets.push(new am4charts.LabelBullet());
-  categoryLabel.label.text = "{name}";
-  categoryLabel.label.horizontalCenter = "right";
-  categoryLabel.label.dx = -10;
-  categoryLabel.label.fill = am4core.color("#fff");
-  categoryLabel.label.hideOversized = false;
-  categoryLabel.label.truncate = false;
-}
+    }
 
-createSeries("lastyear", "2017");
-createSeries("thisyear", "2018");
-  }
 }
