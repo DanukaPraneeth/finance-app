@@ -1,7 +1,6 @@
 package com.backend.core.bills.water;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.electricity.ElectricityBill;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +31,13 @@ public class WaterBillService {
         return waterBillRepo.findBybillNo(billNo);
     }
 
-    public WaterBills getwaterBillByMonth (String month){
-        return waterBillRepo.findByPeriod(month);
+    public List<WaterBills> getwaterBillByYear (String month){
+        return waterBillRepo.findByNameStartsWith(month);
     }
 
-    public void addWaterBill(WaterBills waterBill){
+    public List<WaterBills> getwaterBillByMonth (String month){ return waterBillRepo.findByNameEndsWith(month); }
+
+    public MessageResponse addWaterBill(WaterBills waterBill){
         try{
             waterBillRepo.save(waterBill);
             messageResponse.setSuccess(true);
@@ -44,26 +45,40 @@ public class WaterBillService {
             log.error("Error while entering the bill record ", e);
             messageResponse.setSuccess(false);
         }
+        return messageResponse;
     }
 
-    public void updateWaterBill (int billNo , WaterBills waterBill){
+    public MessageResponse updateWaterBill (String billNo , WaterBills waterBill){
         try{
-            waterBillRepo.save(waterBill);
+            WaterBills selectedBill = waterBillRepo.findBybillNo(billNo);
+            selectedBill.setBillNo(waterBill.getBillNo());
+            selectedBill.setPeriod(waterBill.getPeriod());
+            selectedBill.setPreviousReading(waterBill.getPreviousReading());
+            selectedBill.setCurrentReading(waterBill.getCurrentReading());
+            selectedBill.setNoOfUnits(waterBill.getNoOfUnits());
+            selectedBill.setAmount(waterBill.getAmount());
+            selectedBill.setCertification(waterBill.getCertification());
+            selectedBill.setCertifiedDate(waterBill.getCertifiedDate());
+            selectedBill.setTraineeStaffId(waterBill.getTraineeStaffId());
+            selectedBill.setUserKey(waterBill.getUserKey());
+            waterBillRepo.save(selectedBill);
             messageResponse.setSuccess(true);
         }catch (Exception e){
             log.error("Error while updating the bill record ", e);
             messageResponse.setSuccess(false);
         }
+        return messageResponse;
     }
 
-    public void remveWaterBill (String billNo){
-        WaterBills id = waterBillRepo.findBybillNo(billNo);
+    public MessageResponse removeWaterBill (String billNo){
+        WaterBills selectedBill = waterBillRepo.findBybillNo(billNo);
         try{
-            waterBillRepo.delete(id);
+            waterBillRepo.delete(selectedBill);
             messageResponse.setSuccess(true);
         }catch (Exception e){
             log.error("Error while deleting the bill record ", e);
             messageResponse.setSuccess(false);
         }
+        return messageResponse;
     }
 }
