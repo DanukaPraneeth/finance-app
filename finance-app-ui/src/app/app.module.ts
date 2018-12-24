@@ -36,7 +36,7 @@ import {
     MatToolbarModule
 } from "@angular/material";
 import {HaspermissionDirective} from "./directives/haspermission.directive";
-import {CertifyCountComponent} from "./certify-count/certify-count.component";
+import {CertifyCountComponent} from "./dashboards/certify-count/certify-count.component";
 import {ReportsListComponent} from "./reports/reports-list/reports-list.component";
 import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component";
 
