@@ -1,6 +1,8 @@
 package com.backend.core.bills.water;
 
 import com.backend.core.MessageResponse;
+import com.backend.core.bills.models.billStatusModel;
+import com.backend.core.bills.telephone.TelephoneBills;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +31,10 @@ public class WaterBillService {
 
     public WaterBills getwaterBill (String billNo){
         return waterBillRepo.findBybillNo(billNo);
+    }
+
+    public List<WaterBills> getwaterBillByPeriod (String period){
+        return waterBillRepo.findByPeriod(period);
     }
 
     public List<WaterBills> getwaterBillByYear (String month){
@@ -80,5 +86,15 @@ public class WaterBillService {
             messageResponse.setSuccess(false);
         }
         return messageResponse;
+    }
+
+    public billStatusModel getStatusCount(String status){
+        List<WaterBills> pendingBills = waterBillRepo.findByCertification(status);
+
+        billStatusModel pendingList = new billStatusModel();
+        pendingList.setBillType("water");
+        pendingList.setStatus(status);
+        pendingList.setCount(pendingBills.size());
+        return pendingList;
     }
 }

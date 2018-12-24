@@ -1,6 +1,7 @@
 package com.backend.core.bills.telephone;
 
 import com.backend.core.MessageResponse;
+import com.backend.core.bills.models.billStatusModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +27,16 @@ public class TelephoneBillsService {
         return telephoneBills;
     }
 
-    public TelephoneBills getTelephoneBillsBymonth (String month){
-        return telephoneBillsRepo.findBymonth(month);
+    public List<TelephoneBills> getTelephoneBillsByPeriod (String period){
+        return telephoneBillsRepo.findByPeriod(period);
     }
 
-    public TelephoneBills getTelephoneBills (String billId){
+    public List<TelephoneBills> getTelephoneBillByMonth(String month){ return telephoneBillsRepo.findByNameEndsWith(month);}
 
-        return telephoneBillsRepo.findBybillId(Integer.parseInt(billId));
+    public List<TelephoneBills> getTelephoneBillByYear(String year){return telephoneBillsRepo.findByNameStartsWith(year);}
+
+    public TelephoneBills getTelephoneBills (String billId){
+        return telephoneBillsRepo.findBybillId(billId);
     }
 
     public MessageResponse addTelephoneBills(TelephoneBills TelephoneBills){
@@ -46,9 +50,20 @@ public class TelephoneBillsService {
         return messageResponse;
     }
 
-    public MessageResponse updateTelephoneBills (String billId , TelephoneBills TelephoneBills){
+    public MessageResponse updateTelephoneBills (String billId , TelephoneBills billUpdate){
         try {
-            telephoneBillsRepo.save(TelephoneBills);
+            TelephoneBills existingBill = telephoneBillsRepo.findBybillId(billId);
+            existingBill.setBillId(billUpdate.getBillId() );
+            existingBill.setPeriod(billUpdate.getPeriod());
+            existingBill.setCategory(billUpdate.getCategory());
+            existingBill.setLocation(billUpdate.getLocation());
+            existingBill.setAmount(billUpdate.getAmount());
+            existingBill.setCertification(billUpdate.getCertification());
+            existingBill.setCertifiedDate(billUpdate.getCertifiedDate());
+//            existingBill.setDatetime(billUpdate.getDatetime());
+            existingBill.setTraineeStaffId(billUpdate.getTraineeStaffId());
+            existingBill.setUserKey(billUpdate.getUserKey());
+            telephoneBillsRepo.save(existingBill);
             messageResponse.setSuccess(true);
         }catch (Exception e){
             log.error("Error while updating bill record ", e);
@@ -57,9 +72,9 @@ public class TelephoneBillsService {
         return messageResponse;
     }
 
-    public MessageResponse remveTelephoneBills (String billId){
+    public MessageResponse removeTelephoneBills (String billId){
         try {
-            TelephoneBills id = telephoneBillsRepo.findBybillId(Integer.parseInt(billId));
+            TelephoneBills id = telephoneBillsRepo.findBybillId(billId);
             telephoneBillsRepo.delete(id);
             messageResponse.setSuccess(true);
         }catch (Exception e){
@@ -67,5 +82,15 @@ public class TelephoneBillsService {
             messageResponse.setSuccess(false);
         }
         return messageResponse;
+    }
+
+    public billStatusModel getStatusCount(String status){
+        List<TelephoneBills> pendingBills = telephoneBillsRepo.findByCertification(status);
+
+        billStatusModel pendingList = new billStatusModel();
+        pendingList.setBillType("telephone");
+        pendingList.setStatus(status);
+        pendingList.setCount(pendingBills.size());
+        return pendingList;
     }
 }
