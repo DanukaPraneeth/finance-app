@@ -1,11 +1,11 @@
-@import "../../assets/styles/mixing";
+@import "../../../assets/styles/mixing";
 
 .approval-count{
   height: 170px;
   position: relative;
   overflow: hidden;
-  background-color: #8E44AD;
   border-radius: 8px;
+  cursor: hand;
 
   .count{
     position: absolute;

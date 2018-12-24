@@ -58,3 +58,11 @@ export class Profile {
   password: string;
   userRole: number;
 }
+
+export class Certify {
+    type: string;
+    icon: string;
+    color: string;
+    pendingCertifcations: number;
+    route: string;
+}
