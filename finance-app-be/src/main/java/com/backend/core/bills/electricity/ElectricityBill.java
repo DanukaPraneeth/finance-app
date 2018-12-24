@@ -12,7 +12,7 @@ public class ElectricityBill {
     @Column( name = "billno", nullable = false, unique = true)
     private String billNo;
     private String location;
-    private String month;
+    private String period;
     private int previousReading;
     private int currentReading;
     private int noOfUnits;
@@ -26,14 +26,14 @@ public class ElectricityBill {
 
     public ElectricityBill(){}
 
-    public ElectricityBill(String billNo, String location, String month, int previousReading,
+    public ElectricityBill(String billNo, String location, String period, int previousReading,
                            int currentReading, int noOfUnits, float amount,
                            String certification, String certifiedDate, String datetime,
                            int traineeStaffId, int userKey) {
         super();
         this.billNo = billNo;
         this.location = location;
-        this.month = month;
+        this.period = period;
         this.previousReading = previousReading;
         this.currentReading = currentReading;
         this.noOfUnits = noOfUnits;
@@ -69,9 +69,9 @@ public class ElectricityBill {
         this.location = location;
     }
 
-    public String getMonth() { return month; }
+    public String getPeriod() { return period; }
 
-    public void setMonth(String month) { this.month = month; }
+    public void setPeriod(String period) { this.period = period; }
 
     public int getPreviousReading() {
         return previousReading;
