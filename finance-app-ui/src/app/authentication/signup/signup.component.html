@@ -32,7 +32,7 @@
                            required
                            [(ngModel)]="password"
                            (input)="errorPwd($event.target.value)">
-                    <span class="error" *ngIf="isPasswordError">{{passworError}}</span>
+                    <span class="error" *ngIf="isPasswordError">{{passwordError}}</span>
                     <span class="warning" *ngIf="isPasswordWarning">{{passwordWarning}}</span>
                 </div>
 
@@ -52,8 +52,8 @@
                 <div class="form-group">
                     <label class="control-label">Select Role</label>
                     <select class="form-control" (change)="onRoleSelected($event)" placeholder="Role">
-                        <option *ngFor="let opt of roles" [selected]="selectedRole == opt">
-                            {{opt}}
+                        <option *ngFor="let opt of availableUserRoles" [selected]="selectedRole == opt.roleName">
+                            {{opt.roleName}}
                         </option>
                     </select>
                     <span class="error" *ngIf="isInvalidRole">Select a valid role</span>

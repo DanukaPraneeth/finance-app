@@ -6,9 +6,9 @@
           Pending Bill Certifications
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" *ngFor="let bill of certifications">
             <app-certify-count
-            [bill]="simpleBill"></app-certify-count>
+            [bill]="bill"></app-certify-count>
           </div>
         </div>
       </div>

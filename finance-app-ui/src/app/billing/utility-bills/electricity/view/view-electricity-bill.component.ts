@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class ViewElectricityBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", "", ""];
+    fieldSet: string [] = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification",""];
     electrictyBillList: ElectricityBill [];
     private modalTitle: string;
     private showUpdateBill: boolean;

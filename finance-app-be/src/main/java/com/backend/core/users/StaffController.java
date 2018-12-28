@@ -43,11 +43,12 @@ public class StaffController {
     public List<Staff> getAllStaff(){
         return staffService.getAllStaff();
     }
-//
-//    @RequestMapping("/staff/{id}")
-//    public Staff getStaff(@PathVariable int id){
-//        return staffService.getStaff(id);
-//    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/staff/usernames")
+    public List<String> getStaffUserNames(){
+        return staffService.getStaffUserNames();
+    }
+
 
     @RequestMapping(method = RequestMethod.POST, value = "/staff/signup")
     public MessageResponse addStaff(@RequestBody String staffDetails) throws IOException{
@@ -93,12 +94,17 @@ public class StaffController {
         if(!mapRequsetBody(staffDetails)){
             loginResponse.setLoggedIn(false);
             loginResponse.setUserName(null);
+            loginResponse.setUserRole(0);
             return loginResponse;
         }
         loginResponse.setUserName(staff.getUserName());
         try{
-            passwrd = staffService.getPasswordByUserName(staff.getUserName()).getPassword();
+            Staff thisStaff = staffService.getPasswordByUserName(staff.getUserName());
+            passwrd = thisStaff.getPassword();
             loginResponse.setLoggedIn(passwordEncoder.matches(staff.getPassword(),passwrd));
+            if(loginResponse.isLoggedIn()){
+                loginResponse.setUserRole(thisStaff.getUserRole());
+            }
         }catch (Exception e){
             log.info("Error in retrieving data from db", e);
             loginResponse.setLoggedIn(false);
