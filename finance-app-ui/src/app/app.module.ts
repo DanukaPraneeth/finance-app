@@ -5,6 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { MatButtonModule, MatCardModule, MatGridListModule, MatIconModule, MatMenuModule, MatToolbarModule } from "@angular/material";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ChartsModule } from 'angular-bootstrap-md';
 import { AlertModule, BsDropdownModule, ButtonsModule, ModalModule, TooltipModule } from "ngx-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -70,7 +71,8 @@ import { UserAvatarComponent } from "./user-avatar/user-avatar.component";
         MatToolbarModule,
         MatIconModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        ChartsModule
     ],
     exports: [
         ModalModule
