@@ -4,6 +4,11 @@ export class LoginResponse {
   userRole: string;
 }
 
+export class UserRole {
+    roleId: number;
+    roleName: string;
+}
+
 
 export class SignupResponse {
   success: boolean;
@@ -93,4 +98,10 @@ export class Certify {
     color: string;
     pendingCertifcations: number;
     route: string;
+}
+
+export class PendingCertification {
+    billType: string;
+    status: string;
+    count: number;
 }

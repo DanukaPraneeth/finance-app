@@ -35,6 +35,20 @@ public class StaffService {
         return staff;
     }
 
+    public List<String> getStaffUserNames(){
+
+        List<Staff> staff = new ArrayList<>();
+        List<String> usenames = new ArrayList<>();
+        staffRepo.findAll()
+                .forEach(staff::add);
+
+        for (Staff user: staff) {
+            usenames.add(user.getUserName());
+        }
+
+        return usenames;
+    }
+
     public Staff getStaff (int id){
 
         return staffRepo.findOne(id);

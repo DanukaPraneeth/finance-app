@@ -22,9 +22,9 @@ export class AuthenticationService {
                 const loginInfo = new LoginResponse();
 
                 if (data["loggedIn"] == true) {
-                    loginInfo.loggedIn = true;
+                    loginInfo.loggedIn = data["loggedIn"]
                     loginInfo.userName = data["userName"];
-                    loginInfo.userRole = "1";
+                    loginInfo.userRole = data["userRole"];
                     this.loginUserInfo.next(loginInfo);
                     sessionStorage.setItem("loginUserInfo", JSON.stringify(loginInfo));
                     this._router.navigate(["home"]);
@@ -58,6 +58,30 @@ export class AuthenticationService {
 
     getUser() {
         return true;
+    }
+
+    getAllUserNames(callback: Function) {
+        this._remoteService.getAllUserNames()
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getAllRoles(callback: Function) {
+        this._remoteService.getAllRoles()
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
     }
 
     hasPermissions(patternStr: string): boolean {

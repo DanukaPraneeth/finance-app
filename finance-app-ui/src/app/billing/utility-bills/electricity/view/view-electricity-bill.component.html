@@ -59,7 +59,7 @@
                         <span class="icon material-icons">edit</span>
                     </button>
                 </div>
-                <div class="tbl-cell">
+                <div class="tbl-cell" *appHaspermission="1">
                     <button class="btn btn-light"
                             (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
                             type="button"
