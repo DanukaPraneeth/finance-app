@@ -35,10 +35,11 @@ import {
     MatMenuModule,
     MatToolbarModule
 } from "@angular/material";
-import {HaspermissionDirective} from "./directives/haspermission.directive";
 import {CertifyCountComponent} from "./dashboards/certify-count/certify-count.component";
 import {ReportsListComponent} from "./reports/reports-list/reports-list.component";
 import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component";
+import {DashboardService} from "./services/dashboard.service";
+import {PermissionModule} from "./directives/permission.module";
 
 @NgModule({
     declarations: [
@@ -53,7 +54,6 @@ import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/r
         SignupComponent,
         ChartComponent,
         PiechartComponent,
-        HaspermissionDirective,
         CertifyCountComponent,
         ReportsListComponent,
         ReportsElectricityComponent
@@ -70,6 +70,7 @@ import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/r
         AlertModule.forRoot(),
         SharedModule,
         NgbModule,
+        PermissionModule,
         BillingModule,
         AppRoutingModule,
         MatButtonModule,
@@ -80,7 +81,8 @@ import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/r
         MatGridListModule
     ],
     exports: [
-        ModalModule
+        ModalModule,
+        PermissionModule
     ],
     providers: [
         AppGuard,
@@ -89,6 +91,7 @@ import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/r
         ElectricityBillsService,
         ElectricityBillRemoteDataService,
         LoginRemoteDataService,
+        DashboardService,
         AppCommonService
     ],
     bootstrap: [AppComponent]

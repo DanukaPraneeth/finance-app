@@ -16,6 +16,7 @@ import {UpdateElectricityBillComponent} from "./utility-bills/electricity/update
 import {ModalModule} from "ngx-bootstrap/modal";
 import {CertifyElectricityBillComponent} from "./utility-bills/electricity/certify/certify-electricity-bill.component";
 import {TooltipModule} from "ngx-bootstrap/tooltip";
+import {PermissionModule} from "../directives/permission.module";
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import {TooltipModule} from "ngx-bootstrap/tooltip";
         NgbModule,
         BillingRoutingModule,
         ModalModule.forRoot(),
-        TooltipModule.forRoot()
+        TooltipModule.forRoot(),
+        PermissionModule
     ],
     declarations: [
         CreateElectricityBillComponent,
