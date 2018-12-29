@@ -1,121 +1,118 @@
 <div class="animated fadeInUp">
 
-  <div class="col-sm-12">
-    <!--Form Container - START-->
-    <div class="form-container billInputContainer">
-      <div class="tbl-header">
-        Water Bill
+  <!--<div class="col-sm-12">-->
+  <!--Form Container - START-->
+  <div class="form-container billInputContainer">
+    <div class="form-header">
+      Water Bill
+    </div>
+
+    <form class="form-horizontal" #waterBillForm="ngForm" novalidate
+          (ngSubmit)="onSubmition(waterBillForm)" autocomplete="off">
+      <div class="form-group row" [ngClass]="{'has-danger': isAccountNoError}">
+        <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="text"
+                 autocomplete="off"
+                 placeholder="Bill Account Number"
+                 name="name"
+                 #nameRef="ngModel"
+                 required
+                 [(ngModel)]="waterBill.billNo"
+                 (input)="isAccountNoValid($event.target.value)">
+          <span class="error" *ngIf="isAccountNoError">{{accountNoError}}</span>
+        </div>
       </div>
 
-      <form class="form-horizontal" #billForm="ngForm" novalidate
-            (ngSubmit)="onSubmition(billForm)" autocomplete="off">
-        <div class="form-group row" [ngClass]="{'has-danger': isNameError}">
-          <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Bill Account Number"
-                   name="name"
-                   #nameRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefName"
-                   (input)="isNameUnique($event.target.value)">
-            <span class="error" *ngIf="isNameError">{{nameError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isPeriodError}">
+        <label class="control-label col-sm-2">Period <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="month"
+                 autocomplete="off"
+                 placeholder="Period"
+                 name="period"
+                 #periodRef="ngModel"
+                 required
+                 [(ngModel)]="waterBill.period"
+                 (input)="isPeriodValid($event.target.value)">
+          <span class="error" *ngIf="isPeriodError">{{periodError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Period <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Period"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isPreviousReadingError}">
+        <label class="control-label col-sm-2">Previous Reading <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="number"
+                 autocomplete="off"
+                 placeholder="Previous Reading"
+                 name="prevread"
+                 #prevreadRef="ngModel"
+                 required
+                 [(ngModel)]="waterBill.previousReading"
+                 (input)="isPreviousReadingValid($event.target.value)">
+          <span class="error" *ngIf="isPreviousReadingError">{{previousReadingError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Previous Reading <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Previous Reading"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isCurrentReadingError}">
+        <label class="control-label col-sm-2">Current Reading <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="number"
+                 autocomplete="off"
+                 placeholder="Current Reading"
+                 name="curread"
+                 #curreadRef="ngModel"
+                 required
+                 [(ngModel)]="waterBill.currentReading"
+                 (input)="isCurrentReadingValid($event.target.value)">
+          <span class="error" *ngIf="isCurrentReadingError">{{currentReadingError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Current Reading <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Current Reading"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isNoOfUnitsError}">
+        <label class="control-label col-sm-2">No. of Units <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="number"
+                 autocomplete="off"
+                 placeholder="No. of Units"
+                 name="units"
+                 required
+                 #unitsRef="ngModel"
+                 [(ngModel)]="waterBill.noOfUnits">
+          <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">No. of Units <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="No. of Units"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isAmountError}">
+        <label class="control-label col-sm-2">Amount <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="number"
+                 autocomplete="off"
+                 placeholder="Amount"
+                 name="amount"
+                 #amountRef="ngModel"
+                 required
+                 [(ngModel)]="waterBill.amount"
+                 (input)="isAmountValid($event.target.value)">
+          <span class="error" *ngIf="isAmountError">{{amountError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Amount <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Amount"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-2 btnContainer">
+          <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
+          &nbsp;
+          <a type="button" class="btn btn-warning" (click)="clearForm()">Clear</a>
         </div>
+      </div>
 
-        <div class="form-group">
-          <div class="col-sm-4 col-sm-offset-2 btnContainer">
-            <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
-            &nbsp;
-            <a class="btn btn-warning" (click)="reloadPage()">Clear</a>
-          </div>
-        </div>
+    </form>
 
-      </form>
-
-    </div>
   </div>
-  <!--<button (click)="showit()">show</button>-->
 </div>

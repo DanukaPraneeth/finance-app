@@ -35,6 +35,34 @@ export class ElectricityBill {
     userKey: number;
 }
 
+export class WaterBill {
+    id: number;
+    period: string;
+    previousReading: number;
+    currentReading: number;
+    noOfUnits: number;
+    amount: number;
+    billNo: string;
+    certification: string;
+    certifiedDate: string;
+    datetime: string;
+    traineeStaffId: number;
+    userKey: number;
+}
+
+export class TelephoneBill {
+    id: number;
+    period: string;
+    category: string;
+    amount: number;
+    billNo: string;
+    certification: string;
+    certifiedDate: string;
+    datetime: string;
+    traineeStaffId: number;
+    userKey: number;
+}
+
 export class CreateBillResponse {
     success: boolean;
 }
