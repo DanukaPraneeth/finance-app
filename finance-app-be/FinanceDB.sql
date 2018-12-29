@@ -54,8 +54,8 @@ CREATE TABLE salary_payment (
 
 CREATE TABLE water_bills (
     id int NOT NULL AUTO_INCREMENT,
-    billno varchar(255),
-    period varchar(255),
+    billno varchar(255) NOT NULL,
+    period varchar(255) NOT NULL,
     previous_reading int NOT NULL,
     current_reading int NOT NULL,
 	  no_of_units int NOT NULL,
@@ -66,6 +66,7 @@ CREATE TABLE water_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (id),
+	  UNIQUE (billno),
     FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
 	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
@@ -90,7 +91,7 @@ CREATE TABLE electricity_bills (
     id int NOT NULL AUTO_INCREMENT,
     billno varchar(20) NOT NULL,
     location varchar(20),
-    month varchar(15),
+    period varchar(15),
     previous_reading int NOT NULL,
     current_reading int NOT NULL,
 	  no_of_units int NOT NULL,
@@ -101,6 +102,7 @@ CREATE TABLE electricity_bills (
 	  trainee_staff_id int,
 	  user_key int,
 	  PRIMARY KEY (id),
+	  UNIQUE (billno),
     FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
 	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
@@ -136,8 +138,9 @@ CREATE TABLE mahapola (
 );
 
 CREATE TABLE telephone_bills (
-    bill_id int NOT NULL AUTO_INCREMENT,
-    month varchar(15),
+    id int NOT NULL AUTO_INCREMENT,
+    billno varchar(15) NOT NULL,
+    period varchar(15),
     category varchar(20),
 	  amount float(8,2) NOT NULL,
 	  location varchar(20),
@@ -146,9 +149,9 @@ CREATE TABLE telephone_bills (
 	  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	  trainee_staff_id int,
 	  user_key int,
-	  PRIMARY KEY (bill_id),
+	  PRIMARY KEY (id),
+	  UNIQUE (billno),
     FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
-	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );
 
 CREATE TABLE travel_claims (

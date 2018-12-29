@@ -14,7 +14,6 @@ import { LoginComponent } from "./authentication/login/login.component";
 import { SignupComponent } from "./authentication/signup/signup.component";
 import { BillingModule } from "./billing/billing.module";
 import { BreadcrumbsComponent } from "./breadcrumbs/breadcrumbs.component";
-import { CertifyCountComponent } from "./certify-count/certify-count.component";
 import { ChartComponent } from "./chart/chart.component";
 import { HaspermissionDirective } from "./directives/haspermission.directive";
 import { HamburgerMenuComponent } from "./hamburger-menu/hamburger-menu.component";
@@ -31,8 +30,7 @@ import { AuthenticationService } from "./services/authentication.service";
 import { ElectricityBillsService } from "./services/electricity-bill.service";
 import { SharedModule } from "./shared/shared.module";
 import { UserAvatarComponent } from "./user-avatar/user-avatar.component";
-
-
+import {CertifyCountComponent} from "./dashboards/certify-count/certify-count.component";
 
 @NgModule({
     declarations: [

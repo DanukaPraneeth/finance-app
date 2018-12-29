@@ -7,9 +7,11 @@ import javax.persistence.*;
 public class TelephoneBills {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int billId;
-    private String month;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private int id;
+    @Column(name = "billno", nullable = false, unique = true)
+    private String billId;
+    private String period;
     private String category;
     private String location;
     private float amount;
@@ -20,11 +22,14 @@ public class TelephoneBills {
     private int traineeStaffId;
     private int userKey;
 
-    public TelephoneBills(String month, String category, String location,
+    public TelephoneBills(){}
+
+    public TelephoneBills(String billId, String period, String category, String location,
                           float amount, String certification, String certifiedDate,
                           String datetime, int traineeStaffId, int userKey) {
         super();
-        this.month = month;
+        this.billId = billId;
+        this.period = period;
         this.category = category;
         this.location = location;
         this.amount = amount;
@@ -35,22 +40,20 @@ public class TelephoneBills {
         this.userKey = userKey;
     }
 
-    public TelephoneBills(){}
-
-    public int getBillId() {
+    public String getBillId() {
         return billId;
     }
 
-    public void setBillId(int billId) {
+    public void setBillId(String billId) {
         this.billId = billId;
     }
 
-    public String getMonth() {
-        return month;
+    public String getPeriod() {
+        return period;
     }
 
-    public void setMonth(String month) {
-        this.month = month;
+    public void setPeriod(String month) {
+        this.period = month;
     }
 
     public String getCategory() {
