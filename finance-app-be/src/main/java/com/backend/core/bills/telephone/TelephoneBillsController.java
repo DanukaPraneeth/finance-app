@@ -1,6 +1,9 @@
 package com.backend.core.bills.telephone;
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.models.billStatusModel;
+import com.backend.core.common.models.billStatusModel;
+import com.backend.core.common.models.locationExpenseModel;
+import com.backend.core.common.models.monthExpenseModel;
+import com.backend.core.common.models.yearExpenseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,5 +59,25 @@ public class TelephoneBillsController {
     @RequestMapping("/bills/telephonebills/status/{status}")
     public billStatusModel getStatusCount(@PathVariable String status){
         return telephoneBillsService.getStatusCount(status);
+    }
+
+    @RequestMapping("/bills/telephonebills/summary/year/{year}")
+    public List<yearExpenseModel> getExpensesByYear(@PathVariable String year){
+        return telephoneBillsService.getExpensesByYear(year);
+    }
+
+    @RequestMapping("/bills/telephonebills/summary/month/{month}")
+    public List<monthExpenseModel> getExpensesByMonth(@PathVariable String month){
+        return telephoneBillsService.getExpensesByMonth(month);
+    }
+
+    @RequestMapping("/bills/telephonebills/summary/location/year/{year}")
+    public List<locationExpenseModel> getExpensesByLocationByYear(@PathVariable String year){
+        return telephoneBillsService.getExpensesByLocationByYear(year);
+    }
+
+    @RequestMapping("/bills/telephonebills/summary/location/month/{month}")
+    public List<locationExpenseModel> getExpensesByLocationByMonth(@PathVariable String month){
+        return telephoneBillsService.getExpensesByLocationByMonth(month);
     }
 }

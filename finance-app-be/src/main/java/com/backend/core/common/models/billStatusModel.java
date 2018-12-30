@@ -1,4 +1,4 @@
-package com.backend.core.bills.models;
+package com.backend.core.common.models;
 
 public class billStatusModel {
 

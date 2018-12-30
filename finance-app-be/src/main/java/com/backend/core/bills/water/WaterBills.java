@@ -12,11 +12,12 @@ public class WaterBills {
     @Column(name = "billno", nullable = false, unique = true)
     private String billNo;
     private String period;
+    private String location;
     private int previousReading;
     private int currentReading;
     private int noOfUnits;
     private float amount;
-    private String certification;
+    private String certification = "pending";
     private String certifiedDate;
     @Column (name = "date")
     private String datetime;
@@ -28,12 +29,13 @@ public class WaterBills {
 
     }
 
-    public WaterBills(String billNo, String period, int previousReading, int currentReading, int noOfUnits,
-                      float amount, String certification, String certifiedDate,
+    public WaterBills(String billNo, String period, String location, int previousReading, int currentReading,
+                      int noOfUnits, float amount, String certification, String certifiedDate,
                       String datetime, int traineeStaffId, int userKey) {
         super();
         this.billNo=billNo;
         this.period = period;
+        this.location = location;
         this.previousReading = previousReading;
         this.currentReading = currentReading;
         this.noOfUnits = noOfUnits;
@@ -56,6 +58,10 @@ public class WaterBills {
     public void setPeriod(String period) {
         this.period = period;
     }
+
+    public String getLocation() { return location; }
+
+    public void setLocation(String location) { this.location = location; }
 
     public int getPreviousReading() {
         return previousReading;

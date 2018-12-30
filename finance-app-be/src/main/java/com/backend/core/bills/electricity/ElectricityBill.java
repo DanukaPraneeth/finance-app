@@ -17,8 +17,8 @@ public class ElectricityBill {
     private int currentReading;
     private int noOfUnits;
     private float amount;
-    private String certification;
-    private String certifiedDate;
+    private String certification = "pending";
+    private String certifiedDate ;
     @Column (name = "date")
     private String datetime;
     private int traineeStaffId;

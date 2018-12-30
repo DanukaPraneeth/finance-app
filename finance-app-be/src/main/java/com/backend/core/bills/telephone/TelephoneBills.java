@@ -15,7 +15,7 @@ public class TelephoneBills {
     private String category;
     private String location;
     private float amount;
-    private String certification;
+    private String certification = "pending";
     private String certifiedDate;
     @Column (name = "date")
     private String datetime;
