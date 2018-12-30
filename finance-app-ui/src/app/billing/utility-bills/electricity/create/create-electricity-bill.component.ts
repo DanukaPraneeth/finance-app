@@ -41,7 +41,7 @@ export class CreateElectricityBillComponent implements OnInit {
         //this.electricityBill.noOfUnits = this.getNoOfUnits();
     }
 
-    onSubmition(billForm) {
+    onSubmition(electricityBillForm) {
 //when form is submitted
         if (this.electricityBill.billNo != null && this.electricityBill.billNo != "" &&
             this.electricityBill.location != null && this.electricityBill.location != "" &&
@@ -51,10 +51,7 @@ export class CreateElectricityBillComponent implements OnInit {
             this.electricityBill.amount != null &&
             this.electricityBill.location != null && this.electricityBill.location != "") {
 
-            this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
-            this.electricityBill.userKey = 1;
             this.electricityBill.traineeStaffId = 1;
-            this.electricityBill.certification = "approved";
             this.electricityBillsService.insertElectricityBill(this.electricityBill);
         }else {
             if (this.electricityBill.billNo.length == 0){

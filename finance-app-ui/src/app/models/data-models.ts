@@ -4,6 +4,11 @@ export class LoginResponse {
   userRole: string;
 }
 
+export class UserRole {
+    roleId: number;
+    roleName: string;
+}
+
 
 export class SignupResponse {
   success: boolean;
@@ -27,6 +32,36 @@ export class ElectricityBill {
     noOfUnits: number;
     amount: number;
     billNo: string;
+    location: string;
+    certification: string;
+    certifiedDate: string;
+    datetime: string;
+    traineeStaffId: number;
+    userKey: number;
+}
+
+export class WaterBill {
+    id: number;
+    period: string;
+    previousReading: number;
+    currentReading: number;
+    noOfUnits: number;
+    amount: number;
+    location: string;
+    billNo: string;
+    certification: string;
+    certifiedDate: string;
+    datetime: string;
+    traineeStaffId: number;
+    userKey: number;
+}
+
+export class TelephoneBill {
+    id: number;
+    period: string;
+    category: string;
+    amount: number;
+    billId: string;
     location: string;
     certification: string;
     certifiedDate: string;
@@ -65,4 +100,10 @@ export class Certify {
     color: string;
     pendingCertifcations: number;
     route: string;
+}
+
+export class PendingCertification {
+    billType: string;
+    status: string;
+    count: number;
 }

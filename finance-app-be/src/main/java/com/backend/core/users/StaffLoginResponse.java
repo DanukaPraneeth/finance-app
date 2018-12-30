@@ -3,6 +3,15 @@ package com.backend.core.users;
 public class StaffLoginResponse {
     private boolean isLoggedIn;
     private String userName;
+    private int userRole;
+
+    public int getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(int userRole) {
+        this.userRole = userRole;
+    }
 
     public boolean isLoggedIn() {
         return isLoggedIn;

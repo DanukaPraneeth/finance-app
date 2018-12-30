@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from "../../services/authentication.service";
 import {Router} from "@angular/router";
+import {UserRole} from "../../models/data-models";
+import {forEach} from "@angular/router/src/utils/collection";
+import {thLocale} from "ngx-bootstrap";
 
 @Component({
     selector: 'app-signup',
@@ -21,12 +24,15 @@ export class SignupComponent implements OnInit {
     isUsernameError: boolean;
     isPasswordWarning: boolean;
 
-    passworError: string;
+    passwordError: string;
     passwordWarning: string
     repeatPasswordError: string;
     usernameError: string;
 
-    roles: string [] = ["", "admin", "clerk", "other"];
+    availableUserNames: string[];
+    availableUserRoles: UserRole[]
+
+    // roles: string [] = ["", "admin", "clerk", "other"];
 
     constructor(private _authenticationService: AuthenticationService, private _router: Router) {
     }
@@ -37,6 +43,8 @@ export class SignupComponent implements OnInit {
         this.userName = "";
         this.password = "";
         this.repeatpassword = "";
+        this.getAllUserNames();
+        this.getAllRoles();
     }
 
     onSignUpClick(signupForm) {
@@ -47,16 +55,16 @@ export class SignupComponent implements OnInit {
         }
     }
 
-    checkBeforeSignup(){
+    checkBeforeSignup() {
         this.errorPwd(this.password);
         this.matchPwd(this.repeatpassword);
         this.uniqueUsername(this.userName);
 
-        if(!this.isRepeatPasswordError && !this.isPasswordError && !this.isUsernameError && !this.isInvalidRole){
+        if (!this.isRepeatPasswordError && !this.isPasswordError && !this.isUsernameError && !this.isInvalidRole) {
             return true;
-        }else {
-            if(this.selectedRole == ""){
-               this.isInvalidRole = true;
+        } else {
+            if (this.selectedRole == "") {
+                this.isInvalidRole = true;
             }
             return false;
         }
@@ -68,8 +76,8 @@ export class SignupComponent implements OnInit {
 
         if (pwd.length == 0) {
             this.isPasswordError = true;
-            this.passworError = "Password cannot be empty";
-        } else if ( (0 < pwd.length) && (pwd.length < 8)) {
+            this.passwordError = "Password cannot be empty";
+        } else if ((0 < pwd.length) && (pwd.length < 8)) {
             this.passwordWarning = "Not a strong password";
             this.isPasswordWarning = true;
         } else {
@@ -88,12 +96,15 @@ export class SignupComponent implements OnInit {
 
 
     uniqueUsername(username) {
-        if (username.length == 0) {
+        if (username.length === 0) {
             this.isUsernameError = true;
             this.usernameError = "User name can not be empty";
         } else if (username.length > 45) {
             this.isUsernameError = true;
             this.usernameError = "Ony 45 Characters Allowed";
+        } else if (!this.isUniqueUsername(username)) {
+            this.isUsernameError = true;
+            this.usernameError = "User name already exists, please use another name";
         } else {
             this.isUsernameError = false;
             this.usernameError = '';
@@ -104,28 +115,67 @@ export class SignupComponent implements OnInit {
         this.selectedRole = event.target.value;
         this.isInvalidRole = false;
 
-        switch (this.selectedRole) {
-            case "admin": {
-                this.roleValue = 1;
-                break;
-            }
-            case "clerk": {
-                this.roleValue = 1;
-                break;
-            }
-            case "other": {
-                this.roleValue = 1;
-                break;
-            }
-            default: {
-                this.isInvalidRole = true;
-                break;
+        for (const role of this.availableUserRoles) {
+            if (role.roleName === this.selectedRole) {
+                this.roleValue = role.roleId;
+                return;
             }
         }
+
+        this.isInvalidRole = true;
+
+        // switch (this.selectedRole) {
+        //     case "admin": {
+        //         this.roleValue = 1;
+        //         break;
+        //     }
+        //     case "clerk": {
+        //         this.roleValue = 2;
+        //         break;
+        //     }
+        //     case "other": {
+        //         this.roleValue = 3;
+        //         break;
+        //     }
+        //     default: {
+        //         this.isInvalidRole = true;
+        //         break;
+        //     }
+        // }
     }
 
     loginClick() {
         this._router.navigate(["login"]);
+    }
+
+    private getAllUserNames() {
+        this._authenticationService.getAllUserNames((response) => {
+            if (response.length != 0) {
+                this.availableUserNames = response;
+            } else {
+                this.availableUserNames = [];
+            }
+        });
+    }
+
+    private getAllRoles() {
+        this._authenticationService.getAllRoles((response) => {
+            if (response.length != 0) {
+                this.availableUserRoles = response;
+                console.log(JSON.stringify(this.availableUserRoles));
+            } else {
+                this.availableUserRoles = [];
+            }
+        });
+    }
+
+    private isUniqueUsername(username: string): boolean {
+        for (const item of this.availableUserNames) {
+            if (username === item) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
