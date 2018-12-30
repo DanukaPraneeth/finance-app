@@ -17,6 +17,10 @@ import {ModalModule} from "ngx-bootstrap/modal";
 import {CertifyElectricityBillComponent} from "./utility-bills/electricity/certify/certify-electricity-bill.component";
 import {TooltipModule} from "ngx-bootstrap/tooltip";
 import {PermissionModule} from "../directives/permission.module";
+import {ViewWaterBillComponent} from "./utility-bills/water/view/view-water-bill.component";
+import {UpdateWaterBillComponent} from "./utility-bills/water/update/update-water-bill.component";
+import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-telephone-bill.component";
+import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/update-telephone-bill.component";
 
 
 @NgModule({
@@ -42,7 +46,11 @@ import {PermissionModule} from "../directives/permission.module";
         ViewbillComponent,
         ViewElectricityBillComponent,
         UpdateElectricityBillComponent,
-        CertifyElectricityBillComponent
+        CertifyElectricityBillComponent,
+        ViewWaterBillComponent,
+        UpdateWaterBillComponent,
+        ViewTelephoneBillComponent,
+        UpdateTelephoneBillComponent
     ]
 })
 export class BillingModule {

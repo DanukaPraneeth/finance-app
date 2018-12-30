@@ -3,9 +3,9 @@
   <!--<div class="col-sm-12">-->
   <!--Form Container - START-->
   <div class="form-container billInputContainer">
-    <div class="form-header">
-      Telephone Bill
-    </div>
+    <!--<div class="form-header">-->
+      <!--Telephone Bill-->
+    <!--</div>-->
 
     <form class="form-horizontal" #telephoneBillForm="ngForm" novalidate
           (ngSubmit)="onSubmition(telephoneBillForm)" autocomplete="off">
@@ -19,7 +19,7 @@
                  name="name"
                  #nameRef="ngModel"
                  required
-                 [(ngModel)]="telephoneBill.billNo"
+                 [(ngModel)]="telephoneBill.billId"
                  (input)="isAccountNoValid($event.target.value)">
           <span class="error" *ngIf="isAccountNoError">{{accountNoError}}</span>
         </div>

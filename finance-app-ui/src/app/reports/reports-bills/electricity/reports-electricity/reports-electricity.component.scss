@@ -2,3 +2,193 @@ mat-grid-tile {
   border: 1px;
   height: 500px;
   }
+
+:host {
+  display: block;
+  margin-top: 20px;
+}
+
+.content-div {
+  background-color: #ffffff;
+}
+
+.form-header {
+  color: #E19131;
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 5px 0px 30px;
+  text-transform: uppercase;
+}
+
+.table-wrapper {
+  margin-top: 20px;
+}
+
+.row{
+  margin-bottom:15px;
+}
+
+.modal {
+  top: 20%;
+  outline: none;
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.modal-content{
+  width: 1000px;
+}
+
+.modal-backdrop {
+  display: none
+}
+
+.tbl-header {
+  margin-top: 0px;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 5px 0px 30px;
+  color: #E19131;
+  text-transform: uppercase;
+}
+
+.has-danger .form-control{
+  border-color: #d9534f;
+  color: #d9534f;
+}
+
+.btn{ border-radius: 0px !important;}
+
+.control-label span { color: #dd0d0d;}
+
+.btnContainer{
+  margin-top:5%;
+  padding-left: 150px;
+}
+
+.control-label {
+  text-align: right;
+  font-weight: bold;
+  padding-top: 9px;
+}
+
+.table {
+  display: table;
+  width: 100%;
+
+  @media only screen and (max-width: 768px) {
+    // display: block;
+  }
+
+  .tbl-row {
+    display: table-row;
+    background-color: #f6f6f6;
+    height: 0px;
+
+    &:nth-of-type(odd) {
+      background-color: white;
+    }
+
+    &.header {
+      background-color: #4717F6;
+      font-weight: 600;
+      color: white;
+    }
+
+    @media only screen and (max-width: 768px) {
+      // display: block;
+    }
+
+    .tbl-cell {
+      display: table-cell;
+      padding: 10px 10px;
+      @media only screen and (max-width: 768px) {
+        //  display: block;
+      }
+    }
+
+    &.modified {
+      background-color: #ffffcc;
+    }
+
+    &.open {
+      height: 158px;
+      background-color: #f4f2c9;
+
+      .action {
+        border-color: black;
+        color : black;
+      }
+
+      &.A,&.R{
+        height: 243px;
+      }
+    }
+
+    .more-con{
+      padding:10px 0px 10px 0px;
+      background-color: #7a8ca5;
+      position: absolute;
+      left: 10px;
+      right: 11px;
+      height: 105px;
+      margin-top: 53px;
+      border:solid 1px #d0d0d0;
+
+      &.A,&.R{
+        height: 190px;
+      }
+
+      .more-row{
+        margin-bottom: 2px;
+      }
+
+      .field-name{
+        height: 40px;
+        background-color: #9a9a9a;
+        line-height: 40px;
+        text-align: right;
+        font-weight: 600;
+      }
+
+      .field-value{
+        height: 40px;
+        background-color: white;
+        line-height: 40px;
+      }
+
+      select,input{
+        margin-top: 2px;
+      }
+
+      .btn{
+        margin-top: 20px;
+        padding-top: 5px!important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+  }
+
+  .no-rec-row {
+    position: relative;
+
+    .no-rec {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      width: 100px;
+      padding-top: 15px;
+      color: #9a9a9a;
+    }
+  }
+
+  .fromcolor{
+    color: #2f9e44;
+  }
+
+  .tocolor{
+    color: #dd0d0d;
+  }
+}

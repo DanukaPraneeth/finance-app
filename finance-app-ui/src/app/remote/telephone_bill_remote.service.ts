@@ -13,8 +13,11 @@ export class TelephoneBillRemoteDataService {
     telephoneBillsObservable: Observable<TelephoneBill[]>;
     private apiEndpoints: Object = {
         telephonebills: this.apiContext + "/bills/telephonebills",
-        insertbill: this.apiContext + "/bills/telephonebill",
-        updatebill: this.apiContext + "/bills/telephonebill"
+        insertbill: this.apiContext + "/bills/telephonebills",
+        updatebill: this.apiContext + "/bills/telephonebills",
+        telephoneBillsByMonth: this.apiContext + "/bills/telephonebills/filtermonth/",
+        telephoneBillsByYear: this.apiContext + "/bills/telephonebills/filteryear/",
+        telephoneBillsByPeriod: this.apiContext + "/bills/telephonebills/filterperiod/"
     };
 
     private httpOptions = {
@@ -40,7 +43,28 @@ export class TelephoneBillRemoteDataService {
 
     updateTelephoneBill(telephoneBill: TelephoneBill) {
         console.log("Id:"+telephoneBill.id);
-        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + telephoneBill.billNo,
+        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + telephoneBill.billId,
             telephoneBill, this.httpOptions);
+    }
+
+    getTelephoneBillsByMonth(month: string) {
+        this.telephoneBillsObservable = this.http.get<TelephoneBill[]>(
+            this.apiEndpoints['telephoneBillsByMonth'].concat(month), this.httpOptions
+        )
+        return this.telephoneBillsObservable;
+    }
+
+    getTelephoneBillsByYear(year: string) {
+        this.telephoneBillsObservable = this.http.get<TelephoneBill[]>(
+            this.apiEndpoints['telephoneBillsByYear'].concat(year), this.httpOptions
+        )
+        return this.telephoneBillsObservable;
+    }
+
+    getTelephoneBillsByPeriod(year: string, month: string) {
+        this.telephoneBillsObservable = this.http.get<TelephoneBill[]>(
+            this.apiEndpoints['telephoneBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions
+        )
+        return this.telephoneBillsObservable;
     }
 }

@@ -47,6 +47,7 @@ export class WaterBill {
     currentReading: number;
     noOfUnits: number;
     amount: number;
+    location: string;
     billNo: string;
     certification: string;
     certifiedDate: string;
@@ -60,7 +61,8 @@ export class TelephoneBill {
     period: string;
     category: string;
     amount: number;
-    billNo: string;
+    billId: string;
+    location: string;
     certification: string;
     certifiedDate: string;
     datetime: string;

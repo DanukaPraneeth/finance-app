@@ -54,10 +54,6 @@ export class UpdateElectricityBillComponent implements OnInit {
             this.electricityBill.amount != null &&
             this.electricityBill.location != null && this.electricityBill.location != "") {
 
-            // this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
-            // this.electricityBill.userKey = 1;
-            // this.electricityBill.traineeStaffId = 1;
-            // this.electricityBill.certification = "approved";
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
             this.onUpdateTask.emit(true);
         } else {

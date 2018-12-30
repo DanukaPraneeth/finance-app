@@ -23,6 +23,7 @@ export class ReportsElectricityComponent implements OnInit {
     private chartLabelsLine: Array<any>;
     private chartColorsLine: Array<any>;
     private chartOptionsLine: any;
+    typeString: string [] = ["", "Year", "Month", "Location"];
 
     constructor() {
     }
@@ -137,6 +138,10 @@ export class ReportsElectricityComponent implements OnInit {
         this.chartOptionsLine = {
             responsive: true
         };
+
+    }
+
+    public onPropertySelected(event) {
 
     }
 

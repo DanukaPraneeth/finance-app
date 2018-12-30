@@ -14,7 +14,10 @@ export class WaterBillRemoteDataService {
     private apiEndpoints: Object = {
         waterbills: this.apiContext + "/bills/waterbill",
         insertbill: this.apiContext + "/bills/waterbill",
-        updatebill: this.apiContext + "/bills/waterbill"
+        updatebill: this.apiContext + "/bills/waterbill",
+        waterBillsByMonth: this.apiContext + "/bills/waterbill/filtermonth/",
+        waterBillsByYear: this.apiContext + "/bills/waterbill/filteryear/",
+        waterBillsByPeriod: this.apiContext + "/bills/waterbill/filterperiod/"
     };
 
     private httpOptions = {
@@ -42,5 +45,26 @@ export class WaterBillRemoteDataService {
         console.log("Id:"+waterBill.id);
         return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + waterBill.billNo,
             waterBill, this.httpOptions);
+    }
+
+    getWaterBillsByMonth(month: string) {
+        this.waterBillsObservable = this.http.get<WaterBill[]>(
+            this.apiEndpoints['waterBillsByMonth'].concat(month), this.httpOptions
+        )
+        return this.waterBillsObservable;
+    }
+
+    getWaterBillsByYear(year: string) {
+        this.waterBillsObservable = this.http.get<WaterBill[]>(
+            this.apiEndpoints['waterBillsByYear'].concat(year), this.httpOptions
+        )
+        return this.waterBillsObservable;
+    }
+
+    getWaterBillsByPeriod(year: string, month: string) {
+        this.waterBillsObservable = this.http.get<WaterBill[]>(
+            this.apiEndpoints['waterBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions
+        )
+        return this.waterBillsObservable;
     }
 }

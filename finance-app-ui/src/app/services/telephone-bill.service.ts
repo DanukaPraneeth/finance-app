@@ -47,4 +47,40 @@ export class TelephoneBillsService {
                 this._router.navigate(["viewBill"]);
             });
     }
+
+    getTelephoneBillsByMonth(month: string, callback: Function) {
+        this._remoteService.getTelephoneBillsByMonth(month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getTelephoneBillsByYear(year: string, callback: Function) {
+        this._remoteService.getTelephoneBillsByYear(year)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getTelephoneBillsByPeriod(year: string, month: string, callback: Function) {
+        this._remoteService.getTelephoneBillsByPeriod(year,month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
 }

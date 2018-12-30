@@ -3,9 +3,9 @@
   <!--<div class="col-sm-12">-->
   <!--Form Container - START-->
   <div class="form-container billInputContainer">
-    <div class="form-header">
-      Water Bill
-    </div>
+    <!--<div class="form-header">-->
+      <!--Water Bill-->
+    <!--</div>-->
 
     <form class="form-horizontal" #waterBillForm="ngForm" novalidate
           (ngSubmit)="onSubmition(waterBillForm)" autocomplete="off">
@@ -83,7 +83,8 @@
                  name="units"
                  required
                  #unitsRef="ngModel"
-                 [(ngModel)]="waterBill.noOfUnits">
+                 [(ngModel)]="waterBill.noOfUnits"
+                 (input)="isNoOfUnitsValid($event.target.value)">
           <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
         </div>
       </div>

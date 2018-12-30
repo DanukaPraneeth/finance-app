@@ -47,4 +47,40 @@ export class WaterBillsService {
                 this._router.navigate(["viewBill"]);
             });
     }
+
+    getWaterBillsByMonth(month: string, callback: Function) {
+        this._remoteService.getWaterBillsByMonth(month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getWaterBillsByYear(year: string, callback: Function) {
+        this._remoteService.getWaterBillsByYear(year)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getWaterBillsByPeriod(year: string, month: string, callback: Function) {
+        this._remoteService.getWaterBillsByPeriod(year,month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
 }

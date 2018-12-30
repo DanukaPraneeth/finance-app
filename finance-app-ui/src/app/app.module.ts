@@ -40,6 +40,11 @@ import {ReportsListComponent} from "./reports/reports-list/reports-list.componen
 import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component";
 import {DashboardService} from "./services/dashboard.service";
 import {PermissionModule} from "./directives/permission.module";
+import {ChartsModule} from "angular-bootstrap-md";
+import {WaterBillsService} from "./services/water-bill.service";
+import {WaterBillRemoteDataService} from "./remote/water_bill_remote.service";
+import {TelephoneBillsService} from "./services/telephone-bill.service";
+import {TelephoneBillRemoteDataService} from "./remote/telephone_bill_remote.service";
 
 @NgModule({
     declarations: [
@@ -91,6 +96,10 @@ import {PermissionModule} from "./directives/permission.module";
         AuthenticationService,
         ElectricityBillsService,
         ElectricityBillRemoteDataService,
+        WaterBillsService,
+        WaterBillRemoteDataService,
+        TelephoneBillsService,
+        TelephoneBillRemoteDataService,
         LoginRemoteDataService,
         DashboardService,
         AppCommonService
