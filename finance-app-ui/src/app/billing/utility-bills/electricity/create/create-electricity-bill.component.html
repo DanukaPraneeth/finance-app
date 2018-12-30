@@ -3,12 +3,12 @@
   <!--<div class="col-sm-12">-->
     <!--Form Container - START-->
     <div class="form-container billInputContainer">
-      <div class="form-header">
-        Electricity Bill
-      </div>
+      <!--<div class="form-header">-->
+        <!--Electricity Bill-->
+      <!--</div>-->
 
       <form class="form-horizontal" #electricityBillForm="ngForm" novalidate
-            (ngSubmit)="onSubmition(billForm)" autocomplete="off">
+            (ngSubmit)="onSubmition(electricityBillForm)" autocomplete="off">
         <div class="form-group row" [ngClass]="{'has-danger': isAccountNoError}">
           <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
           <div class="col-sm-6">
@@ -83,7 +83,8 @@
                    name="units"
                    required
                    #unitsRef="ngModel"
-                   [(ngModel)]="electricityBill.noOfUnits">
+                   [(ngModel)]="electricityBill.noOfUnits"
+                   (input)="isNoOfUnitsValid($event.target.value)">
             <span class="error" *ngIf="isNoOfUnitsError">{{noOfUnitsError}}</span>
           </div>
         </div>

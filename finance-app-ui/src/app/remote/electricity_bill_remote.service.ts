@@ -16,7 +16,10 @@ export class ElectricityBillRemoteDataService {
     private apiEndpoints: Object = {
         electricitybills: this.apiContext + "/bills/electricitybill",
         insertbill: this.apiContext + "/bills/electricitybill",
-        updatebill: this.apiContext + "/bills/electricitybill"
+        updatebill: this.apiContext + "/bills/electricitybill",
+        electricityBillsByMonth: this.apiContext + "/bills/electricitybill/filtermonth/",
+        electricityBillsByYear: this.apiContext + "/bills/electricitybill/filteryear/",
+        electricityBillsByPeriod: this.apiContext + "/bills/electricitybill/filterperiod/"
     };
 
     private httpOptions = {
@@ -51,7 +54,6 @@ export class ElectricityBillRemoteDataService {
         this.electricityBillsObservable = this.http.get<ElectricityBill[]>(
             this.apiEndpoints['electricitybills'], this.httpOptions
         )
-        console.log(this.electricityBillsObservable);
         return this.electricityBillsObservable;
     }
 
@@ -60,8 +62,28 @@ export class ElectricityBillRemoteDataService {
     }
 
     updateElectricityBill(electricityBill: ElectricityBill) {
-        console.log("Id:"+electricityBill.id);
         return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + electricityBill.billNo,
             electricityBill, this.httpOptions);
+    }
+
+    getElectricityBillsByMonth(month: string) {
+        this.electricityBillsObservable = this.http.get<ElectricityBill[]>(
+            this.apiEndpoints['electricityBillsByMonth'].concat(month), this.httpOptions
+        )
+        return this.electricityBillsObservable;
+    }
+
+    getElectricityBillsByYear(year: string) {
+        this.electricityBillsObservable = this.http.get<ElectricityBill[]>(
+            this.apiEndpoints['electricityBillsByYear'].concat(year), this.httpOptions
+        )
+        return this.electricityBillsObservable;
+    }
+
+    getElectricityBillsByPeriod(year: string, month: string) {
+        this.electricityBillsObservable = this.http.get<ElectricityBill[]>(
+            this.apiEndpoints['electricityBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions
+        )
+        return this.electricityBillsObservable;
     }
 }

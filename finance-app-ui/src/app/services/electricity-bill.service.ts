@@ -47,4 +47,40 @@ export class ElectricityBillsService {
                 this._router.navigate(["viewBill"]);
             });
     }
+
+    getElectricityBillsByMonth(month: string, callback: Function) {
+        this._remoteService.getElectricityBillsByMonth(month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getElectricityBillsByYear(year: string, callback: Function) {
+        this._remoteService.getElectricityBillsByYear(year)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getElectricityBillsByPeriod(year: string, month: string, callback: Function) {
+        this._remoteService.getElectricityBillsByPeriod(year,month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
 }

@@ -37,13 +37,33 @@
             Electricity Bill Table
         </div>
 
+        <div class="row ">
+        <label class="control-label col-sm-2">Select Year</label>
+        <div class="col-sm-2 field-value">
+          <select class="form-control" (change)="onYearSelected($event)">
+            <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
+              {{opt}}
+            </option>
+          </select>
+        </div>
+            <label class="control-label col-sm-2">Select Month</label>
+            <div class="col-sm-2 field-value">
+                <select class="form-control" (change)="onMonthSelected($event)">
+                    <option *ngFor="let opt of monthString" [selected]="selectedMonth == opt">
+                        {{opt}}
+                    </option>
+                </select>
+            </div>
+      </div>
+
+
         <div class="table">
             <div class="tbl-row header">
                 <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
             </div>
             <div class="tbl-row" *ngFor="let item of electrictyBillList">
-                <div class="tbl-cell">{{item.datetime}}</div>
                 <div class="tbl-cell">{{item.billNo}}</div>
+                <div class="tbl-cell">{{item.period}}</div>
                 <div class="tbl-cell">{{item.previousReading}}</div>
                 <div class="tbl-cell">{{item.currentReading}}</div>
                 <div class="tbl-cell">{{item.noOfUnits}}</div>
