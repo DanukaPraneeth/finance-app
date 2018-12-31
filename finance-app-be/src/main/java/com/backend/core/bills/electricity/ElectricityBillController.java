@@ -1,7 +1,10 @@
 package com.backend.core.bills.electricity;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.models.billStatusModel;
+import com.backend.core.common.models.billStatusModel;
+import com.backend.core.common.models.locationExpenseModel;
+import com.backend.core.common.models.monthExpenseModel;
+import com.backend.core.common.models.yearExpenseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,5 +58,25 @@ public class ElectricityBillController {
     @RequestMapping("/bills/electricitybill/status/{status}")
     public billStatusModel getStatusCount(@PathVariable String status){
         return electricityBillService.getStatusCount(status);
+    }
+
+    @RequestMapping("/bills/electricitybill/summary/year/{year}")
+    public List<yearExpenseModel> getExpensesByYear(@PathVariable String year){
+        return electricityBillService.getExpensesByYear(year);
+    }
+
+    @RequestMapping("/bills/electricitybill/summary/month/{month}")
+    public List<monthExpenseModel> getExpensesByMonth(@PathVariable String month){
+        return electricityBillService.getExpensesByMonth(month);
+    }
+
+    @RequestMapping("/bills/electricitybill/summary/location/year/{year}")
+    public List<locationExpenseModel> getExpensesByLocationByYear(@PathVariable String year){
+        return electricityBillService.getExpensesByLocationByYear(year);
+    }
+
+    @RequestMapping("/bills/electricitybill/summary/location/month/{month}")
+    public List<locationExpenseModel> getExpensesByLocationByMonth(@PathVariable String month){
+        return electricityBillService.getExpensesByLocationByMonth(month);
     }
 }

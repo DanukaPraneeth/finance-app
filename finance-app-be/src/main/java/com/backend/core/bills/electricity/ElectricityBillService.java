@@ -1,7 +1,11 @@
 package com.backend.core.bills.electricity;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.models.billStatusModel;
+import com.backend.core.bills.water.WaterBills;
+import com.backend.core.common.models.billStatusModel;
+import com.backend.core.common.models.locationExpenseModel;
+import com.backend.core.common.models.monthExpenseModel;
+import com.backend.core.common.models.yearExpenseModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,9 +40,9 @@ public class ElectricityBillService {
         return electricityBillRepo.findByPeriod(month);
     }
 
-    public List<ElectricityBill> getElectricityBillByMonth(String month){ return electricityBillRepo.findByNameEndsWith(month);}
+    public List<ElectricityBill> getElectricityBillByMonth(String month){ return electricityBillRepo.findByPeriodEndsWith(month);}
 
-    public List<ElectricityBill> getElectricityBillByYear(String year){return electricityBillRepo.findByNameStartsWith(year);}
+    public List<ElectricityBill> getElectricityBillByYear(String year){return electricityBillRepo.findByPeriodStartsWith(year);}
 
     public MessageResponse addElectricityBill(ElectricityBill electricityBill){
         try{
@@ -61,8 +65,8 @@ public class ElectricityBillService {
             existingBill.setCurrentReading(electricityBill.getCurrentReading());
             existingBill.setNoOfUnits(electricityBill.getNoOfUnits());
             existingBill.setAmount(electricityBill.getAmount());
-            existingBill.setCertification(electricityBill.getCertification());
-            existingBill.setCertifiedDate(electricityBill.getCertifiedDate());
+            //existingBill.setCertification(electricityBill.getCertification());
+            //existingBill.setCertifiedDate(electricityBill.getCertifiedDate());
             existingBill.setTraineeStaffId(electricityBill.getTraineeStaffId());
             existingBill.setUserKey(electricityBill.getUserKey());
             electricityBillRepo.save(existingBill);
@@ -94,5 +98,113 @@ public class ElectricityBillService {
         pendingList.setStatus(status);
         pendingList.setCount(pendingBills.size());
         return pendingList;
+    }
+
+    public List<yearExpenseModel> getExpensesByYear(String year){
+
+        List<yearExpenseModel> sum = new ArrayList<yearExpenseModel>();
+
+        try{
+            List<ElectricityBill> totalList = getElectricityBillByYear(year);
+            for(int i = 1; i < 13 ; i++){
+
+                String month = year + "-" + i;
+                float monthSum = 0;
+
+                for (ElectricityBill rs: totalList ) {
+                    if(rs.getPeriod().equals(month) ) {
+                        monthSum += rs.getAmount();
+                    }
+                }
+                sum.add(new yearExpenseModel(String.valueOf(i),monthSum));
+            }
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the year" + e);
+        }
+        return sum;
+    }
+
+
+    public List<monthExpenseModel> getExpensesByMonth(String month){
+
+        List<monthExpenseModel> sum = new ArrayList<monthExpenseModel>();
+
+        try{
+            List<ElectricityBill> totalList = getElectricityBillByMonth(month);
+            List<String> years = electricityBillRepo.findDistinctFirstByPeriodEndingWith(month);
+
+
+            for(String yr : years){
+
+                float monthSum = 0;
+
+                for (ElectricityBill rs: totalList ) {
+                    if(rs.getPeriod().equals(yr) ) {
+                        monthSum += rs.getAmount();
+                    }
+                }
+
+                String yearNow = yr.split("-")[0];
+                sum.add(new monthExpenseModel(yearNow,monthSum));
+            }
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the month" + e);
+        }
+        return sum;
+    }
+
+    public List<locationExpenseModel> getExpensesByLocationByYear(String year){
+        List<locationExpenseModel> sum = new ArrayList<locationExpenseModel>();
+
+        try{
+            List<String> locations = electricityBillRepo.findDistinctByLocation();
+
+            for(String rs : locations){
+
+                float locationSum = 0;
+                List<ElectricityBill> electricityBills = electricityBillRepo.findByLocationAndPeriodStartingWith(rs,year);
+
+                for (ElectricityBill wb: electricityBills ) {
+                    locationSum += wb.getAmount();
+                }
+
+                sum.add(new locationExpenseModel(rs,locationSum));
+
+            }
+
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the location for each year" + e);
+        }
+
+        return sum;
+
+    }
+
+
+    public List<locationExpenseModel> getExpensesByLocationByMonth(String month){
+        List<locationExpenseModel> sum = new ArrayList<locationExpenseModel>();
+
+        try{
+            List<String> locations = electricityBillRepo.findDistinctByLocation();
+
+            for(String rs : locations){
+
+                float locationSum = 0;
+                List<ElectricityBill> electricityBills = electricityBillRepo.findByLocationAndPeriodEndingWith(rs,month);
+
+                for (ElectricityBill wb: electricityBills ) {
+                    locationSum += wb.getAmount();
+                }
+
+                sum.add(new locationExpenseModel(rs,locationSum));
+
+            }
+
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the location for each month" + e);
+        }
+
+        return sum;
+
     }
 }

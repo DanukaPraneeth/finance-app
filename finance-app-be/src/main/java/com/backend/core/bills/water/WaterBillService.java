@@ -1,8 +1,10 @@
 package com.backend.core.bills.water;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.models.billStatusModel;
-import com.backend.core.bills.telephone.TelephoneBills;
+import com.backend.core.common.models.billStatusModel;
+import com.backend.core.common.models.locationExpenseModel;
+import com.backend.core.common.models.monthExpenseModel;
+import com.backend.core.common.models.yearExpenseModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +39,11 @@ public class WaterBillService {
         return waterBillRepo.findByPeriod(period);
     }
 
-    public List<WaterBills> getwaterBillByYear (String month){
-        return waterBillRepo.findByNameStartsWith(month);
+    public List<WaterBills> getwaterBillByYear (String year){
+        return waterBillRepo.findByPeriodStartsWith(year);
     }
 
-    public List<WaterBills> getwaterBillByMonth (String month){ return waterBillRepo.findByNameEndsWith(month); }
+    public List<WaterBills> getwaterBillByMonth (String month){ return waterBillRepo.findByPeriodEndsWith(month); }
 
     public MessageResponse addWaterBill(WaterBills waterBill){
         try{
@@ -59,12 +61,13 @@ public class WaterBillService {
             WaterBills selectedBill = waterBillRepo.findBybillNo(billNo);
             selectedBill.setBillNo(waterBill.getBillNo());
             selectedBill.setPeriod(waterBill.getPeriod());
+            selectedBill.setLocation(waterBill.getLocation());
             selectedBill.setPreviousReading(waterBill.getPreviousReading());
             selectedBill.setCurrentReading(waterBill.getCurrentReading());
             selectedBill.setNoOfUnits(waterBill.getNoOfUnits());
             selectedBill.setAmount(waterBill.getAmount());
-            selectedBill.setCertification(waterBill.getCertification());
-            selectedBill.setCertifiedDate(waterBill.getCertifiedDate());
+            //selectedBill.setCertification(waterBill.getCertification());
+            //selectedBill.setCertifiedDate(waterBill.getCertifiedDate());
             selectedBill.setTraineeStaffId(waterBill.getTraineeStaffId());
             selectedBill.setUserKey(waterBill.getUserKey());
             waterBillRepo.save(selectedBill);
@@ -96,5 +99,113 @@ public class WaterBillService {
         pendingList.setStatus(status);
         pendingList.setCount(pendingBills.size());
         return pendingList;
+    }
+
+    public List<yearExpenseModel> getExpensesByYear(String year){
+
+        List<yearExpenseModel> sum = new ArrayList<yearExpenseModel>();
+
+        try{
+            List<WaterBills> totalList = getwaterBillByYear(year);
+            for(int i = 1; i < 13 ; i++){
+
+                String month = year + "-" + i;
+                float monthSum = 0;
+
+                for (WaterBills rs: totalList ) {
+                    if(rs.getPeriod().equals(month) ) {
+                        monthSum += rs.getAmount();
+                    }
+                }
+                sum.add(new yearExpenseModel(String.valueOf(i),monthSum));
+            }
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the year" + e);
+        }
+        return sum;
+    }
+
+
+    public List<monthExpenseModel> getExpensesByMonth(String month){
+
+        List<monthExpenseModel> sum = new ArrayList<monthExpenseModel>();
+
+        try{
+            List<WaterBills> totalList = getwaterBillByMonth(month);
+            List<String> years = waterBillRepo.findDistinctFirstByPeriodEndingWith(month);
+
+
+            for(String yr : years){
+
+                float monthSum = 0;
+
+                for (WaterBills rs: totalList ) {
+                    if(rs.getPeriod().equals(yr) ) {
+                        monthSum += rs.getAmount();
+                    }
+                }
+
+                String yearNow = yr.split("-")[0];
+                sum.add(new monthExpenseModel(yearNow,monthSum));
+            }
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the month" + e);
+        }
+        return sum;
+    }
+
+    public List<locationExpenseModel> getExpensesByLocationByYear(String year){
+        List<locationExpenseModel> sum = new ArrayList<locationExpenseModel>();
+
+        try{
+            List<String> locations = waterBillRepo.findDistinctByLocation();
+
+            for(String rs : locations){
+
+                float locationSum = 0;
+                List<WaterBills> waterBills = waterBillRepo.findByLocationAndPeriodStartingWith(rs,year);
+
+                for (WaterBills wb: waterBills ) {
+                    locationSum += wb.getAmount();
+                }
+
+                sum.add(new locationExpenseModel(rs,locationSum));
+
+            }
+
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the location for each year" + e);
+        }
+
+        return sum;
+
+    }
+
+
+    public List<locationExpenseModel> getExpensesByLocationByMonth(String month){
+        List<locationExpenseModel> sum = new ArrayList<locationExpenseModel>();
+
+        try{
+            List<String> locations = waterBillRepo.findDistinctByLocation();
+
+            for(String rs : locations){
+
+                float locationSum = 0;
+                List<WaterBills> waterBills = waterBillRepo.findByLocationAndPeriodEndingWith(rs,month);
+
+                for (WaterBills wb: waterBills ) {
+                    locationSum += wb.getAmount();
+                }
+
+                sum.add(new locationExpenseModel(rs,locationSum));
+
+            }
+
+        }catch (Exception e){
+            log.error("Error while getting the total expense for the location for each month" + e);
+        }
+
+        return sum;
+
     }
 }

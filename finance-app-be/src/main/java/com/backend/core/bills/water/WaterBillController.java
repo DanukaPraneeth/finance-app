@@ -1,7 +1,10 @@
 package com.backend.core.bills.water;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.bills.models.billStatusModel;
+import com.backend.core.common.models.billStatusModel;
+import com.backend.core.common.models.locationExpenseModel;
+import com.backend.core.common.models.monthExpenseModel;
+import com.backend.core.common.models.yearExpenseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -56,5 +59,25 @@ public class WaterBillController {
     @RequestMapping("/bills/waterbill/status/{status}")
     public billStatusModel getStatusCount(@PathVariable String status){
         return waterBillService.getStatusCount(status);
+    }
+
+    @RequestMapping("/bills/waterbill/summary/year/{year}")
+    public List<yearExpenseModel> getExpensesByYear(@PathVariable String year){
+        return waterBillService.getExpensesByYear(year);
+    }
+
+    @RequestMapping("/bills/waterbill/summary/month/{month}")
+    public List<monthExpenseModel> getExpensesByMonth(@PathVariable String month){
+        return waterBillService.getExpensesByMonth(month);
+    }
+
+    @RequestMapping("/bills/waterbill/summary/location/year/{year}")
+    public List<locationExpenseModel> getExpensesByLocationByYear(@PathVariable String year){
+        return waterBillService.getExpensesByLocationByYear(year);
+    }
+
+    @RequestMapping("/bills/waterbill/summary/location/month/{month}")
+    public List<locationExpenseModel> getExpensesByLocationByMonth(@PathVariable String month){
+        return waterBillService.getExpensesByLocationByMonth(month);
     }
 }
