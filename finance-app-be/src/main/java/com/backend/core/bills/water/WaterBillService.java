@@ -1,15 +1,15 @@
 package com.backend.core.bills.water;
 
 import com.backend.core.MessageResponse;
-import com.backend.core.common.models.billStatusModel;
-import com.backend.core.common.models.locationExpenseModel;
-import com.backend.core.common.models.monthExpenseModel;
-import com.backend.core.common.models.yearExpenseModel;
+import com.backend.core.common.models.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -207,5 +207,22 @@ public class WaterBillService {
 
         return sum;
 
+    }
+
+    public MessageResponse approveBill(billApproveModel bill) {
+
+        WaterBills selectedBill = waterBillRepo.findBybillNo(bill.getBillId());
+        try{
+            selectedBill.setCertification(bill.getStatus());
+            LocalDateTime currentDateTime = LocalDateTime.now();
+            String timeNow = currentDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+            selectedBill.setCertifiedDate(timeNow);
+            waterBillRepo.save(selectedBill);
+            messageResponse.setSuccess(true);
+        }catch (Exception e){
+            log.error("Error while updating the bill approval ", e);
+            messageResponse.setSuccess(false);
+        }
+        return messageResponse;
     }
 }
