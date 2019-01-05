@@ -1,17 +1,17 @@
 import {Component, Input, OnInit} from "@angular/core";
-import {BillToApprove, ElectricityBill} from "../../../../models/data-models";
+import {BillToApprove, WaterBill} from "../../../../models/data-models";
 import {ApprovalService} from "../../../../services/approval.service";
 
 @Component({
-    selector: "app-certify-electricity-bill",
-    templateUrl: "./certify-electricity-bill.component.html",
-    styleUrls: ["./certify-electricity-bill.component.scss"]
+    selector: "app-certify-water-bill",
+    templateUrl: "./certify-water-bill.component.html",
+    styleUrls: ["./certify-water-bill.component.scss"]
 })
-export class CertifyElectricityBillComponent implements OnInit {
+export class CertifyWaterBillComponent implements OnInit {
 
 
     @Input()
-    bill: ElectricityBill;
+    bill: WaterBill;
 
     constructor(private _approvalService: ApprovalService) {
     }
@@ -21,7 +21,7 @@ export class CertifyElectricityBillComponent implements OnInit {
 
     approve() {
         const approvedBill = new BillToApprove();
-        approvedBill.billType = "electricitybill";
+        approvedBill.billType = "waterbill";
         approvedBill.status = "approved";
         approvedBill.comment = "approved successfully";
         approvedBill.billId = this.bill.billNo;
@@ -31,7 +31,7 @@ export class CertifyElectricityBillComponent implements OnInit {
 
     reject() {
         const approvedBill = new BillToApprove();
-        approvedBill.billType = "electricitybill";
+        approvedBill.billType = "waterbill";
         approvedBill.status = "rejected";
         approvedBill.comment = "rejected the bill";
         approvedBill.billId = this.bill.billNo;

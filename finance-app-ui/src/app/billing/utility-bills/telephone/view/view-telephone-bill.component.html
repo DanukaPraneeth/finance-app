@@ -19,10 +19,10 @@
                         (onUpdateTask)="onUpdateBillHandler($event)"
                         (modalClose)="lgModal.hide(); clearModalContent()"></app-update-telephone-bill>
 
-                <!--<app-certify-telephone-bill-->
-                        <!--*ngIf="showCertifyBill"-->
-                        <!--[bill]="changingBill"-->
-                        <!--(modalClose)="lgModal.hide(); clearModalContent()"></app-certify-telephone-bill>-->
+                <app-certify-telephone-bill
+                        *ngIf="showCertifyBill"
+                        [bill]="changingBill"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-telephone-bill>
 
             </div>
         </div>

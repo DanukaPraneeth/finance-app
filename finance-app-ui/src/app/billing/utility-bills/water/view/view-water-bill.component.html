@@ -19,10 +19,10 @@
                         (onUpdateTask)="onUpdateBillHandler($event)"
                         (modalClose)="lgModal.hide(); clearModalContent()"></app-update-water-bill>
 
-                <!--<app-certify-electricity-bill-->
-                        <!--*ngIf="showCertifyBill"-->
-                        <!--[bill]="changingBill"-->
-                        <!--(modalClose)="lgModal.hide(); clearModalContent()"></app-certify-electricity-bill>-->
+                <app-certify-water-bill
+                        *ngIf="showCertifyBill"
+                        [bill]="changingBill"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-water-bill>
 
             </div>
         </div>
