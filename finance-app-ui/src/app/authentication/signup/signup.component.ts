@@ -50,6 +50,7 @@ export class SignupComponent implements OnInit {
     onSignUpClick(signupForm) {
         if (this.checkBeforeSignup()) {
             if (this.password == this.repeatpassword) {
+                console.log('$'+ this.roleValue + '$')
                 this._authenticationService.signup(this.userName, this.password, this.roleValue);
             }
         }

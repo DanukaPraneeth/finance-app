@@ -21,6 +21,8 @@ import {ViewWaterBillComponent} from "./utility-bills/water/view/view-water-bill
 import {UpdateWaterBillComponent} from "./utility-bills/water/update/update-water-bill.component";
 import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-telephone-bill.component";
 import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/update-telephone-bill.component";
+import {CertifyWaterBillComponent} from "./utility-bills/water/certify/certify-water-bill.component";
+import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/certify-telephone-bill.component";
 
 
 @NgModule({
@@ -47,6 +49,8 @@ import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/upd
         ViewElectricityBillComponent,
         UpdateElectricityBillComponent,
         CertifyElectricityBillComponent,
+        CertifyWaterBillComponent,
+        CertifyTelephoneBillComponent,
         ViewWaterBillComponent,
         UpdateWaterBillComponent,
         ViewTelephoneBillComponent,
