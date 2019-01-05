@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -93,7 +92,6 @@ public class WaterBillService {
 
     public billStatusModel getStatusCount(String status){
         List<WaterBills> pendingBills = waterBillRepo.findByCertification(status);
-
         billStatusModel pendingList = new billStatusModel();
         pendingList.setBillType("water");
         pendingList.setStatus(status);
@@ -109,7 +107,7 @@ public class WaterBillService {
             List<WaterBills> totalList = getwaterBillByYear(year);
             for(int i = 1; i < 13 ; i++){
 
-                String month = year + "-" + i;
+                String month = year + "-" + String.format("%02d",i);
                 float monthSum = 0;
 
                 for (WaterBills rs: totalList ) {
@@ -117,7 +115,7 @@ public class WaterBillService {
                         monthSum += rs.getAmount();
                     }
                 }
-                sum.add(new yearExpenseModel(String.valueOf(i),monthSum));
+                sum.add(new yearExpenseModel(String.format("%02d",i),monthSum));
             }
         }catch (Exception e){
             log.error("Error while getting the total expense for the year" + e);

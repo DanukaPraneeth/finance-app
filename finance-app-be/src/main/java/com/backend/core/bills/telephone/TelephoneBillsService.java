@@ -104,7 +104,7 @@ public class TelephoneBillsService {
             List<TelephoneBills> totalList = getTelephoneBillByYear(year);
             for(int i = 1; i < 13 ; i++){
 
-                String month = year + "-" + i;
+                String month = year + "-" + String.format("%02d",i);
                 float monthSum = 0;
 
                 for (TelephoneBills rs: totalList ) {
@@ -112,7 +112,7 @@ public class TelephoneBillsService {
                         monthSum += rs.getAmount();
                     }
                 }
-                sum.add(new yearExpenseModel(String.valueOf(i),monthSum));
+                sum.add(new yearExpenseModel(String.format("%02d",i),monthSum));
             }
         }catch (Exception e){
             log.error("Error while getting the total expense for the year" + e);
