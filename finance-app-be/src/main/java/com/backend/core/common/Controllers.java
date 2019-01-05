@@ -2,6 +2,7 @@ package com.backend.core.common;
 
 import com.backend.core.MessageResponse;
 import com.backend.core.bills.electricity.ElectricityBillService;
+import com.backend.core.bills.internet.InternetBillsService;
 import com.backend.core.bills.telephone.TelephoneBillsService;
 import com.backend.core.bills.water.WaterBillService;
 import com.backend.core.common.models.billApproveModel;
@@ -22,6 +23,8 @@ public class Controllers {
     private TelephoneBillsService telephoneBillsService;
     @Autowired
     private ElectricityBillService electricityBillService;
+    @Autowired
+    private InternetBillsService internetBillsService;
 
     @RequestMapping("/bills/expense/summary/year/{year}")
     public void getExpensesByYear(@PathVariable String year){
@@ -39,6 +42,9 @@ public class Controllers {
         }
         else if(payload.getBillType().equals("telephonebill")){
             return telephoneBillsService.approveBill(payload);
+        }
+        else if(payload.getBillType().equals("internetbill")){
+            return internetBillsService.approveBill(payload);
         }
         messageResponse.setSuccess(false);
         return messageResponse;
