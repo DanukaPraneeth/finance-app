@@ -13,10 +13,8 @@ public class InternetBills {
     private String billNo;
     private String period;
     private String location;
-    private String category;
-    private String duration;
     private float amount;
-    private String certification;
+    private String certification = "pending";
     private String certifiedDate;
     @Column (name = "date")
     private String datetime;
@@ -25,15 +23,12 @@ public class InternetBills {
 
     public InternetBills(){ }
 
-    public InternetBills(String billNo, String period, String location, String category, String duration,
-                         float amount, String certification, String certifiedDate,
-                         String datetime, int traineeStaffId, int userKey) {
+    public InternetBills(String billNo, String period, String location, float amount, String certification,
+                         String certifiedDate, String datetime, int traineeStaffId, int userKey) {
         super();
         this.billNo = billNo;
         this.period = period;
         this.location = location;
-        this.category = category;
-        this.duration = duration;
         this.amount = amount;
         this.certification = certification;
         this.certifiedDate = certifiedDate;
@@ -63,22 +58,6 @@ public class InternetBills {
     public String getLocation() { return location; }
 
     public void setLocation(String location) { this.location = location; }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public String getDuration() {
-        return duration;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
 
     public float getAmount() {
         return amount;
