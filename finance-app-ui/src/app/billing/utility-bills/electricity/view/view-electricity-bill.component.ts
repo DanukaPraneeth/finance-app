@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
@@ -13,7 +13,7 @@ import 'jspdf-autotable';
 export class ViewElectricityBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "", ""];
+    fieldSet: string [] = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "Action",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
     monthString: string [] = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     electrictyBillList: ElectricityBill [];
@@ -21,8 +21,8 @@ export class ViewElectricityBillComponent implements OnInit {
     private showUpdateBill: boolean;
     private changingBill: ElectricityBill;
     private showCertifyBill: boolean;
-    private selectedYear: string = "All";
-    private selectedMonth: string = "All";
+    private selectedYear = "All";
+    private selectedMonth = "All";
 
 
     constructor(private _electrictyBillService: ElectricityBillsService, private _router: Router) {
@@ -86,7 +86,7 @@ export class ViewElectricityBillComponent implements OnInit {
     }
 
     public onMonthSelected(event) {
-        var selectedType = event.target.value;
+        let selectedType = event.target.value;
 
         switch (selectedType) {
             case "January": {
@@ -180,5 +180,13 @@ export class ViewElectricityBillComponent implements OnInit {
             startY: 30
         });
         doc.save('Electricity Bill Report.pdf');
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

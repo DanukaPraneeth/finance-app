@@ -31,7 +31,7 @@ export class ElectricityBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["bill/create"]);
+                this._router.navigate(["bill/show/electricity"]);
             });
 
     }
@@ -44,7 +44,7 @@ export class ElectricityBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["viewBill"]);
+                this._router.navigate(["bill/show/electricity"]);
             });
     }
 

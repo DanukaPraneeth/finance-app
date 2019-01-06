@@ -80,12 +80,13 @@
                         <span class="icon material-icons">edit</span>
                     </button>
                 </div>
-                <div class="tbl-cell" *appHaspermission="1">
+                <div class="tbl-cell" *ngIf="showPendingOnly(item.certification)">
                     <button class="btn btn-light"
                             (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
                             type="button"
                             tooltip="Certify"
-                            placement="top">
+                            placement="top"
+                            *appHaspermission="1">
                         <span class="icon material-icons">done</span>
                     </button>
                 </div>

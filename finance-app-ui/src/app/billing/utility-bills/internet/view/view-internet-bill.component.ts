@@ -159,11 +159,11 @@ export class ViewInternetBillComponent implements OnInit {
 
     private downloadTable() {
         var doc = new jspdf();
-        var col = ['Bill No', 'Period','Amount', 'Location', 'Certification'];
+        var col = ['Bill No', 'Period', 'Amount', 'Location', 'Certification'];
         var rows = [];
 
         this.internetBillList.forEach(element => {
-            var temp = [element.billId, element.period,element.amount, element.location, element.certification];
+            var temp = [element.billId, element.period, element.amount, element.location, element.certification];
             rows.push(temp);
 
         });
@@ -180,5 +180,13 @@ export class ViewInternetBillComponent implements OnInit {
             startY: 30
         });
         doc.save('Internet Bill Report.pdf');
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

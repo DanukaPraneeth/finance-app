@@ -18,12 +18,10 @@
                         [internetBill]="changingBill"
                         (onUpdateTask)="onUpdateBillHandler($event)"
                         (modalClose)="lgModal.hide(); clearModalContent()"></app-update-internet-bill>
-
-                <!--<app-certify-internet-bill-->
-                <!--*ngIf="showCertifyBill"-->
-                <!--[bill]="changingBill"-->
-                <!--(modalClose)="lgModal.hide(); clearModalContent()"></app-certify-internet-bill>-->
-
+                <app-certify-internet-bill
+                        *ngIf="showCertifyBill"
+                        [bill]="changingBill"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-internet-bill>
             </div>
         </div>
     </div>
@@ -80,12 +78,13 @@
                         <span class="icon material-icons">edit</span>
                     </button>
                 </div>
-                <div class="tbl-cell" *appHaspermission="1">
+                <div class="tbl-cell" *ngIf="showPendingOnly(item.certification)">
                     <button class="btn btn-light"
                             (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
                             type="button"
                             tooltip="Certify"
-                            placement="top">
+                            placement="top"
+                            *appHaspermission="1">
                         <span class="icon material-icons">done</span>
                     </button>
                 </div>

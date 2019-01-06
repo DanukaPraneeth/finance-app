@@ -13,7 +13,7 @@ import 'jspdf-autotable';
 export class ViewWaterBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification",""];
+    fieldSet: string [] = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification","",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
     monthString: string [] = ["All","January", "February", "March", "April", "May", "June", "July", "August", "September","October","November","December"];
     waterBillList: WaterBill [];
@@ -180,5 +180,13 @@ export class ViewWaterBillComponent implements OnInit {
             startY: 30
         });
         doc.save('Water Bill Report.pdf');
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -159,11 +159,11 @@ export class ViewTelephoneBillComponent implements OnInit {
 
     private downloadTable() {
         var doc = new jspdf();
-        var col = ['Bill No', 'Period', 'Category','Amount', 'Location', 'Certification'];
+        var col = ['Bill No', 'Period', 'Category', 'Amount', 'Location', 'Certification'];
         var rows = [];
 
         this.telephoneBillList.forEach(element => {
-            var temp = [element.billId, element.period, element.category,element.amount, element.location, element.certification];
+            var temp = [element.billId, element.period, element.category, element.amount, element.location, element.certification];
             rows.push(temp);
 
         });
@@ -180,5 +180,13 @@ export class ViewTelephoneBillComponent implements OnInit {
             startY: 30
         });
         doc.save('Telephone Bill Report.pdf');
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

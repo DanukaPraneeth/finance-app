@@ -51,6 +51,8 @@ import {InternetBillsService} from "./services/internet-bill.service";
 import {InternetBillRemoteDataService} from "./remote/internet_bill_remote.service";
 import {ApprovalService} from "./services/approval.service";
 import {ApprovalRemoteService} from "./remote/approval-remote.service";
+import {MessageService} from "./services/message.service";
+import {ToastyModule} from "ng2-toasty";
 
 @NgModule({
     declarations: [
@@ -81,6 +83,7 @@ import {ApprovalRemoteService} from "./remote/approval-remote.service";
         BsDropdownModule.forRoot(),
         TooltipModule.forRoot(),
         AlertModule.forRoot(),
+        ToastyModule.forRoot(),
         SharedModule,
         NgbModule,
         PermissionModule,
@@ -114,6 +117,7 @@ import {ApprovalRemoteService} from "./remote/approval-remote.service";
         DashboardService,
         ApprovalService,
         ApprovalRemoteService,
+        MessageService,
         AppCommonService
     ],
     bootstrap: [AppComponent]
