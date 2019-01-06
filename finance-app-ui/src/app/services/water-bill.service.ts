@@ -31,7 +31,7 @@ export class WaterBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["home"]);
+                this._router.navigate(["bill/show/water"]);
             });
 
     }
@@ -44,7 +44,7 @@ export class WaterBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["viewBill"]);
+                this._router.navigate(["bill/show/water"]);
             });
     }
 

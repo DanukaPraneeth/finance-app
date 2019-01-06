@@ -1,4 +1,4 @@
-import {Component, OnInit, TemplateRef} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
@@ -11,16 +11,16 @@ import {Router} from "@angular/router";
 export class ViewElectricityBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification","",""];
+    fieldSet: string [] = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "Action",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
-    monthString: string [] = ["All","January", "February", "March", "April", "May", "June", "July", "August", "September","October","November","December"];
+    monthString: string [] = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     electrictyBillList: ElectricityBill [];
     private modalTitle: string;
     private showUpdateBill: boolean;
     private changingBill: ElectricityBill;
     private showCertifyBill: boolean;
-    private selectedYear: string = "All";
-    private selectedMonth: string = "All";
+    private selectedYear = "All";
+    private selectedMonth = "All";
 
 
     constructor(private _electrictyBillService: ElectricityBillsService, private _router: Router) {
@@ -40,19 +40,19 @@ export class ViewElectricityBillComponent implements OnInit {
     }
 
     private getAllElectrictyBillsByMonth(month: string) {
-        this._electrictyBillService.getElectricityBillsByMonth(month,(response) => {
+        this._electrictyBillService.getElectricityBillsByMonth(month, (response) => {
             this.electrictyBillList = response;
         });
     }
 
     private getAllElectrictyBillsByYear(year: string) {
-        this._electrictyBillService.getElectricityBillsByYear(year,(response) => {
+        this._electrictyBillService.getElectricityBillsByYear(year, (response) => {
             this.electrictyBillList = response;
         });
     }
 
-    private getAllElectrictyBillsByPeriod(year: string,month: string) {
-        this._electrictyBillService.getElectricityBillsByPeriod(year,month,(response) => {
+    private getAllElectrictyBillsByPeriod(year: string, month: string) {
+        this._electrictyBillService.getElectricityBillsByPeriod(year, month, (response) => {
             this.electrictyBillList = response;
         });
     }
@@ -84,7 +84,7 @@ export class ViewElectricityBillComponent implements OnInit {
     }
 
     public onMonthSelected(event) {
-        var selectedType = event.target.value;
+        let selectedType = event.target.value;
 
         switch (selectedType) {
             case "January": {
@@ -145,13 +145,22 @@ export class ViewElectricityBillComponent implements OnInit {
     }
 
     private retrieveElectricityBills() {
-        if(this.selectedYear == "All" && this.selectedMonth == "All")
+        if (this.selectedYear == "All" && this.selectedMonth == "All") {
             this.getAllElectrictyBills();
-        else if(this.selectedYear == "All" && this.selectedMonth != "All")
+        } else if (this.selectedYear == "All" && this.selectedMonth != "All") {
             this.getAllElectrictyBillsByMonth(this.selectedMonth);
-        else if(this.selectedYear != "All" && this.selectedMonth == "All")
+             } else if (this.selectedYear != "All" && this.selectedMonth == "All") {
             this.getAllElectrictyBillsByYear(this.selectedYear);
-        else
-            this.getAllElectrictyBillsByPeriod(this.selectedYear,this.selectedMonth);
+             } else {
+            this.getAllElectrictyBillsByPeriod(this.selectedYear, this.selectedMonth);
+             }
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

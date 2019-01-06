@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class ViewWaterBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification",""];
+    fieldSet: string [] = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification","",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
     monthString: string [] = ["All","January", "February", "March", "April", "May", "June", "July", "August", "September","October","November","December"];
     waterBillList: WaterBill [];
@@ -153,5 +153,13 @@ export class ViewWaterBillComponent implements OnInit {
             this.getAllWaterBillsByYear(this.selectedYear);
         else
             this.getAllWaterBillsByPeriod(this.selectedYear,this.selectedMonth);
+    }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

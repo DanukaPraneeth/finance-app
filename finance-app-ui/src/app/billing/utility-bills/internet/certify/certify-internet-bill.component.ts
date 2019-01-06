@@ -1,19 +1,19 @@
 import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
-import {BillToApprove, WaterBill} from "../../../../models/data-models";
+import {BillToApprove, ElectricityBill, InternetBill} from "../../../../models/data-models";
 import {ApprovalService} from "../../../../services/approval.service";
 import {Router} from "@angular/router";
 import {MessageService} from "../../../../services/message.service";
 
 @Component({
-    selector: "app-certify-water-bill",
-    templateUrl: "./certify-water-bill.component.html",
-    styleUrls: ["./certify-water-bill.component.scss"]
+    selector: "app-certify-internet-bill",
+    templateUrl: "./certify-internet-bill.component.html",
+    styleUrls: ["./certify-internet-bill.component.scss"]
 })
-export class CertifyWaterBillComponent implements OnInit {
+export class CertifyInternetBillComponent implements OnInit {
 
 
     @Input()
-    bill: WaterBill;
+    bill: InternetBill;
 
     @Output()
     private modalClose: EventEmitter<boolean> = new EventEmitter();
@@ -26,14 +26,14 @@ export class CertifyWaterBillComponent implements OnInit {
 
     approve() {
         const approvedBill = new BillToApprove();
-        approvedBill.billType = "waterbill";
+        approvedBill.billType = "internetbill";
         approvedBill.status = "approved";
         approvedBill.comment = "approved successfully";
-        approvedBill.billId = this.bill.billNo;
+        approvedBill.billId = this.bill.billId;
         approvedBill.userId = 1;
         this._approvalService.approveBill(approvedBill, (response) => {
             if (response.success) {
-                this._router.navigate(["bill/show/electricity"]);
+                this._router.navigate(["bill/show/internet"]);
                 this.modalClose.emit(true);
                 // this.message.success(response.message);
             } else {
@@ -44,14 +44,14 @@ export class CertifyWaterBillComponent implements OnInit {
 
     reject() {
         const approvedBill = new BillToApprove();
-        approvedBill.billType = "waterbill";
+        approvedBill.billType = "internetbill";
         approvedBill.status = "rejected";
         approvedBill.comment = "rejected the bill";
-        approvedBill.billId = this.bill.billNo;
+        approvedBill.billId = this.bill.billId;
         approvedBill.userId = 1;
         this._approvalService.approveBill(approvedBill, (response) => {
             if (response.success) {
-                this._router.navigate(["bill/show/electricity"]);
+                this._router.navigate(["bill/show/internet"]);
                 this.modalClose.emit(true);
                 // this.message.success(response.message);
             } else {
