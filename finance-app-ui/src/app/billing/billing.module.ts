@@ -25,6 +25,7 @@ import {ViewInternetBillComponent} from "./utility-bills/internet/view/view-inte
 import {UpdateInternetBillComponent} from "./utility-bills/internet/update/update-internet-bill.component";
 import {CertifyWaterBillComponent} from "./utility-bills/water/certify/certify-water-bill.component";
 import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/certify-telephone-bill.component";
+import {ToastyModule} from "ng2-toasty";
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/c
         BillingRoutingModule,
         ModalModule.forRoot(),
         TooltipModule.forRoot(),
+        ToastyModule.forRoot(),
         PermissionModule
     ],
     declarations: [
