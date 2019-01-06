@@ -19,7 +19,7 @@
                  name="name"
                  #nameRef="ngModel"
                  required
-                 [(ngModel)]="internetBill.billId"
+                 [(ngModel)]="internetBill.billNo"
                  (input)="isAccountNoValid($event.target.value)">
           <span class="error" *ngIf="isAccountNoError">{{accountNoError}}</span>
         </div>

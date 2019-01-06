@@ -74,7 +74,7 @@ export class InternetBill {
     id: number;
     period: string;
     amount: number;
-    billId: string;
+    billNo: string;
     location: string;
     certification: string;
     certifiedDate: string;

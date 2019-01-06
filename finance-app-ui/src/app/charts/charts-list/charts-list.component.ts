@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartsListComponent implements OnInit {
 
-  typeString: string [] = ["", "Electricity", "Telephone", "Water"];
+  typeString: string [] = ["", "Electricity","Internet", "Telephone", "Water"];
   selectedType: string;
   isElectricity: boolean;
   isWater: boolean;

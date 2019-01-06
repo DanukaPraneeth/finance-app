@@ -239,14 +239,15 @@ export class ChartsWaterComponent implements OnInit {
     }
 
     private createMonthCharts(selectedValue: string) {
-        this._waterBillService.getYearlyExpenseOfMonth(selectedValue, (response) => {
+        var month = this.getMonthIndex(selectedValue);
+        this._waterBillService.getYearlyExpenseOfMonth(month, (response) => {
             this.yearlyExpenseOfMonthList = response;
             this.createBarChart(
                 this.yearlyExpenseOfMonthList.map(yearlyExpense => [yearlyExpense.expense]),
                 this.yearlyExpenseOfMonthList.map(yearlyExpense => [yearlyExpense.year])
             );
         });
-        this._waterBillService.getLocationExpenseOfMonth(selectedValue, (response) => {
+        this._waterBillService.getLocationExpenseOfMonth(month, (response) => {
             this.locationExpenseInYearList = response;
             this.createPieChart(
                 this.locationExpenseInYearList.map(locationExpense => [locationExpense.expense]),
@@ -263,5 +264,13 @@ export class ChartsWaterComponent implements OnInit {
         // this.monthlyExpenseInYearList = [];
         // this.yearlyExpenseOfMonthList = [];
         // this.locationExpenseInYearList = [];
+    }
+
+    private getMonthIndex(month: string){
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December' ];
+        var index = monthNames.indexOf(month) + 1 ;
+        var formattedNumber = ("0" + index).slice(-2);
+        return formattedNumber;
     }
 }

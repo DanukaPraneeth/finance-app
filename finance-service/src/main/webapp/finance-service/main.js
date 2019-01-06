@@ -370,7 +370,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <app-header *ngIf=\"isLoggedIn\"></app-header>\n  <div class=\"content-container\">\n    <div class=\"menu-container animated slideInLeft\" *ngIf=\"isLoggedIn\">\n      <app-main-menu></app-main-menu>\n    </div>\n    <div class=\"view-container\" [ngClass]=\"{'menu-expand':isMenuExpanded}\">\n      <div>\n        <div class=\"col-sm-12 breadcrumbs-bar\"  [ngClass]=\"{'menu-expand':isMenuExpanded}\" *ngIf=\"isLoggedIn\">\n          <app-breadcrumbs></app-breadcrumbs>\n        </div>\n        <div class=\"col-sm-12 content-div\">\n          <router-outlet></router-outlet>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"container-fluid\">\n  <app-header *ngIf=\"isLoggedIn\"></app-header>\n  <div class=\"content-container\">\n    <div class=\"menu-container animated slideInLeft\" *ngIf=\"isLoggedIn\">\n      <app-main-menu></app-main-menu>\n    </div>\n    <div class=\"view-container\" [ngClass]=\"{'menu-expand':isMenuExpanded}\">\n      <div>\n        <div class=\"col-sm-12 breadcrumbs-bar\"  [ngClass]=\"{'menu-expand':isMenuExpanded}\" *ngIf=\"isLoggedIn\">\n          <app-breadcrumbs></app-breadcrumbs>\n        </div>\n        <div class=\"col-sm-12 content-div\">\n          <router-outlet></router-outlet>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<ng2-toasty [position]=\"'bottom-center'\" ></ng2-toasty>\n"
 
 /***/ }),
 
@@ -559,19 +559,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _charts_charts_bills_electricity_charts_electricity_charts_electricity_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./charts/charts-bills/electricity/charts-electricity/charts-electricity.component */ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.ts");
 /* harmony import */ var _charts_charts_bills_water_charts_water_charts_water_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./charts/charts-bills/water/charts-water/charts-water.component */ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.ts");
 /* harmony import */ var _charts_charts_bills_telephone_charts_telephone_charts_telephone_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./charts/charts-bills/telephone/charts-telephone/charts-telephone.component */ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.ts");
-/* harmony import */ var _services_dashboard_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./services/dashboard.service */ "./src/app/services/dashboard.service.ts");
-/* harmony import */ var _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./directives/permission.module */ "./src/app/directives/permission.module.ts");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/water-bill.service */ "./src/app/services/water-bill.service.ts");
-/* harmony import */ var _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./remote/water_bill_remote.service */ "./src/app/remote/water_bill_remote.service.ts");
-/* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
-/* harmony import */ var _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./remote/telephone_bill_remote.service */ "./src/app/remote/telephone_bill_remote.service.ts");
+/* harmony import */ var _charts_charts_bills_internet_charts_internet_charts_internet_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./charts/charts-bills/internet/charts-internet/charts-internet.component */ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.ts");
+/* harmony import */ var _services_dashboard_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./services/dashboard.service */ "./src/app/services/dashboard.service.ts");
+/* harmony import */ var _directives_permission_module__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./directives/permission.module */ "./src/app/directives/permission.module.ts");
+/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
+/* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./services/water-bill.service */ "./src/app/services/water-bill.service.ts");
+/* harmony import */ var _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./remote/water_bill_remote.service */ "./src/app/remote/water_bill_remote.service.ts");
+/* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
+/* harmony import */ var _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./remote/telephone_bill_remote.service */ "./src/app/remote/telephone_bill_remote.service.ts");
+/* harmony import */ var _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./services/internet-bill.service */ "./src/app/services/internet-bill.service.ts");
+/* harmony import */ var _remote_internet_bill_remote_service__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./remote/internet_bill_remote.service */ "./src/app/remote/internet_bill_remote.service.ts");
+/* harmony import */ var _services_approval_service__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./services/approval.service */ "./src/app/services/approval.service.ts");
+/* harmony import */ var _remote_approval_remote_service__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./remote/approval-remote.service */ "./src/app/remote/approval-remote.service.ts");
+/* harmony import */ var _services_message_service__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./services/message.service */ "./src/app/services/message.service.ts");
+/* harmony import */ var ng2_toasty__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ng2-toasty */ "./node_modules/ng2-toasty/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
 
 
 
@@ -633,7 +647,8 @@ var AppModule = /** @class */ (function () {
                 _charts_charts_list_charts_list_component__WEBPACK_IMPORTED_MODULE_29__["ChartsListComponent"],
                 _charts_charts_bills_electricity_charts_electricity_charts_electricity_component__WEBPACK_IMPORTED_MODULE_30__["ChartsElectricityComponent"],
                 _charts_charts_bills_water_charts_water_charts_water_component__WEBPACK_IMPORTED_MODULE_31__["ChartsWaterComponent"],
-                _charts_charts_bills_telephone_charts_telephone_charts_telephone_component__WEBPACK_IMPORTED_MODULE_32__["ChartsTelephoneComponent"]
+                _charts_charts_bills_telephone_charts_telephone_charts_telephone_component__WEBPACK_IMPORTED_MODULE_32__["ChartsTelephoneComponent"],
+                _charts_charts_bills_internet_charts_internet_charts_internet_component__WEBPACK_IMPORTED_MODULE_33__["ChartsInternetComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -645,9 +660,10 @@ var AppModule = /** @class */ (function () {
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["BsDropdownModule"].forRoot(),
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["TooltipModule"].forRoot(),
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["AlertModule"].forRoot(),
+                ng2_toasty__WEBPACK_IMPORTED_MODULE_46__["ToastyModule"].forRoot(),
                 _shared_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_19__["NgbModule"],
-                _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__["PermissionModule"],
+                _directives_permission_module__WEBPACK_IMPORTED_MODULE_35__["PermissionModule"],
                 _billing_billing_module__WEBPACK_IMPORTED_MODULE_20__["BillingModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatButtonModule"],
@@ -656,11 +672,11 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatGridListModule"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_35__["ChartsModule"]
+                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_36__["ChartsModule"]
             ],
             exports: [
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
-                _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__["PermissionModule"]
+                _directives_permission_module__WEBPACK_IMPORTED_MODULE_35__["PermissionModule"]
             ],
             providers: [
                 _app_guard__WEBPACK_IMPORTED_MODULE_7__["AppGuard"],
@@ -668,12 +684,17 @@ var AppModule = /** @class */ (function () {
                 _services_authentication_service__WEBPACK_IMPORTED_MODULE_8__["AuthenticationService"],
                 _services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_23__["ElectricityBillsService"],
                 _remote_electricity_bill_remote_service__WEBPACK_IMPORTED_MODULE_22__["ElectricityBillRemoteDataService"],
-                _services_water_bill_service__WEBPACK_IMPORTED_MODULE_36__["WaterBillsService"],
-                _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__["WaterBillRemoteDataService"],
-                _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_38__["TelephoneBillsService"],
-                _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_39__["TelephoneBillRemoteDataService"],
+                _services_water_bill_service__WEBPACK_IMPORTED_MODULE_37__["WaterBillsService"],
+                _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_38__["WaterBillRemoteDataService"],
+                _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_39__["TelephoneBillsService"],
+                _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_40__["TelephoneBillRemoteDataService"],
+                _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_41__["InternetBillsService"],
+                _remote_internet_bill_remote_service__WEBPACK_IMPORTED_MODULE_42__["InternetBillRemoteDataService"],
                 _remote_login_remote_data_service__WEBPACK_IMPORTED_MODULE_24__["LoginRemoteDataService"],
-                _services_dashboard_service__WEBPACK_IMPORTED_MODULE_33__["DashboardService"],
+                _services_dashboard_service__WEBPACK_IMPORTED_MODULE_34__["DashboardService"],
+                _services_approval_service__WEBPACK_IMPORTED_MODULE_43__["ApprovalService"],
+                _remote_approval_remote_service__WEBPACK_IMPORTED_MODULE_44__["ApprovalRemoteService"],
+                _services_message_service__WEBPACK_IMPORTED_MODULE_45__["MessageService"],
                 _services_app_common_service__WEBPACK_IMPORTED_MODULE_9__["AppCommonService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -771,7 +792,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"login-container animated fadeInDown\" style=\"animation-delay: 1s\">\n\n    <div class=\"logo-container\">\n        RECORD<span class=\"man\">APPLICATION</span>\n    </div>\n\n    <div class=\"form-container\">\n        <h1 class=\"sign-in\">Sign Up</h1>\n        <!--login form START-->\n        <form #loginForm=\"ngForm\" novalidate (ngSubmit)=\"onSignUpClick(signupForm)\">\n            <div class=\"form-fields\">\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           placeholder=\"Username\"\n                           name=\"userName\"\n                           #userNameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"userName\"\n                           (input)=\"uniqueUsername($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isUsernameError\">{{usernameError}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"password\"\n                           autocomplete=\"off\"\n                           placeholder=\"Password\"\n                           name=\"password\"\n                           #passwordRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"password\"\n                           (input)=\"errorPwd($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPasswordError\">{{passwordError}}</span>\n                    <span class=\"warning\" *ngIf=\"isPasswordWarning\">{{passwordWarning}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"password\"\n                           autocomplete=\"off\"\n                           placeholder=\"Repeat Password\"\n                           name=\"password\"\n                           #passwordRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"repeatpassword\"\n                           (input)=\"matchPwd($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isRepeatPasswordError\">{{repeatPasswordError}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"control-label\">Select Role</label>\n                    <select class=\"form-control\" (change)=\"onRoleSelected($event)\" placeholder=\"Role\">\n                        <option *ngFor=\"let opt of availableUserRoles\" [selected]=\"selectedRole == opt.roleName\">\n                            {{opt.roleName}}\n                        </option>\n                    </select>\n                    <span class=\"error\" *ngIf=\"isInvalidRole\">Select a valid role</span>\n                </div>\n\n\n                <div class=\"action-container\">\n                    <button class=\"btn btn-primary signup\">SIGNUP</button>\n                    <button class=\"btn btn-light login\" (click)=\"loginClick()\">LOGIN</button>\n                </div>\n            </div>\n\n\n        </form> <!--login form END-->\n\n    </div>\n\n</div>\n"
+module.exports = "<div class=\"login-container animated fadeInDown\" style=\"animation-delay: 1s\">\n\n    <div class=\"logo-container\">\n        RECORD<span class=\"man\">APPLICATION</span>\n    </div>\n\n    <div class=\"form-container\">\n        <h1 class=\"sign-in\">Sign Up</h1>\n        <!--login form START-->\n        <form #loginForm=\"ngForm\" novalidate (ngSubmit)=\"onSignUpClick(signupForm)\">\n            <div class=\"form-fields\">\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           placeholder=\"Username\"\n                           name=\"userName\"\n                           #userNameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"userName\"\n                           (input)=\"uniqueUsername($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isUsernameError\">{{usernameError}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"password\"\n                           autocomplete=\"off\"\n                           placeholder=\"Password\"\n                           name=\"password\"\n                           #passwordRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"password\"\n                           (input)=\"errorPwd($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPasswordError\">{{passwordError}}</span>\n                    <span class=\"warning\" *ngIf=\"isPasswordWarning\">{{passwordWarning}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <input class=\"form-control\"\n                           type=\"password\"\n                           autocomplete=\"off\"\n                           placeholder=\"Repeat Password\"\n                           name=\"password\"\n                           #passwordRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"repeatpassword\"\n                           (input)=\"matchPwd($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isRepeatPasswordError\">{{repeatPasswordError}}</span>\n                </div>\n\n                <div class=\"form-group\">\n                    <label class=\"control-label\">Select Role</label>\n                    <select class=\"form-control\" (change)=\"onRoleSelected($event)\">\n                        <option *ngFor=\"let opt of availableUserRoles\" [selected]=\"selectedRole == opt.roleName\">\n                            {{opt.roleName}}\n                        </option>\n                    </select>\n                    <span class=\"error\" *ngIf=\"isInvalidRole\">Select a valid role</span>\n                </div>\n\n\n                <div class=\"action-container\">\n                    <button class=\"btn btn-primary signup\">SIGNUP</button>\n                    <button class=\"btn btn-light login\" (click)=\"loginClick()\">LOGIN</button>\n                </div>\n            </div>\n\n\n        </form> <!--login form END-->\n\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -829,6 +850,7 @@ var SignupComponent = /** @class */ (function () {
     SignupComponent.prototype.onSignUpClick = function (signupForm) {
         if (this.checkBeforeSignup()) {
             if (this.password == this.repeatpassword) {
+                console.log('$' + this.roleValue + '$');
                 this._authenticationService.signup(this.userName, this.password, this.roleValue);
             }
         }
@@ -984,13 +1006,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_guard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../app.guard */ "./src/app/app.guard.ts");
 /* harmony import */ var _maincomponets_viewbill_viewbill_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./maincomponets/viewbill/viewbill.component */ "./src/app/billing/maincomponets/viewbill/viewbill.component.ts");
 /* harmony import */ var _utility_bills_electricity_view_view_electricity_bill_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utility-bills/electricity/view/view-electricity-bill.component */ "./src/app/billing/utility-bills/electricity/view/view-electricity-bill.component.ts");
-/* harmony import */ var _utility_bills_internet_create_create_internet_bill_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utility-bills/internet/create/create-internet-bill.component */ "./src/app/billing/utility-bills/internet/create/create-internet-bill.component.ts");
+/* harmony import */ var _utility_bills_telephone_view_view_telephone_bill_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utility-bills/telephone/view/view-telephone-bill.component */ "./src/app/billing/utility-bills/telephone/view/view-telephone-bill.component.ts");
+/* harmony import */ var _utility_bills_water_view_view_water_bill_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./utility-bills/water/view/view-water-bill.component */ "./src/app/billing/utility-bills/water/view/view-water-bill.component.ts");
+/* harmony import */ var _utility_bills_internet_view_view_internet_bill_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./utility-bills/internet/view/view-internet-bill.component */ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1018,7 +1044,16 @@ var billingRoutes = [
                     },
                     {
                         path: 'telephone',
-                        component: _utility_bills_internet_create_create_internet_bill_component__WEBPACK_IMPORTED_MODULE_6__["CreateInternetBillComponent"],
+                        component: _utility_bills_telephone_view_view_telephone_bill_component__WEBPACK_IMPORTED_MODULE_6__["ViewTelephoneBillComponent"],
+                        canActivate: [_app_guard__WEBPACK_IMPORTED_MODULE_3__["AppGuard"]]
+                    },
+                    {
+                        path: 'water',
+                        component: _utility_bills_water_view_view_water_bill_component__WEBPACK_IMPORTED_MODULE_7__["ViewWaterBillComponent"],
+                        canActivate: [_app_guard__WEBPACK_IMPORTED_MODULE_3__["AppGuard"]]
+                    }, {
+                        path: 'internet',
+                        component: _utility_bills_internet_view_view_internet_bill_component__WEBPACK_IMPORTED_MODULE_8__["ViewInternetBillComponent"],
                         canActivate: [_app_guard__WEBPACK_IMPORTED_MODULE_3__["AppGuard"]]
                     }
                 ]
@@ -1084,12 +1119,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utility_bills_water_update_update_water_bill_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./utility-bills/water/update/update-water-bill.component */ "./src/app/billing/utility-bills/water/update/update-water-bill.component.ts");
 /* harmony import */ var _utility_bills_telephone_view_view_telephone_bill_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./utility-bills/telephone/view/view-telephone-bill.component */ "./src/app/billing/utility-bills/telephone/view/view-telephone-bill.component.ts");
 /* harmony import */ var _utility_bills_telephone_update_update_telephone_bill_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./utility-bills/telephone/update/update-telephone-bill.component */ "./src/app/billing/utility-bills/telephone/update/update-telephone-bill.component.ts");
+/* harmony import */ var _utility_bills_internet_view_view_internet_bill_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./utility-bills/internet/view/view-internet-bill.component */ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.ts");
+/* harmony import */ var _utility_bills_internet_update_update_internet_bill_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./utility-bills/internet/update/update-internet-bill.component */ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.ts");
+/* harmony import */ var _utility_bills_water_certify_certify_water_bill_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./utility-bills/water/certify/certify-water-bill.component */ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.ts");
+/* harmony import */ var _utility_bills_telephone_certify_certify_telephone_bill_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./utility-bills/telephone/certify/certify-telephone-bill.component */ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.ts");
+/* harmony import */ var ng2_toasty__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ng2-toasty */ "./node_modules/ng2-toasty/index.js");
+/* harmony import */ var _utility_bills_internet_certify_certify_internet_bill_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./utility-bills/internet/certify/certify-internet-bill.component */ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
 
 
 
@@ -1129,6 +1176,7 @@ var BillingModule = /** @class */ (function () {
                 _billing_routing_module__WEBPACK_IMPORTED_MODULE_8__["BillingRoutingModule"],
                 ngx_bootstrap_modal__WEBPACK_IMPORTED_MODULE_15__["ModalModule"].forRoot(),
                 ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_17__["TooltipModule"].forRoot(),
+                ng2_toasty__WEBPACK_IMPORTED_MODULE_27__["ToastyModule"].forRoot(),
                 _directives_permission_module__WEBPACK_IMPORTED_MODULE_18__["PermissionModule"]
             ],
             declarations: [
@@ -1141,10 +1189,15 @@ var BillingModule = /** @class */ (function () {
                 _utility_bills_electricity_view_view_electricity_bill_component__WEBPACK_IMPORTED_MODULE_13__["ViewElectricityBillComponent"],
                 _utility_bills_electricity_update_update_electricity_bill_component__WEBPACK_IMPORTED_MODULE_14__["UpdateElectricityBillComponent"],
                 _utility_bills_electricity_certify_certify_electricity_bill_component__WEBPACK_IMPORTED_MODULE_16__["CertifyElectricityBillComponent"],
+                _utility_bills_water_certify_certify_water_bill_component__WEBPACK_IMPORTED_MODULE_25__["CertifyWaterBillComponent"],
+                _utility_bills_telephone_certify_certify_telephone_bill_component__WEBPACK_IMPORTED_MODULE_26__["CertifyTelephoneBillComponent"],
+                _utility_bills_internet_certify_certify_internet_bill_component__WEBPACK_IMPORTED_MODULE_28__["CertifyInternetBillComponent"],
                 _utility_bills_water_view_view_water_bill_component__WEBPACK_IMPORTED_MODULE_19__["ViewWaterBillComponent"],
                 _utility_bills_water_update_update_water_bill_component__WEBPACK_IMPORTED_MODULE_20__["UpdateWaterBillComponent"],
                 _utility_bills_telephone_view_view_telephone_bill_component__WEBPACK_IMPORTED_MODULE_21__["ViewTelephoneBillComponent"],
-                _utility_bills_telephone_update_update_telephone_bill_component__WEBPACK_IMPORTED_MODULE_22__["UpdateTelephoneBillComponent"]
+                _utility_bills_telephone_update_update_telephone_bill_component__WEBPACK_IMPORTED_MODULE_22__["UpdateTelephoneBillComponent"],
+                _utility_bills_internet_view_view_internet_bill_component__WEBPACK_IMPORTED_MODULE_23__["ViewInternetBillComponent"],
+                _utility_bills_internet_update_update_internet_bill_component__WEBPACK_IMPORTED_MODULE_24__["UpdateInternetBillComponent"]
             ]
         })
     ], BillingModule);
@@ -1200,7 +1253,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AddbillComponent = /** @class */ (function () {
     function AddbillComponent() {
-        this.typeString = ["", "Electricity", "Telephone", "Water"];
+        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
     }
     AddbillComponent.prototype.ngOnInit = function () {
         this.selectedType = "";
@@ -1260,7 +1313,7 @@ var AddbillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billViewContainer\">\n      <div class=\"form-header\">\n         View Bills\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-view-electricity-bill></app-view-electricity-bill>\n    </div>\n    <div *ngIf=\"isInternet\">\n      <app-create-internet-bill></app-create-internet-bill>\n    </div>\n    <div *ngIf=\"isTelephone\">\n      <app-view-telephone-bill></app-view-telephone-bill>\n    </div>\n    <div *ngIf=\"isWater\">\n      <app-view-water-bill></app-view-water-bill>\n    </div>\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billViewContainer\">\n      <div class=\"form-header\">\n         View Bills\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-view-electricity-bill></app-view-electricity-bill>\n    </div>\n    <div *ngIf=\"isInternet\">\n      <app-view-internet-bill></app-view-internet-bill>\n    </div>\n    <div *ngIf=\"isTelephone\">\n      <app-view-telephone-bill></app-view-telephone-bill>\n    </div>\n    <div *ngIf=\"isWater\">\n      <app-view-water-bill></app-view-water-bill>\n    </div>\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
 
 /***/ }),
 
@@ -1298,7 +1351,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ViewbillComponent = /** @class */ (function () {
     function ViewbillComponent() {
-        this.typeString = ["", "Electricity", "Telephone", "Water"];
+        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
     }
     ViewbillComponent.prototype.ngOnInit = function () {
         this.selectedType = "";
@@ -1358,7 +1411,7 @@ var ViewbillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"approve()\" autocomplete=\"off\">\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Date:</label>\n                <div class=\"col-sm-6\">\n                    <p class=\"form-control\">{{bill.datetime}}</p>\n                </div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billNo}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Previous Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.previousReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Current Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.currentReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billNo}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">No. Of Units:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.noOfUnits}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Amount:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.amount}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Location:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.location}}</p></div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"reject()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>"
+module.exports = "<div class=\"animated fadeInUp\" xmlns=\"http://www.w3.org/1999/html\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"approve()\" autocomplete=\"off\">\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Date:</label>\n                <div class=\"col-sm-6\">\n                    <p class=\"form-control\">{{bill.datetime}}</p>\n                </div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billNo}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Previous Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.previousReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Current Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.currentReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">No. Of Units:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.noOfUnits}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Amount:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.amount}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Location:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.location}}</p></div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-5 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Certify</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"reject()\">Reject</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1385,6 +1438,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertifyElectricityBillComponent", function() { return CertifyElectricityBillComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_approval_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/approval.service */ "./src/app/services/approval.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_message_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/message.service */ "./src/app/services/message.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1396,28 +1452,71 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var CertifyElectricityBillComponent = /** @class */ (function () {
-    // @Output()
-    // private onUpdateTask: EventEmitter<boolean> = new EventEmitter();
-    function CertifyElectricityBillComponent() {
+    function CertifyElectricityBillComponent(_router, _approvalService, message) {
+        this._router = _router;
+        this._approvalService = _approvalService;
+        this.message = message;
+        this.modalClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     CertifyElectricityBillComponent.prototype.ngOnInit = function () {
     };
     CertifyElectricityBillComponent.prototype.approve = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "electricitybill";
+        approvedBill.status = "approved";
+        approvedBill.comment = "approved successfully";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/electricity"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
     };
     CertifyElectricityBillComponent.prototype.reject = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "electricitybill";
+        approvedBill.status = "rejected";
+        approvedBill.comment = "rejected the bill";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/electricity"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", _models_data_models__WEBPACK_IMPORTED_MODULE_1__["ElectricityBill"])
     ], CertifyElectricityBillComponent.prototype, "bill", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], CertifyElectricityBillComponent.prototype, "modalClose", void 0);
     CertifyElectricityBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-certify-electricity-bill',
+            selector: "app-certify-electricity-bill",
             template: __webpack_require__(/*! ./certify-electricity-bill.component.html */ "./src/app/billing/utility-bills/electricity/certify/certify-electricity-bill.component.html"),
             styles: [__webpack_require__(/*! ./certify-electricity-bill.component.scss */ "./src/app/billing/utility-bills/electricity/certify/certify-electricity-bill.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_approval_service__WEBPACK_IMPORTED_MODULE_2__["ApprovalService"], _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
     ], CertifyElectricityBillComponent);
     return CertifyElectricityBillComponent;
 }());
@@ -1433,7 +1532,7 @@ var CertifyElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <!--<div class=\"form-header\">-->\n        <!--Electricity Bill-->\n      <!--</div>-->\n\n      <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n            (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n          <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Bill Account Number\"\n                   name=\"name\"\n                   #nameRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.billNo\"\n                   (input)=\"isAccountNoValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n          <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"month\"\n                   autocomplete=\"off\"\n                   placeholder=\"Period\"\n                   name=\"period\"\n                   #periodRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.period\"\n                   (input)=\"isPeriodValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n          <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Previous Reading\"\n                   name=\"prevread\"\n                   #prevreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.previousReading\"\n                   (input)=\"isPreviousReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n          <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Current Reading\"\n                   name=\"curread\"\n                   #curreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.currentReading\"\n                   (input)=\"isCurrentReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n          <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"No. of Units\"\n                   name=\"units\"\n                   required\n                   #unitsRef=\"ngModel\"\n                   [(ngModel)]=\"electricityBill.noOfUnits\"\n                   (input)=\"isNoOfUnitsValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n          <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Amount\"\n                   name=\"amount\"\n                   #amountRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.amount\"\n                   (input)=\"isAmountValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n          <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Location\"\n                   name=\"location\"\n                   #locationRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.location\"\n                   (input)=\"isLocationValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n            <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n            &nbsp;\n            <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n          </div>\n        </div>\n\n      </form>\n\n    </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <!--<div class=\"form-header\">-->\n        <!--Electricity Bill-->\n      <!--</div>-->\n\n      <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n            (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n          <label class=\"control-label col-sm-2\">Bill Number <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Bill Number\"\n                   name=\"name\"\n                   #nameRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.billNo\"\n                   (input)=\"isAccountNoValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n          <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"month\"\n                   autocomplete=\"off\"\n                   placeholder=\"Period\"\n                   name=\"period\"\n                   #periodRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.period\"\n                   (input)=\"isPeriodValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n          <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Previous Reading\"\n                   name=\"prevread\"\n                   #prevreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.previousReading\"\n                   (input)=\"isPreviousReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n          <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Current Reading\"\n                   name=\"curread\"\n                   #curreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.currentReading\"\n                   (input)=\"isCurrentReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n          <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"No. of Units\"\n                   name=\"units\"\n                   required\n                   #unitsRef=\"ngModel\"\n                   [(ngModel)]=\"electricityBill.noOfUnits\"\n                   (input)=\"isNoOfUnitsValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n          <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Amount\"\n                   name=\"amount\"\n                   #amountRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.amount\"\n                   (input)=\"isAmountValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n          <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Location\"\n                   name=\"location\"\n                   #locationRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.location\"\n                   (input)=\"isLocationValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n            <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n            &nbsp;\n            <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n          </div>\n        </div>\n\n      </form>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1682,7 +1781,7 @@ var CreateElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.billNo\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"month\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n                <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Previous Reading\"\n                           name=\"prevread\"\n                           #prevreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.previousReading\"\n                           (input)=\"isPreviousReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n                <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Current Reading\"\n                           name=\"curread\"\n                           #curreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.currentReading\"\n                           (input)=\"isCurrentReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n                <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"No. of Units\"\n                           name=\"units\"\n                           required\n                           #unitsRef=\"ngModel\"\n                           [(ngModel)]=\"electricityBill.noOfUnits\">\n                    <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.billNo\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"month\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n                <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Previous Reading\"\n                           name=\"prevread\"\n                           #prevreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.previousReading\"\n                           (input)=\"isPreviousReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n                <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Current Reading\"\n                           name=\"curread\"\n                           #curreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.currentReading\"\n                           (input)=\"isCurrentReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n                <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"No. of Units\"\n                           name=\"units\"\n                           required\n                           #unitsRef=\"ngModel\"\n                           [(ngModel)]=\"electricityBill.noOfUnits\">\n                    <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1729,12 +1828,13 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
         this.electricityBillsService = electricityBillsService;
         this._router = _router;
         this.onUpdateTask = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.modalClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     UpdateElectricityBillComponent.prototype.ngOnInit = function () {
         this.disableAddButton = false;
     };
     UpdateElectricityBillComponent.prototype.ngAfterViewChecked = function () {
-        console.log("After view loaded : " + this.electricityBill.id);
+        // console.log("After view loaded : " + this.electricityBill.id);
     };
     UpdateElectricityBillComponent.prototype.onSubmition = function (billForm) {
         //when form is submitted
@@ -1747,6 +1847,7 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
             this.electricityBill.location != null && this.electricityBill.location != "") {
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
             this.onUpdateTask.emit(true);
+            this.modalClose.emit(true);
         }
         else {
             if (this.electricityBill.billNo.length == 0) {
@@ -1915,6 +2016,10 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
     ], UpdateElectricityBillComponent.prototype, "onUpdateTask", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], UpdateElectricityBillComponent.prototype, "modalClose", void 0);
     UpdateElectricityBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-update-electricity-bill",
@@ -1937,7 +2042,7 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-electricity-bill\n                        *ngIf=\"showUpdateBill\"\n                        [electricityBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-electricity-bill>\n\n                <app-certify-electricity-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Electricity Bill Table\n        </div>\n\n        <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Year</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n            <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-electricity-bill\n                        *ngIf=\"showUpdateBill\"\n                        [electricityBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-electricity-bill>\n\n                <app-certify-electricity-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Electricity Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"col-sm-2 field-value\">\n                <a type=\"button\" class=\"btn btn-warning\" (click)=\"downloadTable()\">Download PDF</a>\n            </div>\n        </div>\n\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *ngIf=\"showPendingOnly(item.certification)\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\"\n                            *appHaspermission=\"1\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1965,6 +2070,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/electricity-bill.service */ "./src/app/services/electricity-bill.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jspdf-autotable */ "./node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js");
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1977,11 +2086,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var ViewElectricityBillComponent = /** @class */ (function () {
     function ViewElectricityBillComponent(_electrictyBillService, _router) {
         this._electrictyBillService = _electrictyBillService;
         this._router = _router;
-        this.fieldSet = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "", ""];
+        this.fieldSet = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "Action", ""];
         this.yearString = ["All", "2017", "2018", "2019", "2020"];
         this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         this.selectedYear = "All";
@@ -2105,6 +2216,33 @@ var ViewElectricityBillComponent = /** @class */ (function () {
         else
             this.getAllElectrictyBillsByPeriod(this.selectedYear, this.selectedMonth);
     };
+    ViewElectricityBillComponent.prototype.downloadTable = function () {
+        var doc = new jspdf__WEBPACK_IMPORTED_MODULE_3__();
+        var col = ['Bill No', 'Period', 'Prev Reading', 'Curr Reading', 'No.of Units', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+        this.electrictyBillList.forEach(function (element) {
+            var temp = [element.billNo, element.period, element.previousReading, element.currentReading, element.noOfUnits, element.amount, element.location, element.certification];
+            rows.push(temp);
+        });
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+        doc.text('Electricity Bill Report', 80, 20);
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Electricity Bill Report.pdf');
+    };
+    ViewElectricityBillComponent.prototype.showPendingOnly = function (item) {
+        if (item == "pending") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
     ViewElectricityBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-view-electricity-bill",
@@ -2120,6 +2258,127 @@ var ViewElectricityBillComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\" xmlns=\"http://www.w3.org/1999/html\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"approve()\" autocomplete=\"off\">\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Date:</label>\n                <div class=\"col-sm-6\">\n                    <p class=\"form-control\">{{bill.datetime}}</p>\n                </div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billId}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Period:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.period}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Amount:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.amount}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Location:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.location}}</p></div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-5 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Certify</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"reject()\">Reject</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.scss":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.scss ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L2NlcnRpZnkvY2VydGlmeS1pbnRlcm5ldC1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWMsRUFDZjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLDZCQUE0QixFQUM3Qjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYSxFQUNkOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBS3RDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvaW50ZXJuZXQvY2VydGlmeS9jZXJ0aWZ5LWludGVybmV0LWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xufVxuXG4uYmlsbElucHV0Q29udGFpbmVyIHtcbiAgbWluLWhlaWdodDogMTAwcHg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IHNvbGlkIDFweCB3aGl0ZXNtb2tlO1xufVxuXG4uZXJyb3Ige1xuICBmb250LXNpemU6IDAuOWVtO1xuICBjb2xvcjogI2Y5NjU2NTtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAxMCU7XG4gIG91dGxpbmU6IG5vbmU7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cblxuXG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.ts":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.ts ***!
+  \*******************************************************************************************/
+/*! exports provided: CertifyInternetBillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertifyInternetBillComponent", function() { return CertifyInternetBillComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_approval_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/approval.service */ "./src/app/services/approval.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_message_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/message.service */ "./src/app/services/message.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CertifyInternetBillComponent = /** @class */ (function () {
+    function CertifyInternetBillComponent(_router, _approvalService, message) {
+        this._router = _router;
+        this._approvalService = _approvalService;
+        this.message = message;
+        this.modalClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    CertifyInternetBillComponent.prototype.ngOnInit = function () {
+    };
+    CertifyInternetBillComponent.prototype.approve = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "internetbill";
+        approvedBill.status = "approved";
+        approvedBill.comment = "approved successfully";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/internet"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    CertifyInternetBillComponent.prototype.reject = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "internetbill";
+        approvedBill.status = "rejected";
+        approvedBill.comment = "rejected the bill";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/internet"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_data_models__WEBPACK_IMPORTED_MODULE_1__["InternetBill"])
+    ], CertifyInternetBillComponent.prototype, "bill", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], CertifyInternetBillComponent.prototype, "modalClose", void 0);
+    CertifyInternetBillComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-certify-internet-bill",
+            template: __webpack_require__(/*! ./certify-internet-bill.component.html */ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.html"),
+            styles: [__webpack_require__(/*! ./certify-internet-bill.component.scss */ "./src/app/billing/utility-bills/internet/certify/certify-internet-bill.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_approval_service__WEBPACK_IMPORTED_MODULE_2__["ApprovalService"], _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
+    ], CertifyInternetBillComponent);
+    return CertifyInternetBillComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/billing/utility-bills/internet/create/create-internet-bill.component.html":
 /*!*******************************************************************************************!*\
   !*** ./src/app/billing/utility-bills/internet/create/create-internet-bill.component.html ***!
@@ -2127,7 +2386,7 @@ var ViewElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"tbl-header\">\n        Internet Bill\n      </div>\n\n      <form class=\"form-horizontal\" #billForm=\"ngForm\" novalidate\n            (ngSubmit)=\"onSubmition(billForm)\" autocomplete=\"off\">\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNameError}\">\n          <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Bill Account Number\"\n                   name=\"name\"\n                   #nameRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"rateDefName\"\n                   (input)=\"isNameUnique($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isNameError\">{{nameError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isDescriptionEmpty}\">\n          <label class=\"control-label col-sm-2\">Date <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Date\"\n                   name=\"description\"\n                   #descriptionRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"rateDefDescription\"\n                   (input)=\"descriptionEmpty($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isDescriptionError\">{{descriptionError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isDescriptionEmpty}\">\n          <label class=\"control-label col-sm-2\">Payment Month <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Payment Month\"\n                   name=\"description\"\n                   #descriptionRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"rateDefDescription\"\n                   (input)=\"descriptionEmpty($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isDescriptionError\">{{descriptionError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isDescriptionEmpty}\">\n          <label class=\"control-label col-sm-2\">Duration <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Duration\"\n                   name=\"description\"\n                   #descriptionRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"rateDefDescription\"\n                   (input)=\"descriptionEmpty($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isDescriptionError\">{{descriptionError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isDescriptionEmpty}\">\n          <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Amount\"\n                   name=\"description\"\n                   #descriptionRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"rateDefDescription\"\n                   (input)=\"descriptionEmpty($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isDescriptionError\">{{descriptionError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n            <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n            &nbsp;\n            <a class=\"btn btn-warning\" (click)=\"reloadPage()\">Clear</a>\n          </div>\n        </div>\n\n      </form>\n\n    </div>\n  </div>\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <!--<div class=\"form-header\">-->\n      <!--Internet Bill-->\n    <!--</div>-->\n\n    <form class=\"form-horizontal\" #internetBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(internetBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"internetBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"internetBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"internetBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n        <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Location\"\n                 name=\"location\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"internetBill.location\"\n                 (input)=\"isLocationValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2138,7 +2397,7 @@ module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.billInputContainer .fields-container div[class^=\"col-\"] {\n    padding-bottom: 10px; }\n\n.billInputContainer .title {\n    font-size: 1.2em;\n    font-weight: 600;\n    color: gray;\n    padding-bottom: 5px; }\n\n.rateForm input {\n  background-color: #dde3ec;\n  height: 43px;\n  color: #8290a3;\n  border: 1px solid #dde3ec; }\n\n.rateForm input:focus {\n    border: 1px solid #c3ccda; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n/* The switch - the box around the slider */\n\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 34px; }\n\n/* Hide default HTML checkbox */\n\n.switch input {\n  display: none; }\n\n/* The slider */\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s; }\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s; }\n\ninput:checked + .slider {\n  background-color: #2196F3; }\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #2196F3; }\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px); }\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 34px; }\n\n.slider.round:before {\n  border-radius: 50%; }\n\n.info-tooltip {\n  font-size: 1.5em;\n  color: #8E44AD;\n  vertical-align: top;\n  margin-top: 0.3em;\n  cursor: pointer; }\n\n.info-tooltip-view {\n  margin-top: 0em !important;\n  margin-left: 0.5em; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.searchFilter {\n  /*overflow: hidden;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke;\n    background-color: #E19131;*/\n  min-height: 78px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #E19131;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  color: #ffffff; }\n\n.searchFilter div[class^=\"col-\"] {\n  padding-bottom: 10px; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.noreteselect {\n  margin-left: 10%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  color: #343a40; }\n\n.noreteselect i {\n  font-size: 50px;\n  color: #E19131; }\n\n.viewListForm .control-label {\n  padding-top: 0px !important; }\n\n.sub-control-label {\n  color: #9a9a9a; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #7788aa;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n.open > .dropdown-menu {\n  display: block;\n  height: 100px;\n  overflow-y: scroll; }\n\n.tariff_des {\n  font-size: 9px !important; }\n\n.tariffdropname {\n  color: #660066; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L2NyZWF0ZS9jcmVhdGUtaW50ZXJuZXQtYmlsbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsY0FBYTtFQUNiLHdCQUF1QjtFQUN2Qiw2QkFBNEIsRUFjN0I7O0FBbEJEO0lBUU0scUJBQW9CLEVBQ3JCOztBQVRMO0lBYUksaUJBQWdCO0lBQ2hCLGlCQUFnQjtJQUNoQixZQUFXO0lBQ1gsb0JBQW1CLEVBQ3BCOztBQUdIO0VBR0ksMEJBQXlCO0VBQ3pCLGFBQVk7RUFDWixlQUFjO0VBQ2QsMEJBQXlCLEVBSzFCOztBQVhIO0lBU00sMEJBQXlCLEVBQzFCOztBQUlMO0VBQ0UsaUJBQWdCO0VBQ2hCLGVBQWMsRUFDZjs7QUFFRCw0Q0FBNEM7O0FBQzVDO0VBQ0UsbUJBQWtCO0VBQ2xCLHNCQUFxQjtFQUNyQixZQUFXO0VBQ1gsYUFBWSxFQUNiOztBQUVELGdDQUFnQzs7QUFDaEM7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQsZ0JBQWdCOztBQUNoQjtFQUNFLG1CQUFrQjtFQUNsQixnQkFBZTtFQUNmLE9BQU07RUFDTixRQUFPO0VBQ1AsU0FBUTtFQUNSLFVBQVM7RUFDVCx1QkFBc0I7RUFFdEIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSxtQkFBa0I7RUFDbEIsWUFBVztFQUNYLGFBQVk7RUFDWixZQUFXO0VBQ1gsVUFBUztFQUNULFlBQVc7RUFDWCx3QkFBdUI7RUFFdkIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSw0QkFBMkIsRUFDNUI7O0FBRUQ7RUFDRSxvQ0FBbUM7RUFFbkMsNEJBQTJCLEVBQzVCOztBQUVELHFCQUFxQjs7QUFDckI7RUFDRSxvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsZUFBYztFQUNkLG9CQUFtQjtFQUNuQixrQkFBaUI7RUFDakIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSwyQkFBMEI7RUFDMUIsbUJBQWtCLEVBQ25COztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWEsRUFDZDs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0Usc0JBQXFCO0VBQ3JCLGVBQWMsRUFDZjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUd0QztFQUNFOzs7O2dDQUk4QjtFQUU5QixpQkFBZ0I7RUFDaEIsY0FBYTtFQUNiLG9CQUFtQjtFQUNuQiwwQkFBeUI7RUFDekIsMEJBQXlCO0VBR3pCLG1CQUFrQjtFQUdsQixnREFBK0M7RUFDL0MsZUFBYyxFQUNmOztBQUVEO0VBRUkscUJBQW9CLEVBQ3JCOztBQUdIO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFBZSxpQkFBZ0I7RUFBRSxlQUFjO0VBQUUsa0JBQWlCO0VBQUUsZUFBYyxFQUFHOztBQUVyRjtFQUFpQixnQkFBZTtFQUFFLGVBQWMsRUFBRzs7QUFFbkQ7RUFBOEIsNEJBQTJCLEVBQUc7O0FBRTVEO0VBQW9CLGVBQWMsRUFBRzs7QUFHckM7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2Y7O0FBR0g7RUFDRSxlQUFjO0VBQ2QsY0FBYTtFQUNiLG1CQUFrQixFQUNuQjs7QUFFRDtFQUFhLDBCQUF5QixFQUFHOztBQUV6QztFQUFnQixlQUFjLEVBQUUiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvaW50ZXJuZXQvY3JlYXRlL2NyZWF0ZS1pbnRlcm5ldC1iaWxsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmNvbnRlbnQtZGl2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcbn1cblxuLnRibC1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbn1cblxuLmJpbGxJbnB1dENvbnRhaW5lciB7XG4gIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGVzbW9rZTtcblxuICAuZmllbGRzLWNvbnRhaW5lciB7XG4gICAgZGl2W2NsYXNzXj1cImNvbC1cIl0ge1xuICAgICAgcGFkZGluZy1ib3R0b206IDEwcHg7XG4gICAgfVxuICB9XG5cbiAgLnRpdGxlIHtcbiAgICBmb250LXNpemU6IDEuMmVtO1xuICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgY29sb3I6IGdyYXk7XG4gICAgcGFkZGluZy1ib3R0b206IDVweDtcbiAgfVxufVxuXG4ucmF0ZUZvcm0ge1xuXG4gIGlucHV0IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRlM2VjO1xuICAgIGhlaWdodDogNDNweDtcbiAgICBjb2xvcjogIzgyOTBhMztcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRlM2VjO1xuXG4gICAgJjpmb2N1cyB7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCAjYzNjY2RhO1xuICAgIH1cbiAgfVxufVxuXG4uZXJyb3Ige1xuICBmb250LXNpemU6IDAuOWVtO1xuICBjb2xvcjogI2Y5NjU2NTtcbn1cblxuLyogVGhlIHN3aXRjaCAtIHRoZSBib3ggYXJvdW5kIHRoZSBzbGlkZXIgKi9cbi5zd2l0Y2gge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgd2lkdGg6IDYwcHg7XG4gIGhlaWdodDogMzRweDtcbn1cblxuLyogSGlkZSBkZWZhdWx0IEhUTUwgY2hlY2tib3ggKi9cbi5zd2l0Y2ggaW5wdXQge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG4vKiBUaGUgc2xpZGVyICovXG4uc2xpZGVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgcmlnaHQ6IDA7XG4gIGJvdHRvbTogMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2NjYztcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiAuNHM7XG4gIHRyYW5zaXRpb246IC40cztcbn1cblxuLnNsaWRlcjpiZWZvcmUge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGNvbnRlbnQ6IFwiXCI7XG4gIGhlaWdodDogMjZweDtcbiAgd2lkdGg6IDI2cHg7XG4gIGxlZnQ6IDRweDtcbiAgYm90dG9tOiA0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAtd2Via2l0LXRyYW5zaXRpb246IC40cztcbiAgdHJhbnNpdGlvbjogLjRzO1xufVxuXG5pbnB1dDpjaGVja2VkICsgLnNsaWRlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyMTk2RjM7XG59XG5cbmlucHV0OmZvY3VzICsgLnNsaWRlciB7XG4gIGJveC1zaGFkb3c6IDAgMCAxcHggIzIxOTZGMztcbn1cblxuaW5wdXQ6Y2hlY2tlZCArIC5zbGlkZXI6YmVmb3JlIHtcbiAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMjZweCk7XG4gIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMjZweCk7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgyNnB4KTtcbn1cblxuLyogUm91bmRlZCBzbGlkZXJzICovXG4uc2xpZGVyLnJvdW5kIHtcbiAgYm9yZGVyLXJhZGl1czogMzRweDtcbn1cblxuLnNsaWRlci5yb3VuZDpiZWZvcmUge1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG59XG5cbi5pbmZvLXRvb2x0aXAge1xuICBmb250LXNpemU6IDEuNWVtO1xuICBjb2xvcjogIzhFNDRBRDtcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcbiAgbWFyZ2luLXRvcDogMC4zZW07XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmluZm8tdG9vbHRpcC12aWV3IHtcbiAgbWFyZ2luLXRvcDogMGVtICFpbXBvcnRhbnQ7XG4gIG1hcmdpbi1sZWZ0OiAwLjVlbTtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAxMCU7XG4gIG91dGxpbmU6IG5vbmU7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICBjb2xvcjogI0UxOTEzMTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLmhhcy1kYW5nZXIgLmZvcm0tY29udHJvbHtcbiAgYm9yZGVyLWNvbG9yOiAjZDk1MzRmO1xuICBjb2xvcjogI2Q5NTM0Zjtcbn1cblxuLmJ0bnsgYm9yZGVyLXJhZGl1czogMHB4ICFpbXBvcnRhbnQ7fVxuXG5cbi5zZWFyY2hGaWx0ZXIge1xuICAvKm92ZXJmbG93OiBoaWRkZW47XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IHNvbGlkIDFweCB3aGl0ZXNtb2tlO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNFMTkxMzE7Ki9cblxuICBtaW4taGVpZ2h0OiA3OHB4O1xuICBwYWRkaW5nOiAxOXB4O1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjRTE5MTMxO1xuICBib3JkZXI6IDFweCBzb2xpZCAjZTNlM2UzO1xuICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDtcbiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiBpbnNldCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgLW1vei1ib3gtc2hhZG93OiBpbnNldCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjA1KTtcbiAgYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGNvbG9yOiAjZmZmZmZmO1xufVxuXG4uc2VhcmNoRmlsdGVyIHtcbiAgZGl2W2NsYXNzXj1cImNvbC1cIl0ge1xuICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xuICB9XG59XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4ubm9yZXRlc2VsZWN0eyBtYXJnaW4tbGVmdDogMTAlOyBtYXJnaW4tdG9wOiA1JTsgbWFyZ2luLWJvdHRvbTogNSU7IGNvbG9yOiAjMzQzYTQwO31cblxuLm5vcmV0ZXNlbGVjdCBpeyBmb250LXNpemU6IDUwcHg7IGNvbG9yOiAjRTE5MTMxO31cblxuLnZpZXdMaXN0Rm9ybSAuY29udHJvbC1sYWJlbHsgcGFkZGluZy10b3A6IDBweCAhaW1wb3J0YW50O31cblxuLnN1Yi1jb250cm9sLWxhYmVseyBjb2xvcjogIzlhOWE5YTt9XG5cblxuLnRhYmxlIHtcbiAgZGlzcGxheTogdGFibGU7XG4gIHdpZHRoOiAxMDAlO1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgfVxuXG4gIC50Ymwtcm93IHtcbiAgICBkaXNwbGF5OiB0YWJsZS1yb3c7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjZmNjtcbiAgICBoZWlnaHQ6IDBweDtcblxuICAgICY6bnRoLW9mLXR5cGUob2RkKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICAmLmhlYWRlciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzc4OGFhO1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgICB9XG5cbiAgICAudGJsLWNlbGwge1xuICAgICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbiAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgICAgLy8gIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgfVxuICAgIH1cblxuICAgICYubW9kaWZpZWQge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZjYztcbiAgICB9XG5cbiAgICAmLm9wZW4ge1xuICAgICAgaGVpZ2h0OiAxNThweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNGYyYzk7XG5cbiAgICAgIC5hY3Rpb24ge1xuICAgICAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgICAgICBjb2xvciA6IGJsYWNrO1xuICAgICAgfVxuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDI0M3B4O1xuICAgICAgfVxuICAgIH1cblxuICAgIC5tb3JlLWNvbntcbiAgICAgIHBhZGRpbmc6MTBweCAwcHggMTBweCAwcHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2E4Y2E1O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMTBweDtcbiAgICAgIHJpZ2h0OiAxMXB4O1xuICAgICAgaGVpZ2h0OiAxMDVweDtcbiAgICAgIG1hcmdpbi10b3A6IDUzcHg7XG4gICAgICBib3JkZXI6c29saWQgMXB4ICNkMGQwZDA7XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMTkwcHg7XG4gICAgICB9XG5cbiAgICAgIC5tb3JlLXJvd3tcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMnB4O1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtbmFtZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOWE5YTlhO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC12YWx1ZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICB9XG5cbiAgICAgIHNlbGVjdCxpbnB1dHtcbiAgICAgICAgbWFyZ2luLXRvcDogMnB4O1xuICAgICAgfVxuXG4gICAgICAuYnRue1xuICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgICAgICBwYWRkaW5nLXRvcDogNXB4IWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDVweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cblxuICB9XG5cbiAgLm5vLXJlYy1yb3cge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIC5uby1yZWMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMHB4O1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIG1hcmdpbjogYXV0bztcbiAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgIHBhZGRpbmctdG9wOiAxNXB4O1xuICAgICAgY29sb3I6ICM5YTlhOWE7XG4gICAgfVxuICB9XG5cbiAgLmZyb21jb2xvcntcbiAgICBjb2xvcjogIzJmOWU0NDtcbiAgfVxuXG4gIC50b2NvbG9ye1xuICAgIGNvbG9yOiAjZGQwZDBkO1xuICB9XG59XG5cbi5vcGVuPi5kcm9wZG93bi1tZW51IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGhlaWdodDogMTAwcHg7XG4gIG92ZXJmbG93LXk6IHNjcm9sbDtcbn1cblxuLnRhcmlmZl9kZXN7IGZvbnQtc2l6ZTogOXB4ICFpbXBvcnRhbnQ7fVxuXG4udGFyaWZmZHJvcG5hbWV7Y29sb3I6IzY2MDA2NiB9XG4iXX0= */"
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.billInputContainer .fields-container div[class^=\"col-\"] {\n    padding-bottom: 10px; }\n\n.billInputContainer .title {\n    font-size: 1.2em;\n    font-weight: 600;\n    color: gray;\n    padding-bottom: 5px; }\n\n.rateForm input {\n  background-color: #dde3ec;\n  height: 43px;\n  color: #8290a3;\n  border: 1px solid #dde3ec; }\n\n.rateForm input:focus {\n    border: 1px solid #c3ccda; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n/* The switch - the box around the slider */\n\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 34px; }\n\n/* Hide default HTML checkbox */\n\n.switch input {\n  display: none; }\n\n/* The slider */\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s; }\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s; }\n\ninput:checked + .slider {\n  background-color: #2196F3; }\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #2196F3; }\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px); }\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 34px; }\n\n.slider.round:before {\n  border-radius: 50%; }\n\n.info-tooltip {\n  font-size: 1.5em;\n  color: #8E44AD;\n  vertical-align: top;\n  margin-top: 0.3em;\n  cursor: pointer; }\n\n.info-tooltip-view {\n  margin-top: 0em !important;\n  margin-left: 0.5em; }\n\n.tbl-header {\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.searchFilter {\n  /*overflow: hidden;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke;\n    background-color: #E19131;*/\n  min-height: 78px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #E19131;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  color: #ffffff; }\n\n.searchFilter div[class^=\"col-\"] {\n  padding-bottom: 10px; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.noreteselect {\n  margin-left: 10%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  color: #343a40; }\n\n.noreteselect i {\n  font-size: 50px;\n  color: #E19131; }\n\n.viewListForm .control-label {\n  padding-top: 0px !important; }\n\n.sub-control-label {\n  color: #9a9a9a; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #7788aa;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n.open > .dropdown-menu {\n  display: block;\n  height: 100px;\n  overflow-y: scroll; }\n\n.tariff_des {\n  font-size: 9px !important; }\n\n.tariffdropname {\n  color: #660066; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L2NyZWF0ZS9jcmVhdGUtaW50ZXJuZXQtYmlsbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsY0FBYTtFQUNiLHdCQUF1QjtFQUN2Qiw2QkFBNEIsRUFjN0I7O0FBbEJEO0lBUU0scUJBQW9CLEVBQ3JCOztBQVRMO0lBYUksaUJBQWdCO0lBQ2hCLGlCQUFnQjtJQUNoQixZQUFXO0lBQ1gsb0JBQW1CLEVBQ3BCOztBQUdIO0VBR0ksMEJBQXlCO0VBQ3pCLGFBQVk7RUFDWixlQUFjO0VBQ2QsMEJBQXlCLEVBSzFCOztBQVhIO0lBU00sMEJBQXlCLEVBQzFCOztBQUlMO0VBQ0UsaUJBQWdCO0VBQ2hCLGVBQWMsRUFDZjs7QUFFRCw0Q0FBNEM7O0FBQzVDO0VBQ0UsbUJBQWtCO0VBQ2xCLHNCQUFxQjtFQUNyQixZQUFXO0VBQ1gsYUFBWSxFQUNiOztBQUVELGdDQUFnQzs7QUFDaEM7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQsZ0JBQWdCOztBQUNoQjtFQUNFLG1CQUFrQjtFQUNsQixnQkFBZTtFQUNmLE9BQU07RUFDTixRQUFPO0VBQ1AsU0FBUTtFQUNSLFVBQVM7RUFDVCx1QkFBc0I7RUFFdEIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSxtQkFBa0I7RUFDbEIsWUFBVztFQUNYLGFBQVk7RUFDWixZQUFXO0VBQ1gsVUFBUztFQUNULFlBQVc7RUFDWCx3QkFBdUI7RUFFdkIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSw0QkFBMkIsRUFDNUI7O0FBRUQ7RUFDRSxvQ0FBbUM7RUFFbkMsNEJBQTJCLEVBQzVCOztBQUVELHFCQUFxQjs7QUFDckI7RUFDRSxvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsZUFBYztFQUNkLG9CQUFtQjtFQUNuQixrQkFBaUI7RUFDakIsZ0JBQWUsRUFDaEI7O0FBRUQ7RUFDRSwyQkFBMEI7RUFDMUIsbUJBQWtCLEVBQ25COztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBR3RDO0VBQ0U7Ozs7Z0NBSThCO0VBRTlCLGlCQUFnQjtFQUNoQixjQUFhO0VBQ2Isb0JBQW1CO0VBQ25CLDBCQUF5QjtFQUN6QiwwQkFBeUI7RUFHekIsbUJBQWtCO0VBR2xCLGdEQUErQztFQUMvQyxlQUFjLEVBQ2Y7O0FBRUQ7RUFFSSxxQkFBb0IsRUFDckI7O0FBR0g7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUNFLGVBQWE7RUFDYixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQjs7QUFFRDtFQUFlLGlCQUFnQjtFQUFFLGVBQWM7RUFBRSxrQkFBaUI7RUFBRSxlQUFjLEVBQUc7O0FBRXJGO0VBQWlCLGdCQUFlO0VBQUUsZUFBYyxFQUFHOztBQUVuRDtFQUE4Qiw0QkFBMkIsRUFBRzs7QUFFNUQ7RUFBb0IsZUFBYyxFQUFHOztBQUdyQztFQUNFLGVBQWM7RUFDZCxZQUFXLEVBcUhaOztBQXZIRDtJQVNJLG1CQUFrQjtJQUNsQiwwQkFBeUI7SUFDekIsWUFBVyxFQXFGWjs7QUFoR0g7TUFjTSx3QkFBdUIsRUFDeEI7O0FBZkw7TUFrQk0sMEJBQXlCO01BQ3pCLGlCQUFnQjtNQUNoQixhQUFZLEVBQ2I7O0FBckJMO01BNEJNLG9CQUFtQjtNQUNuQixtQkFBa0IsRUFJbkI7O0FBakNMO01Bb0NNLDBCQUF5QixFQUMxQjs7QUFyQ0w7TUF3Q00sY0FBYTtNQUNiLDBCQUF5QixFQVUxQjs7QUFuREw7UUE0Q1Esb0JBQW1CO1FBQ25CLGFBQWEsRUFDZDs7QUE5Q1A7UUFpRFEsY0FBYSxFQUNkOztBQWxEUDtNQXNETSwyQkFBeUI7TUFDekIsMEJBQXlCO01BQ3pCLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsWUFBVztNQUNYLGNBQWE7TUFDYixpQkFBZ0I7TUFDaEIsMEJBQXdCLEVBaUN6Qjs7QUE5Rkw7UUFnRVEsY0FBYSxFQUNkOztBQWpFUDtRQW9FUSxtQkFBa0IsRUFDbkI7O0FBckVQO1FBd0VRLGFBQVk7UUFDWiwwQkFBeUI7UUFDekIsa0JBQWlCO1FBQ2pCLGtCQUFpQjtRQUNqQixpQkFBZ0IsRUFDakI7O0FBN0VQO1FBZ0ZRLGFBQVk7UUFDWix3QkFBdUI7UUFDdkIsa0JBQWlCLEVBQ2xCOztBQW5GUDtRQXNGUSxnQkFBZSxFQUNoQjs7QUF2RlA7UUEwRlEsaUJBQWdCO1FBQ2hCLDRCQUEwQjtRQUMxQiwrQkFBOEIsRUFDL0I7O0FBN0ZQO0lBbUdJLG1CQUFrQixFQVduQjs7QUE5R0g7TUFzR00sbUJBQWtCO01BQ2xCLFVBQVM7TUFDVCxXQUFVO01BQ1YsYUFBWTtNQUNaLGFBQVk7TUFDWixrQkFBaUI7TUFDakIsZUFBYyxFQUNmOztBQTdHTDtJQWlISSxlQUFjLEVBQ2Y7O0FBbEhIO0lBcUhJLGVBQWMsRUFDZjs7QUFHSDtFQUNFLGVBQWM7RUFDZCxjQUFhO0VBQ2IsbUJBQWtCLEVBQ25COztBQUVEO0VBQWEsMEJBQXlCLEVBQUc7O0FBRXpDO0VBQWdCLGVBQWMsRUFBRSIsImZpbGUiOiJzcmMvYXBwL2JpbGxpbmcvdXRpbGl0eS1iaWxscy9pbnRlcm5ldC9jcmVhdGUvY3JlYXRlLWludGVybmV0LWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xufVxuXG4uYmlsbElucHV0Q29udGFpbmVyIHtcbiAgbWluLWhlaWdodDogMTAwcHg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IHNvbGlkIDFweCB3aGl0ZXNtb2tlO1xuXG4gIC5maWVsZHMtY29udGFpbmVyIHtcbiAgICBkaXZbY2xhc3NePVwiY29sLVwiXSB7XG4gICAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgICB9XG4gIH1cblxuICAudGl0bGUge1xuICAgIGZvbnQtc2l6ZTogMS4yZW07XG4gICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICBjb2xvcjogZ3JheTtcbiAgICBwYWRkaW5nLWJvdHRvbTogNXB4O1xuICB9XG59XG5cbi5yYXRlRm9ybSB7XG5cbiAgaW5wdXQge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGUzZWM7XG4gICAgaGVpZ2h0OiA0M3B4O1xuICAgIGNvbG9yOiAjODI5MGEzO1xuICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGUzZWM7XG5cbiAgICAmOmZvY3VzIHtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNjM2NjZGE7XG4gICAgfVxuICB9XG59XG5cbi5lcnJvciB7XG4gIGZvbnQtc2l6ZTogMC45ZW07XG4gIGNvbG9yOiAjZjk2NTY1O1xufVxuXG4vKiBUaGUgc3dpdGNoIC0gdGhlIGJveCBhcm91bmQgdGhlIHNsaWRlciAqL1xuLnN3aXRjaCB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB3aWR0aDogNjBweDtcbiAgaGVpZ2h0OiAzNHB4O1xufVxuXG4vKiBIaWRlIGRlZmF1bHQgSFRNTCBjaGVja2JveCAqL1xuLnN3aXRjaCBpbnB1dCB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbi8qIFRoZSBzbGlkZXIgKi9cbi5zbGlkZXIge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICByaWdodDogMDtcbiAgYm90dG9tOiAwO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjY2NjO1xuICAtd2Via2l0LXRyYW5zaXRpb246IC40cztcbiAgdHJhbnNpdGlvbjogLjRzO1xufVxuXG4uc2xpZGVyOmJlZm9yZSB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgY29udGVudDogXCJcIjtcbiAgaGVpZ2h0OiAyNnB4O1xuICB3aWR0aDogMjZweDtcbiAgbGVmdDogNHB4O1xuICBib3R0b206IDRweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLjRzO1xuICB0cmFuc2l0aW9uOiAuNHM7XG59XG5cbmlucHV0OmNoZWNrZWQgKyAuc2xpZGVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzIxOTZGMztcbn1cblxuaW5wdXQ6Zm9jdXMgKyAuc2xpZGVyIHtcbiAgYm94LXNoYWRvdzogMCAwIDFweCAjMjE5NkYzO1xufVxuXG5pbnB1dDpjaGVja2VkICsgLnNsaWRlcjpiZWZvcmUge1xuICAtd2Via2l0LXRyYW5zZm9ybTogdHJhbnNsYXRlWCgyNnB4KTtcbiAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlWCgyNnB4KTtcbiAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xufVxuXG4vKiBSb3VuZGVkIHNsaWRlcnMgKi9cbi5zbGlkZXIucm91bmQge1xuICBib3JkZXItcmFkaXVzOiAzNHB4O1xufVxuXG4uc2xpZGVyLnJvdW5kOmJlZm9yZSB7XG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcbn1cblxuLmluZm8tdG9vbHRpcCB7XG4gIGZvbnQtc2l6ZTogMS41ZW07XG4gIGNvbG9yOiAjOEU0NEFEO1xuICB2ZXJ0aWNhbC1hbGlnbjogdG9wO1xuICBtYXJnaW4tdG9wOiAwLjNlbTtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4uaW5mby10b29sdGlwLXZpZXcge1xuICBtYXJnaW4tdG9wOiAwZW0gIWltcG9ydGFudDtcbiAgbWFyZ2luLWxlZnQ6IDAuNWVtO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5oYXMtZGFuZ2VyIC5mb3JtLWNvbnRyb2x7XG4gIGJvcmRlci1jb2xvcjogI2Q5NTM0ZjtcbiAgY29sb3I6ICNkOTUzNGY7XG59XG5cbi5idG57IGJvcmRlci1yYWRpdXM6IDBweCAhaW1wb3J0YW50O31cblxuXG4uc2VhcmNoRmlsdGVyIHtcbiAgLypvdmVyZmxvdzogaGlkZGVuO1xuICBwYWRkaW5nOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGVzbW9rZTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRTE5MTMxOyovXG5cbiAgbWluLWhlaWdodDogNzhweDtcbiAgcGFkZGluZzogMTlweDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0UxOTEzMTtcbiAgYm9yZGVyOiAxcHggc29saWQgI2UzZTNlMztcbiAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7XG4gIC1tb3otYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIC1tb3otYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJveC1zaGFkb3c6IGluc2V0IDAgMXB4IDFweCByZ2JhKDAsIDAsIDAsIDAuMDUpO1xuICBjb2xvcjogI2ZmZmZmZjtcbn1cblxuLnNlYXJjaEZpbHRlciB7XG4gIGRpdltjbGFzc149XCJjb2wtXCJdIHtcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgfVxufVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVye1xuICBtYXJnaW4tdG9wOjUlO1xuICBwYWRkaW5nLWxlZnQ6IDE1MHB4O1xufVxuXG4uY29udHJvbC1sYWJlbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy10b3A6IDlweDtcbn1cblxuLm5vcmV0ZXNlbGVjdHsgbWFyZ2luLWxlZnQ6IDEwJTsgbWFyZ2luLXRvcDogNSU7IG1hcmdpbi1ib3R0b206IDUlOyBjb2xvcjogIzM0M2E0MDt9XG5cbi5ub3JldGVzZWxlY3QgaXsgZm9udC1zaXplOiA1MHB4OyBjb2xvcjogI0UxOTEzMTt9XG5cbi52aWV3TGlzdEZvcm0gLmNvbnRyb2wtbGFiZWx7IHBhZGRpbmctdG9wOiAwcHggIWltcG9ydGFudDt9XG5cbi5zdWItY29udHJvbC1sYWJlbHsgY29sb3I6ICM5YTlhOWE7fVxuXG5cbi50YWJsZSB7XG4gIGRpc3BsYXk6IHRhYmxlO1xuICB3aWR0aDogMTAwJTtcblxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgLy8gZGlzcGxheTogYmxvY2s7XG4gIH1cblxuICAudGJsLXJvdyB7XG4gICAgZGlzcGxheTogdGFibGUtcm93O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNmY2ZjY7XG4gICAgaGVpZ2h0OiAwcHg7XG5cbiAgICAmOm50aC1vZi10eXBlKG9kZCkge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgfVxuXG4gICAgJi5oZWFkZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzc3ODhhYTtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBjb2xvcjogd2hpdGU7XG4gICAgfVxuXG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgLy8gZGlzcGxheTogYmxvY2s7XG4gICAgfVxuXG4gICAgLnRibC1jZWxsIHtcbiAgICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7XG4gICAgICBwYWRkaW5nOiAxMHB4IDEwcHg7XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAgIC8vICBkaXNwbGF5OiBibG9jaztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmLm1vZGlmaWVkIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmY2M7XG4gICAgfVxuXG4gICAgJi5vcGVuIHtcbiAgICAgIGhlaWdodDogMTU4cHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmMmM5O1xuXG4gICAgICAuYWN0aW9uIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiBibGFjaztcbiAgICAgICAgY29sb3IgOiBibGFjaztcbiAgICAgIH1cblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAyNDNweDtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAubW9yZS1jb257XG4gICAgICBwYWRkaW5nOjEwcHggMHB4IDEwcHggMHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzdhOGNhNTtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGxlZnQ6IDEwcHg7XG4gICAgICByaWdodDogMTFweDtcbiAgICAgIGhlaWdodDogMTA1cHg7XG4gICAgICBtYXJnaW4tdG9wOiA1M3B4O1xuICAgICAgYm9yZGVyOnNvbGlkIDFweCAjZDBkMGQwO1xuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDE5MHB4O1xuICAgICAgfVxuXG4gICAgICAubW9yZS1yb3d7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDJweDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLW5hbWV7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzlhOWE5YTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtdmFsdWV7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgfVxuXG4gICAgICBzZWxlY3QsaW5wdXR7XG4gICAgICAgIG1hcmdpbi10b3A6IDJweDtcbiAgICAgIH1cblxuICAgICAgLmJ0bntcbiAgICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICAgICAgcGFkZGluZy10b3A6IDVweCFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiA1cHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICB9XG5cbiAgfVxuXG4gIC5uby1yZWMtcm93IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICAubm8tcmVjIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGxlZnQ6IDBweDtcbiAgICAgIHJpZ2h0OiAwcHg7XG4gICAgICBtYXJnaW46IGF1dG87XG4gICAgICB3aWR0aDogMTAwcHg7XG4gICAgICBwYWRkaW5nLXRvcDogMTVweDtcbiAgICAgIGNvbG9yOiAjOWE5YTlhO1xuICAgIH1cbiAgfVxuXG4gIC5mcm9tY29sb3J7XG4gICAgY29sb3I6ICMyZjllNDQ7XG4gIH1cblxuICAudG9jb2xvcntcbiAgICBjb2xvcjogI2RkMGQwZDtcbiAgfVxufVxuXG4ub3Blbj4uZHJvcGRvd24tbWVudSB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBoZWlnaHQ6IDEwMHB4O1xuICBvdmVyZmxvdy15OiBzY3JvbGw7XG59XG5cbi50YXJpZmZfZGVzeyBmb250LXNpemU6IDlweCAhaW1wb3J0YW50O31cblxuLnRhcmlmZmRyb3BuYW1le2NvbG9yOiM2NjAwNjYgfVxuIl19 */"
 
 /***/ }),
 
@@ -2153,6 +2412,9 @@ module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateInternetBillComponent", function() { return CreateInternetBillComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/internet-bill.service */ "./src/app/services/internet-bill.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2163,10 +2425,121 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
 var CreateInternetBillComponent = /** @class */ (function () {
-    function CreateInternetBillComponent() {
+    function CreateInternetBillComponent(internetBillsService, _router) {
+        this.internetBillsService = internetBillsService;
+        this._router = _router;
     }
     CreateInternetBillComponent.prototype.ngOnInit = function () {
+        this.internetBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["InternetBill"]();
+        this.clearForm();
+        this.disableAddButton = false;
+    };
+    CreateInternetBillComponent.prototype.onSubmition = function (internetBillForm) {
+        //when form is submitted
+        if (this.internetBill.billNo != null && this.internetBill.billNo != "" &&
+            this.internetBill.location != null && this.internetBill.location != "" &&
+            this.internetBill.amount != null &&
+            this.internetBill.location != null && this.internetBill.location != "") {
+            this.internetBill.traineeStaffId = 1;
+            this.internetBillsService.insertInternetBill(this.internetBill);
+        }
+        else {
+            if (this.internetBill.billNo.length == 0) {
+                this.isAccountNoError = true;
+                this.accountNoError = "Bill No cannot be empty";
+            }
+            else {
+                this.isAccountNoError = false;
+            }
+            if (this.internetBill.period.length == 0) {
+                this.isPeriodError = true;
+                this.periodError = "Period cannot be empty";
+            }
+            else {
+                this.isPeriodError = false;
+            }
+            if (this.internetBill.amount == null) {
+                this.isAmountError = true;
+                this.amountError = "Amount cannot be empty";
+            }
+            else {
+                this.isAmountError = false;
+            }
+            if (this.internetBill.location.length == 0) {
+                this.isLocationError = true;
+                this.locationError = "Bill No cannot be empty";
+            }
+            else {
+                this.isLocationError = false;
+            }
+            this.disableAddButton = false;
+        }
+    };
+    CreateInternetBillComponent.prototype.isAccountNoValid = function (accoutNo) {
+        //when the accout no is ented do the acount no check.
+        //shold be a no in the database
+        if (accoutNo.length == 0) {
+            this.isAccountNoError = true;
+            this.accountNoError = 'Bill no can not be empty';
+        }
+        else {
+            this.isAccountNoError = false;
+            this.accountNoError = '';
+        }
+    };
+    CreateInternetBillComponent.prototype.isPeriodValid = function (period) {
+        //shold be a no in the database
+        if (period.length == 0) {
+            this.isPeriodError = true;
+            this.periodError = 'Period can not be empty';
+        }
+        else {
+            this.isPeriodError = false;
+            this.periodError = '';
+        }
+    };
+    CreateInternetBillComponent.prototype.isAmountValid = function (amount) {
+        //shold be a no in the database
+        if (amount.length == 0) {
+            this.isAmountError = true;
+            this.amountError = 'Amount can not be empty';
+        }
+        else {
+            this.isAmountError = false;
+            this.amountError = '';
+        }
+    };
+    CreateInternetBillComponent.prototype.isLocationValid = function (location) {
+        //shold be a no in the database
+        if (location.length == 0) {
+            this.isLocationError = true;
+            this.locationError = 'Location can not be empty';
+        }
+        else {
+            this.isLocationError = false;
+            this.locationError = '';
+        }
+    };
+    CreateInternetBillComponent.prototype.clearForm = function () {
+        this.internetBill.amount = null;
+        this.internetBill.location = '';
+        this.internetBill.period = '';
+        this.internetBill.billNo = '';
+        this.clearErrors();
+    };
+    CreateInternetBillComponent.prototype.clearErrors = function () {
+        this.isAccountNoError = false;
+        this.isPeriodError = false;
+        this.isAmountError = false;
+        this.isLocationError = false;
+        this.accountNoError = "";
+        this.periodError = "";
+        this.accountNoError = "";
+        this.locationError = "";
     };
     CreateInternetBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2174,9 +2547,546 @@ var CreateInternetBillComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./create-internet-bill.component.html */ "./src/app/billing/utility-bills/internet/create/create-internet-bill.component.html"),
             styles: [__webpack_require__(/*! ./create-internet-bill.component.scss */ "./src/app/billing/utility-bills/internet/create/create-internet-bill.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__["InternetBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
     ], CreateInternetBillComponent);
     return CreateInternetBillComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.html":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/update/update-internet-bill.component.html ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #internetBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(internetBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"internetBill.billId\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"internetBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCategoryError}\">\n                <label class=\"control-label col-sm-2\">Category <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           placeholder=\"Category\"\n                           name=\"category\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"internetBill.category\"\n                           (input)=\"isCategoryValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCategoryError\">{{categoryError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"internetBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"internetBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Update</button>                    &nbsp;\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.scss":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/update/update-internet-bill.component.scss ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L3VwZGF0ZS91cGRhdGUtaW50ZXJuZXQtYmlsbC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsY0FBYTtFQUNiLHdCQUF1QjtFQUN2Qiw2QkFBNEIsRUFDN0I7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsZUFBYyxFQUNmOztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWEsRUFDZDs7QUFFRDtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsZUFBYztFQUNkLDBCQUF5QixFQUMxQjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUt0QztFQUFzQixlQUFjLEVBQUc7O0FBRXZDO0VBQ0UsZUFBYTtFQUNiLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixrQkFBaUI7RUFDakIsaUJBQWdCLEVBQ2pCIiwiZmlsZSI6InNyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L3VwZGF0ZS91cGRhdGUtaW50ZXJuZXQtYmlsbC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgY29sb3I6ICNFMTkxMzE7XG59XG5cbi5iaWxsSW5wdXRDb250YWluZXIge1xuICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogc29saWQgMXB4IHdoaXRlc21va2U7XG59XG5cbi5lcnJvciB7XG4gIGZvbnQtc2l6ZTogMC45ZW07XG4gIGNvbG9yOiAjZjk2NTY1O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDEwJTtcbiAgb3V0bGluZTogbm9uZTtcbn1cblxuLnRibC1oZWFkZXIge1xuICBtYXJnaW4tdG9wOiAwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5idG57IGJvcmRlci1yYWRpdXM6IDBweCAhaW1wb3J0YW50O31cblxuXG5cblxuLmNvbnRyb2wtbGFiZWwgc3BhbiB7IGNvbG9yOiAjZGQwZDBkO31cblxuLmJ0bkNvbnRhaW5lcntcbiAgbWFyZ2luLXRvcDo1JTtcbiAgcGFkZGluZy1sZWZ0OiAxNTBweDtcbn1cblxuLmNvbnRyb2wtbGFiZWwge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmctdG9wOiA5cHg7XG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.ts":
+/*!*****************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/update/update-internet-bill.component.ts ***!
+  \*****************************************************************************************/
+/*! exports provided: UpdateInternetBillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateInternetBillComponent", function() { return UpdateInternetBillComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/internet-bill.service */ "./src/app/services/internet-bill.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UpdateInternetBillComponent = /** @class */ (function () {
+    function UpdateInternetBillComponent(internetBillsService, _router) {
+        this.internetBillsService = internetBillsService;
+        this._router = _router;
+        this.onUpdateTask = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    UpdateInternetBillComponent.prototype.ngOnInit = function () {
+        this.disableAddButton = false;
+    };
+    UpdateInternetBillComponent.prototype.ngAfterViewChecked = function () {
+        console.log("After view loaded : " + this.internetBill.id);
+    };
+    UpdateInternetBillComponent.prototype.onSubmition = function (billForm) {
+        //when form is submitted
+        if (this.internetBill.billNo != null && this.internetBill.billNo != "" &&
+            this.internetBill.location != null && this.internetBill.location != "" &&
+            this.internetBill.amount != null &&
+            this.internetBill.location != null && this.internetBill.location != "") {
+            // this.internetBill.certifiedDate = "2018-01-03 00:00:00.0";
+            // this.internetBill.userKey = 1;
+            // this.internetBill.traineeStaffId = 1;
+            // this.internetBill.certification = "approved";
+            this.internetBillsService.updateInternetBill(this.internetBill);
+            this.onUpdateTask.emit(true);
+        }
+        else {
+            if (this.internetBill.billNo.length == 0) {
+                this.isAccountNoError = true;
+                this.accountNoError = "Bill No cannot be empty";
+            }
+            else {
+                this.isAccountNoError = false;
+            }
+            if (this.internetBill.period.length == 0) {
+                this.isPeriodError = true;
+                this.periodError = "Period cannot be empty";
+            }
+            else {
+                this.isPeriodError = false;
+            }
+            if (this.internetBill.amount == null) {
+                this.isAmountError = true;
+                this.amountError = "Amount cannot be empty";
+            }
+            else {
+                this.isAmountError = false;
+            }
+            if (this.internetBill.location.length == 0) {
+                this.isLocationError = true;
+                this.locationError = "Bill No cannot be empty";
+            }
+            else {
+                this.isLocationError = false;
+            }
+            this.disableAddButton = false;
+        }
+    };
+    UpdateInternetBillComponent.prototype.isAccountNoValid = function (accoutNo) {
+        //when the accout no is ented do the acount no check.
+        //shold be a no in the database
+        if (accoutNo.length == 0) {
+            this.isAccountNoError = true;
+            this.accountNoError = 'Bill no can not be empty';
+        }
+        else {
+            this.isAccountNoError = false;
+            this.accountNoError = '';
+        }
+    };
+    UpdateInternetBillComponent.prototype.isPeriodValid = function (period) {
+        //shold be a no in the database
+        if (period.length == 0) {
+            this.isPeriodError = true;
+            this.periodError = 'Period can not be empty';
+        }
+        else {
+            this.isPeriodError = false;
+            this.periodError = '';
+        }
+    };
+    UpdateInternetBillComponent.prototype.isAmountValid = function (amount) {
+        //shold be a no in the database
+        if (amount.length == 0) {
+            this.isAmountError = true;
+            this.amountError = 'Amount can not be empty';
+        }
+        else {
+            this.isAmountError = false;
+            this.amountError = '';
+        }
+    };
+    UpdateInternetBillComponent.prototype.isLocationValid = function (location) {
+        //shold be a no in the database
+        if (location.length == 0) {
+            this.isLocationError = true;
+            this.locationError = 'Location can not be empty';
+        }
+        else {
+            this.isLocationError = false;
+            this.locationError = '';
+        }
+    };
+    UpdateInternetBillComponent.prototype.reloadPage = function () {
+    };
+    UpdateInternetBillComponent.prototype.clearForm = function () {
+        this.internetBill.amount = null;
+        this.internetBill.location = '';
+        this.internetBill.period = '';
+        this.internetBill.billNo = '';
+        this.clearErrors();
+    };
+    UpdateInternetBillComponent.prototype.clearErrors = function () {
+        this.isAccountNoError = false;
+        this.isPeriodError = false;
+        this.isAmountError = false;
+        this.isLocationError = false;
+        this.accountNoError = "";
+        this.periodError = "";
+        this.accountNoError = "";
+        this.locationError = "";
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_data_models__WEBPACK_IMPORTED_MODULE_1__["InternetBill"])
+    ], UpdateInternetBillComponent.prototype, "internetBill", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], UpdateInternetBillComponent.prototype, "onUpdateTask", void 0);
+    UpdateInternetBillComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-update-internet-bill",
+            template: __webpack_require__(/*! ./update-internet-bill.component.html */ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.html"),
+            styles: [__webpack_require__(/*! ./update-internet-bill.component.scss */ "./src/app/billing/utility-bills/internet/update/update-internet-bill.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__["InternetBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]])
+    ], UpdateInternetBillComponent);
+    return UpdateInternetBillComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/view/view-internet-bill.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-internet-bill\n                        *ngIf=\"showUpdateBill\"\n                        [internetBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-internet-bill>\n                <app-certify-internet-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-internet-bill>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Internet Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"col-sm-2 field-value\">\n                <a type=\"button\" class=\"btn btn-warning\" (click)=\"downloadTable()\">Download PDF</a>\n            </div>\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of internetBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *ngIf=\"showPendingOnly(item.certification)\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\"\n                            *appHaspermission=\"1\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"internetBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.scss":
+/*!***************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/view/view-internet-bill.component.scss ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 10px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2ludGVybmV0L3ZpZXcvdmlldy1pbnRlcm5ldC1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0Usb0JBQWtCLEVBQ25COztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWE7RUFDYiwrQkFBOEIsRUFDN0I7O0FBRUg7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxjQUNGLEVBQUM7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBRXRDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvaW50ZXJuZXQvdmlldy92aWV3LWludGVybmV0LWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9ybS1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4udGFibGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5yb3d7XG4gIG1hcmdpbi1ib3R0b206MTBweDtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAyMCU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KVxuICB9XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/internet/view/view-internet-bill.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: ViewInternetBillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewInternetBillComponent", function() { return ViewInternetBillComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/internet-bill.service */ "./src/app/services/internet-bill.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jspdf-autotable */ "./node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js");
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__);
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ViewInternetBillComponent = /** @class */ (function () {
+    function ViewInternetBillComponent(_internetBillService, _router) {
+        this._internetBillService = _internetBillService;
+        this._router = _router;
+        this.fieldSet = ["Date", "Bill No", "Period", "Amount", "Location", "Certification", "", ""];
+        this.yearString = ["All", "2017", "2018", "2019", "2020"];
+        this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        this.selectedYear = "All";
+        this.selectedMonth = "All";
+    }
+    ViewInternetBillComponent.prototype.ngOnInit = function () {
+        this.internetBillList = [];
+        this.retrieveInternetBills();
+        this.showUpdateBill = false;
+        this.showCertifyBill = false;
+    };
+    ViewInternetBillComponent.prototype.getAllInternetBills = function () {
+        var _this = this;
+        this._internetBillService.getInternetBills(function (response) {
+            _this.internetBillList = response;
+        });
+    };
+    ViewInternetBillComponent.prototype.getAllInternetBillsByMonth = function (month) {
+        var _this = this;
+        this._internetBillService.getInternetBillsByMonth(month, function (response) {
+            _this.internetBillList = response;
+        });
+    };
+    ViewInternetBillComponent.prototype.getAllInternetBillsByYear = function (year) {
+        var _this = this;
+        this._internetBillService.getInternetBillsByYear(year, function (response) {
+            _this.internetBillList = response;
+        });
+    };
+    ViewInternetBillComponent.prototype.getAllInternetBillsByPeriod = function (year, month) {
+        var _this = this;
+        this._internetBillService.getInternetBillsByPeriod(year, month, function (response) {
+            _this.internetBillList = response;
+        });
+    };
+    ViewInternetBillComponent.prototype.changeDialogTitle = function () {
+        return this.modalTitle = "Update Internet Bill";
+    };
+    ViewInternetBillComponent.prototype.changeHeading = function () {
+        return this.modalTitle = "Certify Internet Bill";
+    };
+    ViewInternetBillComponent.prototype.clearModalContent = function () {
+        this.showUpdateBill = false;
+        this.showCertifyBill = false;
+        this.retrieveInternetBills();
+    };
+    ViewInternetBillComponent.prototype.onUpdateBillHandler = function (event) {
+        if (event) {
+            this.retrieveInternetBills();
+        }
+    };
+    ViewInternetBillComponent.prototype.onYearSelected = function (event) {
+        this.selectedYear = event.target.value;
+        this.retrieveInternetBills();
+    };
+    ViewInternetBillComponent.prototype.onMonthSelected = function (event) {
+        var selectedType = event.target.value;
+        switch (selectedType) {
+            case "January": {
+                this.selectedMonth = "01";
+                break;
+            }
+            case "February": {
+                this.selectedMonth = "02";
+                break;
+            }
+            case "March": {
+                this.selectedMonth = "03";
+                break;
+            }
+            case "April": {
+                this.selectedMonth = "04";
+                break;
+            }
+            case "May": {
+                this.selectedMonth = "05";
+                break;
+            }
+            case "June": {
+                this.selectedMonth = "06";
+                break;
+            }
+            case "July": {
+                this.selectedMonth = "07";
+                break;
+            }
+            case "August": {
+                this.selectedMonth = "08";
+                break;
+            }
+            case "September": {
+                this.selectedMonth = "09";
+                break;
+            }
+            case "October": {
+                this.selectedMonth = "10";
+                break;
+            }
+            case "November": {
+                this.selectedMonth = "11";
+                break;
+            }
+            case "December": {
+                this.selectedMonth = "12";
+                break;
+            }
+            default: {
+                this.selectedMonth = "All";
+                break;
+            }
+        }
+        this.retrieveInternetBills();
+    };
+    ViewInternetBillComponent.prototype.retrieveInternetBills = function () {
+        if (this.selectedYear == "All" && this.selectedMonth == "All")
+            this.getAllInternetBills();
+        else if (this.selectedYear == "All" && this.selectedMonth != "All")
+            this.getAllInternetBillsByMonth(this.selectedMonth);
+        else if (this.selectedYear != "All" && this.selectedMonth == "All")
+            this.getAllInternetBillsByYear(this.selectedYear);
+        else
+            this.getAllInternetBillsByPeriod(this.selectedYear, this.selectedMonth);
+    };
+    ViewInternetBillComponent.prototype.downloadTable = function () {
+        var doc = new jspdf__WEBPACK_IMPORTED_MODULE_3__();
+        var col = ['Bill No', 'Period', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+        this.internetBillList.forEach(function (element) {
+            var temp = [element.billNo, element.period, element.amount, element.location, element.certification];
+            rows.push(temp);
+        });
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+        doc.text('Internet Bill Report', 80, 20);
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Internet Bill Report.pdf');
+    };
+    ViewInternetBillComponent.prototype.showPendingOnly = function (item) {
+        if (item == "pending") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    ViewInternetBillComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-view-internet-bill",
+            template: __webpack_require__(/*! ./view-internet-bill.component.html */ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.html"),
+            styles: [__webpack_require__(/*! ./view-internet-bill.component.scss */ "./src/app/billing/utility-bills/internet/view/view-internet-bill.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_internet_bill_service__WEBPACK_IMPORTED_MODULE_1__["InternetBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])
+    ], ViewInternetBillComponent);
+    return ViewInternetBillComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.html ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #telephoneBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"approve()\" autocomplete=\"off\">\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Date:</label>\n                <div class=\"col-sm-6\">\n                    <p class=\"form-control\">{{bill.datetime}}</p>\n                </div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billId}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Period:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.period}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Category:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.category}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Amount:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.amount}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Location:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.location}}</p></div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-5 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Certify</button>&nbsp;\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"reject()\">Reject</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.scss":
+/*!***********************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.scss ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3RlbGVwaG9uZS9jZXJ0aWZ5L2NlcnRpZnktdGVsZXBob25lLWJpbGwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsZUFBYyxFQUNmOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGNBQWE7RUFDYix3QkFBdUI7RUFDdkIsNkJBQTRCLEVBQzdCOztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLGVBQWMsRUFDZjs7QUFFRDtFQUNFLFNBQVE7RUFDUixjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFBTSw4QkFBNkIsRUFBRzs7QUFLdEM7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUNFLGVBQWE7RUFDYixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQiIsImZpbGUiOiJzcmMvYXBwL2JpbGxpbmcvdXRpbGl0eS1iaWxscy90ZWxlcGhvbmUvY2VydGlmeS9jZXJ0aWZ5LXRlbGVwaG9uZS1iaWxsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmNvbnRlbnQtZGl2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcbn1cblxuLnRibC1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbn1cblxuLmJpbGxJbnB1dENvbnRhaW5lciB7XG4gIG1pbi1oZWlnaHQ6IDEwMHB4O1xuICBwYWRkaW5nOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGVzbW9rZTtcbn1cblxuLmVycm9yIHtcbiAgZm9udC1zaXplOiAwLjllbTtcbiAgY29sb3I6ICNmOTY1NjU7XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMTAlO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICBjb2xvcjogI0UxOTEzMTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLmJ0bnsgYm9yZGVyLXJhZGl1czogMHB4ICFpbXBvcnRhbnQ7fVxuXG5cblxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVye1xuICBtYXJnaW4tdG9wOjUlO1xuICBwYWRkaW5nLWxlZnQ6IDE1MHB4O1xufVxuXG4uY29udHJvbC1sYWJlbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy10b3A6IDlweDtcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.ts":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.ts ***!
+  \*********************************************************************************************/
+/*! exports provided: CertifyTelephoneBillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertifyTelephoneBillComponent", function() { return CertifyTelephoneBillComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_approval_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/approval.service */ "./src/app/services/approval.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_message_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/message.service */ "./src/app/services/message.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CertifyTelephoneBillComponent = /** @class */ (function () {
+    function CertifyTelephoneBillComponent(_router, _approvalService, message) {
+        this._router = _router;
+        this._approvalService = _approvalService;
+        this.message = message;
+        this.modalClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    CertifyTelephoneBillComponent.prototype.ngOnInit = function () {
+    };
+    CertifyTelephoneBillComponent.prototype.approve = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "telephonebill";
+        approvedBill.status = "approved";
+        approvedBill.comment = "approved successfully";
+        approvedBill.billId = this.bill.billId;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/telephone"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    CertifyTelephoneBillComponent.prototype.reject = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "telephonebill";
+        approvedBill.status = "rejected";
+        approvedBill.comment = "rejected the bill";
+        approvedBill.billId = this.bill.billId;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/telephone"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_data_models__WEBPACK_IMPORTED_MODULE_1__["TelephoneBill"])
+    ], CertifyTelephoneBillComponent.prototype, "bill", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], CertifyTelephoneBillComponent.prototype, "modalClose", void 0);
+    CertifyTelephoneBillComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-certify-telephone-bill",
+            template: __webpack_require__(/*! ./certify-telephone-bill.component.html */ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.html"),
+            styles: [__webpack_require__(/*! ./certify-telephone-bill.component.scss */ "./src/app/billing/utility-bills/telephone/certify/certify-telephone-bill.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_approval_service__WEBPACK_IMPORTED_MODULE_2__["ApprovalService"], _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
+    ], CertifyTelephoneBillComponent);
+    return CertifyTelephoneBillComponent;
 }());
 
 
@@ -2604,7 +3514,7 @@ var UpdateTelephoneBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-telephone-bill\n                        *ngIf=\"showUpdateBill\"\n                        [telephoneBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-telephone-bill>\n\n                <!--<app-certify-telephone-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-telephone-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Telephone Bill Table\n        </div>\n\n        <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Year</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n            <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of telephoneBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billId}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.category}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"telephoneBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-telephone-bill\n                        *ngIf=\"showUpdateBill\"\n                        [telephoneBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-telephone-bill>\n\n                <app-certify-telephone-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-telephone-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Telephone Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"col-sm-2 field-value\">\n                <a type=\"button\" class=\"btn btn-warning\" (click)=\"downloadTable()\">Download PDF</a>\n            </div>\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of telephoneBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billId}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.category}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *ngIf=\"showPendingOnly(item.certification)\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\"\n                            *appHaspermission=\"1\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"telephoneBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -2632,6 +3542,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jspdf-autotable */ "./node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js");
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2641,6 +3555,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -2772,6 +3688,33 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
         else
             this.getAllTelephoneBillsByPeriod(this.selectedYear, this.selectedMonth);
     };
+    ViewTelephoneBillComponent.prototype.downloadTable = function () {
+        var doc = new jspdf__WEBPACK_IMPORTED_MODULE_3__();
+        var col = ['Bill No', 'Period', 'Category', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+        this.telephoneBillList.forEach(function (element) {
+            var temp = [element.billId, element.period, element.category, element.amount, element.location, element.certification];
+            rows.push(temp);
+        });
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+        doc.text('Telephone Bill Report', 80, 20);
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Telephone Bill Report.pdf');
+    };
+    ViewTelephoneBillComponent.prototype.showPendingOnly = function (item) {
+        if (item == "pending") {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
     ViewTelephoneBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: "app-view-telephone-bill",
@@ -2787,6 +3730,127 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/water/certify/certify-water-bill.component.html ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"approve()\" autocomplete=\"off\">\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Date:</label>\n                <div class=\"col-sm-6\">\n                    <p class=\"form-control\">{{bill.datetime}}</p>\n                </div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Number:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.billNo}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Previous Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.previousReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Current Reading:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.currentReading}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">No. Of Units:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.noOfUnits}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Amount:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.amount}}</p></div>\n            </div>\n            <div class=\"form-group row\">\n                <label class=\"control-label col-sm-2\">Location:</label>\n                <div class=\"col-sm-6\"><p class=\"form-control\">{{bill.location}}</p></div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Certify</button>&nbsp;\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"reject()\">Reject</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.scss":
+/*!***************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/water/certify/certify-water-bill.component.scss ***!
+  \***************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3dhdGVyL2NlcnRpZnkvY2VydGlmeS13YXRlci1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWMsRUFDZjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLDZCQUE0QixFQUM3Qjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixlQUFjLEVBQ2Y7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYSxFQUNkOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBS3RDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakIiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvd2F0ZXIvY2VydGlmeS9jZXJ0aWZ5LXdhdGVyLWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xufVxuXG4uYmlsbElucHV0Q29udGFpbmVyIHtcbiAgbWluLWhlaWdodDogMTAwcHg7XG4gIHBhZGRpbmc6IDEwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBib3JkZXI6IHNvbGlkIDFweCB3aGl0ZXNtb2tlO1xufVxuXG4uZXJyb3Ige1xuICBmb250LXNpemU6IDAuOWVtO1xuICBjb2xvcjogI2Y5NjU2NTtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAxMCU7XG4gIG91dGxpbmU6IG5vbmU7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cblxuXG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/app/billing/utility-bills/water/certify/certify-water-bill.component.ts ***!
+  \*************************************************************************************/
+/*! exports provided: CertifyWaterBillComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CertifyWaterBillComponent", function() { return CertifyWaterBillComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _models_data_models__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../models/data-models */ "./src/app/models/data-models.ts");
+/* harmony import */ var _services_approval_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/approval.service */ "./src/app/services/approval.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_message_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../services/message.service */ "./src/app/services/message.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CertifyWaterBillComponent = /** @class */ (function () {
+    function CertifyWaterBillComponent(_router, _approvalService, message) {
+        this._router = _router;
+        this._approvalService = _approvalService;
+        this.message = message;
+        this.modalClose = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    CertifyWaterBillComponent.prototype.ngOnInit = function () {
+    };
+    CertifyWaterBillComponent.prototype.approve = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "waterbill";
+        approvedBill.status = "approved";
+        approvedBill.comment = "approved successfully";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/electricity"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    CertifyWaterBillComponent.prototype.reject = function () {
+        var _this = this;
+        var approvedBill = new _models_data_models__WEBPACK_IMPORTED_MODULE_1__["BillToApprove"]();
+        approvedBill.billType = "waterbill";
+        approvedBill.status = "rejected";
+        approvedBill.comment = "rejected the bill";
+        approvedBill.billId = this.bill.billNo;
+        approvedBill.userId = 1;
+        this._approvalService.approveBill(approvedBill, function (response) {
+            if (response.success) {
+                _this._router.navigate(["bill/show/electricity"]);
+                _this.modalClose.emit(true);
+                // this.message.success(response.message);
+            }
+            else {
+                // this.message.error(response.message);
+            }
+        });
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", _models_data_models__WEBPACK_IMPORTED_MODULE_1__["WaterBill"])
+    ], CertifyWaterBillComponent.prototype, "bill", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], CertifyWaterBillComponent.prototype, "modalClose", void 0);
+    CertifyWaterBillComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: "app-certify-water-bill",
+            template: __webpack_require__(/*! ./certify-water-bill.component.html */ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.html"),
+            styles: [__webpack_require__(/*! ./certify-water-bill.component.scss */ "./src/app/billing/utility-bills/water/certify/certify-water-bill.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _services_approval_service__WEBPACK_IMPORTED_MODULE_2__["ApprovalService"], _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"]])
+    ], CertifyWaterBillComponent);
+    return CertifyWaterBillComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/billing/utility-bills/water/create/create-water-bill.component.html":
 /*!*************************************************************************************!*\
   !*** ./src/app/billing/utility-bills/water/create/create-water-bill.component.html ***!
@@ -2794,7 +3858,7 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <!--<div class=\"form-header\">-->\n      <!--Water Bill-->\n    <!--</div>-->\n\n    <form class=\"form-horizontal\" #waterBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(waterBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n        <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Previous Reading\"\n                 name=\"prevread\"\n                 #prevreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.previousReading\"\n                 (input)=\"isPreviousReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n        <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Current Reading\"\n                 name=\"curread\"\n                 #curreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.currentReading\"\n                 (input)=\"isCurrentReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n        <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"No. of Units\"\n                 name=\"units\"\n                 required\n                 #unitsRef=\"ngModel\"\n                 [(ngModel)]=\"waterBill.noOfUnits\"\n                 (input)=\"isNoOfUnitsValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <!--<div class=\"form-header\">-->\n      <!--Water Bill-->\n    <!--</div>-->\n\n    <form class=\"form-horizontal\" #waterBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(waterBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n        <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Previous Reading\"\n                 name=\"prevread\"\n                 #prevreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.previousReading\"\n                 (input)=\"isPreviousReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n        <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Current Reading\"\n                 name=\"curread\"\n                 #curreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.currentReading\"\n                 (input)=\"isCurrentReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n        <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"No. of Units\"\n                 name=\"units\"\n                 required\n                 #unitsRef=\"ngModel\"\n                 [(ngModel)]=\"waterBill.noOfUnits\"\n                 (input)=\"isNoOfUnitsValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n        <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Location\"\n                 name=\"location\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.location\"\n                 (input)=\"isLocationValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -3296,7 +4360,7 @@ var UpdateWaterBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-water-bill\n                        *ngIf=\"showUpdateBill\"\n                        [waterBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-water-bill>\n\n                <!--<app-certify-electricity-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Water Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-water-bill\n                        *ngIf=\"showUpdateBill\"\n                        [waterBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-water-bill>\n\n                <app-certify-water-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-water-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Water Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"col-sm-2 field-value\">\n                <a type=\"button\" class=\"btn btn-warning\" (click)=\"downloadTable()\">Download PDF</a>\n            </div>\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of waterBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *ngIf=\"showPendingOnly(item.certification)\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\"\n                            *appHaspermission=\"1\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"waterBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -3324,6 +4388,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../services/water-bill.service */ "./src/app/services/water-bill.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jspdf */ "./node_modules/jspdf/dist/jspdf.min.js");
+/* harmony import */ var jspdf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jspdf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jspdf-autotable */ "./node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js");
+/* harmony import */ var jspdf_autotable__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jspdf_autotable__WEBPACK_IMPORTED_MODULE_4__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3336,11 +4404,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var ViewWaterBillComponent = /** @class */ (function () {
     function ViewWaterBillComponent(_waterBillService, _router) {
         this._waterBillService = _waterBillService;
         this._router = _router;
-        this.fieldSet = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", ""];
+        this.fieldSet = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", "", ""];
         this.yearString = ["All", "2017", "2018", "2019", "2020"];
         this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         this.selectedYear = "All";
@@ -3463,6 +4533,33 @@ var ViewWaterBillComponent = /** @class */ (function () {
             this.getAllWaterBillsByYear(this.selectedYear);
         else
             this.getAllWaterBillsByPeriod(this.selectedYear, this.selectedMonth);
+    };
+    ViewWaterBillComponent.prototype.downloadTable = function () {
+        var doc = new jspdf__WEBPACK_IMPORTED_MODULE_3__();
+        var col = ['Bill No', 'Period', 'Prev Reading', 'Curr Reading', 'No.of Units', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+        this.waterBillList.forEach(function (element) {
+            var temp = [element.billNo, element.period, element.previousReading, element.currentReading, element.noOfUnits, element.amount, element.location, element.certification];
+            rows.push(temp);
+        });
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+        doc.text('Water Bill Report', 80, 20);
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Water Bill Report.pdf');
+    };
+    ViewWaterBillComponent.prototype.showPendingOnly = function (item) {
+        if (item == "pending") {
+            return true;
+        }
+        else {
+            return false;
+        }
     };
     ViewWaterBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3746,8 +4843,8 @@ var ChartsElectricityComponent = /** @class */ (function () {
         this._router = _router;
         this.chartTypeBar = "bar";
         this.chartTypePie = "pie";
-        this.propertyString = ["Year", "Month", "Location"];
-        this.yearString = ["2017", "2018", "2019", "2020"];
+        this.propertyString = ["", "Year", "Month", "Location"];
+        this.yearString = ["", "2017", "2018", "2019", "2020"];
         this.monthString = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     }
     ChartsElectricityComponent.prototype.ngOnInit = function () {
@@ -3904,7 +5001,9 @@ var ChartsElectricityComponent = /** @class */ (function () {
         var _this = this;
         this._electrictyBillService.getMonthlyExpenseOfYear(selectedValue, function (response) {
             _this.monthlyExpenseInYearList = response;
-            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.month]; }));
+            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthString
+            //this.monthlyExpenseInYearList.map(monthlyExpense => [monthlyExpense.month])
+            );
         });
         this._electrictyBillService.getLocationExpenseOfYear(selectedValue, function (response) {
             _this.locationExpenseInYearList = response;
@@ -3931,6 +5030,12 @@ var ChartsElectricityComponent = /** @class */ (function () {
         // this.yearlyExpenseOfMonthList = [];
         // this.locationExpenseInYearList = [];
     };
+    ChartsElectricityComponent.prototype.convertToMonthName = function (monthIndex) {
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+        var index = Number(monthIndex);
+        return monthNames[index - 1];
+    };
     ChartsElectricityComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-charts-electricity-bill',
@@ -3940,6 +5045,259 @@ var ChartsElectricityComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_2__["ElectricityBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ChartsElectricityComponent);
     return ChartsElectricityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.html":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.html ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Property</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onPropertySelected($event)\">\n            <option *ngFor=\"let opt of propertyString\" [selected]=\"selectedProperty == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">{{dropDownLable}}</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onSecondDropdownSelected($event)\">\n                    <option *ngFor=\"let opt of secondDropdownString\" [selected]=\"selectedValue == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n<mat-grid-list cols=\"2\" gutterSize=\"10px\" rowHeight=\"3:2.5\">\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{barChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypeBar\"\n                [datasets]=\"chartDatasetsBar\"\n                [labels]=\"chartLabelsBar\"\n                [colors]=\"chartColorsBar\"\n                [options]=\"chartOptionsBar\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{pieChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypePie\"\n                [datasets]=\"chartDatasetsPie\"\n                [labels]=\"chartLabelsPie\"\n                [colors]=\"chartColorsPie\"\n                [options]=\"chartOptionsPie\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <!--<mat-grid-tile>-->\n        <!--<mat-grid-tile-header>-->\n            <!--Comparison with Last year-->\n        <!--</mat-grid-tile-header>-->\n        <!--<canvas mdbChart-->\n                <!--[chartType]=\"chartTypeLine\"-->\n                <!--[datasets]=\"chartDatasetsLine\"-->\n                <!--[labels]=\"chartLabelsLine\"-->\n                <!--[colors]=\"chartColorsLine\"-->\n                <!--[options]=\"chartOptionsLine\"-->\n                <!--[legend]=\"true\"-->\n                <!--(chartHover)=\"chartHovered($event)\"-->\n                <!--(chartClick)=\"chartClicked($event)\">-->\n        <!--</canvas>-->\n    <!--</mat-grid-tile>-->\n    <!--<mat-grid-tile>4</mat-grid-tile>-->\n</mat-grid-list>"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.scss":
+/*!*********************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.scss ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-grid-tile {\n  border: 1px;\n  height: 500px; }\n\n:host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 15px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy9pbnRlcm5ldC9jaGFydHMtaW50ZXJuZXQvY2hhcnRzLWludGVybmV0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGNBQWEsRUFDWjs7QUFFSDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLG9CQUFrQixFQUNuQjs7QUFFRDtFQUNFLFNBQVE7RUFDUixjQUFhO0VBQ2IsK0JBQThCLEVBQy9COztBQUVEO0VBQ0UsY0FBYSxFQUNkOztBQUVEO0VBQ0UsY0FDRixFQUFDOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0Usc0JBQXFCO0VBQ3JCLGVBQWMsRUFDZjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUV0QztFQUFzQixlQUFjLEVBQUc7O0FBRXZDO0VBQ0UsZUFBYTtFQUNiLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixrQkFBaUI7RUFDakIsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsZUFBYztFQUNkLFlBQVcsRUFxSFo7O0FBdkhEO0lBU0ksbUJBQWtCO0lBQ2xCLDBCQUF5QjtJQUN6QixZQUFXLEVBcUZaOztBQWhHSDtNQWNNLHdCQUF1QixFQUN4Qjs7QUFmTDtNQWtCTSwwQkFBeUI7TUFDekIsaUJBQWdCO01BQ2hCLGFBQVksRUFDYjs7QUFyQkw7TUE0Qk0sb0JBQW1CO01BQ25CLG1CQUFrQixFQUluQjs7QUFqQ0w7TUFvQ00sMEJBQXlCLEVBQzFCOztBQXJDTDtNQXdDTSxjQUFhO01BQ2IsMEJBQXlCLEVBVTFCOztBQW5ETDtRQTRDUSxvQkFBbUI7UUFDbkIsYUFBYSxFQUNkOztBQTlDUDtRQWlEUSxjQUFhLEVBQ2Q7O0FBbERQO01Bc0RNLDJCQUF5QjtNQUN6QiwwQkFBeUI7TUFDekIsbUJBQWtCO01BQ2xCLFdBQVU7TUFDVixZQUFXO01BQ1gsY0FBYTtNQUNiLGlCQUFnQjtNQUNoQiwwQkFBd0IsRUFpQ3pCOztBQTlGTDtRQWdFUSxjQUFhLEVBQ2Q7O0FBakVQO1FBb0VRLG1CQUFrQixFQUNuQjs7QUFyRVA7UUF3RVEsYUFBWTtRQUNaLDBCQUF5QjtRQUN6QixrQkFBaUI7UUFDakIsa0JBQWlCO1FBQ2pCLGlCQUFnQixFQUNqQjs7QUE3RVA7UUFnRlEsYUFBWTtRQUNaLHdCQUF1QjtRQUN2QixrQkFBaUIsRUFDbEI7O0FBbkZQO1FBc0ZRLGdCQUFlLEVBQ2hCOztBQXZGUDtRQTBGUSxpQkFBZ0I7UUFDaEIsNEJBQTBCO1FBQzFCLCtCQUE4QixFQUMvQjs7QUE3RlA7SUFtR0ksbUJBQWtCLEVBV25COztBQTlHSDtNQXNHTSxtQkFBa0I7TUFDbEIsVUFBUztNQUNULFdBQVU7TUFDVixhQUFZO01BQ1osYUFBWTtNQUNaLGtCQUFpQjtNQUNqQixlQUFjLEVBQ2Y7O0FBN0dMO0lBaUhJLGVBQWMsRUFDZjs7QUFsSEg7SUFxSEksZUFBYyxFQUNmIiwiZmlsZSI6InNyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy9pbnRlcm5ldC9jaGFydHMtaW50ZXJuZXQvY2hhcnRzLWludGVybmV0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWdyaWQtdGlsZSB7XG4gIGJvcmRlcjogMXB4O1xuICBoZWlnaHQ6IDUwMHB4O1xuICB9XG5cbjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi5mb3JtLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICBtYXJnaW4tdG9wOiA1MHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi50YWJsZS13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLnJvd3tcbiAgbWFyZ2luLWJvdHRvbToxNXB4O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDIwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpXG59XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.ts":
+/*!*******************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.ts ***!
+  \*******************************************************************************************/
+/*! exports provided: ChartsInternetComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsInternetComponent", function() { return ChartsInternetComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/internet-bill.service */ "./src/app/services/internet-bill.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ChartsInternetComponent = /** @class */ (function () {
+    function ChartsInternetComponent(_internetBillService, _router) {
+        this._internetBillService = _internetBillService;
+        this._router = _router;
+        this.chartTypeBar = "bar";
+        this.chartTypePie = "pie";
+        this.propertyString = ["Year", "Month", "Location"];
+        this.yearString = ["2017", "2018", "2019", "2020"];
+        this.monthString = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    }
+    ChartsInternetComponent.prototype.ngOnInit = function () {
+        this.clearAll();
+        this.isYearSelected = true;
+        this.dropDownLable = "Select Year";
+        this.secondDropdownString = this.yearString;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+        this.yearlyExpenseOfMonthList = [];
+        //this.createPieChart();
+        //this.createBarChart();
+        //this.createLineChart();
+    };
+    ChartsInternetComponent.prototype.createPieChart = function (dataSet, labelSet) {
+        this.chartDatasetsPie = [
+            {
+                data: dataSet,
+                label: 'Internet consumption by Location'
+            }
+        ];
+        this.chartLabelsPie = labelSet;
+        this.chartColorsPie = [
+            {
+                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsPie = {
+            responsive: true
+        };
+    };
+    ChartsInternetComponent.prototype.createBarChart = function (dataSet, labelSet) {
+        this.chartLabelsBar = labelSet;
+        this.chartDatasetsBar = [
+            {
+                data: dataSet,
+                label: 'Internet Consumption by Rupees'
+            }
+        ];
+        this.chartColorsBar = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsBar = {
+            responsive: true
+        };
+    };
+    ChartsInternetComponent.prototype.createLineChart = function () {
+        this.chartTypeLine = 'line';
+        this.chartDatasetsLine = [
+            { data: [65, 59, 80, 81, 56, 55, 40], label: '2017' },
+            { data: [28, 48, 40, 19, 86, 27, 90], label: '2018' }
+        ];
+        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        this.chartColorsLine = [
+            {
+                backgroundColor: 'rgba(105, 0, 132, .2)',
+                borderColor: 'rgba(200, 99, 132, .7)',
+                borderWidth: 2,
+            },
+            {
+                backgroundColor: 'rgba(0, 137, 132, .2)',
+                borderColor: 'rgba(0, 10, 130, .7)',
+                borderWidth: 2,
+            }
+        ];
+        this.chartOptionsLine = {
+            responsive: true
+        };
+    };
+    ChartsInternetComponent.prototype.onPropertySelected = function (event) {
+        this.selectedProperty = event.target.value;
+        this.clearAll();
+        this.clearCharts();
+        switch (this.selectedProperty) {
+            case "Year": {
+                this.isYearSelected = true;
+                this.dropDownLable = "Select Year";
+                this.secondDropdownString = this.yearString;
+                break;
+            }
+            case "Month": {
+                this.isMonthselected = true;
+                this.dropDownLable = "Select Month";
+                this.secondDropdownString = this.monthString;
+                break;
+            }
+            default: {
+                this.clearAll();
+                break;
+            }
+        }
+    };
+    ChartsInternetComponent.prototype.onSecondDropdownSelected = function (event) {
+        //this.clearCharts();
+        this.selectedValue = event.target.value;
+        if (this.isYearSelected) {
+            this.barChartHeader = "Monthly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createYearCharts(this.selectedValue);
+        }
+        else if (this.isMonthselected) {
+            this.barChartHeader = "Yearly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createMonthCharts(this.selectedValue);
+        }
+        else
+            console.log("Location filter is still in progress");
+    };
+    ChartsInternetComponent.prototype.clearAll = function () {
+        this.isMonthselected = false;
+        this.isYearSelected = false;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+    };
+    // private getMonthlyExpenseOfYear(year: string) {
+    //     this._internetBillService.getMonthlyExpenseOfYear(year, (response) => {
+    //         this.monthlyExpenseInYearList = response;
+    //         this.createBarChart();
+    //     });
+    // }
+    ChartsInternetComponent.prototype.createYearCharts = function (selectedValue) {
+        var _this = this;
+        this._internetBillService.getMonthlyExpenseOfYear(selectedValue, function (response) {
+            _this.monthlyExpenseInYearList = response;
+            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.month]; }));
+        });
+        this._internetBillService.getLocationExpenseOfYear(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsInternetComponent.prototype.createMonthCharts = function (selectedValue) {
+        var _this = this;
+        this._internetBillService.getYearlyExpenseOfMonth(selectedValue, function (response) {
+            _this.yearlyExpenseOfMonthList = response;
+            _this.createBarChart(_this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.expense]; }), _this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.year]; }));
+        });
+        this._internetBillService.getLocationExpenseOfMonth(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsInternetComponent.prototype.clearCharts = function () {
+        this.chartDatasetsBar = [];
+        this.chartLabelsBar = [];
+        this.chartDatasetsPie = [];
+        this.chartLabelsPie = [];
+        // this.monthlyExpenseInYearList = [];
+        // this.yearlyExpenseOfMonthList = [];
+        // this.locationExpenseInYearList = [];
+    };
+    ChartsInternetComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-charts-internet-bill',
+            template: __webpack_require__(/*! ./charts-internet.component.html */ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.html"),
+            styles: [__webpack_require__(/*! ./charts-internet.component.scss */ "./src/app/charts/charts-bills/internet/charts-internet/charts-internet.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_internet_bill_service__WEBPACK_IMPORTED_MODULE_2__["InternetBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], ChartsInternetComponent);
+    return ChartsInternetComponent;
 }());
 
 
@@ -4459,7 +5817,7 @@ var ChartsWaterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"tbl-header\">\n        View Charts\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-charts-electricity-bill></app-charts-electricity-bill>\n    </div>\n    <!--<div *ngIf=\"isInternet\">-->\n      <!--<app-create-internet-bill></app-create-internet-bill>-->\n    <!--</div>-->\n    <div *ngIf=\"isTelephone\">\n      <app-charts-telephone-bill></app-charts-telephone-bill>\n    </div>\n    <div *ngIf=\"isWater\">\n      <app-charts-water-bill></app-charts-water-bill>\n    </div>\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"tbl-header\">\n        View Charts\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-charts-electricity-bill></app-charts-electricity-bill>\n    </div>\n    <div *ngIf=\"isInternet\">\n      <app-charts-internet-bill></app-charts-internet-bill>\n    </div>\n    <div *ngIf=\"isTelephone\">\n      <app-charts-telephone-bill></app-charts-telephone-bill>\n    </div>\n    <div *ngIf=\"isWater\">\n      <app-charts-water-bill></app-charts-water-bill>\n    </div>\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
 
 /***/ }),
 
@@ -4497,7 +5855,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ChartsListComponent = /** @class */ (function () {
     function ChartsListComponent() {
-        this.typeString = ["", "Electricity", "Telephone", "Water"];
+        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
     }
     ChartsListComponent.prototype.ngOnInit = function () {
         this.selectedType = "";
@@ -5053,8 +6411,7 @@ var MainMenuComponent = /** @class */ (function () {
             { id: 2, route: '/', name: 'Bill', position: 'parent has-child', iconName: 'blur_linear', pattern: '*' },
             { id: 3, route: '/bill/create', position: 'child', name: 'Create Bill', iconName: 'add_box', pattern: '*' },
             { id: 4, route: '/bill/view', position: 'child', name: 'View Bill', iconName: 'pageview', pattern: '*' },
-            { id: 5, route: 'charts', position: 'child', name: 'View Charts', iconName: 'blur_linear', pattern: '1' },
-            { id: 6, route: 'reports', position: 'child', name: 'View Reports', iconName: 'blur_linear', pattern: '1' }
+            { id: 5, route: 'charts', position: 'child', name: 'View Charts', iconName: 'blur_linear', pattern: '1' }
         ];
     }
     MainMenuComponent.prototype.ngOnInit = function () {
@@ -5091,7 +6448,7 @@ var MainMenuComponent = /** @class */ (function () {
 /*!***************************************!*\
   !*** ./src/app/models/data-models.ts ***!
   \***************************************/
-/*! exports provided: LoginResponse, UserRole, SignupResponse, MenuItem, ElectricityBill, WaterBill, TelephoneBill, CreateBillResponse, UpdateBillResponse, User, TempResponse, Profile, Certify, PendingCertification, MonthlyExpenseInYear, LocationExpenseInYear, YearlyExpenseOfMonth */
+/*! exports provided: LoginResponse, UserRole, SignupResponse, MenuItem, ElectricityBill, WaterBill, TelephoneBill, InternetBill, CreateBillResponse, UpdateBillResponse, User, TempResponse, Profile, Certify, PendingCertification, MonthlyExpenseInYear, LocationExpenseInYear, YearlyExpenseOfMonth, BillToApprove, ApprovalResponse */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5103,6 +6460,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElectricityBill", function() { return ElectricityBill; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WaterBill", function() { return WaterBill; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TelephoneBill", function() { return TelephoneBill; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InternetBill", function() { return InternetBill; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CreateBillResponse", function() { return CreateBillResponse; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateBillResponse", function() { return UpdateBillResponse; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
@@ -5113,6 +6471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonthlyExpenseInYear", function() { return MonthlyExpenseInYear; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationExpenseInYear", function() { return LocationExpenseInYear; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YearlyExpenseOfMonth", function() { return YearlyExpenseOfMonth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BillToApprove", function() { return BillToApprove; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApprovalResponse", function() { return ApprovalResponse; });
 var LoginResponse = /** @class */ (function () {
     function LoginResponse() {
     }
@@ -5153,6 +6513,12 @@ var TelephoneBill = /** @class */ (function () {
     function TelephoneBill() {
     }
     return TelephoneBill;
+}());
+
+var InternetBill = /** @class */ (function () {
+    function InternetBill() {
+    }
+    return InternetBill;
 }());
 
 var CreateBillResponse = /** @class */ (function () {
@@ -5213,6 +6579,18 @@ var YearlyExpenseOfMonth = /** @class */ (function () {
     function YearlyExpenseOfMonth() {
     }
     return YearlyExpenseOfMonth;
+}());
+
+var BillToApprove = /** @class */ (function () {
+    function BillToApprove() {
+    }
+    return BillToApprove;
+}());
+
+var ApprovalResponse = /** @class */ (function () {
+    function ApprovalResponse() {
+    }
+    return ApprovalResponse;
 }());
 
 
@@ -5309,6 +6687,59 @@ var PiechartComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/remote/approval-remote.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/remote/approval-remote.service.ts ***!
+  \***************************************************/
+/*! exports provided: ApprovalRemoteService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApprovalRemoteService", function() { return ApprovalRemoteService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ApprovalRemoteService = /** @class */ (function () {
+    function ApprovalRemoteService(http) {
+        this.http = http;
+        this.url = new URL(window.location.href);
+        this.apiContext = this.url.protocol + '//' + this.url.host + '/finance';
+        this.apiEndpoints = {
+            certifyBill: this.apiContext + "/bills/approve/"
+        };
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            })
+        };
+    }
+    ApprovalRemoteService.prototype.approveBill = function (bill) {
+        return this.http.post(this.apiEndpoints["certifyBill"] + bill.billId, bill, this.httpOptions);
+    };
+    ApprovalRemoteService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ApprovalRemoteService);
+    return ApprovalRemoteService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/remote/dashboard_remote.service.ts":
 /*!****************************************************!*\
   !*** ./src/app/remote/dashboard_remote.service.ts ***!
@@ -5336,7 +6767,7 @@ var DashboardRemoteService = /** @class */ (function () {
     function DashboardRemoteService(http) {
         this.http = http;
         this.url = new URL(window.location.href);
-        this.apiContext = this.url.protocol + '//' + this.url.host + '/finance';
+        this.apiContext = this.url.protocol + '//' + this.url.host + '/financeo';
         this.apiEndpoints = {
             pendingBills: this.apiContext + "/bills/pending"
         };
@@ -5476,6 +6907,104 @@ var ElectricityBillRemoteDataService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/remote/internet_bill_remote.service.ts":
+/*!********************************************************!*\
+  !*** ./src/app/remote/internet_bill_remote.service.ts ***!
+  \********************************************************/
+/*! exports provided: InternetBillRemoteDataService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InternetBillRemoteDataService", function() { return InternetBillRemoteDataService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var InternetBillRemoteDataService = /** @class */ (function () {
+    function InternetBillRemoteDataService(http) {
+        this.http = http;
+        //private apiContext = "http://demo0207630.mockable.io";
+        this.url = new URL(window.location.href);
+        this.apiContext = this.url.protocol + '//' + this.url.host + '/finance';
+        this.apiEndpoints = {
+            internetbills: this.apiContext + "/bills/internetbills",
+            insertbill: this.apiContext + "/bills/internetbills",
+            updatebill: this.apiContext + "/bills/internetbills",
+            internetBillsByMonth: this.apiContext + "/bills/internetbills/filtermonth/",
+            internetBillsByYear: this.apiContext + "/bills/internetbills/filteryear/",
+            internetBillsByPeriod: this.apiContext + "/bills/internetbills/filterperiod/",
+            internetBillsSummaryByMonth: this.apiContext + "/bills/internetbills/summary/month/",
+            internetBillsSummaryByYearandLocation: this.apiContext + "/bills/internetbills/summary/location/year/",
+            internetBillsSummaryByMonthandLocation: this.apiContext + "/bills/internetbills/summary/location/month/",
+            internetBillsSummaryByYear: this.apiContext + "/bills/internetbills/summary/year/"
+        };
+        this.httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
+                "Content-Type": "application/json",
+            })
+        };
+    }
+    InternetBillRemoteDataService.prototype.getInternetBills = function () {
+        this.internetBillsObservable = this.http.get(this.apiEndpoints['internetbills'], this.httpOptions);
+        console.log(this.internetBillsObservable);
+        return this.internetBillsObservable;
+    };
+    InternetBillRemoteDataService.prototype.insertInternetBill = function (internetBill) {
+        return this.http.post(this.apiEndpoints["insertbill"], internetBill, this.httpOptions);
+    };
+    InternetBillRemoteDataService.prototype.updateInternetBill = function (internetBill) {
+        console.log("Id:" + internetBill.id);
+        return this.http.put(this.apiEndpoints["updatebill"] + "/" + internetBill.billNo, internetBill, this.httpOptions);
+    };
+    InternetBillRemoteDataService.prototype.getInternetBillsByMonth = function (month) {
+        this.internetBillsObservable = this.http.get(this.apiEndpoints['internetBillsByMonth'].concat(month), this.httpOptions);
+        return this.internetBillsObservable;
+    };
+    InternetBillRemoteDataService.prototype.getInternetBillsByYear = function (year) {
+        this.internetBillsObservable = this.http.get(this.apiEndpoints['internetBillsByYear'].concat(year), this.httpOptions);
+        return this.internetBillsObservable;
+    };
+    InternetBillRemoteDataService.prototype.getInternetBillsByPeriod = function (year, month) {
+        this.internetBillsObservable = this.http.get(this.apiEndpoints['internetBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions);
+        return this.internetBillsObservable;
+    };
+    InternetBillRemoteDataService.prototype.getMonthlyExpenseOfYear = function (year) {
+        this.monthlyExpenseInYearObservable = this.http.get(this.apiEndpoints['internetBillsSummaryByYear'].concat(year), this.httpOptions);
+        return this.monthlyExpenseInYearObservable;
+    };
+    InternetBillRemoteDataService.prototype.getLocationExpenseOfYear = function (year) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['internetBillsSummaryByYearandLocation'].concat(year), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
+    InternetBillRemoteDataService.prototype.getYearlyExpenseOfMonth = function (month) {
+        this.yearlyExpenseInMonthObservable = this.http.get(this.apiEndpoints['internetBillsSummaryByMonth'].concat(month), this.httpOptions);
+        return this.yearlyExpenseInMonthObservable;
+    };
+    InternetBillRemoteDataService.prototype.getLocationExpenseOfMonth = function (month) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['internetBillsSummaryByMonthandLocation'].concat(month), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
+    InternetBillRemoteDataService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], InternetBillRemoteDataService);
+    return InternetBillRemoteDataService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/remote/login_remote-data.service.ts":
 /*!*****************************************************!*\
   !*** ./src/app/remote/login_remote-data.service.ts ***!
@@ -5586,10 +7115,10 @@ var TelephoneBillRemoteDataService = /** @class */ (function () {
             telephoneBillsByMonth: this.apiContext + "/bills/telephonebills/filtermonth/",
             telephoneBillsByYear: this.apiContext + "/bills/telephonebills/filteryear/",
             telephoneBillsByPeriod: this.apiContext + "/bills/telephonebills/filterperiod/",
-            telephoneBillsSummaryByMonth: "/bills/telephonebills/summary/month/",
-            telephoneBillsSummaryByYearandLocation: "/bills/telephonebills/summary/location/year/",
-            telephoneBillsSummaryByMonthandLocation: "/bills/telephonebills/summary/location/month/",
-            telephoneBillsSummaryByYear: "/bills/telephonebills/summary/year/"
+            telephoneBillsSummaryByMonth: this.apiContext + "/bills/telephonebills/summary/month/",
+            telephoneBillsSummaryByYearandLocation: this.apiContext + "/bills/telephonebills/summary/location/year/",
+            telephoneBillsSummaryByMonthandLocation: this.apiContext + "/bills/telephonebills/summary/location/month/",
+            telephoneBillsSummaryByYear: this.apiContext + "/bills/telephonebills/summary/year/"
         };
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -5684,10 +7213,10 @@ var WaterBillRemoteDataService = /** @class */ (function () {
             waterBillsByMonth: this.apiContext + "/bills/waterbill/filtermonth/",
             waterBillsByYear: this.apiContext + "/bills/waterbill/filteryear/",
             waterBillsByPeriod: this.apiContext + "/bills/waterbill/filterperiod/",
-            waterBillsSummaryByMonth: "/bills/waterbill/summary/month/",
-            waterBillsSummaryByYearandLocation: "/bills/waterbill/summary/location/year/",
-            waterBillsSummaryByMonthandLocation: "/bills/waterbill/summary/location/month/",
-            waterBillsSummaryByYear: "/bills/waterbill/summary/year/"
+            waterBillsSummaryByMonth: this.apiContext + "/bills/waterbill/summary/month/",
+            waterBillsSummaryByYearandLocation: this.apiContext + "/bills/waterbill/summary/location/year/",
+            waterBillsSummaryByMonthandLocation: this.apiContext + "/bills/waterbill/summary/location/month/",
+            waterBillsSummaryByYear: this.apiContext + "/bills/waterbill/summary/year/"
         };
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -5781,6 +7310,66 @@ var AppCommonService = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AppCommonService);
     return AppCommonService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/approval.service.ts":
+/*!**********************************************!*\
+  !*** ./src/app/services/approval.service.ts ***!
+  \**********************************************/
+/*! exports provided: ApprovalService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ApprovalService", function() { return ApprovalService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _remote_approval_remote_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../remote/approval-remote.service */ "./src/app/remote/approval-remote.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ApprovalService = /** @class */ (function () {
+    function ApprovalService(_remoteService) {
+        this._remoteService = _remoteService;
+    }
+    ApprovalService.prototype.approveBill = function (bill, callback) {
+        this._remoteService.approveBill(bill)
+            .subscribe(function (data) {
+            if (data.success == true) {
+                console.log("here");
+                var response = {
+                    success: true,
+                    message: 'Certified Successfully',
+                };
+                callback(response);
+            }
+            else {
+                var response = {
+                    success: false,
+                    message: 'Error In Certify Process. Retry !!',
+                };
+                callback(response);
+            }
+        });
+    };
+    ApprovalService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_remote_approval_remote_service__WEBPACK_IMPORTED_MODULE_1__["ApprovalRemoteService"]])
+    ], ApprovalService);
+    return ApprovalService;
 }());
 
 
@@ -5997,7 +7586,7 @@ var ElectricityBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["home"]);
+            _this._router.navigate(["bill/show/electricity"]);
         });
     };
     ElectricityBillsService.prototype.updateElectricityBill = function (electricityBill) {
@@ -6009,7 +7598,7 @@ var ElectricityBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["viewBill"]);
+            _this._router.navigate(["bill/show/electricity"]);
         });
     };
     ElectricityBillsService.prototype.getElectricityBillsByMonth = function (month, callback) {
@@ -6079,6 +7668,194 @@ var ElectricityBillsService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/services/internet-bill.service.ts":
+/*!***************************************************!*\
+  !*** ./src/app/services/internet-bill.service.ts ***!
+  \***************************************************/
+/*! exports provided: InternetBillsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InternetBillsService", function() { return InternetBillsService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _remote_internet_bill_remote_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../remote/internet_bill_remote.service */ "./src/app/remote/internet_bill_remote.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var InternetBillsService = /** @class */ (function () {
+    function InternetBillsService(_router, _remoteService) {
+        this._router = _router;
+        this._remoteService = _remoteService;
+    }
+    InternetBillsService.prototype.getInternetBills = function (callback) {
+        this._remoteService.getInternetBills()
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.insertInternetBill = function (internetBill) {
+        var _this = this;
+        this._remoteService.insertInternetBill(internetBill)
+            .subscribe(function (data) {
+            // if (data["success"] == true) {
+            //     this._router.navigate(["home"]);
+            // } else {
+            //     this._router.navigate(["singnup"]);
+            // }
+            _this._router.navigate(["bill/show/internet"]);
+        });
+    };
+    InternetBillsService.prototype.updateInternetBill = function (internetBill) {
+        var _this = this;
+        this._remoteService.updateInternetBill(internetBill)
+            .subscribe(function (data) {
+            // if (data["success"] == true) {
+            //     this._router.navigate(["home"]);
+            // } else {
+            //     this._router.navigate(["singnup"]);
+            // }
+            _this._router.navigate(["bill/show/internet"]);
+        });
+    };
+    InternetBillsService.prototype.getInternetBillsByMonth = function (month, callback) {
+        this._remoteService.getInternetBillsByMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getInternetBillsByYear = function (year, callback) {
+        this._remoteService.getInternetBillsByYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getInternetBillsByPeriod = function (year, month, callback) {
+        this._remoteService.getInternetBillsByPeriod(year, month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getMonthlyExpenseOfYear = function (year, callback) {
+        this._remoteService.getMonthlyExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getLocationExpenseOfYear = function (year, callback) {
+        this._remoteService.getLocationExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getYearlyExpenseOfMonth = function (month, callback) {
+        this._remoteService.getYearlyExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService.prototype.getLocationExpenseOfMonth = function (month, callback) {
+        this._remoteService.getLocationExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    InternetBillsService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _remote_internet_bill_remote_service__WEBPACK_IMPORTED_MODULE_2__["InternetBillRemoteDataService"]])
+    ], InternetBillsService);
+    return InternetBillsService;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/services/message.service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/services/message.service.ts ***!
+  \*********************************************/
+/*! exports provided: MessageService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MessageService", function() { return MessageService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var ng2_toasty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ng2-toasty */ "./node_modules/ng2-toasty/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MessageService = /** @class */ (function () {
+    function MessageService(toastyService, toastyConfig) {
+        this.toastyService = toastyService;
+        this.toastyConfig = toastyConfig;
+        this.toastOptions = {
+            title: "",
+            msg: "",
+            showClose: true,
+            timeout: 7000,
+            theme: "material"
+        };
+        this.toastyConfig.theme = 'material';
+    }
+    MessageService.prototype.success = function (message, title) {
+        this.toastyService.success(Object.assign({}, this.toastOptions, { title: title, msg: message }));
+    };
+    MessageService.prototype.error = function (message, title) {
+        this.toastyService.error(Object.assign({}, this.toastOptions, { title: title, msg: message }));
+    };
+    MessageService.prototype.warning = function (message, title) {
+        this.toastyService.warning(Object.assign({}, this.toastOptions, { title: title, msg: message }));
+    };
+    MessageService.prototype.info = function (message, title) {
+        this.toastyService.info(Object.assign({}, this.toastOptions, { title: title, msg: message }));
+    };
+    MessageService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
+        __metadata("design:paramtypes", [ng2_toasty__WEBPACK_IMPORTED_MODULE_1__["ToastyService"], ng2_toasty__WEBPACK_IMPORTED_MODULE_1__["ToastyConfig"]])
+    ], MessageService);
+    return MessageService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/services/telephone-bill.service.ts":
 /*!****************************************************!*\
   !*** ./src/app/services/telephone-bill.service.ts ***!
@@ -6126,7 +7903,7 @@ var TelephoneBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["home"]);
+            _this._router.navigate(["bill/show/telephone"]);
         });
     };
     TelephoneBillsService.prototype.updateTelephoneBill = function (telephoneBill) {
@@ -6138,7 +7915,7 @@ var TelephoneBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["viewBill"]);
+            _this._router.navigate(["bill/show/telephone"]);
         });
     };
     TelephoneBillsService.prototype.getTelephoneBillsByMonth = function (month, callback) {
@@ -6255,7 +8032,7 @@ var WaterBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["home"]);
+            _this._router.navigate(["bill/show/water"]);
         });
     };
     WaterBillsService.prototype.updateWaterBill = function (waterBill) {
@@ -6267,7 +8044,7 @@ var WaterBillsService = /** @class */ (function () {
             // } else {
             //     this._router.navigate(["singnup"]);
             // }
-            _this._router.navigate(["viewBill"]);
+            _this._router.navigate(["bill/show/water"]);
         });
     };
     WaterBillsService.prototype.getWaterBillsByMonth = function (month, callback) {

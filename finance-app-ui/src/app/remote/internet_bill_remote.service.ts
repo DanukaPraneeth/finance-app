@@ -54,7 +54,7 @@ export class InternetBillRemoteDataService {
 
     updateInternetBill(internetBill: InternetBill) {
         console.log("Id:" + internetBill.id);
-        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + internetBill.billId,
+        return this.http.put<CreateBillResponse>(this.apiEndpoints["updatebill"] + "/" + internetBill.billNo,
             internetBill, this.httpOptions);
     }
 

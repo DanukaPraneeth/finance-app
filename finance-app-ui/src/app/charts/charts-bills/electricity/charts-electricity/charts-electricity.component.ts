@@ -240,14 +240,15 @@ export class ChartsElectricityComponent implements OnInit {
     }
 
     private createMonthCharts(selectedValue: string) {
-        this._electrictyBillService.getYearlyExpenseOfMonth(selectedValue, (response) => {
+        var month = this.getMonthIndex(selectedValue);
+        this._electrictyBillService.getYearlyExpenseOfMonth(month, (response) => {
             this.yearlyExpenseOfMonthList = response;
             this.createBarChart(
                 this.yearlyExpenseOfMonthList.map(yearlyExpense => [yearlyExpense.expense]),
                 this.yearlyExpenseOfMonthList.map(yearlyExpense => [yearlyExpense.year])
             );
         });
-        this._electrictyBillService.getLocationExpenseOfMonth(selectedValue, (response) => {
+        this._electrictyBillService.getLocationExpenseOfMonth(month, (response) => {
             this.locationExpenseInYearList = response;
             this.createPieChart(
                 this.locationExpenseInYearList.map(locationExpense => [locationExpense.expense]),
@@ -266,10 +267,11 @@ export class ChartsElectricityComponent implements OnInit {
         // this.locationExpenseInYearList = [];
     }
 
-    private convertToMonthName(monthIndex: string){
-        var monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June',
+    private getMonthIndex(month: string){
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
             'July', 'August', 'September', 'October', 'November', 'December' ];
-        var index = Number(monthIndex);
-        return monthNames[index - 1];
+        var index = monthNames.indexOf(month) + 1 ;
+        var formattedNumber = ("0" + index).slice(-2);
+        return formattedNumber;
     }
 }

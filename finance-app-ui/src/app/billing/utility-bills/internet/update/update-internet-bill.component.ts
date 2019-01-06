@@ -40,7 +40,7 @@ export class UpdateInternetBillComponent implements OnInit {
 
     onSubmition(billForm) {
 //when form is submitted
-        if (this.internetBill.billId != null && this.internetBill.billId != "" &&
+        if (this.internetBill.billNo != null && this.internetBill.billNo != "" &&
             this.internetBill.location != null && this.internetBill.location != "" &&
             this.internetBill.amount != null &&
             this.internetBill.location != null && this.internetBill.location != "") {
@@ -52,7 +52,7 @@ export class UpdateInternetBillComponent implements OnInit {
             this.internetBillsService.updateInternetBill(this.internetBill);
             this.onUpdateTask.emit(true);
         } else {
-            if (this.internetBill.billId.length == 0) {
+            if (this.internetBill.billNo.length == 0) {
                 this.isAccountNoError = true;
                 this.accountNoError = "Bill No cannot be empty"
             } else {
@@ -135,7 +135,7 @@ export class UpdateInternetBillComponent implements OnInit {
         this.internetBill.amount = null;
         this.internetBill.location = '';
         this.internetBill.period = '';
-        this.internetBill.billId = '';
+        this.internetBill.billNo = '';
         this.clearErrors();
     }
 

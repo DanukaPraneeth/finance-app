@@ -40,6 +40,7 @@ import {ChartsListComponent} from "./charts/charts-list/charts-list.component";
 import {ChartsElectricityComponent} from "./charts/charts-bills/electricity/charts-electricity/charts-electricity.component";
 import {ChartsWaterComponent} from "./charts/charts-bills/water/charts-water/charts-water.component";
 import {ChartsTelephoneComponent} from "./charts/charts-bills/telephone/charts-telephone/charts-telephone.component";
+import {ChartsInternetComponent} from "./charts/charts-bills/internet/charts-internet/charts-internet.component";
 import {DashboardService} from "./services/dashboard.service";
 import {PermissionModule} from "./directives/permission.module";
 import {ChartsModule} from "angular-bootstrap-md";
@@ -71,7 +72,8 @@ import {ToastyModule} from "ng2-toasty";
         ChartsListComponent,
         ChartsElectricityComponent,
         ChartsWaterComponent,
-        ChartsTelephoneComponent
+        ChartsTelephoneComponent,
+        ChartsInternetComponent
     ],
     imports: [
         BrowserModule,

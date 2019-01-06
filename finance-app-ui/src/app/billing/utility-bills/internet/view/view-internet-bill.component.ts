@@ -13,7 +13,7 @@ import 'jspdf-autotable';
 export class ViewInternetBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Date", "Bill No", "Period", "Category", "Amount", "Location", "Certification","",""];
+    fieldSet: string [] = ["Date", "Bill No", "Period", "Amount", "Location", "Certification","",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
     monthString: string [] = ["All","January", "February", "March", "April", "May", "June", "July", "August", "September","October","November","December"];
     internetBillList: InternetBill [];
@@ -163,7 +163,7 @@ export class ViewInternetBillComponent implements OnInit {
         var rows = [];
 
         this.internetBillList.forEach(element => {
-            var temp = [element.billId, element.period, element.amount, element.location, element.certification];
+            var temp = [element.billNo, element.period, element.amount, element.location, element.certification];
             rows.push(temp);
 
         });
