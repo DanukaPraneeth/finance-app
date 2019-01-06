@@ -6,6 +6,7 @@ import {ViewbillComponent} from "./maincomponets/viewbill/viewbill.component";
 import {ViewElectricityBillComponent} from "./utility-bills/electricity/view/view-electricity-bill.component";
 import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-telephone-bill.component";
 import {ViewWaterBillComponent} from "./utility-bills/water/view/view-water-bill.component";
+import {ViewInternetBillComponent} from "./utility-bills/internet/view/view-internet-bill.component";
 
 const billingRoutes: Routes = [
 
@@ -37,7 +38,7 @@ const billingRoutes: Routes = [
                         canActivate: [AppGuard]
                     }, {
                         path: 'internet',
-                        component: ViewTelephoneBillComponent,
+                        component: ViewInternetBillComponent,
                         canActivate: [AppGuard]
                     }
                 ]

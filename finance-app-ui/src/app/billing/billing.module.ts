@@ -26,6 +26,7 @@ import {UpdateInternetBillComponent} from "./utility-bills/internet/update/updat
 import {CertifyWaterBillComponent} from "./utility-bills/water/certify/certify-water-bill.component";
 import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/certify-telephone-bill.component";
 import {ToastyModule} from "ng2-toasty";
+import {CertifyInternetBillComponent} from "./utility-bills/internet/certify/certify-internet-bill.component";
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import {ToastyModule} from "ng2-toasty";
         CertifyElectricityBillComponent,
         CertifyWaterBillComponent,
         CertifyTelephoneBillComponent,
+        CertifyInternetBillComponent,
         ViewWaterBillComponent,
         UpdateWaterBillComponent,
         ViewTelephoneBillComponent,

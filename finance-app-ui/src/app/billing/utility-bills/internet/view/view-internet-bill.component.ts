@@ -154,4 +154,12 @@ export class ViewInternetBillComponent implements OnInit {
         else
             this.getAllInternetBillsByPeriod(this.selectedYear,this.selectedMonth);
     }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
