@@ -135,3 +135,16 @@ export class YearlyExpenseOfMonth {
     year: string;
     expense: number;
 }
+
+export class BillToApprove {
+    billId: string;
+    status: string;
+    comment: string;
+	billType: string;
+    userId: number;
+}
+
+export class ApprovalResponse {
+    success: boolean;
+
+}

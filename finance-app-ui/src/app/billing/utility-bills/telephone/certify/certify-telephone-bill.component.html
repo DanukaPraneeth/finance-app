@@ -1,8 +1,8 @@
-<div class="animated fadeInUp" xmlns="http://www.w3.org/1999/html">
+<div class="animated fadeInUp">
 
     <div class="form-container billInputContainer">
 
-        <form class="form-horizontal" #electricityBillForm="ngForm" novalidate
+        <form class="form-horizontal" #telephoneBillForm="ngForm" novalidate
               (ngSubmit)="approve()" autocomplete="off">
             <div class="form-group row">
                 <label class="control-label col-sm-2">Date:</label>
@@ -12,19 +12,15 @@
             </div>
             <div class="form-group row">
                 <label class="control-label col-sm-2">Number:</label>
-                <div class="col-sm-6"><p class="form-control">{{bill.billNo}}</p></div>
+                <div class="col-sm-6"><p class="form-control">{{bill.billId}}</p></div>
             </div>
             <div class="form-group row">
-                <label class="control-label col-sm-2">Previous Reading:</label>
-                <div class="col-sm-6"><p class="form-control">{{bill.previousReading}}</p></div>
+                <label class="control-label col-sm-2">Period:</label>
+                <div class="col-sm-6"><p class="form-control">{{bill.period}}</p></div>
             </div>
             <div class="form-group row">
-                <label class="control-label col-sm-2">Current Reading:</label>
-                <div class="col-sm-6"><p class="form-control">{{bill.currentReading}}</p></div>
-            </div>
-            <div class="form-group row">
-                <label class="control-label col-sm-2">No. Of Units:</label>
-                <div class="col-sm-6"><p class="form-control">{{bill.noOfUnits}}</p></div>
+                <label class="control-label col-sm-2">Category:</label>
+                <div class="col-sm-6"><p class="form-control">{{bill.category}}</p></div>
             </div>
             <div class="form-group row">
                 <label class="control-label col-sm-2">Amount:</label>
@@ -37,7 +33,7 @@
 
             <div class="form-group">
                 <div class="col-sm-5 col-sm-offset-2 btnContainer">
-                    <button type="submit" class="btn btn-primary animated fadeIn">Certify</button>
+                    <button type="submit" class="btn btn-primary animated fadeIn">Certify</button>&nbsp;
                     &nbsp;
                     <a class="btn btn-warning" (click)="reject()">Reject</a>
                 </div>

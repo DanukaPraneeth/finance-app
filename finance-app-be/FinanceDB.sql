@@ -222,17 +222,19 @@ CREATE TABLE home_allowance (
 );
 
 CREATE TABLE internet_bills (
-    bill_id int NOT NULL AUTO_INCREMENT,
+    id int NOT NULL AUTO_INCREMENT,
+    billno varchar(15) NOT NULL,
     month varchar(15),
     category varchar(20),
 	  amount float(8,2) NOT NULL,
 	  duration varchar(20),
-	  certification varchar(10),
-	  certified_date datetime,
+	  certification varchar(15) NOT NULL DEFAULT 'pending',
+	  certified_date DATETIME,
 	  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	  trainee_staff_id int,
 	  user_key int,
-	  PRIMARY KEY (bill_id),
+	  PRIMARY KEY (id),
+	  UNIQUE (billno);
     FOREIGN KEY (trainee_staff_id) REFERENCES staff(user_key)
 	  --	  FOREIGN KEY (user_key) REFERENCES staff(user_key)
 );

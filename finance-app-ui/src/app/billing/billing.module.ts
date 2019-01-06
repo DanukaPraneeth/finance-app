@@ -23,6 +23,8 @@ import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-te
 import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/update-telephone-bill.component";
 import {ViewInternetBillComponent} from "./utility-bills/internet/view/view-internet-bill.component";
 import {UpdateInternetBillComponent} from "./utility-bills/internet/update/update-internet-bill.component";
+import {CertifyWaterBillComponent} from "./utility-bills/water/certify/certify-water-bill.component";
+import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/certify-telephone-bill.component";
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import {UpdateInternetBillComponent} from "./utility-bills/internet/update/updat
         ViewElectricityBillComponent,
         UpdateElectricityBillComponent,
         CertifyElectricityBillComponent,
+        CertifyWaterBillComponent,
+        CertifyTelephoneBillComponent,
         ViewWaterBillComponent,
         UpdateWaterBillComponent,
         ViewTelephoneBillComponent,

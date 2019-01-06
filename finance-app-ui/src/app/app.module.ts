@@ -49,6 +49,8 @@ import {TelephoneBillsService} from "./services/telephone-bill.service";
 import {TelephoneBillRemoteDataService} from "./remote/telephone_bill_remote.service";
 import {InternetBillsService} from "./services/internet-bill.service";
 import {InternetBillRemoteDataService} from "./remote/internet_bill_remote.service";
+import {ApprovalService} from "./services/approval.service";
+import {ApprovalRemoteService} from "./remote/approval-remote.service";
 
 @NgModule({
     declarations: [
@@ -110,6 +112,8 @@ import {InternetBillRemoteDataService} from "./remote/internet_bill_remote.servi
         InternetBillRemoteDataService,
         LoginRemoteDataService,
         DashboardService,
+        ApprovalService,
+        ApprovalRemoteService,
         AppCommonService
     ],
     bootstrap: [AppComponent]

@@ -31,7 +31,7 @@ export class ElectricityBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["home"]);
+                this._router.navigate(["bill/create"]);
             });
 
     }

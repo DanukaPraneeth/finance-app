@@ -8,8 +8,11 @@ public class InternetBills {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int billId;
-    private String month;
+    private int id;
+    @Column(name = "billno", nullable = false, unique = true)
+    private String billNo;
+    private String period;
+    private String location;
     private String category;
     private String duration;
     private float amount;
@@ -20,11 +23,15 @@ public class InternetBills {
     private int traineeStaffId;
     private int userKey;
 
-    public InternetBills(String month, String category, String duration,
+    public InternetBills(){ }
+
+    public InternetBills(String billNo, String period, String location, String category, String duration,
                          float amount, String certification, String certifiedDate,
                          String datetime, int traineeStaffId, int userKey) {
         super();
-        this.month = month;
+        this.billNo = billNo;
+        this.period = period;
+        this.location = location;
         this.category = category;
         this.duration = duration;
         this.amount = amount;
@@ -35,25 +42,27 @@ public class InternetBills {
         this.userKey = userKey;
     }
 
-    public InternetBills(){
+    public int getId() { return id; }
 
+    public void setId(int id) { this.id = id; }
+
+    public String getBillNo() {
+        return billNo;
     }
 
-    public int getBillId() {
-        return billId;
+    public void setBillNo(String billNo) { this.billNo = billNo; }
+
+    public String getPeriod() {
+        return period;
     }
 
-    public void setBillId(int billId) {
-        this.billId = billId;
+    public void setPeriod(String period) {
+        this.period = period;
     }
 
-    public String getMonth() {
-        return month;
-    }
+    public String getLocation() { return location; }
 
-    public void setMonth(String month) {
-        this.month = month;
-    }
+    public void setLocation(String location) { this.location = location; }
 
     public String getCategory() {
         return category;
