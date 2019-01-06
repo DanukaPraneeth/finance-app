@@ -2,6 +2,8 @@ import {Component, OnInit, TemplateRef} from "@angular/core";
 import {InternetBill} from "../../../../models/data-models";
 import {InternetBillsService} from "../../../../services/internet-bill.service";
 import {Router} from "@angular/router";
+import * as jspdf from 'jspdf';
+import 'jspdf-autotable';
 
 @Component({
     selector: "app-view-internet-bill",
@@ -11,7 +13,7 @@ import {Router} from "@angular/router";
 export class ViewInternetBillComponent implements OnInit {
 
 
-    fieldSet: string [] = ["Date", "Bill No", "Period", "Category", "Amount", "Location", "Certification","",""];
+    fieldSet: string [] = ["Date", "Bill No", "Period", "Amount", "Location", "Certification","",""];
     yearString: string [] = ["All", "2017", "2018", "2019", "2020"];
     monthString: string [] = ["All","January", "February", "March", "April", "May", "June", "July", "August", "September","October","November","December"];
     internetBillList: InternetBill [];
@@ -153,6 +155,31 @@ export class ViewInternetBillComponent implements OnInit {
             this.getAllInternetBillsByYear(this.selectedYear);
         else
             this.getAllInternetBillsByPeriod(this.selectedYear,this.selectedMonth);
+    }
+
+    private downloadTable() {
+        var doc = new jspdf();
+        var col = ['Bill No', 'Period', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+
+        this.internetBillList.forEach(element => {
+            var temp = [element.billNo, element.period, element.amount, element.location, element.certification];
+            rows.push(temp);
+
+        });
+
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+
+        doc.text('Internet Bill Report', 80, 20);
+
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Internet Bill Report.pdf');
     }
 
     private showPendingOnly(item): boolean {

@@ -2,6 +2,8 @@ import {Component, OnInit} from "@angular/core";
 import {ElectricityBill} from "../../../../models/data-models";
 import {ElectricityBillsService} from "../../../../services/electricity-bill.service";
 import {Router} from "@angular/router";
+import * as jspdf from 'jspdf';
+import 'jspdf-autotable';
 
 @Component({
     selector: "app-view-electricity-bill",
@@ -145,15 +147,39 @@ export class ViewElectricityBillComponent implements OnInit {
     }
 
     private retrieveElectricityBills() {
-        if (this.selectedYear == "All" && this.selectedMonth == "All") {
+        if (this.selectedYear == "All" && this.selectedMonth == "All")
             this.getAllElectrictyBills();
-        } else if (this.selectedYear == "All" && this.selectedMonth != "All") {
+        else if (this.selectedYear == "All" && this.selectedMonth != "All")
             this.getAllElectrictyBillsByMonth(this.selectedMonth);
-             } else if (this.selectedYear != "All" && this.selectedMonth == "All") {
+        else if (this.selectedYear != "All" && this.selectedMonth == "All")
             this.getAllElectrictyBillsByYear(this.selectedYear);
-             } else {
+        else
             this.getAllElectrictyBillsByPeriod(this.selectedYear, this.selectedMonth);
-             }
+    }
+
+    private downloadTable() {
+        var doc = new jspdf();
+        var col = ['Bill No', 'Period', 'Prev Reading', 'Curr Reading', 'No.of Units', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+
+        this.electrictyBillList.forEach(element => {
+            var temp = [element.billNo, element.period, element.previousReading, element.currentReading, element.noOfUnits, element.amount, element.location, element.certification];
+            rows.push(temp);
+
+        });
+
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+
+        doc.text('Electricity Bill Report', 80, 20);
+
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Electricity Bill Report.pdf');
     }
 
     private showPendingOnly(item): boolean {

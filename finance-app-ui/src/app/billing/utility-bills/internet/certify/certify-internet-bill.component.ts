@@ -29,7 +29,7 @@ export class CertifyInternetBillComponent implements OnInit {
         approvedBill.billType = "internetbill";
         approvedBill.status = "approved";
         approvedBill.comment = "approved successfully";
-        approvedBill.billId = this.bill.billId;
+        approvedBill.billId = this.bill.billNo;
         approvedBill.userId = 1;
         this._approvalService.approveBill(approvedBill, (response) => {
             if (response.success) {
@@ -47,7 +47,7 @@ export class CertifyInternetBillComponent implements OnInit {
         approvedBill.billType = "internetbill";
         approvedBill.status = "rejected";
         approvedBill.comment = "rejected the bill";
-        approvedBill.billId = this.bill.billId;
+        approvedBill.billId = this.bill.billNo;
         approvedBill.userId = 1;
         this._approvalService.approveBill(approvedBill, (response) => {
             if (response.success) {

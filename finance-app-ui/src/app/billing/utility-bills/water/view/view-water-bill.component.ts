@@ -2,6 +2,8 @@ import {Component, OnInit, TemplateRef} from "@angular/core";
 import {WaterBill} from "../../../../models/data-models";
 import {WaterBillsService} from "../../../../services/water-bill.service";
 import {Router} from "@angular/router";
+import * as jspdf from 'jspdf';
+import 'jspdf-autotable';
 
 @Component({
     selector: "app-view-water-bill",
@@ -153,6 +155,31 @@ export class ViewWaterBillComponent implements OnInit {
             this.getAllWaterBillsByYear(this.selectedYear);
         else
             this.getAllWaterBillsByPeriod(this.selectedYear,this.selectedMonth);
+    }
+
+    private downloadTable() {
+        var doc = new jspdf();
+        var col = ['Bill No', 'Period', 'Prev Reading', 'Curr Reading', 'No.of Units', 'Amount', 'Location', 'Certification'];
+        var rows = [];
+
+        this.waterBillList.forEach(element => {
+            var temp = [element.billNo, element.period, element.previousReading, element.currentReading, element.noOfUnits, element.amount, element.location, element.certification];
+            rows.push(temp);
+
+        });
+
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+
+        doc.text('Water Bill Report', 80, 20);
+
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Water Bill Report.pdf');
     }
 
     private showPendingOnly(item): boolean {

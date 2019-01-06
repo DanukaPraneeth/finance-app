@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "/opt/apache-tomcat-8.0.46/webapps/finance-service/finance-service", //"/opt/apache-tomcat-8.0.43/webapps/finance-service/finance-service", //"/home/dinindu/Documents/WSO2_Telco_Work/Finance/finance-app/finance-service/src/main/webapp/finance-service",
+            "outputPath": "/opt/apache-tomcat-8.0.43/webapps/finance-service/finance-service", //"/opt/apache-tomcat-8.0.43/webapps/finance-service/finance-service", //"/home/dinindu/Documents/WSO2_Telco_Work/Finance/finance-app/finance-service/src/main/webapp/finance-service",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

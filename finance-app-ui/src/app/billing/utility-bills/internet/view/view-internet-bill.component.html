@@ -18,12 +18,10 @@
                         [internetBill]="changingBill"
                         (onUpdateTask)="onUpdateBillHandler($event)"
                         (modalClose)="lgModal.hide(); clearModalContent()"></app-update-internet-bill>
-
                 <app-certify-internet-bill
                         *ngIf="showCertifyBill"
                         [bill]="changingBill"
                         (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-internet-bill>
-
             </div>
         </div>
     </div>
@@ -38,14 +36,14 @@
         </div>
 
         <div class="row ">
-        <label class="control-label col-sm-2">Select Year</label>
-        <div class="col-sm-2 field-value">
-          <select class="form-control" (change)="onYearSelected($event)">
-            <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
-              {{opt}}
-            </option>
-          </select>
-        </div>
+            <label class="control-label col-sm-2">Select Year</label>
+            <div class="col-sm-2 field-value">
+                <select class="form-control" (change)="onYearSelected($event)">
+                    <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
+                        {{opt}}
+                    </option>
+                </select>
+            </div>
             <label class="control-label col-sm-2">Select Month</label>
             <div class="col-sm-2 field-value">
                 <select class="form-control" (change)="onMonthSelected($event)">
@@ -54,7 +52,10 @@
                     </option>
                 </select>
             </div>
-      </div>
+            <div class="col-sm-2 field-value">
+                <a type="button" class="btn btn-warning" (click)="downloadTable()">Download PDF</a>
+            </div>
+        </div>
 
         <div class="table">
             <div class="tbl-row header">
@@ -62,9 +63,8 @@
             </div>
             <div class="tbl-row" *ngFor="let item of internetBillList">
                 <div class="tbl-cell">{{item.datetime}}</div>
-                <div class="tbl-cell">{{item.billId}}</div>
+                <div class="tbl-cell">{{item.billNo}}</div>
                 <div class="tbl-cell">{{item.period}}</div>
-                <div class="tbl-cell">{{item.category}}</div>
                 <div class="tbl-cell">{{item.amount}}</div>
                 <div class="tbl-cell">{{item.location}}</div>
                 <div class="tbl-cell">{{item.certification}}</div>
