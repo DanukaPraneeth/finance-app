@@ -2,6 +2,8 @@ import {Component, OnInit, TemplateRef} from "@angular/core";
 import {TelephoneBill} from "../../../../models/data-models";
 import {TelephoneBillsService} from "../../../../services/telephone-bill.service";
 import {Router} from "@angular/router";
+import * as jspdf from 'jspdf';
+import 'jspdf-autotable';
 
 @Component({
     selector: "app-view-telephone-bill",
@@ -153,5 +155,30 @@ export class ViewTelephoneBillComponent implements OnInit {
             this.getAllTelephoneBillsByYear(this.selectedYear);
         else
             this.getAllTelephoneBillsByPeriod(this.selectedYear,this.selectedMonth);
+    }
+
+    private downloadTable() {
+        var doc = new jspdf();
+        var col = ['Bill No', 'Period', 'Category','Amount', 'Location', 'Certification'];
+        var rows = [];
+
+        this.telephoneBillList.forEach(element => {
+            var temp = [element.billId, element.period, element.category,element.amount, element.location, element.certification];
+            rows.push(temp);
+
+        });
+
+        doc.setFontSize(16);
+        doc.setFontStyle('bold');
+
+        doc.text('Telephone Bill Report', 80, 20);
+
+        doc.autoTable({
+            head: [col],
+            body: rows,
+            theme: 'grid',
+            startY: 30
+        });
+        doc.save('Telephone Bill Report.pdf');
     }
 }
