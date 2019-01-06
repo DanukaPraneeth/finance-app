@@ -60,8 +60,6 @@ public class InternetBillsService {
             selectedBill.setBillNo(internetBill.getBillNo());
             selectedBill.setPeriod(internetBill.getPeriod());
             selectedBill.setLocation(internetBill.getLocation());
-            selectedBill.setCategory(internetBill.getCategory());
-            selectedBill.setDatetime(internetBill.getDuration());
             selectedBill.setAmount(internetBill.getAmount());
             selectedBill.setTraineeStaffId(internetBill.getTraineeStaffId());
             selectedBill.setUserKey(internetBill.getUserKey());
