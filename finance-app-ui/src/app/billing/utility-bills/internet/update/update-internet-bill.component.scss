@@ -1,0 +1,56 @@
+:host {
+  display: block;
+  margin-top: 20px;
+}
+
+.content-div {
+  background-color: #ffffff;
+}
+
+.tbl-header {
+  color: #E19131;
+}
+
+.billInputContainer {
+  min-height: 100px;
+  padding: 10px;
+  background-color: white;
+  border: solid 1px whitesmoke;
+}
+
+.error {
+  font-size: 0.9em;
+  color: #f96565;
+}
+
+.modal {
+  top: 10%;
+  outline: none;
+}
+
+.tbl-header {
+  margin-top: 0px;
+  font-weight: 600;
+  font-size: 1.3em;
+  padding: 5px 0px 30px;
+  color: #E19131;
+  text-transform: uppercase;
+}
+
+.btn{ border-radius: 0px !important;}
+
+
+
+
+.control-label span { color: #dd0d0d;}
+
+.btnContainer{
+  margin-top:5%;
+  padding-left: 150px;
+}
+
+.control-label {
+  text-align: right;
+  font-weight: bold;
+  padding-top: 9px;
+}

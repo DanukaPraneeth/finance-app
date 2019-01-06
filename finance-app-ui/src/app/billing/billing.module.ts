@@ -21,6 +21,8 @@ import {ViewWaterBillComponent} from "./utility-bills/water/view/view-water-bill
 import {UpdateWaterBillComponent} from "./utility-bills/water/update/update-water-bill.component";
 import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-telephone-bill.component";
 import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/update-telephone-bill.component";
+import {ViewInternetBillComponent} from "./utility-bills/internet/view/view-internet-bill.component";
+import {UpdateInternetBillComponent} from "./utility-bills/internet/update/update-internet-bill.component";
 
 
 @NgModule({
@@ -50,7 +52,9 @@ import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/upd
         ViewWaterBillComponent,
         UpdateWaterBillComponent,
         ViewTelephoneBillComponent,
-        UpdateTelephoneBillComponent
+        UpdateTelephoneBillComponent,
+        ViewInternetBillComponent,
+        UpdateInternetBillComponent
     ]
 })
 export class BillingModule {

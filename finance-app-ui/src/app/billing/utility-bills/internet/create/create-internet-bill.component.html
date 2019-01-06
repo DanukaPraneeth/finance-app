@@ -1,105 +1,87 @@
 <div class="animated fadeInUp">
 
-  <div class="col-sm-12">
-    <!--Form Container - START-->
-    <div class="form-container billInputContainer">
-      <div class="tbl-header">
-        Internet Bill
+  <!--<div class="col-sm-12">-->
+  <!--Form Container - START-->
+  <div class="form-container billInputContainer">
+    <!--<div class="form-header">-->
+      <!--Internet Bill-->
+    <!--</div>-->
+
+    <form class="form-horizontal" #internetBillForm="ngForm" novalidate
+          (ngSubmit)="onSubmition(internetBillForm)" autocomplete="off">
+      <div class="form-group row" [ngClass]="{'has-danger': isAccountNoError}">
+        <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="text"
+                 autocomplete="off"
+                 placeholder="Bill Account Number"
+                 name="name"
+                 #nameRef="ngModel"
+                 required
+                 [(ngModel)]="internetBill.billId"
+                 (input)="isAccountNoValid($event.target.value)">
+          <span class="error" *ngIf="isAccountNoError">{{accountNoError}}</span>
+        </div>
       </div>
 
-      <form class="form-horizontal" #billForm="ngForm" novalidate
-            (ngSubmit)="onSubmition(billForm)" autocomplete="off">
-        <div class="form-group row" [ngClass]="{'has-danger': isNameError}">
-          <label class="control-label col-sm-2">Bill Account Number <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Bill Account Number"
-                   name="name"
-                   #nameRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefName"
-                   (input)="isNameUnique($event.target.value)">
-            <span class="error" *ngIf="isNameError">{{nameError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isPeriodError}">
+        <label class="control-label col-sm-2">Period <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="month"
+                 autocomplete="off"
+                 placeholder="Period"
+                 name="period"
+                 #periodRef="ngModel"
+                 required
+                 [(ngModel)]="internetBill.period"
+                 (input)="isPeriodValid($event.target.value)">
+          <span class="error" *ngIf="isPeriodError">{{periodError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Date <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Date"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isAmountError}">
+        <label class="control-label col-sm-2">Amount <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="number"
+                 autocomplete="off"
+                 placeholder="Amount"
+                 name="amount"
+                 #amountRef="ngModel"
+                 required
+                 [(ngModel)]="internetBill.amount"
+                 (input)="isAmountValid($event.target.value)">
+          <span class="error" *ngIf="isAmountError">{{amountError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Payment Month <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Payment Month"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group row" [ngClass]="{'has-danger': isLocationError}">
+        <label class="control-label col-sm-2">Location <span>*</span></label>
+        <div class="col-sm-6">
+          <input class="form-control"
+                 type="text"
+                 autocomplete="off"
+                 placeholder="Location"
+                 name="location"
+                 #locationRef="ngModel"
+                 required
+                 [(ngModel)]="internetBill.location"
+                 (input)="isLocationValid($event.target.value)">
+          <span class="error" *ngIf="isLocationError">{{locationError}}</span>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Duration <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Duration"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
+      <div class="form-group">
+        <div class="col-sm-4 col-sm-offset-2 btnContainer">
+          <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
+          &nbsp;
+          <a type="button" class="btn btn-warning" (click)="clearForm()">Clear</a>
         </div>
+      </div>
 
-        <div class="form-group row" [ngClass]="{'has-danger': isDescriptionEmpty}">
-          <label class="control-label col-sm-2">Amount <span>*</span></label>
-          <div class="col-sm-6">
-            <input class="form-control"
-                   type="text"
-                   autocomplete="off"
-                   placeholder="Amount"
-                   name="description"
-                   #descriptionRef="ngModel"
-                   required
-                   [(ngModel)]="rateDefDescription"
-                   (input)="descriptionEmpty($event.target.value)">
-            <span class="error" *ngIf="isDescriptionError">{{descriptionError}}</span>
-          </div>
-        </div>
+    </form>
 
-        <div class="form-group">
-          <div class="col-sm-4 col-sm-offset-2 btnContainer">
-            <button type="submit" class="btn btn-primary animated fadeIn">Add</button>
-            &nbsp;
-            <a class="btn btn-warning" (click)="reloadPage()">Clear</a>
-          </div>
-        </div>
-
-      </form>
-
-    </div>
   </div>
-  <!--<button (click)="showit()">show</button>-->
 </div>

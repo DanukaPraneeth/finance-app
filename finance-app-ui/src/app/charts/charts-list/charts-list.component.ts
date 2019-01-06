@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-reports-list',
-  templateUrl: './reports-list.component.html',
-  styleUrls: ['./reports-list.component.scss']
+  selector: 'app-charts-list',
+  templateUrl: './charts-list.component.html',
+  styleUrls: ['./charts-list.component.scss']
 })
-export class ReportsListComponent implements OnInit {
+export class ChartsListComponent implements OnInit {
 
-  typeString: string [] = ["", "Electricity", "Internet", "Telephone", "Water"];
+  typeString: string [] = ["", "Electricity", "Telephone", "Water"];
   selectedType: string;
   isElectricity: boolean;
   isWater: boolean;

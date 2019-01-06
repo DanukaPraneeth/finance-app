@@ -13,16 +13,16 @@
             </div>
             <div class="modal-body">
 
-                <app-update-water-bill
+                <app-update-internet-bill
                         *ngIf="showUpdateBill"
-                        [waterBill]="changingBill"
+                        [internetBill]="changingBill"
                         (onUpdateTask)="onUpdateBillHandler($event)"
-                        (modalClose)="lgModal.hide(); clearModalContent()"></app-update-water-bill>
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-update-internet-bill>
 
-                <!--<app-certify-electricity-bill-->
+                <!--<app-certify-internet-bill-->
                         <!--*ngIf="showCertifyBill"-->
                         <!--[bill]="changingBill"-->
-                        <!--(modalClose)="lgModal.hide(); clearModalContent()"></app-certify-electricity-bill>-->
+                        <!--(modalClose)="lgModal.hide(); clearModalContent()"></app-certify-internet-bill>-->
 
             </div>
         </div>
@@ -34,18 +34,18 @@
     <div class="table-wrapper">
 
         <div class="form-header">
-            Water Bill Table
+            Internet Bill Table
         </div>
 
         <div class="row ">
-            <label class="control-label col-sm-2">Select Year</label>
-            <div class="col-sm-2 field-value">
-                <select class="form-control" (change)="onYearSelected($event)">
-                    <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
-                        {{opt}}
-                    </option>
-                </select>
-            </div>
+        <label class="control-label col-sm-2">Select Year</label>
+        <div class="col-sm-2 field-value">
+          <select class="form-control" (change)="onYearSelected($event)">
+            <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
+              {{opt}}
+            </option>
+          </select>
+        </div>
             <label class="control-label col-sm-2">Select Month</label>
             <div class="col-sm-2 field-value">
                 <select class="form-control" (change)="onMonthSelected($event)">
@@ -54,17 +54,17 @@
                     </option>
                 </select>
             </div>
-        </div>
+      </div>
 
         <div class="table">
             <div class="tbl-row header">
                 <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
             </div>
-            <div class="tbl-row" *ngFor="let item of waterBillList">
-                <div class="tbl-cell">{{item.billNo}}</div>
-                <div class="tbl-cell">{{item.previousReading}}</div>
-                <div class="tbl-cell">{{item.currentReading}}</div>
-                <div class="tbl-cell">{{item.noOfUnits}}</div>
+            <div class="tbl-row" *ngFor="let item of internetBillList">
+                <div class="tbl-cell">{{item.datetime}}</div>
+                <div class="tbl-cell">{{item.billId}}</div>
+                <div class="tbl-cell">{{item.period}}</div>
+                <div class="tbl-cell">{{item.category}}</div>
                 <div class="tbl-cell">{{item.amount}}</div>
                 <div class="tbl-cell">{{item.location}}</div>
                 <div class="tbl-cell">{{item.certification}}</div>
@@ -87,7 +87,7 @@
                     </button>
                 </div>
             </div>
-            <div class="no-rec-row tbl-row" *ngIf="waterBillList.length == 0">
+            <div class="no-rec-row tbl-row" *ngIf="internetBillList.length == 0">
                 <span class="no-rec">No Records...</span>
             </div>
 

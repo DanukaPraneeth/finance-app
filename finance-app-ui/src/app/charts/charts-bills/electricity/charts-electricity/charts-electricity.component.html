@@ -1,16 +1,16 @@
 <div class="row ">
-        <label class="control-label col-sm-2">Select Year</label>
+        <label class="control-label col-sm-2">Select Property</label>
         <div class="col-sm-2 field-value">
-          <select class="form-control" (change)="onYearSelected($event)">
-            <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
+          <select class="form-control" (change)="onPropertySelected($event)">
+            <option *ngFor="let opt of propertyString" [selected]="selectedProperty == opt">
               {{opt}}
             </option>
           </select>
         </div>
-            <label class="control-label col-sm-2">Select Month</label>
+            <label class="control-label col-sm-2">{{dropDownLable}}</label>
             <div class="col-sm-2 field-value">
-                <select class="form-control" (change)="onMonthSelected($event)">
-                    <option *ngFor="let opt of monthString" [selected]="selectedMonth == opt">
+                <select class="form-control" (change)="onSecondDropdownSelected($event)">
+                    <option *ngFor="let opt of secondDropdownString" [selected]="selectedValue == opt">
                         {{opt}}
                     </option>
                 </select>
@@ -20,7 +20,7 @@
 <mat-grid-list cols="2" gutterSize="10px" rowHeight="3:2.5">
     <mat-grid-tile>
         <mat-grid-tile-header>
-            Monthly consumption of the Year
+            {{barChartHeader}}
         </mat-grid-tile-header>
         <canvas mdbChart
                 [chartType]="chartTypeBar"
@@ -35,7 +35,7 @@
     </mat-grid-tile>
     <mat-grid-tile>
         <mat-grid-tile-header>
-            Consumption by Location
+            {{pieChartHeader}}
         </mat-grid-tile-header>
         <canvas mdbChart
                 [chartType]="chartTypePie"
@@ -48,20 +48,20 @@
                 (chartClick)="chartClicked($event)">
         </canvas>
     </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-grid-tile-header>
-            Comparison with Last year
-        </mat-grid-tile-header>
-        <canvas mdbChart
-                [chartType]="chartTypeLine"
-                [datasets]="chartDatasetsLine"
-                [labels]="chartLabelsLine"
-                [colors]="chartColorsLine"
-                [options]="chartOptionsLine"
-                [legend]="true"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)">
-        </canvas>
-    </mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
+    <!--<mat-grid-tile>-->
+        <!--<mat-grid-tile-header>-->
+            <!--Comparison with Last year-->
+        <!--</mat-grid-tile-header>-->
+        <!--<canvas mdbChart-->
+                <!--[chartType]="chartTypeLine"-->
+                <!--[datasets]="chartDatasetsLine"-->
+                <!--[labels]="chartLabelsLine"-->
+                <!--[colors]="chartColorsLine"-->
+                <!--[options]="chartOptionsLine"-->
+                <!--[legend]="true"-->
+                <!--(chartHover)="chartHovered($event)"-->
+                <!--(chartClick)="chartClicked($event)">-->
+        <!--</canvas>-->
+    <!--</mat-grid-tile>-->
+    <!--<mat-grid-tile>4</mat-grid-tile>-->
 </mat-grid-list>
