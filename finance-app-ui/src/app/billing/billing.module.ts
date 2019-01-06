@@ -21,8 +21,12 @@ import {ViewWaterBillComponent} from "./utility-bills/water/view/view-water-bill
 import {UpdateWaterBillComponent} from "./utility-bills/water/update/update-water-bill.component";
 import {ViewTelephoneBillComponent} from "./utility-bills/telephone/view/view-telephone-bill.component";
 import {UpdateTelephoneBillComponent} from "./utility-bills/telephone/update/update-telephone-bill.component";
+import {ViewInternetBillComponent} from "./utility-bills/internet/view/view-internet-bill.component";
+import {UpdateInternetBillComponent} from "./utility-bills/internet/update/update-internet-bill.component";
 import {CertifyWaterBillComponent} from "./utility-bills/water/certify/certify-water-bill.component";
 import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/certify-telephone-bill.component";
+import {ToastyModule} from "ng2-toasty";
+import {CertifyInternetBillComponent} from "./utility-bills/internet/certify/certify-internet-bill.component";
 
 
 @NgModule({
@@ -37,6 +41,7 @@ import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/c
         BillingRoutingModule,
         ModalModule.forRoot(),
         TooltipModule.forRoot(),
+        ToastyModule.forRoot(),
         PermissionModule
     ],
     declarations: [
@@ -51,10 +56,13 @@ import {CertifyTelephoneBillComponent} from "./utility-bills/telephone/certify/c
         CertifyElectricityBillComponent,
         CertifyWaterBillComponent,
         CertifyTelephoneBillComponent,
+        CertifyInternetBillComponent,
         ViewWaterBillComponent,
         UpdateWaterBillComponent,
         ViewTelephoneBillComponent,
-        UpdateTelephoneBillComponent
+        UpdateTelephoneBillComponent,
+        ViewInternetBillComponent,
+        UpdateInternetBillComponent
     ]
 })
 export class BillingModule {

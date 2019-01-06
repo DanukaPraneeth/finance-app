@@ -302,7 +302,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
 /* harmony import */ var _app_guard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.guard */ "./src/app/app.guard.ts");
 /* harmony import */ var _authentication_signup_signup_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./authentication/signup/signup.component */ "./src/app/authentication/signup/signup.component.ts");
-/* harmony import */ var _reports_reports_list_reports_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reports/reports-list/reports-list.component */ "./src/app/reports/reports-list/reports-list.component.ts");
+/* harmony import */ var _charts_charts_list_charts_list_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./charts/charts-list/charts-list.component */ "./src/app/charts/charts-list/charts-list.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -328,8 +328,8 @@ var routes = [
         canActivate: [_app_guard__WEBPACK_IMPORTED_MODULE_4__["LoginGuard"]]
     },
     {
-        path: "reports",
-        component: _reports_reports_list_reports_list_component__WEBPACK_IMPORTED_MODULE_6__["ReportsListComponent"],
+        path: "charts",
+        component: _charts_charts_list_charts_list_component__WEBPACK_IMPORTED_MODULE_6__["ChartsListComponent"],
         canActivate: [_app_guard__WEBPACK_IMPORTED_MODULE_4__["AppGuard"]]
     },
     {
@@ -555,21 +555,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _piechart_piechart_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./piechart/piechart.component */ "./src/app/piechart/piechart.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _dashboards_certify_count_certify_count_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./dashboards/certify-count/certify-count.component */ "./src/app/dashboards/certify-count/certify-count.component.ts");
-/* harmony import */ var _reports_reports_list_reports_list_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./reports/reports-list/reports-list.component */ "./src/app/reports/reports-list/reports-list.component.ts");
-/* harmony import */ var _reports_reports_bills_electricity_reports_electricity_reports_electricity_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./reports/reports-bills/electricity/reports-electricity/reports-electricity.component */ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.ts");
-/* harmony import */ var _services_dashboard_service__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./services/dashboard.service */ "./src/app/services/dashboard.service.ts");
-/* harmony import */ var _directives_permission_module__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./directives/permission.module */ "./src/app/directives/permission.module.ts");
-/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./services/water-bill.service */ "./src/app/services/water-bill.service.ts");
-/* harmony import */ var _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./remote/water_bill_remote.service */ "./src/app/remote/water_bill_remote.service.ts");
-/* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
-/* harmony import */ var _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./remote/telephone_bill_remote.service */ "./src/app/remote/telephone_bill_remote.service.ts");
+/* harmony import */ var _charts_charts_list_charts_list_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./charts/charts-list/charts-list.component */ "./src/app/charts/charts-list/charts-list.component.ts");
+/* harmony import */ var _charts_charts_bills_electricity_charts_electricity_charts_electricity_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./charts/charts-bills/electricity/charts-electricity/charts-electricity.component */ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.ts");
+/* harmony import */ var _charts_charts_bills_water_charts_water_charts_water_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./charts/charts-bills/water/charts-water/charts-water.component */ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.ts");
+/* harmony import */ var _charts_charts_bills_telephone_charts_telephone_charts_telephone_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./charts/charts-bills/telephone/charts-telephone/charts-telephone.component */ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.ts");
+/* harmony import */ var _services_dashboard_service__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./services/dashboard.service */ "./src/app/services/dashboard.service.ts");
+/* harmony import */ var _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./directives/permission.module */ "./src/app/directives/permission.module.ts");
+/* harmony import */ var angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! angular-bootstrap-md */ "./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
+/* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./services/water-bill.service */ "./src/app/services/water-bill.service.ts");
+/* harmony import */ var _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./remote/water_bill_remote.service */ "./src/app/remote/water_bill_remote.service.ts");
+/* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
+/* harmony import */ var _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./remote/telephone_bill_remote.service */ "./src/app/remote/telephone_bill_remote.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -626,8 +630,10 @@ var AppModule = /** @class */ (function () {
                 _chart_chart_component__WEBPACK_IMPORTED_MODULE_25__["ChartComponent"],
                 _piechart_piechart_component__WEBPACK_IMPORTED_MODULE_26__["PiechartComponent"],
                 _dashboards_certify_count_certify_count_component__WEBPACK_IMPORTED_MODULE_28__["CertifyCountComponent"],
-                _reports_reports_list_reports_list_component__WEBPACK_IMPORTED_MODULE_29__["ReportsListComponent"],
-                _reports_reports_bills_electricity_reports_electricity_reports_electricity_component__WEBPACK_IMPORTED_MODULE_30__["ReportsElectricityComponent"]
+                _charts_charts_list_charts_list_component__WEBPACK_IMPORTED_MODULE_29__["ChartsListComponent"],
+                _charts_charts_bills_electricity_charts_electricity_charts_electricity_component__WEBPACK_IMPORTED_MODULE_30__["ChartsElectricityComponent"],
+                _charts_charts_bills_water_charts_water_charts_water_component__WEBPACK_IMPORTED_MODULE_31__["ChartsWaterComponent"],
+                _charts_charts_bills_telephone_charts_telephone_charts_telephone_component__WEBPACK_IMPORTED_MODULE_32__["ChartsTelephoneComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -641,7 +647,7 @@ var AppModule = /** @class */ (function () {
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["AlertModule"].forRoot(),
                 _shared_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_19__["NgbModule"],
-                _directives_permission_module__WEBPACK_IMPORTED_MODULE_32__["PermissionModule"],
+                _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__["PermissionModule"],
                 _billing_billing_module__WEBPACK_IMPORTED_MODULE_20__["BillingModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatButtonModule"],
@@ -650,11 +656,11 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_27__["MatGridListModule"],
-                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_33__["ChartsModule"]
+                angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_35__["ChartsModule"]
             ],
             exports: [
                 ngx_bootstrap__WEBPACK_IMPORTED_MODULE_11__["ModalModule"],
-                _directives_permission_module__WEBPACK_IMPORTED_MODULE_32__["PermissionModule"]
+                _directives_permission_module__WEBPACK_IMPORTED_MODULE_34__["PermissionModule"]
             ],
             providers: [
                 _app_guard__WEBPACK_IMPORTED_MODULE_7__["AppGuard"],
@@ -662,12 +668,12 @@ var AppModule = /** @class */ (function () {
                 _services_authentication_service__WEBPACK_IMPORTED_MODULE_8__["AuthenticationService"],
                 _services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_23__["ElectricityBillsService"],
                 _remote_electricity_bill_remote_service__WEBPACK_IMPORTED_MODULE_22__["ElectricityBillRemoteDataService"],
-                _services_water_bill_service__WEBPACK_IMPORTED_MODULE_34__["WaterBillsService"],
-                _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_35__["WaterBillRemoteDataService"],
-                _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_36__["TelephoneBillsService"],
-                _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__["TelephoneBillRemoteDataService"],
+                _services_water_bill_service__WEBPACK_IMPORTED_MODULE_36__["WaterBillsService"],
+                _remote_water_bill_remote_service__WEBPACK_IMPORTED_MODULE_37__["WaterBillRemoteDataService"],
+                _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_38__["TelephoneBillsService"],
+                _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_39__["TelephoneBillRemoteDataService"],
                 _remote_login_remote_data_service__WEBPACK_IMPORTED_MODULE_24__["LoginRemoteDataService"],
-                _services_dashboard_service__WEBPACK_IMPORTED_MODULE_31__["DashboardService"],
+                _services_dashboard_service__WEBPACK_IMPORTED_MODULE_33__["DashboardService"],
                 _services_app_common_service__WEBPACK_IMPORTED_MODULE_9__["AppCommonService"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -1194,7 +1200,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var AddbillComponent = /** @class */ (function () {
     function AddbillComponent() {
-        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
+        this.typeString = ["", "Electricity", "Telephone", "Water"];
     }
     AddbillComponent.prototype.ngOnInit = function () {
         this.selectedType = "";
@@ -1292,7 +1298,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ViewbillComponent = /** @class */ (function () {
     function ViewbillComponent() {
-        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
+        this.typeString = ["", "Electricity", "Telephone", "Water"];
     }
     ViewbillComponent.prototype.ngOnInit = function () {
         this.selectedType = "";
@@ -1427,7 +1433,7 @@ var CertifyElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"form-header\">\n        Electricity Bill\n      </div>\n\n      <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n            (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n          <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Bill Account Number\"\n                   name=\"name\"\n                   #nameRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.billNo\"\n                   (input)=\"isAccountNoValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n          <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"month\"\n                   autocomplete=\"off\"\n                   placeholder=\"Period\"\n                   name=\"period\"\n                   #periodRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.period\"\n                   (input)=\"isPeriodValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n          <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Previous Reading\"\n                   name=\"prevread\"\n                   #prevreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.previousReading\"\n                   (input)=\"isPreviousReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n          <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Current Reading\"\n                   name=\"curread\"\n                   #curreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.currentReading\"\n                   (input)=\"isCurrentReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n          <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"No. of Units\"\n                   name=\"units\"\n                   required\n                   #unitsRef=\"ngModel\"\n                   [(ngModel)]=\"electricityBill.noOfUnits\">\n            <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n          <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Amount\"\n                   name=\"amount\"\n                   #amountRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.amount\"\n                   (input)=\"isAmountValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n          <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Location\"\n                   name=\"location\"\n                   #locationRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.location\"\n                   (input)=\"isLocationValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n            <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n            &nbsp;\n            <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n          </div>\n        </div>\n\n      </form>\n\n    </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <!--<div class=\"form-header\">-->\n        <!--Electricity Bill-->\n      <!--</div>-->\n\n      <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n            (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n          <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Bill Account Number\"\n                   name=\"name\"\n                   #nameRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.billNo\"\n                   (input)=\"isAccountNoValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n          <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"month\"\n                   autocomplete=\"off\"\n                   placeholder=\"Period\"\n                   name=\"period\"\n                   #periodRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.period\"\n                   (input)=\"isPeriodValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n          <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Previous Reading\"\n                   name=\"prevread\"\n                   #prevreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.previousReading\"\n                   (input)=\"isPreviousReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n          <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Current Reading\"\n                   name=\"curread\"\n                   #curreadRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.currentReading\"\n                   (input)=\"isCurrentReadingValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n          <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"No. of Units\"\n                   name=\"units\"\n                   required\n                   #unitsRef=\"ngModel\"\n                   [(ngModel)]=\"electricityBill.noOfUnits\"\n                   (input)=\"isNoOfUnitsValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n          <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"number\"\n                   autocomplete=\"off\"\n                   placeholder=\"Amount\"\n                   name=\"amount\"\n                   #amountRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.amount\"\n                   (input)=\"isAmountValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n          <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n          <div class=\"col-sm-6\">\n            <input class=\"form-control\"\n                   type=\"text\"\n                   autocomplete=\"off\"\n                   placeholder=\"Location\"\n                   name=\"location\"\n                   #locationRef=\"ngModel\"\n                   required\n                   [(ngModel)]=\"electricityBill.location\"\n                   (input)=\"isLocationValid($event.target.value)\">\n            <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n          </div>\n        </div>\n\n        <div class=\"form-group\">\n          <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n            <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n            &nbsp;\n            <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n          </div>\n        </div>\n\n      </form>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1676,7 +1682,7 @@ var CreateElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(billForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.billNo\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n                <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Previous Reading\"\n                           name=\"prevread\"\n                           #prevreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.previousReading\"\n                           (input)=\"isPreviousReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n                <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Current Reading\"\n                           name=\"curread\"\n                           #curreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.currentReading\"\n                           (input)=\"isCurrentReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n                <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"No. of Units\"\n                           name=\"units\"\n                           required\n                           #unitsRef=\"ngModel\"\n                           [(ngModel)]=\"electricityBill.noOfUnits\">\n                    <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #electricityBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(electricityBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.billNo\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"month\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n                <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Previous Reading\"\n                           name=\"prevread\"\n                           #prevreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.previousReading\"\n                           (input)=\"isPreviousReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n                <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Current Reading\"\n                           name=\"curread\"\n                           #curreadRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.currentReading\"\n                           (input)=\"isCurrentReadingValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n                <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"No. of Units\"\n                           name=\"units\"\n                           required\n                           #unitsRef=\"ngModel\"\n                           [(ngModel)]=\"electricityBill.noOfUnits\">\n                    <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"electricityBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -1739,10 +1745,6 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
             this.electricityBill.noOfUnits != null &&
             this.electricityBill.amount != null &&
             this.electricityBill.location != null && this.electricityBill.location != "") {
-            // this.electricityBill.certifiedDate = "2018-01-03 00:00:00.0";
-            // this.electricityBill.userKey = 1;
-            // this.electricityBill.traineeStaffId = 1;
-            // this.electricityBill.certification = "approved";
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
             this.onUpdateTask.emit(true);
         }
@@ -1935,7 +1937,7 @@ var UpdateElectricityBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-electricity-bill\n                        *ngIf=\"showUpdateBill\"\n                        [electricityBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-electricity-bill>\n\n                <app-certify-electricity-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Electricity Bill Table\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-electricity-bill\n                        *ngIf=\"showUpdateBill\"\n                        [electricityBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-electricity-bill>\n\n                <app-certify-electricity-bill\n                        *ngIf=\"showCertifyBill\"\n                        [bill]=\"changingBill\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Electricity Bill Table\n        </div>\n\n        <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Year</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n            <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1946,7 +1948,7 @@ module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabind
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2VsZWN0cmljaXR5L3ZpZXcvdmlldy1lbGVjdHJpY2l0eS1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWE7RUFDYiwrQkFBOEIsRUFDN0I7O0FBRUg7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxjQUNGLEVBQUM7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBRXRDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvZWxlY3RyaWNpdHkvdmlldy92aWV3LWVsZWN0cmljaXR5LWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9ybS1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4udGFibGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMjAlO1xuICBvdXRsaW5lOiBub25lO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSlcbiAgfVxuXG4ubW9kYWwtY29udGVudHtcbiAgd2lkdGg6IDEwMDBweDtcbn1cblxuLm1vZGFsLWJhY2tkcm9wIHtcbiAgZGlzcGxheTogbm9uZVxufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICBjb2xvcjogI0UxOTEzMTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLmhhcy1kYW5nZXIgLmZvcm0tY29udHJvbHtcbiAgYm9yZGVyLWNvbG9yOiAjZDk1MzRmO1xuICBjb2xvcjogI2Q5NTM0Zjtcbn1cblxuLmJ0bnsgYm9yZGVyLXJhZGl1czogMHB4ICFpbXBvcnRhbnQ7fVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVye1xuICBtYXJnaW4tdG9wOjUlO1xuICBwYWRkaW5nLWxlZnQ6IDE1MHB4O1xufVxuXG4uY29udHJvbC1sYWJlbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy10b3A6IDlweDtcbn1cblxuLnRhYmxlIHtcbiAgZGlzcGxheTogdGFibGU7XG4gIHdpZHRoOiAxMDAlO1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgfVxuXG4gIC50Ymwtcm93IHtcbiAgICBkaXNwbGF5OiB0YWJsZS1yb3c7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjZmNjtcbiAgICBoZWlnaHQ6IDBweDtcblxuICAgICY6bnRoLW9mLXR5cGUob2RkKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICAmLmhlYWRlciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDcxN0Y2O1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgICB9XG5cbiAgICAudGJsLWNlbGwge1xuICAgICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbiAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgICAgLy8gIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgfVxuICAgIH1cblxuICAgICYubW9kaWZpZWQge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZjYztcbiAgICB9XG5cbiAgICAmLm9wZW4ge1xuICAgICAgaGVpZ2h0OiAxNThweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNGYyYzk7XG5cbiAgICAgIC5hY3Rpb24ge1xuICAgICAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgICAgICBjb2xvciA6IGJsYWNrO1xuICAgICAgfVxuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDI0M3B4O1xuICAgICAgfVxuICAgIH1cblxuICAgIC5tb3JlLWNvbntcbiAgICAgIHBhZGRpbmc6MTBweCAwcHggMTBweCAwcHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2E4Y2E1O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMTBweDtcbiAgICAgIHJpZ2h0OiAxMXB4O1xuICAgICAgaGVpZ2h0OiAxMDVweDtcbiAgICAgIG1hcmdpbi10b3A6IDUzcHg7XG4gICAgICBib3JkZXI6c29saWQgMXB4ICNkMGQwZDA7XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMTkwcHg7XG4gICAgICB9XG5cbiAgICAgIC5tb3JlLXJvd3tcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMnB4O1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtbmFtZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOWE5YTlhO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC12YWx1ZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICB9XG5cbiAgICAgIHNlbGVjdCxpbnB1dHtcbiAgICAgICAgbWFyZ2luLXRvcDogMnB4O1xuICAgICAgfVxuXG4gICAgICAuYnRue1xuICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgICAgICBwYWRkaW5nLXRvcDogNXB4IWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDVweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cblxuICB9XG5cbiAgLm5vLXJlYy1yb3cge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIC5uby1yZWMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMHB4O1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIG1hcmdpbjogYXV0bztcbiAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgIHBhZGRpbmctdG9wOiAxNXB4O1xuICAgICAgY29sb3I6ICM5YTlhOWE7XG4gICAgfVxuICB9XG5cbiAgLmZyb21jb2xvcntcbiAgICBjb2xvcjogIzJmOWU0NDtcbiAgfVxuXG4gIC50b2NvbG9ye1xuICAgIGNvbG9yOiAjZGQwZDBkO1xuICB9XG59Il19 */"
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 10px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL2VsZWN0cmljaXR5L3ZpZXcvdmlldy1lbGVjdHJpY2l0eS1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0Usb0JBQWtCLEVBQ25COztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWE7RUFDYiwrQkFBOEIsRUFDN0I7O0FBRUg7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxjQUNGLEVBQUM7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBRXRDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvZWxlY3RyaWNpdHkvdmlldy92aWV3LWVsZWN0cmljaXR5LWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9ybS1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4udGFibGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5yb3d7XG4gIG1hcmdpbi1ib3R0b206MTBweDtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAyMCU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KVxuICB9XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
 
 /***/ }),
 
@@ -1979,29 +1981,44 @@ var ViewElectricityBillComponent = /** @class */ (function () {
     function ViewElectricityBillComponent(_electrictyBillService, _router) {
         this._electrictyBillService = _electrictyBillService;
         this._router = _router;
-        this.fieldSet = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", ""];
+        this.fieldSet = ["Bill No", "Period", "Prev Reading", "Curr Reading", "No.of Units", "Amount", "Location", "Certification", "", ""];
+        this.yearString = ["All", "2017", "2018", "2019", "2020"];
+        this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        this.selectedYear = "All";
+        this.selectedMonth = "All";
     }
     ViewElectricityBillComponent.prototype.ngOnInit = function () {
         this.electrictyBillList = [];
-        this.getAllElectrictyBills();
+        this.retrieveElectricityBills();
         this.showUpdateBill = false;
         this.showCertifyBill = false;
     };
-    ViewElectricityBillComponent.prototype.getElectrictyBills = function () {
+    ViewElectricityBillComponent.prototype.getAllElectrictyBills = function () {
         var _this = this;
         this._electrictyBillService.getElectricityBills(function (response) {
-            console.log(response.length);
-            if (response.length != 0) {
-                _this.electrictyBillList = response;
-            }
-            else {
-                console.log("Unsuccessfull request");
-            }
+            _this.electrictyBillList = response;
+        });
+    };
+    ViewElectricityBillComponent.prototype.getAllElectrictyBillsByMonth = function (month) {
+        var _this = this;
+        this._electrictyBillService.getElectricityBillsByMonth(month, function (response) {
+            _this.electrictyBillList = response;
+        });
+    };
+    ViewElectricityBillComponent.prototype.getAllElectrictyBillsByYear = function (year) {
+        var _this = this;
+        this._electrictyBillService.getElectricityBillsByYear(year, function (response) {
+            _this.electrictyBillList = response;
+        });
+    };
+    ViewElectricityBillComponent.prototype.getAllElectrictyBillsByPeriod = function (year, month) {
+        var _this = this;
+        this._electrictyBillService.getElectricityBillsByPeriod(year, month, function (response) {
+            _this.electrictyBillList = response;
         });
     };
     ViewElectricityBillComponent.prototype.changeDialogTitle = function () {
-        this.changingBill.period = "November 2018";
-        return this.modalTitle = "Update an Electricity Bill";
+        return this.modalTitle = "Update Electricity Bill";
     };
     ViewElectricityBillComponent.prototype.changeHeading = function () {
         return this.modalTitle = "Certify Electricity Bill";
@@ -2009,11 +2026,84 @@ var ViewElectricityBillComponent = /** @class */ (function () {
     ViewElectricityBillComponent.prototype.clearModalContent = function () {
         this.showUpdateBill = false;
         this.showCertifyBill = false;
+        this.retrieveElectricityBills();
     };
     ViewElectricityBillComponent.prototype.onUpdateBillHandler = function (event) {
         if (event) {
-            this.getAllElectrictyBills();
+            this.retrieveElectricityBills();
         }
+    };
+    ViewElectricityBillComponent.prototype.onYearSelected = function (event) {
+        this.selectedYear = event.target.value;
+        this.retrieveElectricityBills();
+    };
+    ViewElectricityBillComponent.prototype.onMonthSelected = function (event) {
+        var selectedType = event.target.value;
+        switch (selectedType) {
+            case "January": {
+                this.selectedMonth = "01";
+                break;
+            }
+            case "February": {
+                this.selectedMonth = "02";
+                break;
+            }
+            case "March": {
+                this.selectedMonth = "03";
+                break;
+            }
+            case "April": {
+                this.selectedMonth = "04";
+                break;
+            }
+            case "May": {
+                this.selectedMonth = "05";
+                break;
+            }
+            case "June": {
+                this.selectedMonth = "06";
+                break;
+            }
+            case "July": {
+                this.selectedMonth = "07";
+                break;
+            }
+            case "August": {
+                this.selectedMonth = "08";
+                break;
+            }
+            case "September": {
+                this.selectedMonth = "09";
+                break;
+            }
+            case "October": {
+                this.selectedMonth = "10";
+                break;
+            }
+            case "November": {
+                this.selectedMonth = "11";
+                break;
+            }
+            case "December": {
+                this.selectedMonth = "12";
+                break;
+            }
+            default: {
+                this.selectedMonth = "All";
+                break;
+            }
+        }
+        this.retrieveElectricityBills();
+    };
+    ViewElectricityBillComponent.prototype.retrieveElectricityBills = function () {
+        if (this.selectedYear == "All" && this.selectedMonth == "All")
+            this.getAllElectrictyBills();
+        else if (this.selectedYear == "All" && this.selectedMonth != "All")
+            this.getAllElectrictyBillsByMonth(this.selectedMonth);
+        else if (this.selectedYear != "All" && this.selectedMonth == "All")
+            this.getAllElectrictyBillsByYear(this.selectedYear);
+        else
+            this.getAllElectrictyBillsByPeriod(this.selectedYear, this.selectedMonth);
     };
     ViewElectricityBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2100,7 +2190,7 @@ var CreateInternetBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <div class=\"form-header\">\n      Telephone Bill\n    </div>\n\n    <form class=\"form-horizontal\" #telephoneBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(telephoneBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCategoryError}\">\n        <label class=\"control-label col-sm-2\">Category <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Category\"\n                 name=\"category\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.category\"\n                 (input)=\"isCategoryValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCategoryError\">{{categoryError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n        <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Location\"\n                 name=\"location\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.location\"\n                 (input)=\"isLocationValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <!--<div class=\"form-header\">-->\n      <!--Telephone Bill-->\n    <!--</div>-->\n\n    <form class=\"form-horizontal\" #telephoneBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(telephoneBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.billId\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCategoryError}\">\n        <label class=\"control-label col-sm-2\">Category <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Category\"\n                 name=\"category\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.category\"\n                 (input)=\"isCategoryValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCategoryError\">{{categoryError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n        <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Location\"\n                 name=\"location\"\n                 #locationRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"telephoneBill.location\"\n                 (input)=\"isLocationValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isLocationError\">{{locationError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -2154,7 +2244,7 @@ var CreateTelephoneBillComponent = /** @class */ (function () {
     };
     CreateTelephoneBillComponent.prototype.onSubmition = function (telephoneBillForm) {
         //when form is submitted
-        if (this.telephoneBill.billNo != null && this.telephoneBill.billNo != "" &&
+        if (this.telephoneBill.billId != null && this.telephoneBill.billId != "" &&
             this.telephoneBill.location != null && this.telephoneBill.location != "" &&
             this.telephoneBill.category != null && this.telephoneBill.category != "" &&
             this.telephoneBill.amount != null &&
@@ -2163,7 +2253,7 @@ var CreateTelephoneBillComponent = /** @class */ (function () {
             this.telephoneBillsService.insertTelephoneBill(this.telephoneBill);
         }
         else {
-            if (this.telephoneBill.billNo.length == 0) {
+            if (this.telephoneBill.billId.length == 0) {
                 this.isAccountNoError = true;
                 this.accountNoError = "Bill No cannot be empty";
             }
@@ -2262,7 +2352,7 @@ var CreateTelephoneBillComponent = /** @class */ (function () {
         this.telephoneBill.location = '';
         this.telephoneBill.period = '';
         this.telephoneBill.category = '';
-        this.telephoneBill.billNo = '';
+        this.telephoneBill.billId = '';
         this.clearErrors();
     };
     CreateTelephoneBillComponent.prototype.clearErrors = function () {
@@ -2299,7 +2389,7 @@ var CreateTelephoneBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #telephoneBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(telephoneBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.billNo\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCategoryError}\">\n                <label class=\"control-label col-sm-2\">Category <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           placeholder=\"Category\"\n                           name=\"category\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.category\"\n                           (input)=\"isCategoryValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCategoryError\">{{categoryError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n                    &nbsp;\n                    <a class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n    <div class=\"form-container billInputContainer\">\n\n        <form class=\"form-horizontal\" #telephoneBillForm=\"ngForm\" novalidate\n              (ngSubmit)=\"onSubmition(telephoneBillForm)\" autocomplete=\"off\">\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n                <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"name\"\n                           #nameRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.billId\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n                <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"period\"\n                           #periodRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.period\">\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCategoryError}\">\n                <label class=\"control-label col-sm-2\">Category <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           placeholder=\"Category\"\n                           name=\"category\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.category\"\n                           (input)=\"isCategoryValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isCategoryError\">{{categoryError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n                <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"number\"\n                           autocomplete=\"off\"\n                           placeholder=\"Amount\"\n                           name=\"amount\"\n                           #amountRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.amount\"\n                           (input)=\"isAmountValid($event.target.value)\">\n                    <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n                </div>\n            </div>\n\n            <div class=\"form-group row\" [ngClass]=\"{'has-danger': isLocationError}\">\n                <label class=\"control-label col-sm-2\">Location <span>*</span></label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\"\n                           type=\"text\"\n                           autocomplete=\"off\"\n                           readonly\n                           name=\"location\"\n                           #locationRef=\"ngModel\"\n                           required\n                           [(ngModel)]=\"telephoneBill.location\">\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n                    <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Update</button>                    &nbsp;\n                </div>\n            </div>\n\n        </form>\n\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -2355,7 +2445,7 @@ var UpdateTelephoneBillComponent = /** @class */ (function () {
     };
     UpdateTelephoneBillComponent.prototype.onSubmition = function (billForm) {
         //when form is submitted
-        if (this.telephoneBill.billNo != null && this.telephoneBill.billNo != "" &&
+        if (this.telephoneBill.billId != null && this.telephoneBill.billId != "" &&
             this.telephoneBill.location != null && this.telephoneBill.location != "" &&
             this.telephoneBill.category != null && this.telephoneBill.category != "" &&
             this.telephoneBill.amount != null &&
@@ -2368,7 +2458,7 @@ var UpdateTelephoneBillComponent = /** @class */ (function () {
             this.onUpdateTask.emit(true);
         }
         else {
-            if (this.telephoneBill.billNo.length == 0) {
+            if (this.telephoneBill.billId.length == 0) {
                 this.isAccountNoError = true;
                 this.accountNoError = "Bill No cannot be empty";
             }
@@ -2469,7 +2559,7 @@ var UpdateTelephoneBillComponent = /** @class */ (function () {
         this.telephoneBill.location = '';
         this.telephoneBill.period = '';
         this.telephoneBill.category = '';
-        this.telephoneBill.billNo = '';
+        this.telephoneBill.billId = '';
         this.clearErrors();
     };
     UpdateTelephoneBillComponent.prototype.clearErrors = function () {
@@ -2514,7 +2604,7 @@ var UpdateTelephoneBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-telephone-bill\n                        *ngIf=\"showUpdateBill\"\n                        [telephoneBill]]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-telephone-bill>\n\n                <!--<app-certify-telephone-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-telephone-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Telephone Bill Table\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of telephoneBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.category}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"telephoneBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-telephone-bill\n                        *ngIf=\"showUpdateBill\"\n                        [telephoneBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-telephone-bill>\n\n                <!--<app-certify-telephone-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-telephone-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Telephone Bill Table\n        </div>\n\n        <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Year</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n            <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of telephoneBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billId}}</div>\n                <div class=\"tbl-cell\">{{item.period}}</div>\n                <div class=\"tbl-cell\">{{item.category}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"telephoneBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -2525,7 +2615,7 @@ module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabind
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3RlbGVwaG9uZS92aWV3L3ZpZXctdGVsZXBob25lLWJpbGwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQiwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYTtFQUNiLCtCQUE4QixFQUM3Qjs7QUFFSDtFQUNFLGNBQWEsRUFDZDs7QUFFRDtFQUNFLGNBQ0YsRUFBQzs7QUFFRDtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsZUFBYztFQUNkLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLHNCQUFxQjtFQUNyQixlQUFjLEVBQ2Y7O0FBRUQ7RUFBTSw4QkFBNkIsRUFBRzs7QUFFdEM7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUNFLGVBQWE7RUFDYixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxZQUFXLEVBcUhaOztBQXZIRDtJQVNJLG1CQUFrQjtJQUNsQiwwQkFBeUI7SUFDekIsWUFBVyxFQXFGWjs7QUFoR0g7TUFjTSx3QkFBdUIsRUFDeEI7O0FBZkw7TUFrQk0sMEJBQXlCO01BQ3pCLGlCQUFnQjtNQUNoQixhQUFZLEVBQ2I7O0FBckJMO01BNEJNLG9CQUFtQjtNQUNuQixtQkFBa0IsRUFJbkI7O0FBakNMO01Bb0NNLDBCQUF5QixFQUMxQjs7QUFyQ0w7TUF3Q00sY0FBYTtNQUNiLDBCQUF5QixFQVUxQjs7QUFuREw7UUE0Q1Esb0JBQW1CO1FBQ25CLGFBQWEsRUFDZDs7QUE5Q1A7UUFpRFEsY0FBYSxFQUNkOztBQWxEUDtNQXNETSwyQkFBeUI7TUFDekIsMEJBQXlCO01BQ3pCLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsWUFBVztNQUNYLGNBQWE7TUFDYixpQkFBZ0I7TUFDaEIsMEJBQXdCLEVBaUN6Qjs7QUE5Rkw7UUFnRVEsY0FBYSxFQUNkOztBQWpFUDtRQW9FUSxtQkFBa0IsRUFDbkI7O0FBckVQO1FBd0VRLGFBQVk7UUFDWiwwQkFBeUI7UUFDekIsa0JBQWlCO1FBQ2pCLGtCQUFpQjtRQUNqQixpQkFBZ0IsRUFDakI7O0FBN0VQO1FBZ0ZRLGFBQVk7UUFDWix3QkFBdUI7UUFDdkIsa0JBQWlCLEVBQ2xCOztBQW5GUDtRQXNGUSxnQkFBZSxFQUNoQjs7QUF2RlA7UUEwRlEsaUJBQWdCO1FBQ2hCLDRCQUEwQjtRQUMxQiwrQkFBOEIsRUFDL0I7O0FBN0ZQO0lBbUdJLG1CQUFrQixFQVduQjs7QUE5R0g7TUFzR00sbUJBQWtCO01BQ2xCLFVBQVM7TUFDVCxXQUFVO01BQ1YsYUFBWTtNQUNaLGFBQVk7TUFDWixrQkFBaUI7TUFDakIsZUFBYyxFQUNmOztBQTdHTDtJQWlISSxlQUFjLEVBQ2Y7O0FBbEhIO0lBcUhJLGVBQWMsRUFDZiIsImZpbGUiOiJzcmMvYXBwL2JpbGxpbmcvdXRpbGl0eS1iaWxscy90ZWxlcGhvbmUvdmlldy92aWV3LXRlbGVwaG9uZS1iaWxsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmNvbnRlbnQtZGl2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcbn1cblxuLmZvcm0taGVhZGVyIHtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLnRhYmxlLXdyYXBwZXIge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDIwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpXG4gIH1cblxuLm1vZGFsLWNvbnRlbnR7XG4gIHdpZHRoOiAxMDAwcHg7XG59XG5cbi5tb2RhbC1iYWNrZHJvcCB7XG4gIGRpc3BsYXk6IG5vbmVcbn1cblxuLnRibC1oZWFkZXIge1xuICBtYXJnaW4tdG9wOiAwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5oYXMtZGFuZ2VyIC5mb3JtLWNvbnRyb2x7XG4gIGJvcmRlci1jb2xvcjogI2Q5NTM0ZjtcbiAgY29sb3I6ICNkOTUzNGY7XG59XG5cbi5idG57IGJvcmRlci1yYWRpdXM6IDBweCAhaW1wb3J0YW50O31cblxuLmNvbnRyb2wtbGFiZWwgc3BhbiB7IGNvbG9yOiAjZGQwZDBkO31cblxuLmJ0bkNvbnRhaW5lcntcbiAgbWFyZ2luLXRvcDo1JTtcbiAgcGFkZGluZy1sZWZ0OiAxNTBweDtcbn1cblxuLmNvbnRyb2wtbGFiZWwge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmctdG9wOiA5cHg7XG59XG5cbi50YWJsZSB7XG4gIGRpc3BsYXk6IHRhYmxlO1xuICB3aWR0aDogMTAwJTtcblxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgLy8gZGlzcGxheTogYmxvY2s7XG4gIH1cblxuICAudGJsLXJvdyB7XG4gICAgZGlzcGxheTogdGFibGUtcm93O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNmY2ZjY7XG4gICAgaGVpZ2h0OiAwcHg7XG5cbiAgICAmOm50aC1vZi10eXBlKG9kZCkge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgfVxuXG4gICAgJi5oZWFkZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzQ3MTdGNjtcbiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICBjb2xvcjogd2hpdGU7XG4gICAgfVxuXG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgLy8gZGlzcGxheTogYmxvY2s7XG4gICAgfVxuXG4gICAgLnRibC1jZWxsIHtcbiAgICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7XG4gICAgICBwYWRkaW5nOiAxMHB4IDEwcHg7XG4gICAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAgIC8vICBkaXNwbGF5OiBibG9jaztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmLm1vZGlmaWVkIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmY2M7XG4gICAgfVxuXG4gICAgJi5vcGVuIHtcbiAgICAgIGhlaWdodDogMTU4cHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmMmM5O1xuXG4gICAgICAuYWN0aW9uIHtcbiAgICAgICAgYm9yZGVyLWNvbG9yOiBibGFjaztcbiAgICAgICAgY29sb3IgOiBibGFjaztcbiAgICAgIH1cblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAyNDNweDtcbiAgICAgIH1cbiAgICB9XG5cbiAgICAubW9yZS1jb257XG4gICAgICBwYWRkaW5nOjEwcHggMHB4IDEwcHggMHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzdhOGNhNTtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGxlZnQ6IDEwcHg7XG4gICAgICByaWdodDogMTFweDtcbiAgICAgIGhlaWdodDogMTA1cHg7XG4gICAgICBtYXJnaW4tdG9wOiA1M3B4O1xuICAgICAgYm9yZGVyOnNvbGlkIDFweCAjZDBkMGQwO1xuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDE5MHB4O1xuICAgICAgfVxuXG4gICAgICAubW9yZS1yb3d7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDJweDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLW5hbWV7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzlhOWE5YTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICAgIHRleHQtYWxpZ246IHJpZ2h0O1xuICAgICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtdmFsdWV7XG4gICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgfVxuXG4gICAgICBzZWxlY3QsaW5wdXR7XG4gICAgICAgIG1hcmdpbi10b3A6IDJweDtcbiAgICAgIH1cblxuICAgICAgLmJ0bntcbiAgICAgICAgbWFyZ2luLXRvcDogMjBweDtcbiAgICAgICAgcGFkZGluZy10b3A6IDVweCFpbXBvcnRhbnQ7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiA1cHggIWltcG9ydGFudDtcbiAgICAgIH1cbiAgICB9XG5cbiAgfVxuXG4gIC5uby1yZWMtcm93IHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICAubm8tcmVjIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGxlZnQ6IDBweDtcbiAgICAgIHJpZ2h0OiAwcHg7XG4gICAgICBtYXJnaW46IGF1dG87XG4gICAgICB3aWR0aDogMTAwcHg7XG4gICAgICBwYWRkaW5nLXRvcDogMTVweDtcbiAgICAgIGNvbG9yOiAjOWE5YTlhO1xuICAgIH1cbiAgfVxuXG4gIC5mcm9tY29sb3J7XG4gICAgY29sb3I6ICMyZjllNDQ7XG4gIH1cblxuICAudG9jb2xvcntcbiAgICBjb2xvcjogI2RkMGQwZDtcbiAgfVxufSJdfQ== */"
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 10px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3RlbGVwaG9uZS92aWV3L3ZpZXctdGVsZXBob25lLWJpbGwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsZUFBYztFQUNkLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQiwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxvQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYTtFQUNiLCtCQUE4QixFQUM3Qjs7QUFFSDtFQUNFLGNBQWEsRUFDZDs7QUFFRDtFQUNFLGNBQ0YsRUFBQzs7QUFFRDtFQUNFLGdCQUFlO0VBQ2YsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsZUFBYztFQUNkLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLHNCQUFxQjtFQUNyQixlQUFjLEVBQ2Y7O0FBRUQ7RUFBTSw4QkFBNkIsRUFBRzs7QUFFdEM7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUNFLGVBQWE7RUFDYixvQkFBbUIsRUFDcEI7O0FBRUQ7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxZQUFXLEVBcUhaOztBQXZIRDtJQVNJLG1CQUFrQjtJQUNsQiwwQkFBeUI7SUFDekIsWUFBVyxFQXFGWjs7QUFoR0g7TUFjTSx3QkFBdUIsRUFDeEI7O0FBZkw7TUFrQk0sMEJBQXlCO01BQ3pCLGlCQUFnQjtNQUNoQixhQUFZLEVBQ2I7O0FBckJMO01BNEJNLG9CQUFtQjtNQUNuQixtQkFBa0IsRUFJbkI7O0FBakNMO01Bb0NNLDBCQUF5QixFQUMxQjs7QUFyQ0w7TUF3Q00sY0FBYTtNQUNiLDBCQUF5QixFQVUxQjs7QUFuREw7UUE0Q1Esb0JBQW1CO1FBQ25CLGFBQWEsRUFDZDs7QUE5Q1A7UUFpRFEsY0FBYSxFQUNkOztBQWxEUDtNQXNETSwyQkFBeUI7TUFDekIsMEJBQXlCO01BQ3pCLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsWUFBVztNQUNYLGNBQWE7TUFDYixpQkFBZ0I7TUFDaEIsMEJBQXdCLEVBaUN6Qjs7QUE5Rkw7UUFnRVEsY0FBYSxFQUNkOztBQWpFUDtRQW9FUSxtQkFBa0IsRUFDbkI7O0FBckVQO1FBd0VRLGFBQVk7UUFDWiwwQkFBeUI7UUFDekIsa0JBQWlCO1FBQ2pCLGtCQUFpQjtRQUNqQixpQkFBZ0IsRUFDakI7O0FBN0VQO1FBZ0ZRLGFBQVk7UUFDWix3QkFBdUI7UUFDdkIsa0JBQWlCLEVBQ2xCOztBQW5GUDtRQXNGUSxnQkFBZSxFQUNoQjs7QUF2RlA7UUEwRlEsaUJBQWdCO1FBQ2hCLDRCQUEwQjtRQUMxQiwrQkFBOEIsRUFDL0I7O0FBN0ZQO0lBbUdJLG1CQUFrQixFQVduQjs7QUE5R0g7TUFzR00sbUJBQWtCO01BQ2xCLFVBQVM7TUFDVCxXQUFVO01BQ1YsYUFBWTtNQUNaLGFBQVk7TUFDWixrQkFBaUI7TUFDakIsZUFBYyxFQUNmOztBQTdHTDtJQWlISSxlQUFjLEVBQ2Y7O0FBbEhIO0lBcUhJLGVBQWMsRUFDZiIsImZpbGUiOiJzcmMvYXBwL2JpbGxpbmcvdXRpbGl0eS1iaWxscy90ZWxlcGhvbmUvdmlldy92aWV3LXRlbGVwaG9uZS1iaWxsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICBkaXNwbGF5OiBibG9jaztcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLmNvbnRlbnQtZGl2IHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcbn1cblxuLmZvcm0taGVhZGVyIHtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLnRhYmxlLXdyYXBwZXIge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4ucm93e1xuICBtYXJnaW4tYm90dG9tOjEwcHg7XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMjAlO1xuICBvdXRsaW5lOiBub25lO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSlcbiAgfVxuXG4ubW9kYWwtY29udGVudHtcbiAgd2lkdGg6IDEwMDBweDtcbn1cblxuLm1vZGFsLWJhY2tkcm9wIHtcbiAgZGlzcGxheTogbm9uZVxufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICBjb2xvcjogI0UxOTEzMTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLmhhcy1kYW5nZXIgLmZvcm0tY29udHJvbHtcbiAgYm9yZGVyLWNvbG9yOiAjZDk1MzRmO1xuICBjb2xvcjogI2Q5NTM0Zjtcbn1cblxuLmJ0bnsgYm9yZGVyLXJhZGl1czogMHB4ICFpbXBvcnRhbnQ7fVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVye1xuICBtYXJnaW4tdG9wOjUlO1xuICBwYWRkaW5nLWxlZnQ6IDE1MHB4O1xufVxuXG4uY29udHJvbC1sYWJlbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy10b3A6IDlweDtcbn1cblxuLnRhYmxlIHtcbiAgZGlzcGxheTogdGFibGU7XG4gIHdpZHRoOiAxMDAlO1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgfVxuXG4gIC50Ymwtcm93IHtcbiAgICBkaXNwbGF5OiB0YWJsZS1yb3c7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjZmNjtcbiAgICBoZWlnaHQ6IDBweDtcblxuICAgICY6bnRoLW9mLXR5cGUob2RkKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICAmLmhlYWRlciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDcxN0Y2O1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgICB9XG5cbiAgICAudGJsLWNlbGwge1xuICAgICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbiAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgICAgLy8gIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgfVxuICAgIH1cblxuICAgICYubW9kaWZpZWQge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZjYztcbiAgICB9XG5cbiAgICAmLm9wZW4ge1xuICAgICAgaGVpZ2h0OiAxNThweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNGYyYzk7XG5cbiAgICAgIC5hY3Rpb24ge1xuICAgICAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgICAgICBjb2xvciA6IGJsYWNrO1xuICAgICAgfVxuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDI0M3B4O1xuICAgICAgfVxuICAgIH1cblxuICAgIC5tb3JlLWNvbntcbiAgICAgIHBhZGRpbmc6MTBweCAwcHggMTBweCAwcHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2E4Y2E1O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMTBweDtcbiAgICAgIHJpZ2h0OiAxMXB4O1xuICAgICAgaGVpZ2h0OiAxMDVweDtcbiAgICAgIG1hcmdpbi10b3A6IDUzcHg7XG4gICAgICBib3JkZXI6c29saWQgMXB4ICNkMGQwZDA7XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMTkwcHg7XG4gICAgICB9XG5cbiAgICAgIC5tb3JlLXJvd3tcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMnB4O1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtbmFtZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOWE5YTlhO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC12YWx1ZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICB9XG5cbiAgICAgIHNlbGVjdCxpbnB1dHtcbiAgICAgICAgbWFyZ2luLXRvcDogMnB4O1xuICAgICAgfVxuXG4gICAgICAuYnRue1xuICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgICAgICBwYWRkaW5nLXRvcDogNXB4IWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDVweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cblxuICB9XG5cbiAgLm5vLXJlYy1yb3cge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIC5uby1yZWMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMHB4O1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIG1hcmdpbjogYXV0bztcbiAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgIHBhZGRpbmctdG9wOiAxNXB4O1xuICAgICAgY29sb3I6ICM5YTlhOWE7XG4gICAgfVxuICB9XG5cbiAgLmZyb21jb2xvcntcbiAgICBjb2xvcjogIzJmOWU0NDtcbiAgfVxuXG4gIC50b2NvbG9ye1xuICAgIGNvbG9yOiAjZGQwZDBkO1xuICB9XG59Il19 */"
 
 /***/ }),
 
@@ -2558,29 +2648,44 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
     function ViewTelephoneBillComponent(_telephoneBillService, _router) {
         this._telephoneBillService = _telephoneBillService;
         this._router = _router;
-        this.fieldSet = ["Date", "Bill Number", "Category", "Amount", "Location", "Certification", ""];
+        this.fieldSet = ["Date", "Bill No", "Period", "Category", "Amount", "Location", "Certification", "", ""];
+        this.yearString = ["All", "2017", "2018", "2019", "2020"];
+        this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        this.selectedYear = "All";
+        this.selectedMonth = "All";
     }
     ViewTelephoneBillComponent.prototype.ngOnInit = function () {
         this.telephoneBillList = [];
-        this.getTelephoneBills();
+        this.retrieveTelephoneBills();
         this.showUpdateBill = false;
         this.showCertifyBill = false;
     };
-    ViewTelephoneBillComponent.prototype.getTelephoneBills = function () {
+    ViewTelephoneBillComponent.prototype.getAllTelephoneBills = function () {
         var _this = this;
         this._telephoneBillService.getTelephoneBills(function (response) {
-            console.log(response.length);
-            if (response.length != 0) {
-                _this.telephoneBillList = response;
-            }
-            else {
-                console.log("Unsuccessfull request");
-            }
+            _this.telephoneBillList = response;
+        });
+    };
+    ViewTelephoneBillComponent.prototype.getAllTelephoneBillsByMonth = function (month) {
+        var _this = this;
+        this._telephoneBillService.getTelephoneBillsByMonth(month, function (response) {
+            _this.telephoneBillList = response;
+        });
+    };
+    ViewTelephoneBillComponent.prototype.getAllTelephoneBillsByYear = function (year) {
+        var _this = this;
+        this._telephoneBillService.getTelephoneBillsByYear(year, function (response) {
+            _this.telephoneBillList = response;
+        });
+    };
+    ViewTelephoneBillComponent.prototype.getAllTelephoneBillsByPeriod = function (year, month) {
+        var _this = this;
+        this._telephoneBillService.getTelephoneBillsByPeriod(year, month, function (response) {
+            _this.telephoneBillList = response;
         });
     };
     ViewTelephoneBillComponent.prototype.changeDialogTitle = function () {
-        this.changingBill.period = "November 2018";
-        return this.modalTitle = "Update an Telephone Bill";
+        return this.modalTitle = "Update Telephone Bill";
     };
     ViewTelephoneBillComponent.prototype.changeHeading = function () {
         return this.modalTitle = "Certify Telephone Bill";
@@ -2588,11 +2693,84 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
     ViewTelephoneBillComponent.prototype.clearModalContent = function () {
         this.showUpdateBill = false;
         this.showCertifyBill = false;
+        this.retrieveTelephoneBills();
     };
     ViewTelephoneBillComponent.prototype.onUpdateBillHandler = function (event) {
         if (event) {
-            this.getTelephoneBills();
+            this.retrieveTelephoneBills();
         }
+    };
+    ViewTelephoneBillComponent.prototype.onYearSelected = function (event) {
+        this.selectedYear = event.target.value;
+        this.retrieveTelephoneBills();
+    };
+    ViewTelephoneBillComponent.prototype.onMonthSelected = function (event) {
+        var selectedType = event.target.value;
+        switch (selectedType) {
+            case "January": {
+                this.selectedMonth = "01";
+                break;
+            }
+            case "February": {
+                this.selectedMonth = "02";
+                break;
+            }
+            case "March": {
+                this.selectedMonth = "03";
+                break;
+            }
+            case "April": {
+                this.selectedMonth = "04";
+                break;
+            }
+            case "May": {
+                this.selectedMonth = "05";
+                break;
+            }
+            case "June": {
+                this.selectedMonth = "06";
+                break;
+            }
+            case "July": {
+                this.selectedMonth = "07";
+                break;
+            }
+            case "August": {
+                this.selectedMonth = "08";
+                break;
+            }
+            case "September": {
+                this.selectedMonth = "09";
+                break;
+            }
+            case "October": {
+                this.selectedMonth = "10";
+                break;
+            }
+            case "November": {
+                this.selectedMonth = "11";
+                break;
+            }
+            case "December": {
+                this.selectedMonth = "12";
+                break;
+            }
+            default: {
+                this.selectedMonth = "All";
+                break;
+            }
+        }
+        this.retrieveTelephoneBills();
+    };
+    ViewTelephoneBillComponent.prototype.retrieveTelephoneBills = function () {
+        if (this.selectedYear == "All" && this.selectedMonth == "All")
+            this.getAllTelephoneBills();
+        else if (this.selectedYear == "All" && this.selectedMonth != "All")
+            this.getAllTelephoneBillsByMonth(this.selectedMonth);
+        else if (this.selectedYear != "All" && this.selectedMonth == "All")
+            this.getAllTelephoneBillsByYear(this.selectedYear);
+        else
+            this.getAllTelephoneBillsByPeriod(this.selectedYear, this.selectedMonth);
     };
     ViewTelephoneBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2616,7 +2794,7 @@ var ViewTelephoneBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <div class=\"form-header\">\n      Water Bill\n    </div>\n\n    <form class=\"form-horizontal\" #waterBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(waterBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n        <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Previous Reading\"\n                 name=\"prevread\"\n                 #prevreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.previousReading\"\n                 (input)=\"isPreviousReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n        <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Current Reading\"\n                 name=\"curread\"\n                 #curreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.currentReading\"\n                 (input)=\"isCurrentReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n        <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"No. of Units\"\n                 name=\"units\"\n                 required\n                 #unitsRef=\"ngModel\"\n                 [(ngModel)]=\"waterBill.noOfUnits\">\n          <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <!--<div class=\"col-sm-12\">-->\n  <!--Form Container - START-->\n  <div class=\"form-container billInputContainer\">\n    <!--<div class=\"form-header\">-->\n      <!--Water Bill-->\n    <!--</div>-->\n\n    <form class=\"form-horizontal\" #waterBillForm=\"ngForm\" novalidate\n          (ngSubmit)=\"onSubmition(waterBillForm)\" autocomplete=\"off\">\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAccountNoError}\">\n        <label class=\"control-label col-sm-2\">Bill Account Number <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"text\"\n                 autocomplete=\"off\"\n                 placeholder=\"Bill Account Number\"\n                 name=\"name\"\n                 #nameRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.billNo\"\n                 (input)=\"isAccountNoValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAccountNoError\">{{accountNoError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPeriodError}\">\n        <label class=\"control-label col-sm-2\">Period <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"month\"\n                 autocomplete=\"off\"\n                 placeholder=\"Period\"\n                 name=\"period\"\n                 #periodRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.period\"\n                 (input)=\"isPeriodValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPeriodError\">{{periodError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isPreviousReadingError}\">\n        <label class=\"control-label col-sm-2\">Previous Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Previous Reading\"\n                 name=\"prevread\"\n                 #prevreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.previousReading\"\n                 (input)=\"isPreviousReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isPreviousReadingError\">{{previousReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isCurrentReadingError}\">\n        <label class=\"control-label col-sm-2\">Current Reading <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Current Reading\"\n                 name=\"curread\"\n                 #curreadRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.currentReading\"\n                 (input)=\"isCurrentReadingValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isCurrentReadingError\">{{currentReadingError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isNoOfUnitsError}\">\n        <label class=\"control-label col-sm-2\">No. of Units <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"No. of Units\"\n                 name=\"units\"\n                 required\n                 #unitsRef=\"ngModel\"\n                 [(ngModel)]=\"waterBill.noOfUnits\"\n                 (input)=\"isNoOfUnitsValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isNoOfUnitsError\">{{noOfUnitsError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group row\" [ngClass]=\"{'has-danger': isAmountError}\">\n        <label class=\"control-label col-sm-2\">Amount <span>*</span></label>\n        <div class=\"col-sm-6\">\n          <input class=\"form-control\"\n                 type=\"number\"\n                 autocomplete=\"off\"\n                 placeholder=\"Amount\"\n                 name=\"amount\"\n                 #amountRef=\"ngModel\"\n                 required\n                 [(ngModel)]=\"waterBill.amount\"\n                 (input)=\"isAmountValid($event.target.value)\">\n          <span class=\"error\" *ngIf=\"isAmountError\">{{amountError}}</span>\n        </div>\n      </div>\n\n      <div class=\"form-group\">\n        <div class=\"col-sm-4 col-sm-offset-2 btnContainer\">\n          <button type=\"submit\" class=\"btn btn-primary animated fadeIn\">Add</button>\n          &nbsp;\n          <a type=\"button\" class=\"btn btn-warning\" (click)=\"clearForm()\">Clear</a>\n        </div>\n      </div>\n\n    </form>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -3118,7 +3296,7 @@ var UpdateWaterBillComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-water-bill\n                        *ngIf=\"showUpdateBill\"\n                        [waterBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-water-bill>\n\n                <!--<app-certify-electricity-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Water Bill Table\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.datetime}}</div>\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
+module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabindex=\"-1\" role=\"dialog\"\n     [config]=\"{backdrop: false, ignoreBackdropClick: true}\"\n     aria-labelledby=\"myLargeModalLabel\"\n     aria-hidden=\"true\">\n    <div class=\"modal-dialog modal-lg\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h4 class=\"modal-title tbl-header pull-left\">{{modalTitle}}</h4>\n                <button type=\"button\" class=\"close pull-right\"\n                        (click)=\"lgModal.hide(); clearModalContent()\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n\n                <app-update-water-bill\n                        *ngIf=\"showUpdateBill\"\n                        [waterBill]=\"changingBill\"\n                        (onUpdateTask)=\"onUpdateBillHandler($event)\"\n                        (modalClose)=\"lgModal.hide(); clearModalContent()\"></app-update-water-bill>\n\n                <!--<app-certify-electricity-bill-->\n                        <!--*ngIf=\"showCertifyBill\"-->\n                        <!--[bill]=\"changingBill\"-->\n                        <!--(modalClose)=\"lgModal.hide(); clearModalContent()\"></app-certify-electricity-bill>-->\n\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"animated fadeInUp\">\n\n    <div class=\"table-wrapper\">\n\n        <div class=\"form-header\">\n            Water Bill Table\n        </div>\n\n        <div class=\"row \">\n            <label class=\"control-label col-sm-2\">Select Year</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onYearSelected($event)\">\n                    <option *ngFor=\"let opt of yearString\" [selected]=\"selectedYear == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n            <label class=\"control-label col-sm-2\">Select Month</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onMonthSelected($event)\">\n                    <option *ngFor=\"let opt of monthString\" [selected]=\"selectedMonth == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n        </div>\n\n        <div class=\"table\">\n            <div class=\"tbl-row header\">\n                <div class=\"tbl-cell\" *ngFor=\"let field of fieldSet\" style=\"text-transform: capitalize\">{{field}}</div>\n            </div>\n            <div class=\"tbl-row\" *ngFor=\"let item of electrictyBillList\">\n                <div class=\"tbl-cell\">{{item.billNo}}</div>\n                <div class=\"tbl-cell\">{{item.previousReading}}</div>\n                <div class=\"tbl-cell\">{{item.currentReading}}</div>\n                <div class=\"tbl-cell\">{{item.noOfUnits}}</div>\n                <div class=\"tbl-cell\">{{item.amount}}</div>\n                <div class=\"tbl-cell\">{{item.location}}</div>\n                <div class=\"tbl-cell\">{{item.certification}}</div>\n                <div class=\"tbl-cell\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Update\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">edit</span>\n                    </button>\n                </div>\n                <div class=\"tbl-cell\" *appHaspermission=\"1\">\n                    <button class=\"btn btn-light\"\n                            (click)=\"showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();\"\n                            type=\"button\"\n                            tooltip=\"Certify\"\n                            placement=\"top\">\n                        <span class=\"icon material-icons\">done</span>\n                    </button>\n                </div>\n            </div>\n            <div class=\"no-rec-row tbl-row\" *ngIf=\"electrictyBillList.length == 0\">\n                <span class=\"no-rec\">No Records...</span>\n            </div>\n\n        </div>\n    </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -3129,7 +3307,7 @@ module.exports = "<div bsModal #lgModal=\"bs-modal\" class=\"modal fade\" tabind
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3dhdGVyL3ZpZXcvdmlldy13YXRlci1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWE7RUFDYiwrQkFBOEIsRUFDN0I7O0FBRUg7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxjQUNGLEVBQUM7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBRXRDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvd2F0ZXIvdmlldy92aWV3LXdhdGVyLWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9ybS1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4udGFibGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMjAlO1xuICBvdXRsaW5lOiBub25lO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSlcbiAgfVxuXG4ubW9kYWwtY29udGVudHtcbiAgd2lkdGg6IDEwMDBweDtcbn1cblxuLm1vZGFsLWJhY2tkcm9wIHtcbiAgZGlzcGxheTogbm9uZVxufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICBjb2xvcjogI0UxOTEzMTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbn1cblxuLmhhcy1kYW5nZXIgLmZvcm0tY29udHJvbHtcbiAgYm9yZGVyLWNvbG9yOiAjZDk1MzRmO1xuICBjb2xvcjogI2Q5NTM0Zjtcbn1cblxuLmJ0bnsgYm9yZGVyLXJhZGl1czogMHB4ICFpbXBvcnRhbnQ7fVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVye1xuICBtYXJnaW4tdG9wOjUlO1xuICBwYWRkaW5nLWxlZnQ6IDE1MHB4O1xufVxuXG4uY29udHJvbC1sYWJlbCB7XG4gIHRleHQtYWxpZ246IHJpZ2h0O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgcGFkZGluZy10b3A6IDlweDtcbn1cblxuLnRhYmxlIHtcbiAgZGlzcGxheTogdGFibGU7XG4gIHdpZHRoOiAxMDAlO1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgfVxuXG4gIC50Ymwtcm93IHtcbiAgICBkaXNwbGF5OiB0YWJsZS1yb3c7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y2ZjZmNjtcbiAgICBoZWlnaHQ6IDBweDtcblxuICAgICY6bnRoLW9mLXR5cGUob2RkKSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICAmLmhlYWRlciB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNDcxN0Y2O1xuICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc2OHB4KSB7XG4gICAgICAvLyBkaXNwbGF5OiBibG9jaztcbiAgICB9XG5cbiAgICAudGJsLWNlbGwge1xuICAgICAgZGlzcGxheTogdGFibGUtY2VsbDtcbiAgICAgIHBhZGRpbmc6IDEwcHggMTBweDtcbiAgICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgICAgLy8gIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgfVxuICAgIH1cblxuICAgICYubW9kaWZpZWQge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZjYztcbiAgICB9XG5cbiAgICAmLm9wZW4ge1xuICAgICAgaGVpZ2h0OiAxNThweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmNGYyYzk7XG5cbiAgICAgIC5hY3Rpb24ge1xuICAgICAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgICAgICBjb2xvciA6IGJsYWNrO1xuICAgICAgfVxuXG4gICAgICAmLkEsJi5Se1xuICAgICAgICBoZWlnaHQ6IDI0M3B4O1xuICAgICAgfVxuICAgIH1cblxuICAgIC5tb3JlLWNvbntcbiAgICAgIHBhZGRpbmc6MTBweCAwcHggMTBweCAwcHg7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjN2E4Y2E1O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMTBweDtcbiAgICAgIHJpZ2h0OiAxMXB4O1xuICAgICAgaGVpZ2h0OiAxMDVweDtcbiAgICAgIG1hcmdpbi10b3A6IDUzcHg7XG4gICAgICBib3JkZXI6c29saWQgMXB4ICNkMGQwZDA7XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMTkwcHg7XG4gICAgICB9XG5cbiAgICAgIC5tb3JlLXJvd3tcbiAgICAgICAgbWFyZ2luLWJvdHRvbTogMnB4O1xuICAgICAgfVxuXG4gICAgICAuZmllbGQtbmFtZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjOWE5YTlhO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC12YWx1ZXtcbiAgICAgICAgaGVpZ2h0OiA0MHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICAgICAgbGluZS1oZWlnaHQ6IDQwcHg7XG4gICAgICB9XG5cbiAgICAgIHNlbGVjdCxpbnB1dHtcbiAgICAgICAgbWFyZ2luLXRvcDogMnB4O1xuICAgICAgfVxuXG4gICAgICAuYnRue1xuICAgICAgICBtYXJnaW4tdG9wOiAyMHB4O1xuICAgICAgICBwYWRkaW5nLXRvcDogNXB4IWltcG9ydGFudDtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDVweCAhaW1wb3J0YW50O1xuICAgICAgfVxuICAgIH1cblxuICB9XG5cbiAgLm5vLXJlYy1yb3cge1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIC5uby1yZWMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgbGVmdDogMHB4O1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIG1hcmdpbjogYXV0bztcbiAgICAgIHdpZHRoOiAxMDBweDtcbiAgICAgIHBhZGRpbmctdG9wOiAxNXB4O1xuICAgICAgY29sb3I6ICM5YTlhOWE7XG4gICAgfVxuICB9XG5cbiAgLmZyb21jb2xvcntcbiAgICBjb2xvcjogIzJmOWU0NDtcbiAgfVxuXG4gIC50b2NvbG9ye1xuICAgIGNvbG9yOiAjZGQwZDBkO1xuICB9XG59Il19 */"
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 10px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvYmlsbGluZy91dGlsaXR5LWJpbGxzL3dhdGVyL3ZpZXcvdmlldy13YXRlci1iaWxsLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixzQkFBcUI7RUFDckIsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0UsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0Usb0JBQWtCLEVBQ25COztBQUVEO0VBQ0UsU0FBUTtFQUNSLGNBQWE7RUFDYiwrQkFBOEIsRUFDN0I7O0FBRUg7RUFDRSxjQUFhLEVBQ2Q7O0FBRUQ7RUFDRSxjQUNGLEVBQUM7O0FBRUQ7RUFDRSxnQkFBZTtFQUNmLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBRXRDO0VBQXNCLGVBQWMsRUFBRzs7QUFFdkM7RUFDRSxlQUFhO0VBQ2Isb0JBQW1CLEVBQ3BCOztBQUVEO0VBQ0Usa0JBQWlCO0VBQ2pCLGtCQUFpQjtFQUNqQixpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsWUFBVyxFQXFIWjs7QUF2SEQ7SUFTSSxtQkFBa0I7SUFDbEIsMEJBQXlCO0lBQ3pCLFlBQVcsRUFxRlo7O0FBaEdIO01BY00sd0JBQXVCLEVBQ3hCOztBQWZMO01Ba0JNLDBCQUF5QjtNQUN6QixpQkFBZ0I7TUFDaEIsYUFBWSxFQUNiOztBQXJCTDtNQTRCTSxvQkFBbUI7TUFDbkIsbUJBQWtCLEVBSW5COztBQWpDTDtNQW9DTSwwQkFBeUIsRUFDMUI7O0FBckNMO01Bd0NNLGNBQWE7TUFDYiwwQkFBeUIsRUFVMUI7O0FBbkRMO1FBNENRLG9CQUFtQjtRQUNuQixhQUFhLEVBQ2Q7O0FBOUNQO1FBaURRLGNBQWEsRUFDZDs7QUFsRFA7TUFzRE0sMkJBQXlCO01BQ3pCLDBCQUF5QjtNQUN6QixtQkFBa0I7TUFDbEIsV0FBVTtNQUNWLFlBQVc7TUFDWCxjQUFhO01BQ2IsaUJBQWdCO01BQ2hCLDBCQUF3QixFQWlDekI7O0FBOUZMO1FBZ0VRLGNBQWEsRUFDZDs7QUFqRVA7UUFvRVEsbUJBQWtCLEVBQ25COztBQXJFUDtRQXdFUSxhQUFZO1FBQ1osMEJBQXlCO1FBQ3pCLGtCQUFpQjtRQUNqQixrQkFBaUI7UUFDakIsaUJBQWdCLEVBQ2pCOztBQTdFUDtRQWdGUSxhQUFZO1FBQ1osd0JBQXVCO1FBQ3ZCLGtCQUFpQixFQUNsQjs7QUFuRlA7UUFzRlEsZ0JBQWUsRUFDaEI7O0FBdkZQO1FBMEZRLGlCQUFnQjtRQUNoQiw0QkFBMEI7UUFDMUIsK0JBQThCLEVBQy9COztBQTdGUDtJQW1HSSxtQkFBa0IsRUFXbkI7O0FBOUdIO01Bc0dNLG1CQUFrQjtNQUNsQixVQUFTO01BQ1QsV0FBVTtNQUNWLGFBQVk7TUFDWixhQUFZO01BQ1osa0JBQWlCO01BQ2pCLGVBQWMsRUFDZjs7QUE3R0w7SUFpSEksZUFBYyxFQUNmOztBQWxISDtJQXFISSxlQUFjLEVBQ2YiLCJmaWxlIjoic3JjL2FwcC9iaWxsaW5nL3V0aWxpdHktYmlsbHMvd2F0ZXIvdmlldy92aWV3LXdhdGVyLWJpbGwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBtYXJnaW4tdG9wOiAyMHB4O1xufVxuXG4uY29udGVudC1kaXYge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmZmO1xufVxuXG4uZm9ybS1oZWFkZXIge1xuICBjb2xvcjogI0UxOTEzMTtcbiAgbWFyZ2luLXRvcDogNTBweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAxLjNlbTtcbiAgcGFkZGluZzogNXB4IDBweCAzMHB4O1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4udGFibGUtd3JhcHBlciB7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5yb3d7XG4gIG1hcmdpbi1ib3R0b206MTBweDtcbn1cblxuLm1vZGFsIHtcbiAgdG9wOiAyMCU7XG4gIG91dGxpbmU6IG5vbmU7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KVxuICB9XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
 
 /***/ }),
 
@@ -3162,29 +3340,44 @@ var ViewWaterBillComponent = /** @class */ (function () {
     function ViewWaterBillComponent(_waterBillService, _router) {
         this._waterBillService = _waterBillService;
         this._router = _router;
-        this.fieldSet = ["Date", "Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", ""];
+        this.fieldSet = ["Bill Number", "Previous Reading", "Current Reading", "No. of Units", "Amount", "Location", "Certification", ""];
+        this.yearString = ["All", "2017", "2018", "2019", "2020"];
+        this.monthString = ["All", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        this.selectedYear = "All";
+        this.selectedMonth = "All";
     }
     ViewWaterBillComponent.prototype.ngOnInit = function () {
         this.waterBillList = [];
-        this.getElectrictyBills();
+        this.retrieveWaterBills();
         this.showUpdateBill = false;
         this.showCertifyBill = false;
     };
-    ViewWaterBillComponent.prototype.getElectrictyBills = function () {
+    ViewWaterBillComponent.prototype.getAllWaterBills = function () {
         var _this = this;
         this._waterBillService.getWaterBills(function (response) {
-            console.log(response.length);
-            if (response.length != 0) {
-                _this.waterBillList = response;
-            }
-            else {
-                console.log("Unsuccessfull request");
-            }
+            _this.waterBillList = response;
+        });
+    };
+    ViewWaterBillComponent.prototype.getAllWaterBillsByMonth = function (month) {
+        var _this = this;
+        this._waterBillService.getWaterBillsByMonth(month, function (response) {
+            _this.waterBillList = response;
+        });
+    };
+    ViewWaterBillComponent.prototype.getAllWaterBillsByYear = function (year) {
+        var _this = this;
+        this._waterBillService.getWaterBillsByYear(year, function (response) {
+            _this.waterBillList = response;
+        });
+    };
+    ViewWaterBillComponent.prototype.getAllWaterBillsByPeriod = function (year, month) {
+        var _this = this;
+        this._waterBillService.getWaterBillsByPeriod(year, month, function (response) {
+            _this.waterBillList = response;
         });
     };
     ViewWaterBillComponent.prototype.changeDialogTitle = function () {
-        this.changingBill.period = "2018-11";
-        return this.modalTitle = "Update an Water Bill";
+        return this.modalTitle = "Update Water Bill";
     };
     ViewWaterBillComponent.prototype.changeHeading = function () {
         return this.modalTitle = "Certify Water Bill";
@@ -3192,11 +3385,84 @@ var ViewWaterBillComponent = /** @class */ (function () {
     ViewWaterBillComponent.prototype.clearModalContent = function () {
         this.showUpdateBill = false;
         this.showCertifyBill = false;
+        this.retrieveWaterBills();
     };
     ViewWaterBillComponent.prototype.onUpdateBillHandler = function (event) {
         if (event) {
-            this.getElectrictyBills();
+            this.retrieveWaterBills();
         }
+    };
+    ViewWaterBillComponent.prototype.onYearSelected = function (event) {
+        this.selectedYear = event.target.value;
+        this.retrieveWaterBills();
+    };
+    ViewWaterBillComponent.prototype.onMonthSelected = function (event) {
+        var selectedType = event.target.value;
+        switch (selectedType) {
+            case "January": {
+                this.selectedMonth = "01";
+                break;
+            }
+            case "February": {
+                this.selectedMonth = "02";
+                break;
+            }
+            case "March": {
+                this.selectedMonth = "03";
+                break;
+            }
+            case "April": {
+                this.selectedMonth = "04";
+                break;
+            }
+            case "May": {
+                this.selectedMonth = "05";
+                break;
+            }
+            case "June": {
+                this.selectedMonth = "06";
+                break;
+            }
+            case "July": {
+                this.selectedMonth = "07";
+                break;
+            }
+            case "August": {
+                this.selectedMonth = "08";
+                break;
+            }
+            case "September": {
+                this.selectedMonth = "09";
+                break;
+            }
+            case "October": {
+                this.selectedMonth = "10";
+                break;
+            }
+            case "November": {
+                this.selectedMonth = "11";
+                break;
+            }
+            case "December": {
+                this.selectedMonth = "12";
+                break;
+            }
+            default: {
+                this.selectedMonth = "All";
+                break;
+            }
+        }
+        this.retrieveWaterBills();
+    };
+    ViewWaterBillComponent.prototype.retrieveWaterBills = function () {
+        if (this.selectedYear == "All" && this.selectedMonth == "All")
+            this.getAllWaterBills();
+        else if (this.selectedYear == "All" && this.selectedMonth != "All")
+            this.getAllWaterBillsByMonth(this.selectedMonth);
+        else if (this.selectedYear != "All" && this.selectedMonth == "All")
+            this.getAllWaterBillsByYear(this.selectedYear);
+        else
+            this.getAllWaterBillsByPeriod(this.selectedYear, this.selectedMonth);
     };
     ViewWaterBillComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3421,6 +3687,863 @@ var ChartComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgZone"]])
     ], ChartComponent);
     return ChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.html ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Property</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onPropertySelected($event)\">\n            <option *ngFor=\"let opt of propertyString\" [selected]=\"selectedProperty == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">{{dropDownLable}}</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onSecondDropdownSelected($event)\">\n                    <option *ngFor=\"let opt of secondDropdownString\" [selected]=\"selectedValue == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n<mat-grid-list cols=\"2\" gutterSize=\"10px\" rowHeight=\"3:2.5\">\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{barChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypeBar\"\n                [datasets]=\"chartDatasetsBar\"\n                [labels]=\"chartLabelsBar\"\n                [colors]=\"chartColorsBar\"\n                [options]=\"chartOptionsBar\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{pieChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypePie\"\n                [datasets]=\"chartDatasetsPie\"\n                [labels]=\"chartLabelsPie\"\n                [colors]=\"chartColorsPie\"\n                [options]=\"chartOptionsPie\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <!--<mat-grid-tile>-->\n        <!--<mat-grid-tile-header>-->\n            <!--Comparison with Last year-->\n        <!--</mat-grid-tile-header>-->\n        <!--<canvas mdbChart-->\n                <!--[chartType]=\"chartTypeLine\"-->\n                <!--[datasets]=\"chartDatasetsLine\"-->\n                <!--[labels]=\"chartLabelsLine\"-->\n                <!--[colors]=\"chartColorsLine\"-->\n                <!--[options]=\"chartOptionsLine\"-->\n                <!--[legend]=\"true\"-->\n                <!--(chartHover)=\"chartHovered($event)\"-->\n                <!--(chartClick)=\"chartClicked($event)\">-->\n        <!--</canvas>-->\n    <!--</mat-grid-tile>-->\n    <!--<mat-grid-tile>4</mat-grid-tile>-->\n</mat-grid-list>"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.scss":
+/*!******************************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.scss ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-grid-tile {\n  border: 1px;\n  height: 500px; }\n\n:host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 15px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy9lbGVjdHJpY2l0eS9jaGFydHMtZWxlY3RyaWNpdHkvY2hhcnRzLWVsZWN0cmljaXR5LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGNBQWEsRUFDWjs7QUFFSDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLG9CQUFrQixFQUNuQjs7QUFFRDtFQUNFLFNBQVE7RUFDUixjQUFhO0VBQ2IsK0JBQThCLEVBQy9COztBQUVEO0VBQ0UsY0FBYSxFQUNkOztBQUVEO0VBQ0UsY0FDRixFQUFDOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0Usc0JBQXFCO0VBQ3JCLGVBQWMsRUFDZjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUV0QztFQUFzQixlQUFjLEVBQUc7O0FBRXZDO0VBQ0UsZUFBYTtFQUNiLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixrQkFBaUI7RUFDakIsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsZUFBYztFQUNkLFlBQVcsRUFxSFo7O0FBdkhEO0lBU0ksbUJBQWtCO0lBQ2xCLDBCQUF5QjtJQUN6QixZQUFXLEVBcUZaOztBQWhHSDtNQWNNLHdCQUF1QixFQUN4Qjs7QUFmTDtNQWtCTSwwQkFBeUI7TUFDekIsaUJBQWdCO01BQ2hCLGFBQVksRUFDYjs7QUFyQkw7TUE0Qk0sb0JBQW1CO01BQ25CLG1CQUFrQixFQUluQjs7QUFqQ0w7TUFvQ00sMEJBQXlCLEVBQzFCOztBQXJDTDtNQXdDTSxjQUFhO01BQ2IsMEJBQXlCLEVBVTFCOztBQW5ETDtRQTRDUSxvQkFBbUI7UUFDbkIsYUFBYSxFQUNkOztBQTlDUDtRQWlEUSxjQUFhLEVBQ2Q7O0FBbERQO01Bc0RNLDJCQUF5QjtNQUN6QiwwQkFBeUI7TUFDekIsbUJBQWtCO01BQ2xCLFdBQVU7TUFDVixZQUFXO01BQ1gsY0FBYTtNQUNiLGlCQUFnQjtNQUNoQiwwQkFBd0IsRUFpQ3pCOztBQTlGTDtRQWdFUSxjQUFhLEVBQ2Q7O0FBakVQO1FBb0VRLG1CQUFrQixFQUNuQjs7QUFyRVA7UUF3RVEsYUFBWTtRQUNaLDBCQUF5QjtRQUN6QixrQkFBaUI7UUFDakIsa0JBQWlCO1FBQ2pCLGlCQUFnQixFQUNqQjs7QUE3RVA7UUFnRlEsYUFBWTtRQUNaLHdCQUF1QjtRQUN2QixrQkFBaUIsRUFDbEI7O0FBbkZQO1FBc0ZRLGdCQUFlLEVBQ2hCOztBQXZGUDtRQTBGUSxpQkFBZ0I7UUFDaEIsNEJBQTBCO1FBQzFCLCtCQUE4QixFQUMvQjs7QUE3RlA7SUFtR0ksbUJBQWtCLEVBV25COztBQTlHSDtNQXNHTSxtQkFBa0I7TUFDbEIsVUFBUztNQUNULFdBQVU7TUFDVixhQUFZO01BQ1osYUFBWTtNQUNaLGtCQUFpQjtNQUNqQixlQUFjLEVBQ2Y7O0FBN0dMO0lBaUhJLGVBQWMsRUFDZjs7QUFsSEg7SUFxSEksZUFBYyxFQUNmIiwiZmlsZSI6InNyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy9lbGVjdHJpY2l0eS9jaGFydHMtZWxlY3RyaWNpdHkvY2hhcnRzLWVsZWN0cmljaXR5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWdyaWQtdGlsZSB7XG4gIGJvcmRlcjogMXB4O1xuICBoZWlnaHQ6IDUwMHB4O1xuICB9XG5cbjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi5mb3JtLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICBtYXJnaW4tdG9wOiA1MHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi50YWJsZS13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLnJvd3tcbiAgbWFyZ2luLWJvdHRvbToxNXB4O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDIwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpXG59XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.ts":
+/*!****************************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.ts ***!
+  \****************************************************************************************************/
+/*! exports provided: ChartsElectricityComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsElectricityComponent", function() { return ChartsElectricityComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/electricity-bill.service */ "./src/app/services/electricity-bill.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ChartsElectricityComponent = /** @class */ (function () {
+    function ChartsElectricityComponent(_electrictyBillService, _router) {
+        this._electrictyBillService = _electrictyBillService;
+        this._router = _router;
+        this.chartTypeBar = "bar";
+        this.chartTypePie = "pie";
+        this.propertyString = ["Year", "Month", "Location"];
+        this.yearString = ["2017", "2018", "2019", "2020"];
+        this.monthString = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    }
+    ChartsElectricityComponent.prototype.ngOnInit = function () {
+        this.clearAll();
+        this.isYearSelected = true;
+        this.dropDownLable = "Select Year";
+        this.secondDropdownString = this.yearString;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+        this.yearlyExpenseOfMonthList = [];
+        //this.createPieChart();
+        //this.createBarChart();
+        //this.createLineChart();
+    };
+    ChartsElectricityComponent.prototype.createPieChart = function (dataSet, labelSet) {
+        this.chartDatasetsPie = [
+            {
+                data: dataSet,
+                label: 'Electricity consumption by Location'
+            }
+        ];
+        this.chartLabelsPie = labelSet;
+        this.chartColorsPie = [
+            {
+                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsPie = {
+            responsive: true
+        };
+    };
+    ChartsElectricityComponent.prototype.createBarChart = function (dataSet, labelSet) {
+        this.chartLabelsBar = labelSet;
+        this.chartDatasetsBar = [
+            {
+                data: dataSet,
+                label: 'Electricity Consumption by Rupees'
+            }
+        ];
+        this.chartColorsBar = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsBar = {
+            responsive: true
+        };
+    };
+    ChartsElectricityComponent.prototype.createLineChart = function () {
+        this.chartTypeLine = 'line';
+        this.chartDatasetsLine = [
+            { data: [65, 59, 80, 81, 56, 55, 40], label: '2017' },
+            { data: [28, 48, 40, 19, 86, 27, 90], label: '2018' }
+        ];
+        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        this.chartColorsLine = [
+            {
+                backgroundColor: 'rgba(105, 0, 132, .2)',
+                borderColor: 'rgba(200, 99, 132, .7)',
+                borderWidth: 2,
+            },
+            {
+                backgroundColor: 'rgba(0, 137, 132, .2)',
+                borderColor: 'rgba(0, 10, 130, .7)',
+                borderWidth: 2,
+            }
+        ];
+        this.chartOptionsLine = {
+            responsive: true
+        };
+    };
+    ChartsElectricityComponent.prototype.onPropertySelected = function (event) {
+        this.selectedProperty = event.target.value;
+        this.clearAll();
+        this.clearCharts();
+        switch (this.selectedProperty) {
+            case "Year": {
+                this.isYearSelected = true;
+                this.dropDownLable = "Select Year";
+                this.secondDropdownString = this.yearString;
+                break;
+            }
+            case "Month": {
+                this.isMonthselected = true;
+                this.dropDownLable = "Select Month";
+                this.secondDropdownString = this.monthString;
+                break;
+            }
+            default: {
+                this.clearAll();
+                break;
+            }
+        }
+    };
+    ChartsElectricityComponent.prototype.onSecondDropdownSelected = function (event) {
+        //this.clearCharts();
+        this.selectedValue = event.target.value;
+        if (this.isYearSelected) {
+            this.barChartHeader = "Monthly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createYearCharts(this.selectedValue);
+        }
+        else if (this.isMonthselected) {
+            this.barChartHeader = "Yearly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createMonthCharts(this.selectedValue);
+        }
+        else
+            console.log("Location filter is still in progress");
+    };
+    ChartsElectricityComponent.prototype.clearAll = function () {
+        this.isMonthselected = false;
+        this.isYearSelected = false;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+    };
+    // private getMonthlyExpenseOfYear(year: string) {
+    //     this._electrictyBillService.getMonthlyExpenseOfYear(year, (response) => {
+    //         this.monthlyExpenseInYearList = response;
+    //         this.createBarChart();
+    //     });
+    // }
+    ChartsElectricityComponent.prototype.createYearCharts = function (selectedValue) {
+        var _this = this;
+        this._electrictyBillService.getMonthlyExpenseOfYear(selectedValue, function (response) {
+            _this.monthlyExpenseInYearList = response;
+            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.month]; }));
+        });
+        this._electrictyBillService.getLocationExpenseOfYear(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsElectricityComponent.prototype.createMonthCharts = function (selectedValue) {
+        var _this = this;
+        this._electrictyBillService.getYearlyExpenseOfMonth(selectedValue, function (response) {
+            _this.yearlyExpenseOfMonthList = response;
+            _this.createBarChart(_this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.expense]; }), _this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.year]; }));
+        });
+        this._electrictyBillService.getLocationExpenseOfMonth(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsElectricityComponent.prototype.clearCharts = function () {
+        this.chartDatasetsBar = [];
+        this.chartLabelsBar = [];
+        this.chartDatasetsPie = [];
+        this.chartLabelsPie = [];
+        // this.monthlyExpenseInYearList = [];
+        // this.yearlyExpenseOfMonthList = [];
+        // this.locationExpenseInYearList = [];
+    };
+    ChartsElectricityComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-charts-electricity-bill',
+            template: __webpack_require__(/*! ./charts-electricity.component.html */ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.html"),
+            styles: [__webpack_require__(/*! ./charts-electricity.component.scss */ "./src/app/charts/charts-bills/electricity/charts-electricity/charts-electricity.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_electricity_bill_service__WEBPACK_IMPORTED_MODULE_2__["ElectricityBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], ChartsElectricityComponent);
+    return ChartsElectricityComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.html":
+/*!************************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.html ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Property</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onPropertySelected($event)\">\n            <option *ngFor=\"let opt of propertyString\" [selected]=\"selectedProperty == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">{{dropDownLable}}</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onSecondDropdownSelected($event)\">\n                    <option *ngFor=\"let opt of secondDropdownString\" [selected]=\"selectedValue == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n<mat-grid-list cols=\"2\" gutterSize=\"10px\" rowHeight=\"3:2.5\">\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{barChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypeBar\"\n                [datasets]=\"chartDatasetsBar\"\n                [labels]=\"chartLabelsBar\"\n                [colors]=\"chartColorsBar\"\n                [options]=\"chartOptionsBar\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{pieChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypePie\"\n                [datasets]=\"chartDatasetsPie\"\n                [labels]=\"chartLabelsPie\"\n                [colors]=\"chartColorsPie\"\n                [options]=\"chartOptionsPie\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <!--<mat-grid-tile>-->\n        <!--<mat-grid-tile-header>-->\n            <!--Comparison with Last year-->\n        <!--</mat-grid-tile-header>-->\n        <!--<canvas mdbChart-->\n                <!--[chartType]=\"chartTypeLine\"-->\n                <!--[datasets]=\"chartDatasetsLine\"-->\n                <!--[labels]=\"chartLabelsLine\"-->\n                <!--[colors]=\"chartColorsLine\"-->\n                <!--[options]=\"chartOptionsLine\"-->\n                <!--[legend]=\"true\"-->\n                <!--(chartHover)=\"chartHovered($event)\"-->\n                <!--(chartClick)=\"chartClicked($event)\">-->\n        <!--</canvas>-->\n    <!--</mat-grid-tile>-->\n    <!--<mat-grid-tile>4</mat-grid-tile>-->\n</mat-grid-list>"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.scss":
+/*!************************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.scss ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-grid-tile {\n  border: 1px;\n  height: 500px; }\n\n:host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 15px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy90ZWxlcGhvbmUvY2hhcnRzLXRlbGVwaG9uZS9jaGFydHMtdGVsZXBob25lLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGNBQWEsRUFDWjs7QUFFSDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLG9CQUFrQixFQUNuQjs7QUFFRDtFQUNFLFNBQVE7RUFDUixjQUFhO0VBQ2IsK0JBQThCLEVBQy9COztBQUVEO0VBQ0UsY0FBYSxFQUNkOztBQUVEO0VBQ0UsY0FDRixFQUFDOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0Usc0JBQXFCO0VBQ3JCLGVBQWMsRUFDZjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUV0QztFQUFzQixlQUFjLEVBQUc7O0FBRXZDO0VBQ0UsZUFBYTtFQUNiLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixrQkFBaUI7RUFDakIsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsZUFBYztFQUNkLFlBQVcsRUFxSFo7O0FBdkhEO0lBU0ksbUJBQWtCO0lBQ2xCLDBCQUF5QjtJQUN6QixZQUFXLEVBcUZaOztBQWhHSDtNQWNNLHdCQUF1QixFQUN4Qjs7QUFmTDtNQWtCTSwwQkFBeUI7TUFDekIsaUJBQWdCO01BQ2hCLGFBQVksRUFDYjs7QUFyQkw7TUE0Qk0sb0JBQW1CO01BQ25CLG1CQUFrQixFQUluQjs7QUFqQ0w7TUFvQ00sMEJBQXlCLEVBQzFCOztBQXJDTDtNQXdDTSxjQUFhO01BQ2IsMEJBQXlCLEVBVTFCOztBQW5ETDtRQTRDUSxvQkFBbUI7UUFDbkIsYUFBYSxFQUNkOztBQTlDUDtRQWlEUSxjQUFhLEVBQ2Q7O0FBbERQO01Bc0RNLDJCQUF5QjtNQUN6QiwwQkFBeUI7TUFDekIsbUJBQWtCO01BQ2xCLFdBQVU7TUFDVixZQUFXO01BQ1gsY0FBYTtNQUNiLGlCQUFnQjtNQUNoQiwwQkFBd0IsRUFpQ3pCOztBQTlGTDtRQWdFUSxjQUFhLEVBQ2Q7O0FBakVQO1FBb0VRLG1CQUFrQixFQUNuQjs7QUFyRVA7UUF3RVEsYUFBWTtRQUNaLDBCQUF5QjtRQUN6QixrQkFBaUI7UUFDakIsa0JBQWlCO1FBQ2pCLGlCQUFnQixFQUNqQjs7QUE3RVA7UUFnRlEsYUFBWTtRQUNaLHdCQUF1QjtRQUN2QixrQkFBaUIsRUFDbEI7O0FBbkZQO1FBc0ZRLGdCQUFlLEVBQ2hCOztBQXZGUDtRQTBGUSxpQkFBZ0I7UUFDaEIsNEJBQTBCO1FBQzFCLCtCQUE4QixFQUMvQjs7QUE3RlA7SUFtR0ksbUJBQWtCLEVBV25COztBQTlHSDtNQXNHTSxtQkFBa0I7TUFDbEIsVUFBUztNQUNULFdBQVU7TUFDVixhQUFZO01BQ1osYUFBWTtNQUNaLGtCQUFpQjtNQUNqQixlQUFjLEVBQ2Y7O0FBN0dMO0lBaUhJLGVBQWMsRUFDZjs7QUFsSEg7SUFxSEksZUFBYyxFQUNmIiwiZmlsZSI6InNyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy90ZWxlcGhvbmUvY2hhcnRzLXRlbGVwaG9uZS9jaGFydHMtdGVsZXBob25lLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWdyaWQtdGlsZSB7XG4gIGJvcmRlcjogMXB4O1xuICBoZWlnaHQ6IDUwMHB4O1xuICB9XG5cbjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi5mb3JtLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICBtYXJnaW4tdG9wOiA1MHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi50YWJsZS13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLnJvd3tcbiAgbWFyZ2luLWJvdHRvbToxNXB4O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDIwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpXG59XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.ts":
+/*!**********************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.ts ***!
+  \**********************************************************************************************/
+/*! exports provided: ChartsTelephoneComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsTelephoneComponent", function() { return ChartsTelephoneComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/telephone-bill.service */ "./src/app/services/telephone-bill.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ChartsTelephoneComponent = /** @class */ (function () {
+    function ChartsTelephoneComponent(_telephoneBillService, _router) {
+        this._telephoneBillService = _telephoneBillService;
+        this._router = _router;
+        this.chartTypeBar = "bar";
+        this.chartTypePie = "pie";
+        this.propertyString = ["Year", "Month", "Location"];
+        this.yearString = ["2017", "2018", "2019", "2020"];
+        this.monthString = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    }
+    ChartsTelephoneComponent.prototype.ngOnInit = function () {
+        this.clearAll();
+        this.isYearSelected = true;
+        this.dropDownLable = "Select Year";
+        this.secondDropdownString = this.yearString;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+        this.yearlyExpenseOfMonthList = [];
+        //this.createPieChart();
+        //this.createBarChart();
+        //this.createLineChart();
+    };
+    ChartsTelephoneComponent.prototype.createPieChart = function (dataSet, labelSet) {
+        this.chartDatasetsPie = [
+            {
+                data: dataSet,
+                label: 'Telephone consumption by Location'
+            }
+        ];
+        this.chartLabelsPie = labelSet;
+        this.chartColorsPie = [
+            {
+                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsPie = {
+            responsive: true
+        };
+    };
+    ChartsTelephoneComponent.prototype.createBarChart = function (dataSet, labelSet) {
+        this.chartLabelsBar = labelSet;
+        this.chartDatasetsBar = [
+            {
+                data: dataSet,
+                label: 'Telephone Consumption by Rupees'
+            }
+        ];
+        this.chartColorsBar = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsBar = {
+            responsive: true
+        };
+    };
+    ChartsTelephoneComponent.prototype.createLineChart = function () {
+        this.chartTypeLine = 'line';
+        this.chartDatasetsLine = [
+            { data: [65, 59, 80, 81, 56, 55, 40], label: '2017' },
+            { data: [28, 48, 40, 19, 86, 27, 90], label: '2018' }
+        ];
+        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        this.chartColorsLine = [
+            {
+                backgroundColor: 'rgba(105, 0, 132, .2)',
+                borderColor: 'rgba(200, 99, 132, .7)',
+                borderWidth: 2,
+            },
+            {
+                backgroundColor: 'rgba(0, 137, 132, .2)',
+                borderColor: 'rgba(0, 10, 130, .7)',
+                borderWidth: 2,
+            }
+        ];
+        this.chartOptionsLine = {
+            responsive: true
+        };
+    };
+    ChartsTelephoneComponent.prototype.onPropertySelected = function (event) {
+        this.selectedProperty = event.target.value;
+        this.clearAll();
+        this.clearCharts();
+        switch (this.selectedProperty) {
+            case "Year": {
+                this.isYearSelected = true;
+                this.dropDownLable = "Select Year";
+                this.secondDropdownString = this.yearString;
+                break;
+            }
+            case "Month": {
+                this.isMonthselected = true;
+                this.dropDownLable = "Select Month";
+                this.secondDropdownString = this.monthString;
+                break;
+            }
+            default: {
+                this.clearAll();
+                break;
+            }
+        }
+    };
+    ChartsTelephoneComponent.prototype.onSecondDropdownSelected = function (event) {
+        //this.clearCharts();
+        this.selectedValue = event.target.value;
+        if (this.isYearSelected) {
+            this.barChartHeader = "Monthly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createYearCharts(this.selectedValue);
+        }
+        else if (this.isMonthselected) {
+            this.barChartHeader = "Yearly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createMonthCharts(this.selectedValue);
+        }
+        else
+            console.log("Location filter is still in progress");
+    };
+    ChartsTelephoneComponent.prototype.clearAll = function () {
+        this.isMonthselected = false;
+        this.isYearSelected = false;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+    };
+    // private getMonthlyExpenseOfYear(year: string) {
+    //     this._telephoneBillService.getMonthlyExpenseOfYear(year, (response) => {
+    //         this.monthlyExpenseInYearList = response;
+    //         this.createBarChart();
+    //     });
+    // }
+    ChartsTelephoneComponent.prototype.createYearCharts = function (selectedValue) {
+        var _this = this;
+        this._telephoneBillService.getMonthlyExpenseOfYear(selectedValue, function (response) {
+            _this.monthlyExpenseInYearList = response;
+            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.month]; }));
+        });
+        this._telephoneBillService.getLocationExpenseOfYear(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsTelephoneComponent.prototype.createMonthCharts = function (selectedValue) {
+        var _this = this;
+        this._telephoneBillService.getYearlyExpenseOfMonth(selectedValue, function (response) {
+            _this.yearlyExpenseOfMonthList = response;
+            _this.createBarChart(_this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.expense]; }), _this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.year]; }));
+        });
+        this._telephoneBillService.getLocationExpenseOfMonth(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsTelephoneComponent.prototype.clearCharts = function () {
+        this.chartDatasetsBar = [];
+        this.chartLabelsBar = [];
+        this.chartDatasetsPie = [];
+        this.chartLabelsPie = [];
+        // this.monthlyExpenseInYearList = [];
+        // this.yearlyExpenseOfMonthList = [];
+        // this.locationExpenseInYearList = [];
+    };
+    ChartsTelephoneComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-charts-telephone-bill',
+            template: __webpack_require__(/*! ./charts-telephone.component.html */ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.html"),
+            styles: [__webpack_require__(/*! ./charts-telephone.component.scss */ "./src/app/charts/charts-bills/telephone/charts-telephone/charts-telephone.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_telephone_bill_service__WEBPACK_IMPORTED_MODULE_2__["TelephoneBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], ChartsTelephoneComponent);
+    return ChartsTelephoneComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.html":
+/*!************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/water/charts-water/charts-water.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Property</label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onPropertySelected($event)\">\n            <option *ngFor=\"let opt of propertyString\" [selected]=\"selectedProperty == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n            <label class=\"control-label col-sm-2\">{{dropDownLable}}</label>\n            <div class=\"col-sm-2 field-value\">\n                <select class=\"form-control\" (change)=\"onSecondDropdownSelected($event)\">\n                    <option *ngFor=\"let opt of secondDropdownString\" [selected]=\"selectedValue == opt\">\n                        {{opt}}\n                    </option>\n                </select>\n            </div>\n      </div>\n\n<mat-grid-list cols=\"2\" gutterSize=\"10px\" rowHeight=\"3:2.5\">\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{barChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypeBar\"\n                [datasets]=\"chartDatasetsBar\"\n                [labels]=\"chartLabelsBar\"\n                [colors]=\"chartColorsBar\"\n                [options]=\"chartOptionsBar\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <mat-grid-tile>\n        <mat-grid-tile-header>\n            {{pieChartHeader}}\n        </mat-grid-tile-header>\n        <canvas mdbChart\n                [chartType]=\"chartTypePie\"\n                [datasets]=\"chartDatasetsPie\"\n                [labels]=\"chartLabelsPie\"\n                [colors]=\"chartColorsPie\"\n                [options]=\"chartOptionsPie\"\n                [legend]=\"true\"\n                (chartHover)=\"chartHovered($event)\"\n                (chartClick)=\"chartClicked($event)\">\n        </canvas>\n    </mat-grid-tile>\n    <!--<mat-grid-tile>-->\n        <!--<mat-grid-tile-header>-->\n            <!--Comparison with Last year-->\n        <!--</mat-grid-tile-header>-->\n        <!--<canvas mdbChart-->\n                <!--[chartType]=\"chartTypeLine\"-->\n                <!--[datasets]=\"chartDatasetsLine\"-->\n                <!--[labels]=\"chartLabelsLine\"-->\n                <!--[colors]=\"chartColorsLine\"-->\n                <!--[options]=\"chartOptionsLine\"-->\n                <!--[legend]=\"true\"-->\n                <!--(chartHover)=\"chartHovered($event)\"-->\n                <!--(chartClick)=\"chartClicked($event)\">-->\n        <!--</canvas>-->\n    <!--</mat-grid-tile>-->\n    <!--<mat-grid-tile>4</mat-grid-tile>-->\n</mat-grid-list>"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.scss":
+/*!************************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/water/charts-water/charts-water.component.scss ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "mat-grid-tile {\n  border: 1px;\n  height: 500px; }\n\n:host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.form-header {\n  color: #E19131;\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  text-transform: uppercase; }\n\n.table-wrapper {\n  margin-top: 20px; }\n\n.row {\n  margin-bottom: 15px; }\n\n.modal {\n  top: 20%;\n  outline: none;\n  background: rgba(0, 0, 0, 0.5); }\n\n.modal-content {\n  width: 1000px; }\n\n.modal-backdrop {\n  display: none; }\n\n.tbl-header {\n  margin-top: 0px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 5%;\n  padding-left: 150px; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #4717F6;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 20px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy93YXRlci9jaGFydHMtd2F0ZXIvY2hhcnRzLXdhdGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBVztFQUNYLGNBQWEsRUFDWjs7QUFFSDtFQUNFLGVBQWM7RUFDZCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLG9CQUFrQixFQUNuQjs7QUFFRDtFQUNFLFNBQVE7RUFDUixjQUFhO0VBQ2IsK0JBQThCLEVBQy9COztBQUVEO0VBQ0UsY0FBYSxFQUNkOztBQUVEO0VBQ0UsY0FDRixFQUFDOztBQUVEO0VBQ0UsZ0JBQWU7RUFDZixpQkFBZ0I7RUFDaEIsaUJBQWdCO0VBQ2hCLHNCQUFxQjtFQUNyQixlQUFjO0VBQ2QsMEJBQXlCLEVBQzFCOztBQUVEO0VBQ0Usc0JBQXFCO0VBQ3JCLGVBQWMsRUFDZjs7QUFFRDtFQUFNLDhCQUE2QixFQUFHOztBQUV0QztFQUFzQixlQUFjLEVBQUc7O0FBRXZDO0VBQ0UsZUFBYTtFQUNiLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixrQkFBaUI7RUFDakIsaUJBQWdCLEVBQ2pCOztBQUVEO0VBQ0UsZUFBYztFQUNkLFlBQVcsRUFxSFo7O0FBdkhEO0lBU0ksbUJBQWtCO0lBQ2xCLDBCQUF5QjtJQUN6QixZQUFXLEVBcUZaOztBQWhHSDtNQWNNLHdCQUF1QixFQUN4Qjs7QUFmTDtNQWtCTSwwQkFBeUI7TUFDekIsaUJBQWdCO01BQ2hCLGFBQVksRUFDYjs7QUFyQkw7TUE0Qk0sb0JBQW1CO01BQ25CLG1CQUFrQixFQUluQjs7QUFqQ0w7TUFvQ00sMEJBQXlCLEVBQzFCOztBQXJDTDtNQXdDTSxjQUFhO01BQ2IsMEJBQXlCLEVBVTFCOztBQW5ETDtRQTRDUSxvQkFBbUI7UUFDbkIsYUFBYSxFQUNkOztBQTlDUDtRQWlEUSxjQUFhLEVBQ2Q7O0FBbERQO01Bc0RNLDJCQUF5QjtNQUN6QiwwQkFBeUI7TUFDekIsbUJBQWtCO01BQ2xCLFdBQVU7TUFDVixZQUFXO01BQ1gsY0FBYTtNQUNiLGlCQUFnQjtNQUNoQiwwQkFBd0IsRUFpQ3pCOztBQTlGTDtRQWdFUSxjQUFhLEVBQ2Q7O0FBakVQO1FBb0VRLG1CQUFrQixFQUNuQjs7QUFyRVA7UUF3RVEsYUFBWTtRQUNaLDBCQUF5QjtRQUN6QixrQkFBaUI7UUFDakIsa0JBQWlCO1FBQ2pCLGlCQUFnQixFQUNqQjs7QUE3RVA7UUFnRlEsYUFBWTtRQUNaLHdCQUF1QjtRQUN2QixrQkFBaUIsRUFDbEI7O0FBbkZQO1FBc0ZRLGdCQUFlLEVBQ2hCOztBQXZGUDtRQTBGUSxpQkFBZ0I7UUFDaEIsNEJBQTBCO1FBQzFCLCtCQUE4QixFQUMvQjs7QUE3RlA7SUFtR0ksbUJBQWtCLEVBV25COztBQTlHSDtNQXNHTSxtQkFBa0I7TUFDbEIsVUFBUztNQUNULFdBQVU7TUFDVixhQUFZO01BQ1osYUFBWTtNQUNaLGtCQUFpQjtNQUNqQixlQUFjLEVBQ2Y7O0FBN0dMO0lBaUhJLGVBQWMsRUFDZjs7QUFsSEg7SUFxSEksZUFBYyxFQUNmIiwiZmlsZSI6InNyYy9hcHAvY2hhcnRzL2NoYXJ0cy1iaWxscy93YXRlci9jaGFydHMtd2F0ZXIvY2hhcnRzLXdhdGVyLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWdyaWQtdGlsZSB7XG4gIGJvcmRlcjogMXB4O1xuICBoZWlnaHQ6IDUwMHB4O1xuICB9XG5cbjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi5mb3JtLWhlYWRlciB7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICBtYXJnaW4tdG9wOiA1MHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi50YWJsZS13cmFwcGVyIHtcbiAgbWFyZ2luLXRvcDogMjBweDtcbn1cblxuLnJvd3tcbiAgbWFyZ2luLWJvdHRvbToxNXB4O1xufVxuXG4ubW9kYWwge1xuICB0b3A6IDIwJTtcbiAgb3V0bGluZTogbm9uZTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpXG59XG5cbi5tb2RhbC1jb250ZW50e1xuICB3aWR0aDogMTAwMHB4O1xufVxuXG4ubW9kYWwtYmFja2Ryb3Age1xuICBkaXNwbGF5OiBub25lXG59XG5cbi50YmwtaGVhZGVyIHtcbiAgbWFyZ2luLXRvcDogMHB4O1xuICBmb250LXdlaWdodDogNjAwO1xuICBmb250LXNpemU6IDEuM2VtO1xuICBwYWRkaW5nOiA1cHggMHB4IDMwcHg7XG4gIGNvbG9yOiAjRTE5MTMxO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG4uaGFzLWRhbmdlciAuZm9ybS1jb250cm9se1xuICBib3JkZXItY29sb3I6ICNkOTUzNGY7XG4gIGNvbG9yOiAjZDk1MzRmO1xufVxuXG4uYnRueyBib3JkZXItcmFkaXVzOiAwcHggIWltcG9ydGFudDt9XG5cbi5jb250cm9sLWxhYmVsIHNwYW4geyBjb2xvcjogI2RkMGQwZDt9XG5cbi5idG5Db250YWluZXJ7XG4gIG1hcmdpbi10b3A6NSU7XG4gIHBhZGRpbmctbGVmdDogMTUwcHg7XG59XG5cbi5jb250cm9sLWxhYmVsIHtcbiAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBwYWRkaW5nLXRvcDogOXB4O1xufVxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM0NzE3RjY7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDIwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.ts":
+/*!**********************************************************************************!*\
+  !*** ./src/app/charts/charts-bills/water/charts-water/charts-water.component.ts ***!
+  \**********************************************************************************/
+/*! exports provided: ChartsWaterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsWaterComponent", function() { return ChartsWaterComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_water_bill_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../services/water-bill.service */ "./src/app/services/water-bill.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ChartsWaterComponent = /** @class */ (function () {
+    function ChartsWaterComponent(_waterBillService, _router) {
+        this._waterBillService = _waterBillService;
+        this._router = _router;
+        this.chartTypeBar = "bar";
+        this.chartTypePie = "pie";
+        this.propertyString = ["Year", "Month", "Location"];
+        this.yearString = ["2017", "2018", "2019", "2020"];
+        this.monthString = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    }
+    ChartsWaterComponent.prototype.ngOnInit = function () {
+        this.clearAll();
+        this.isYearSelected = true;
+        this.dropDownLable = "Select Year";
+        this.secondDropdownString = this.yearString;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+        this.yearlyExpenseOfMonthList = [];
+        //this.createPieChart();
+        //this.createBarChart();
+        //this.createLineChart();
+    };
+    ChartsWaterComponent.prototype.createPieChart = function (dataSet, labelSet) {
+        this.chartDatasetsPie = [
+            {
+                data: dataSet,
+                label: 'Water consumption by Location'
+            }
+        ];
+        this.chartLabelsPie = labelSet;
+        this.chartColorsPie = [
+            {
+                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsPie = {
+            responsive: true
+        };
+    };
+    ChartsWaterComponent.prototype.createBarChart = function (dataSet, labelSet) {
+        this.chartLabelsBar = labelSet;
+        this.chartDatasetsBar = [
+            {
+                data: dataSet,
+                label: 'Water Consumption by Rupees'
+            }
+        ];
+        this.chartColorsBar = [
+            {
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1,
+            }
+        ];
+        this.chartOptionsBar = {
+            responsive: true
+        };
+    };
+    ChartsWaterComponent.prototype.createLineChart = function () {
+        this.chartTypeLine = 'line';
+        this.chartDatasetsLine = [
+            { data: [65, 59, 80, 81, 56, 55, 40], label: '2017' },
+            { data: [28, 48, 40, 19, 86, 27, 90], label: '2018' }
+        ];
+        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+        this.chartColorsLine = [
+            {
+                backgroundColor: 'rgba(105, 0, 132, .2)',
+                borderColor: 'rgba(200, 99, 132, .7)',
+                borderWidth: 2,
+            },
+            {
+                backgroundColor: 'rgba(0, 137, 132, .2)',
+                borderColor: 'rgba(0, 10, 130, .7)',
+                borderWidth: 2,
+            }
+        ];
+        this.chartOptionsLine = {
+            responsive: true
+        };
+    };
+    ChartsWaterComponent.prototype.onPropertySelected = function (event) {
+        this.selectedProperty = event.target.value;
+        this.clearAll();
+        this.clearCharts();
+        switch (this.selectedProperty) {
+            case "Year": {
+                this.isYearSelected = true;
+                this.dropDownLable = "Select Year";
+                this.secondDropdownString = this.yearString;
+                break;
+            }
+            case "Month": {
+                this.isMonthselected = true;
+                this.dropDownLable = "Select Month";
+                this.secondDropdownString = this.monthString;
+                break;
+            }
+            default: {
+                this.clearAll();
+                break;
+            }
+        }
+    };
+    ChartsWaterComponent.prototype.onSecondDropdownSelected = function (event) {
+        //this.clearCharts();
+        this.selectedValue = event.target.value;
+        if (this.isYearSelected) {
+            this.barChartHeader = "Monthly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createYearCharts(this.selectedValue);
+        }
+        else if (this.isMonthselected) {
+            this.barChartHeader = "Yearly consumption in " + this.selectedValue;
+            this.pieChartHeader = "Location consumption in " + this.selectedValue;
+            this.createMonthCharts(this.selectedValue);
+        }
+        else
+            console.log("Location filter is still in progress");
+    };
+    ChartsWaterComponent.prototype.clearAll = function () {
+        this.isMonthselected = false;
+        this.isYearSelected = false;
+        this.monthlyExpenseInYearList = [];
+        this.locationExpenseInYearList = [];
+    };
+    // private getMonthlyExpenseOfYear(year: string) {
+    //     this._waterBillService.getMonthlyExpenseOfYear(year, (response) => {
+    //         this.monthlyExpenseInYearList = response;
+    //         this.createBarChart();
+    //     });
+    // }
+    ChartsWaterComponent.prototype.createYearCharts = function (selectedValue) {
+        var _this = this;
+        this._waterBillService.getMonthlyExpenseOfYear(selectedValue, function (response) {
+            _this.monthlyExpenseInYearList = response;
+            _this.createBarChart(_this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.expense]; }), _this.monthlyExpenseInYearList.map(function (monthlyExpense) { return [monthlyExpense.month]; }));
+        });
+        this._waterBillService.getLocationExpenseOfYear(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsWaterComponent.prototype.createMonthCharts = function (selectedValue) {
+        var _this = this;
+        this._waterBillService.getYearlyExpenseOfMonth(selectedValue, function (response) {
+            _this.yearlyExpenseOfMonthList = response;
+            _this.createBarChart(_this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.expense]; }), _this.yearlyExpenseOfMonthList.map(function (yearlyExpense) { return [yearlyExpense.year]; }));
+        });
+        this._waterBillService.getLocationExpenseOfMonth(selectedValue, function (response) {
+            _this.locationExpenseInYearList = response;
+            _this.createPieChart(_this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.expense]; }), _this.locationExpenseInYearList.map(function (locationExpense) { return [locationExpense.location]; }));
+        });
+    };
+    ChartsWaterComponent.prototype.clearCharts = function () {
+        this.chartDatasetsBar = [];
+        this.chartLabelsBar = [];
+        this.chartDatasetsPie = [];
+        this.chartLabelsPie = [];
+        // this.monthlyExpenseInYearList = [];
+        // this.yearlyExpenseOfMonthList = [];
+        // this.locationExpenseInYearList = [];
+    };
+    ChartsWaterComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-charts-water-bill',
+            template: __webpack_require__(/*! ./charts-water.component.html */ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.html"),
+            styles: [__webpack_require__(/*! ./charts-water.component.scss */ "./src/app/charts/charts-bills/water/charts-water/charts-water.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_services_water_bill_service__WEBPACK_IMPORTED_MODULE_2__["WaterBillsService"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
+    ], ChartsWaterComponent);
+    return ChartsWaterComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-list/charts-list.component.html":
+/*!***************************************************************!*\
+  !*** ./src/app/charts/charts-list/charts-list.component.html ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"tbl-header\">\n        View Charts\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-charts-electricity-bill></app-charts-electricity-bill>\n    </div>\n    <!--<div *ngIf=\"isInternet\">-->\n      <!--<app-create-internet-bill></app-create-internet-bill>-->\n    <!--</div>-->\n    <div *ngIf=\"isTelephone\">\n      <app-charts-telephone-bill></app-charts-telephone-bill>\n    </div>\n    <div *ngIf=\"isWater\">\n      <app-charts-water-bill></app-charts-water-bill>\n    </div>\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-list/charts-list.component.scss":
+/*!***************************************************************!*\
+  !*** ./src/app/charts/charts-list/charts-list.component.scss ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.billInputContainer .fields-container div[class^=\"col-\"] {\n    padding-bottom: 10px; }\n\n.billInputContainer .title {\n    font-size: 1.2em;\n    font-weight: 600;\n    color: gray;\n    padding-bottom: 5px; }\n\n.rateForm input {\n  background-color: #dde3ec;\n  height: 43px;\n  color: #8290a3;\n  border: 1px solid #dde3ec; }\n\n.rateForm input:focus {\n    border: 1px solid #c3ccda; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n/* The switch - the box around the slider */\n\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 34px; }\n\n/* Hide default HTML checkbox */\n\n.switch input {\n  display: none; }\n\n/* The slider */\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s; }\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s; }\n\ninput:checked + .slider {\n  background-color: #2196F3; }\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #2196F3; }\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px); }\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 34px; }\n\n.slider.round:before {\n  border-radius: 50%; }\n\n.info-tooltip {\n  font-size: 1.5em;\n  color: #8E44AD;\n  vertical-align: top;\n  margin-top: 0.3em;\n  cursor: pointer; }\n\n.info-tooltip-view {\n  margin-top: 0em !important;\n  margin-left: 0.5em; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.searchFilter {\n  /*overflow: hidden;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke;\n    background-color: #E19131;*/\n  min-height: 78px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #E19131;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  color: #ffffff; }\n\n.searchFilter div[class^=\"col-\"] {\n  padding-bottom: 10px; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 2%; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.noreteselect {\n  margin-left: 10%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  color: #343a40; }\n\n.noreteselect i {\n  font-size: 50px;\n  color: #E19131; }\n\n.viewListForm .control-label {\n  padding-top: 0px !important; }\n\n.sub-control-label {\n  color: #9a9a9a; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #7788aa;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 10px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n.open > .dropdown-menu {\n  display: block;\n  height: 100px;\n  overflow-y: scroll; }\n\n.tariff_des {\n  font-size: 9px !important; }\n\n.tariffdropname {\n  color: #660066; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvY2hhcnRzL2NoYXJ0cy1saXN0L2NoYXJ0cy1saXN0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWMsRUFDZjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLDZCQUE0QixFQWM3Qjs7QUFsQkQ7SUFRTSxxQkFBb0IsRUFDckI7O0FBVEw7SUFhSSxpQkFBZ0I7SUFDaEIsaUJBQWdCO0lBQ2hCLFlBQVc7SUFDWCxvQkFBbUIsRUFDcEI7O0FBR0g7RUFHSSwwQkFBeUI7RUFDekIsYUFBWTtFQUNaLGVBQWM7RUFDZCwwQkFBeUIsRUFLMUI7O0FBWEg7SUFTTSwwQkFBeUIsRUFDMUI7O0FBSUw7RUFDRSxpQkFBZ0I7RUFDaEIsZUFBYyxFQUNmOztBQUVELDRDQUE0Qzs7QUFDNUM7RUFDRSxtQkFBa0I7RUFDbEIsc0JBQXFCO0VBQ3JCLFlBQVc7RUFDWCxhQUFZLEVBQ2I7O0FBRUQsZ0NBQWdDOztBQUNoQztFQUNFLGNBQWEsRUFDZDs7QUFFRCxnQkFBZ0I7O0FBQ2hCO0VBQ0UsbUJBQWtCO0VBQ2xCLGdCQUFlO0VBQ2YsT0FBTTtFQUNOLFFBQU87RUFDUCxTQUFRO0VBQ1IsVUFBUztFQUNULHVCQUFzQjtFQUV0QixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsYUFBWTtFQUNaLFlBQVc7RUFDWCxVQUFTO0VBQ1QsWUFBVztFQUNYLHdCQUF1QjtFQUV2QixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLDRCQUEyQixFQUM1Qjs7QUFFRDtFQUNFLG9DQUFtQztFQUVuQyw0QkFBMkIsRUFDNUI7O0FBRUQscUJBQXFCOztBQUNyQjtFQUNFLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixlQUFjO0VBQ2Qsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLDJCQUEwQjtFQUMxQixtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYSxFQUNkOztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBR3RDO0VBQ0U7Ozs7Z0NBSThCO0VBRTlCLGlCQUFnQjtFQUNoQixjQUFhO0VBQ2Isb0JBQW1CO0VBQ25CLDBCQUF5QjtFQUN6QiwwQkFBeUI7RUFHekIsbUJBQWtCO0VBR2xCLGdEQUErQztFQUMvQyxlQUFjLEVBQ2Y7O0FBRUQ7RUFFSSxxQkFBb0IsRUFDckI7O0FBR0g7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUFlLGVBQWEsRUFBRzs7QUFFL0I7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQjs7QUFFRDtFQUFlLGlCQUFnQjtFQUFFLGVBQWM7RUFBRSxrQkFBaUI7RUFBRSxlQUFjLEVBQUc7O0FBRXJGO0VBQWlCLGdCQUFlO0VBQUUsZUFBYyxFQUFHOztBQUVuRDtFQUE4Qiw0QkFBMkIsRUFBRzs7QUFFNUQ7RUFBb0IsZUFBYyxFQUFHOztBQUdyQztFQUNFLGVBQWM7RUFDZCxZQUFXLEVBcUhaOztBQXZIRDtJQVNJLG1CQUFrQjtJQUNsQiwwQkFBeUI7SUFDekIsWUFBVyxFQXFGWjs7QUFoR0g7TUFjTSx3QkFBdUIsRUFDeEI7O0FBZkw7TUFrQk0sMEJBQXlCO01BQ3pCLGlCQUFnQjtNQUNoQixhQUFZLEVBQ2I7O0FBckJMO01BNEJNLG9CQUFtQjtNQUNuQixtQkFBa0IsRUFJbkI7O0FBakNMO01Bb0NNLDBCQUF5QixFQUMxQjs7QUFyQ0w7TUF3Q00sY0FBYTtNQUNiLDBCQUF5QixFQVUxQjs7QUFuREw7UUE0Q1Esb0JBQW1CO1FBQ25CLGFBQWEsRUFDZDs7QUE5Q1A7UUFpRFEsY0FBYSxFQUNkOztBQWxEUDtNQXNETSwyQkFBeUI7TUFDekIsMEJBQXlCO01BQ3pCLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsWUFBVztNQUNYLGNBQWE7TUFDYixpQkFBZ0I7TUFDaEIsMEJBQXdCLEVBaUN6Qjs7QUE5Rkw7UUFnRVEsY0FBYSxFQUNkOztBQWpFUDtRQW9FUSxtQkFBa0IsRUFDbkI7O0FBckVQO1FBd0VRLGFBQVk7UUFDWiwwQkFBeUI7UUFDekIsa0JBQWlCO1FBQ2pCLGtCQUFpQjtRQUNqQixpQkFBZ0IsRUFDakI7O0FBN0VQO1FBZ0ZRLGFBQVk7UUFDWix3QkFBdUI7UUFDdkIsa0JBQWlCLEVBQ2xCOztBQW5GUDtRQXNGUSxnQkFBZSxFQUNoQjs7QUF2RlA7UUEwRlEsaUJBQWdCO1FBQ2hCLDRCQUEwQjtRQUMxQiwrQkFBOEIsRUFDL0I7O0FBN0ZQO0lBbUdJLG1CQUFrQixFQVduQjs7QUE5R0g7TUFzR00sbUJBQWtCO01BQ2xCLFVBQVM7TUFDVCxXQUFVO01BQ1YsYUFBWTtNQUNaLGFBQVk7TUFDWixrQkFBaUI7TUFDakIsZUFBYyxFQUNmOztBQTdHTDtJQWlISSxlQUFjLEVBQ2Y7O0FBbEhIO0lBcUhJLGVBQWMsRUFDZjs7QUFHSDtFQUNFLGVBQWM7RUFDZCxjQUFhO0VBQ2IsbUJBQWtCLEVBQ25COztBQUVEO0VBQWEsMEJBQXlCLEVBQUc7O0FBRXpDO0VBQWdCLGVBQWMsRUFBRSIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jaGFydHMtbGlzdC9jaGFydHMtbGlzdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgY29sb3I6ICNFMTkxMzE7XG59XG5cbi5iaWxsSW5wdXRDb250YWluZXIge1xuICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogc29saWQgMXB4IHdoaXRlc21va2U7XG5cbiAgLmZpZWxkcy1jb250YWluZXIge1xuICAgIGRpdltjbGFzc149XCJjb2wtXCJdIHtcbiAgICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xuICAgIH1cbiAgfVxuXG4gIC50aXRsZSB7XG4gICAgZm9udC1zaXplOiAxLjJlbTtcbiAgICBmb250LXdlaWdodDogNjAwO1xuICAgIGNvbG9yOiBncmF5O1xuICAgIHBhZGRpbmctYm90dG9tOiA1cHg7XG4gIH1cbn1cblxuLnJhdGVGb3JtIHtcblxuICBpbnB1dCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZTNlYztcbiAgICBoZWlnaHQ6IDQzcHg7XG4gICAgY29sb3I6ICM4MjkwYTM7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZTNlYztcblxuICAgICY6Zm9jdXMge1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2MzY2NkYTtcbiAgICB9XG4gIH1cbn1cblxuLmVycm9yIHtcbiAgZm9udC1zaXplOiAwLjllbTtcbiAgY29sb3I6ICNmOTY1NjU7XG59XG5cbi8qIFRoZSBzd2l0Y2ggLSB0aGUgYm94IGFyb3VuZCB0aGUgc2xpZGVyICovXG4uc3dpdGNoIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdpZHRoOiA2MHB4O1xuICBoZWlnaHQ6IDM0cHg7XG59XG5cbi8qIEhpZGUgZGVmYXVsdCBIVE1MIGNoZWNrYm94ICovXG4uc3dpdGNoIGlucHV0IHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLyogVGhlIHNsaWRlciAqL1xuLnNsaWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLjRzO1xuICB0cmFuc2l0aW9uOiAuNHM7XG59XG5cbi5zbGlkZXI6YmVmb3JlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBjb250ZW50OiBcIlwiO1xuICBoZWlnaHQ6IDI2cHg7XG4gIHdpZHRoOiAyNnB4O1xuICBsZWZ0OiA0cHg7XG4gIGJvdHRvbTogNHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiAuNHM7XG4gIHRyYW5zaXRpb246IC40cztcbn1cblxuaW5wdXQ6Y2hlY2tlZCArIC5zbGlkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjE5NkYzO1xufVxuXG5pbnB1dDpmb2N1cyArIC5zbGlkZXIge1xuICBib3gtc2hhZG93OiAwIDAgMXB4ICMyMTk2RjM7XG59XG5cbmlucHV0OmNoZWNrZWQgKyAuc2xpZGVyOmJlZm9yZSB7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMjZweCk7XG59XG5cbi8qIFJvdW5kZWQgc2xpZGVycyAqL1xuLnNsaWRlci5yb3VuZCB7XG4gIGJvcmRlci1yYWRpdXM6IDM0cHg7XG59XG5cbi5zbGlkZXIucm91bmQ6YmVmb3JlIHtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufVxuXG4uaW5mby10b29sdGlwIHtcbiAgZm9udC1zaXplOiAxLjVlbTtcbiAgY29sb3I6ICM4RTQ0QUQ7XG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7XG4gIG1hcmdpbi10b3A6IDAuM2VtO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5pbmZvLXRvb2x0aXAtdmlldyB7XG4gIG1hcmdpbi10b3A6IDBlbSAhaW1wb3J0YW50O1xuICBtYXJnaW4tbGVmdDogMC41ZW07XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMTAlO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5oYXMtZGFuZ2VyIC5mb3JtLWNvbnRyb2x7XG4gIGJvcmRlci1jb2xvcjogI2Q5NTM0ZjtcbiAgY29sb3I6ICNkOTUzNGY7XG59XG5cbi5idG57IGJvcmRlci1yYWRpdXM6IDBweCAhaW1wb3J0YW50O31cblxuXG4uc2VhcmNoRmlsdGVyIHtcbiAgLypvdmVyZmxvdzogaGlkZGVuO1xuICBwYWRkaW5nOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGVzbW9rZTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRTE5MTMxOyovXG5cbiAgbWluLWhlaWdodDogNzhweDtcbiAgcGFkZGluZzogMTlweDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0UxOTEzMTtcbiAgYm9yZGVyOiAxcHggc29saWQgI2UzZTNlMztcbiAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7XG4gIC1tb3otYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIC1tb3otYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJveC1zaGFkb3c6IGluc2V0IDAgMXB4IDFweCByZ2JhKDAsIDAsIDAsIDAuMDUpO1xuICBjb2xvcjogI2ZmZmZmZjtcbn1cblxuLnNlYXJjaEZpbHRlciB7XG4gIGRpdltjbGFzc149XCJjb2wtXCJdIHtcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgfVxufVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVyeyBtYXJnaW4tdG9wOjIlO31cblxuLmNvbnRyb2wtbGFiZWwge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmctdG9wOiA5cHg7XG59XG5cbi5ub3JldGVzZWxlY3R7IG1hcmdpbi1sZWZ0OiAxMCU7IG1hcmdpbi10b3A6IDUlOyBtYXJnaW4tYm90dG9tOiA1JTsgY29sb3I6ICMzNDNhNDA7fVxuXG4ubm9yZXRlc2VsZWN0IGl7IGZvbnQtc2l6ZTogNTBweDsgY29sb3I6ICNFMTkxMzE7fVxuXG4udmlld0xpc3RGb3JtIC5jb250cm9sLWxhYmVseyBwYWRkaW5nLXRvcDogMHB4ICFpbXBvcnRhbnQ7fVxuXG4uc3ViLWNvbnRyb2wtbGFiZWx7IGNvbG9yOiAjOWE5YTlhO31cblxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3Nzg4YWE7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDEwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn1cblxuLm9wZW4+LmRyb3Bkb3duLW1lbnUge1xuICBkaXNwbGF5OiBibG9jaztcbiAgaGVpZ2h0OiAxMDBweDtcbiAgb3ZlcmZsb3cteTogc2Nyb2xsO1xufVxuXG4udGFyaWZmX2Rlc3sgZm9udC1zaXplOiA5cHggIWltcG9ydGFudDt9XG5cbi50YXJpZmZkcm9wbmFtZXtjb2xvcjojNjYwMDY2IH1cbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/charts/charts-list/charts-list.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/charts/charts-list/charts-list.component.ts ***!
+  \*************************************************************/
+/*! exports provided: ChartsListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartsListComponent", function() { return ChartsListComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ChartsListComponent = /** @class */ (function () {
+    function ChartsListComponent() {
+        this.typeString = ["", "Electricity", "Telephone", "Water"];
+    }
+    ChartsListComponent.prototype.ngOnInit = function () {
+        this.selectedType = "";
+        this.clearAll();
+    };
+    ChartsListComponent.prototype.onTypeSelected = function (event) {
+        this.selectedType = event.target.value;
+        this.clearAll();
+        switch (this.selectedType) {
+            case "Electricity": {
+                this.isElectricity = true;
+                break;
+            }
+            case "Water": {
+                this.isWater = true;
+                break;
+            }
+            case "Telephone": {
+                this.isTelephone = true;
+                break;
+            }
+            case "Internet": {
+                this.isInternet = true;
+                break;
+            }
+            default: {
+                this.clearAll();
+                break;
+            }
+        }
+    };
+    ChartsListComponent.prototype.clearAll = function () {
+        this.isElectricity = false;
+        this.isInternet = false;
+        this.isWater = false;
+        this.isTelephone = false;
+    };
+    ChartsListComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-charts-list',
+            template: __webpack_require__(/*! ./charts-list.component.html */ "./src/app/charts/charts-list/charts-list.component.html"),
+            styles: [__webpack_require__(/*! ./charts-list.component.scss */ "./src/app/charts/charts-list/charts-list.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ChartsListComponent);
+    return ChartsListComponent;
 }());
 
 
@@ -3891,7 +5014,7 @@ module.exports = "<ul [ngClass]=\"{'is-expand':isExpand}\">\n  <ng-container *ng
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: block;\n  background-color: #2F2FA2;\n  height: 100%; }\n\nul {\n  list-style: none;\n  padding: 0px;\n  width: 50px;\n  transition: width 0.3s ease-in-out; }\n\nul li {\n    cursor: pointer;\n    width: 100%;\n    height: 46px;\n    border-bottom: solid 1px #4717F6;\n    position: relative;\n    transition: all 0.3s ease-in; }\n\nul li:hover {\n      background-color: #242582; }\n\nul li:after {\n      content: '';\n      width: 0px;\n      height: 0px;\n      border-right: solid 8px #f5f5f5;\n      border-top: solid 10px transparent;\n      border-bottom: solid 10px transparent;\n      position: absolute;\n      right: 0px;\n      top: 14px;\n      display: none; }\n\nul li .icon {\n      display: inline-block;\n      text-align: center;\n      width: 100%;\n      line-height: 46px;\n      color: #adadad;\n      font-size: 1.6em; }\n\nul li .menu-name {\n      -webkit-animation-delay: 0.3s;\n      animation-delay: 0.3s;\n      color: #afafaf; }\n\nul li.selected {\n      background-color: #32c5d2; }\n\nul li.selected .icon {\n        color: white; }\n\nul li.selected .menu-name {\n        color: white; }\n\nul li.selected:after {\n        display: block; }\n\nul.is-expand {\n    width: 285px; }\n\nul.is-expand li .icon {\n      width: 50px; }\n\nli.child {\n  padding-left: 8%; }\n\n.is-expand .has-child {\n  display: block;\n  pointer-events: none;\n  cursor: default; }\n\nli.has-child {\n  display: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvbWFpbi1tZW51L21haW4tbWVudS5jb21wb25lbnQuc2NzcyIsIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hc3NldHMvc3R5bGVzL19jb2xvcnMuc2NzcyIsIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hc3NldHMvc3R5bGVzL192YXJpYmxlcy5zY3NzIiwiL2hvbWUvZGluaW5kdS9Eb2N1bWVudHMvV1NPMl9UZWxjb19Xb3JrL0ZpbmFuY2UvZmluYW5jZS1hcHAvZmluYW5jZS1hcHAtdWkvc3JjL2Fzc2V0cy9zdHlsZXMvX21peGluZy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBO0VBQ0UsZUFBYztFQUNkLDBCQ0wyQjtFRE0zQixhQUFZLEVBQ2I7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsYUFBWTtFQUNaLFlFRDZCO0VDTzdCLG1DSEwwQyxFQW9FM0M7O0FBeEVEO0lBT0ksZ0JBQWU7SUFDZixZQUFXO0lBQ1gsYUVMeUI7SUZNekIsaUNDbEIwQjtJRG1CMUIsbUJBQWtCO0lHRnBCLDZCSEdzQyxFQWlEckM7O0FBN0RIO01BZU0sMEJDekJ1QixFRDBCeEI7O0FBaEJMO01BbUJNLFlBQVc7TUFDWCxXQUFVO01BQ1YsWUFBVztNQUNYLGdDQUErQjtNQUMvQixtQ0FBa0M7TUFDbEMsc0NBQXFDO01BQ3JDLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsVUFBUztNQUNULGNBQWEsRUFDZDs7QUE3Qkw7TUFnQ00sc0JBQXFCO01BQ3JCLG1CQUFrQjtNQUNsQixZQUFXO01BQ1gsa0JFL0J1QjtNRmdDdkIsZUFBYztNQUNkLGlCQUFnQixFQUNqQjs7QUF0Q0w7TUF5Q00sOEJBQTZCO01BRzdCLHNCQUFxQjtNQUNyQixlQUFjLEVBQ2Y7O0FBOUNMO01BaURNLDBCQ25Eb0IsRUQ4RHJCOztBQTVETDtRQW1EUSxhQUFZLEVBQ2I7O0FBcERQO1FBc0RRLGFBQVksRUFDYjs7QUF2RFA7UUEwRFEsZUFBYyxFQUNmOztBQTNEUDtJQWdFSSxhRTdENkIsRUZvRTlCOztBQXZFSDtNQW9FUSxZQUFXLEVBQ1o7O0FBS1A7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QscUJBQW9CO0VBQ3BCLGdCQUFlLEVBQ2hCOztBQUVEO0VBQ0UsY0FBYSxFQUNkIiwiZmlsZSI6InNyYy9hcHAvbWFpbi1tZW51L21haW4tbWVudS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi9hc3NldHMvc3R5bGVzL2NvbG9yc1wiO1xuQGltcG9ydCBcIi4uLy4uL2Fzc2V0cy9zdHlsZXMvbWl4aW5nXCI7XG5AaW1wb3J0IFwiLi4vLi4vYXNzZXRzL3N0eWxlcy92YXJpYmxlc1wiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeS1jb2xvcl9tZW51O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbnVsIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgcGFkZGluZzogMHB4O1xuICB3aWR0aDogJG1haW4tbWVudS1kZWZhdWx0LXdpZHRoO1xuICBAaW5jbHVkZSB0cmFuc2l0aW9uKHdpZHRoIDAuM3MgZWFzZS1pbi1vdXQpO1xuXG4gIGxpIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAkbWFpbi1tZW51LWljb24taGVpZ2h0O1xuICAgIGJvcmRlci1ib3R0b206IHNvbGlkIDFweCAkcHJpbWFyeS1jb2xvcl9saWdodDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgQGluY2x1ZGUgdHJhbnNpdGlvbihhbGwgMC4zcyBlYXNlLWluKTtcblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnktY29sb3JfbWFpbjtcbiAgICB9XG5cbiAgICAmOmFmdGVyIHtcbiAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgd2lkdGg6IDBweDtcbiAgICAgIGhlaWdodDogMHB4O1xuICAgICAgYm9yZGVyLXJpZ2h0OiBzb2xpZCA4cHggI2Y1ZjVmNTtcbiAgICAgIGJvcmRlci10b3A6IHNvbGlkIDEwcHggdHJhbnNwYXJlbnQ7XG4gICAgICBib3JkZXItYm90dG9tOiBzb2xpZCAxMHB4IHRyYW5zcGFyZW50O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIHRvcDogMTRweDtcbiAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxuXG4gICAgLmljb24ge1xuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBsaW5lLWhlaWdodDogJG1haW4tbWVudS1pY29uLWhlaWdodDtcbiAgICAgIGNvbG9yOiAjYWRhZGFkO1xuICAgICAgZm9udC1zaXplOiAxLjZlbTtcbiAgICB9XG5cbiAgICAubWVudS1uYW1lIHtcbiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWRlbGF5OiAwLjNzO1xuICAgICAgLW1vei1hbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICAtby1hbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICBhbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICBjb2xvcjogI2FmYWZhZjtcbiAgICB9XG5cbiAgICAmLnNlbGVjdGVkIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRzZWNvbmRhcnlfY29sb3I7XG4gICAgICAuaWNvbiB7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgIH1cbiAgICAgIC5tZW51LW5hbWUge1xuICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICB9XG5cbiAgICAgICY6YWZ0ZXIge1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICAmLmlzLWV4cGFuZCB7XG4gICAgd2lkdGg6ICRtYWluLW1lbnUtZXhwYW5kZWQtd2lkdGg7XG5cbiAgICBsaSB7XG4gICAgICAuaWNvbiB7XG4gICAgICAgIHdpZHRoOiA1MHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuXG5saS5jaGlsZCB7XG4gIHBhZGRpbmctbGVmdDogOCU7XG59XG5cbi5pcy1leHBhbmQgLmhhcy1jaGlsZCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuXG5saS5oYXMtY2hpbGQge1xuICBkaXNwbGF5OiBub25lO1xufVxuIiwiJHByaW1hcnktY29sb3JfbWFpbiA6ICMyNDI1ODI7XG4kcHJpbWFyeS1jb2xvcl9tZW51IDogIzJGMkZBMjtcbiRwcmltYXJ5LWNvbG9yX2xpZ2h0IDogIzQ3MTdGNjtcblxuJGFjY2VudC1saWdodC1jb2xvciA6ICNlMWE2Mzc7XG4kYWNjZW50LWNvbG9yIDogI0UxOTEzMTtcbiRhY2NlbnQtZGFyay1jb2xvciA6ICNjMTcxMWQ7XG5cbiRzZWNvbmRhcnlfY29sb3IgOiAjMzJjNWQyO1xuXG5cbiR3aGl0ZV9kYXJrIDogI2Y1ZjVmNTtcblxuJGdyYXlfbGlnaHRlciA6ICNlN2VjZjE7XG4kZ3JheV9saWdodCA6ICNkZmRmZGY7XG4kZ3JheSA6ICM4QTk4QTA7XG4kZ3JheS1kYXJrIDogIzdhOGNhNTtcblxuXG4kZXJyb3ItcmVkIDogI2JiMzUzNTtcbiR3YXJuaW5nIDogI2UxYTEwYztcbiRzdWNjZXNzIDogIzEwNzEyNDtcblxuJGdyYXlfMCA6I2Y4ZjlmYTtcbiRncmF5XzEgOiAjZjFmM2Y1O1xuJGdyYXlfMiA6ICNlOWVjZWY7XG4kZ3JheV8zIDogI2RlZTJlNjtcbiRncmF5XzQgOiAjY2VkNGRhO1xuJGdyYXlfNSA6ICNhZGI1YmQ7XG4kZ3JheV82IDogIzg2OGU5NjtcbiRncmF5XzcgOiAjNDk1MDU3O1xuJGdyYXlfOCA6ICMzNDNhNDA7XG4kZ3JheV85IDogIzIxMjUyOTtcbiIsIi8vVG9wQmFyXG4kdG9wYmFyLWhlaWdodCA6IDcwcHg7XG4kYXBwLW1pbi13aWR0aCA6IDUwMHB4O1xuXG4kYW5pbWF0aW9uLWR1cmF0aW9uIDogMC44cztcblxuLy9IYW1idXJnZXIgTWVudSBzZXR0aW5nc1xuJGhtLWJhci13aWR0aDogMjVweDtcbiRobS1iYXItaGVpZ2h0OiAycHg7XG4kaG0tYmFyLXNwYWNpbmc6IDEwcHg7XG5cbi8vTWVudSBCYXJcbiRtYWluLW1lbnUtZGVmYXVsdC13aWR0aCA6IDUwcHg7XG4kbWFpbi1tZW51LWV4cGFuZGVkLXdpZHRoIDogMjg1cHg7XG4kbWFpbi1tZW51LWljb24taGVpZ2h0IDogNDZweDtcblxuLy9CcmVhZGNydW1ic1xuJG1haW4tYnJlYWRjcnVtYnMtaGVpZ2h0IDogNDZweDtcblxuIiwiQG1peGluIGJveC1zaGFkb3coJHNoYWRvdykge1xuICAtd2Via2l0LWJveC1zaGFkb3c6ICRzaGFkb3c7XG4gIC1tb3otYm94LXNoYWRvdzogJHNoYWRvdztcbiAgLW1zLWJveC1zaGFkb3c6ICRzaGFkb3c7XG4gIGJveC1zaGFkb3c6ICRzaGFkb3c7XG59XG5cbkBtaXhpbiBpY29uLXJvdGF0ZSgkcm90YXRlOTApIHtcbiAgLXdlYmtpdC10cmFuc2Zvcm06ICRyb3RhdGU5MDtcbiAgLW1vei10cmFuc2Zvcm06ICRyb3RhdGU5MDtcbiAgLW1zLXRyYW5zZm9ybTogJHJvdGF0ZTkwO1xuICAtby10cmFuc2Zvcm06ICRyb3RhdGU5MDtcbiAgdHJhbnNmb3JtOiAkcm90YXRlOTA7XG59XG5cbkBtaXhpbiB0cmFuc2l0aW9uKCR0cmFuc2l0aW9uLi4uKSB7XG4gIC1tb3otdHJhbnNpdGlvbjogICAgJHRyYW5zaXRpb247XG4gIC1vLXRyYW5zaXRpb246ICAgICAgJHRyYW5zaXRpb247XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogJHRyYW5zaXRpb247XG4gIHRyYW5zaXRpb246ICAgICAgICAgJHRyYW5zaXRpb247XG59XG5cbkBtaXhpbiBsaW5lYXItZ3JhZGllbnQoJGRpcmVjdGlvbiwgJGNvbG9yLXN0b3BzLi4uKSB7XG4gIGJhY2tncm91bmQ6IG50aChudGgoJGNvbG9yLXN0b3BzLCAxKSwgMSk7XG4gIGJhY2tncm91bmQ6IC13ZWJraXQtbGluZWFyLWdyYWRpZW50KGxlZ2FjeS1kaXJlY3Rpb24oJGRpcmVjdGlvbiksICRjb2xvci1zdG9wcyk7XG4gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgkZGlyZWN0aW9uLCAkY29sb3Itc3RvcHMpO1xufVxuIl19 */"
+module.exports = ":host {\n  display: block;\n  background-color: #2F2FA2;\n  height: 100%; }\n\nul {\n  list-style: none;\n  padding: 0px;\n  width: 50px;\n  transition: width 0.3s ease-in-out; }\n\nul li {\n    cursor: pointer;\n    width: 100%;\n    height: 46px;\n    border-bottom: solid 1px #4717F6;\n    position: relative;\n    transition: all 0.3s ease-in; }\n\nul li:hover {\n      background-color: #242582; }\n\nul li:after {\n      content: '';\n      width: 0px;\n      height: 0px;\n      border-right: solid 8px #f5f5f5;\n      border-top: solid 10px transparent;\n      border-bottom: solid 10px transparent;\n      position: absolute;\n      right: 0px;\n      top: 14px;\n      display: none; }\n\nul li .icon {\n      display: inline-block;\n      text-align: center;\n      width: 100%;\n      line-height: 46px;\n      color: #adadad;\n      font-size: 1.6em; }\n\nul li .menu-name {\n      -webkit-animation-delay: 0.3s;\n      animation-delay: 0.3s;\n      color: #afafaf; }\n\nul li.selected {\n      background-color: #32c5d2; }\n\nul li.selected .icon {\n        color: white; }\n\nul li.selected .menu-name {\n        color: white; }\n\nul li.selected:after {\n        display: block; }\n\nul.is-expand {\n    width: 285px; }\n\nul.is-expand li .icon {\n      width: 50px; }\n\nli.child {\n  padding-left: 8%; }\n\n.is-expand .has-child {\n  display: block;\n  pointer-events: none;\n  cursor: default; }\n\nli.has-child {\n  display: none; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvbWFpbi1tZW51L21haW4tbWVudS5jb21wb25lbnQuc2NzcyIsIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hc3NldHMvc3R5bGVzL19jb2xvcnMuc2NzcyIsIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hc3NldHMvc3R5bGVzL192YXJpYmxlcy5zY3NzIiwiL2hvbWUvZGluaW5kdS9Eb2N1bWVudHMvV1NPMl9UZWxjb19Xb3JrL0ZpbmFuY2UvZmluYW5jZS1hcHAvZmluYW5jZS1hcHAtdWkvc3JjL2Fzc2V0cy9zdHlsZXMvX21peGluZy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBO0VBQ0UsZUFBYztFQUNkLDBCQ0wyQjtFRE0zQixhQUFZLEVBQ2I7O0FBRUQ7RUFDRSxpQkFBZ0I7RUFDaEIsYUFBWTtFQUNaLFlFRDZCO0VDTzdCLG1DSEwwQyxFQW9FM0M7O0FBeEVEO0lBT0ksZ0JBQWU7SUFDZixZQUFXO0lBQ1gsYUVMeUI7SUZNekIsaUNDbEIwQjtJRG1CMUIsbUJBQWtCO0lHRnBCLDZCSEdzQyxFQWlEckM7O0FBN0RIO01BZU0sMEJDekJ1QixFRDBCeEI7O0FBaEJMO01BbUJNLFlBQVc7TUFDWCxXQUFVO01BQ1YsWUFBVztNQUNYLGdDQUErQjtNQUMvQixtQ0FBa0M7TUFDbEMsc0NBQXFDO01BQ3JDLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsVUFBUztNQUNULGNBQWEsRUFDZDs7QUE3Qkw7TUFnQ00sc0JBQXFCO01BQ3JCLG1CQUFrQjtNQUNsQixZQUFXO01BQ1gsa0JFL0J1QjtNRmdDdkIsZUFBYztNQUNkLGlCQUFnQixFQUNqQjs7QUF0Q0w7TUF5Q00sOEJBQTZCO01BRzdCLHNCQUFxQjtNQUNyQixlQUFjLEVBQ2Y7O0FBOUNMO01BaURNLDBCQ25Eb0IsRUQ4RHJCOztBQTVETDtRQW1EUSxhQUFZLEVBQ2I7O0FBcERQO1FBc0RRLGFBQVksRUFDYjs7QUF2RFA7UUEwRFEsZUFBYyxFQUNmOztBQTNEUDtJQWdFSSxhRTdENkIsRUZvRTlCOztBQXZFSDtNQW9FUSxZQUFXLEVBQ1o7O0FBS1A7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxlQUFjO0VBQ2QscUJBQW9CO0VBQ3BCLGdCQUFlLEVBQ2hCOztBQUVEO0VBQ0UsY0FBYSxFQUNkIiwiZmlsZSI6InNyYy9hcHAvbWFpbi1tZW51L21haW4tbWVudS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCIuLi8uLi9hc3NldHMvc3R5bGVzL2NvbG9yc1wiO1xuQGltcG9ydCBcIi4uLy4uL2Fzc2V0cy9zdHlsZXMvbWl4aW5nXCI7XG5AaW1wb3J0IFwiLi4vLi4vYXNzZXRzL3N0eWxlcy92YXJpYmxlc1wiO1xuXG46aG9zdCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeS1jb2xvcl9tZW51O1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbnVsIHtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgcGFkZGluZzogMHB4O1xuICB3aWR0aDogJG1haW4tbWVudS1kZWZhdWx0LXdpZHRoO1xuICBAaW5jbHVkZSB0cmFuc2l0aW9uKHdpZHRoIDAuM3MgZWFzZS1pbi1vdXQpO1xuXG4gIGxpIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAkbWFpbi1tZW51LWljb24taGVpZ2h0O1xuICAgIGJvcmRlci1ib3R0b206IHNvbGlkIDFweCAkcHJpbWFyeS1jb2xvcl9saWdodDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgQGluY2x1ZGUgdHJhbnNpdGlvbihhbGwgMC4zcyBlYXNlLWluKTtcblxuICAgICY6aG92ZXIge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHByaW1hcnktY29sb3JfbWFpbjtcbiAgICB9XG5cbiAgICAmOmFmdGVyIHtcbiAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgd2lkdGg6IDBweDtcbiAgICAgIGhlaWdodDogMHB4O1xuICAgICAgYm9yZGVyLXJpZ2h0OiBzb2xpZCA4cHggI2Y1ZjVmNTtcbiAgICAgIGJvcmRlci10b3A6IHNvbGlkIDEwcHggdHJhbnNwYXJlbnQ7XG4gICAgICBib3JkZXItYm90dG9tOiBzb2xpZCAxMHB4IHRyYW5zcGFyZW50O1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgcmlnaHQ6IDBweDtcbiAgICAgIHRvcDogMTRweDtcbiAgICAgIGRpc3BsYXk6IG5vbmU7XG4gICAgfVxuXG4gICAgLmljb24ge1xuICAgICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICBsaW5lLWhlaWdodDogJG1haW4tbWVudS1pY29uLWhlaWdodDtcbiAgICAgIGNvbG9yOiAjYWRhZGFkO1xuICAgICAgZm9udC1zaXplOiAxLjZlbTtcbiAgICB9XG5cbiAgICAubWVudS1uYW1lIHtcbiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWRlbGF5OiAwLjNzO1xuICAgICAgLW1vei1hbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICAtby1hbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICBhbmltYXRpb24tZGVsYXk6IDAuM3M7XG4gICAgICBjb2xvcjogI2FmYWZhZjtcbiAgICB9XG5cbiAgICAmLnNlbGVjdGVkIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICRzZWNvbmRhcnlfY29sb3I7XG4gICAgICAuaWNvbiB7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgIH1cbiAgICAgIC5tZW51LW5hbWUge1xuICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICB9XG5cbiAgICAgICY6YWZ0ZXIge1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgIH1cbiAgICB9XG4gIH1cblxuICAmLmlzLWV4cGFuZCB7XG4gICAgd2lkdGg6ICRtYWluLW1lbnUtZXhwYW5kZWQtd2lkdGg7XG5cbiAgICBsaSB7XG4gICAgICAuaWNvbiB7XG4gICAgICAgIHdpZHRoOiA1MHB4O1xuICAgICAgfVxuICAgIH1cbiAgfVxufVxuXG5saS5jaGlsZCB7XG4gIHBhZGRpbmctbGVmdDogOCU7XG59XG5cbi5pcy1leHBhbmQgLmhhcy1jaGlsZCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xuICBwb2ludGVyLWV2ZW50czogbm9uZTtcbiAgY3Vyc29yOiBkZWZhdWx0O1xufVxuXG5saS5oYXMtY2hpbGQge1xuICBkaXNwbGF5OiBub25lO1xufSIsIiRwcmltYXJ5LWNvbG9yX21haW4gOiAjMjQyNTgyO1xuJHByaW1hcnktY29sb3JfbWVudSA6ICMyRjJGQTI7XG4kcHJpbWFyeS1jb2xvcl9saWdodCA6ICM0NzE3RjY7XG5cbiRhY2NlbnQtbGlnaHQtY29sb3IgOiAjZTFhNjM3O1xuJGFjY2VudC1jb2xvciA6ICNFMTkxMzE7XG4kYWNjZW50LWRhcmstY29sb3IgOiAjYzE3MTFkO1xuXG4kc2Vjb25kYXJ5X2NvbG9yIDogIzMyYzVkMjtcblxuXG4kd2hpdGVfZGFyayA6ICNmNWY1ZjU7XG5cbiRncmF5X2xpZ2h0ZXIgOiAjZTdlY2YxO1xuJGdyYXlfbGlnaHQgOiAjZGZkZmRmO1xuJGdyYXkgOiAjOEE5OEEwO1xuJGdyYXktZGFyayA6ICM3YThjYTU7XG5cblxuJGVycm9yLXJlZCA6ICNiYjM1MzU7XG4kd2FybmluZyA6ICNlMWExMGM7XG4kc3VjY2VzcyA6ICMxMDcxMjQ7XG5cbiRncmF5XzAgOiNmOGY5ZmE7XG4kZ3JheV8xIDogI2YxZjNmNTtcbiRncmF5XzIgOiAjZTllY2VmO1xuJGdyYXlfMyA6ICNkZWUyZTY7XG4kZ3JheV80IDogI2NlZDRkYTtcbiRncmF5XzUgOiAjYWRiNWJkO1xuJGdyYXlfNiA6ICM4NjhlOTY7XG4kZ3JheV83IDogIzQ5NTA1NztcbiRncmF5XzggOiAjMzQzYTQwO1xuJGdyYXlfOSA6ICMyMTI1Mjk7XG4iLCIvL1RvcEJhclxuJHRvcGJhci1oZWlnaHQgOiA3MHB4O1xuJGFwcC1taW4td2lkdGggOiA1MDBweDtcblxuJGFuaW1hdGlvbi1kdXJhdGlvbiA6IDAuOHM7XG5cbi8vSGFtYnVyZ2VyIE1lbnUgc2V0dGluZ3NcbiRobS1iYXItd2lkdGg6IDI1cHg7XG4kaG0tYmFyLWhlaWdodDogMnB4O1xuJGhtLWJhci1zcGFjaW5nOiAxMHB4O1xuXG4vL01lbnUgQmFyXG4kbWFpbi1tZW51LWRlZmF1bHQtd2lkdGggOiA1MHB4O1xuJG1haW4tbWVudS1leHBhbmRlZC13aWR0aCA6IDI4NXB4O1xuJG1haW4tbWVudS1pY29uLWhlaWdodCA6IDQ2cHg7XG5cbi8vQnJlYWRjcnVtYnNcbiRtYWluLWJyZWFkY3J1bWJzLWhlaWdodCA6IDQ2cHg7XG5cbiIsIkBtaXhpbiBib3gtc2hhZG93KCRzaGFkb3cpIHtcbiAgLXdlYmtpdC1ib3gtc2hhZG93OiAkc2hhZG93O1xuICAtbW96LWJveC1zaGFkb3c6ICRzaGFkb3c7XG4gIC1tcy1ib3gtc2hhZG93OiAkc2hhZG93O1xuICBib3gtc2hhZG93OiAkc2hhZG93O1xufVxuXG5AbWl4aW4gaWNvbi1yb3RhdGUoJHJvdGF0ZTkwKSB7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiAkcm90YXRlOTA7XG4gIC1tb3otdHJhbnNmb3JtOiAkcm90YXRlOTA7XG4gIC1tcy10cmFuc2Zvcm06ICRyb3RhdGU5MDtcbiAgLW8tdHJhbnNmb3JtOiAkcm90YXRlOTA7XG4gIHRyYW5zZm9ybTogJHJvdGF0ZTkwO1xufVxuXG5AbWl4aW4gdHJhbnNpdGlvbigkdHJhbnNpdGlvbi4uLikge1xuICAtbW96LXRyYW5zaXRpb246ICAgICR0cmFuc2l0aW9uO1xuICAtby10cmFuc2l0aW9uOiAgICAgICR0cmFuc2l0aW9uO1xuICAtd2Via2l0LXRyYW5zaXRpb246ICR0cmFuc2l0aW9uO1xuICB0cmFuc2l0aW9uOiAgICAgICAgICR0cmFuc2l0aW9uO1xufVxuXG5AbWl4aW4gbGluZWFyLWdyYWRpZW50KCRkaXJlY3Rpb24sICRjb2xvci1zdG9wcy4uLikge1xuICBiYWNrZ3JvdW5kOiBudGgobnRoKCRjb2xvci1zdG9wcywgMSksIDEpO1xuICBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudChsZWdhY3ktZGlyZWN0aW9uKCRkaXJlY3Rpb24pLCAkY29sb3Itc3RvcHMpO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoJGRpcmVjdGlvbiwgJGNvbG9yLXN0b3BzKTtcbn1cbiJdfQ== */"
 
 /***/ }),
 
@@ -3930,7 +5053,8 @@ var MainMenuComponent = /** @class */ (function () {
             { id: 2, route: '/', name: 'Bill', position: 'parent has-child', iconName: 'blur_linear', pattern: '*' },
             { id: 3, route: '/bill/create', position: 'child', name: 'Create Bill', iconName: 'add_box', pattern: '*' },
             { id: 4, route: '/bill/view', position: 'child', name: 'View Bill', iconName: 'pageview', pattern: '*' },
-            { id: 6, route: 'reports', position: 'child', name: 'Charts', iconName: 'blur_linear', pattern: '1' },
+            { id: 5, route: 'charts', position: 'child', name: 'View Charts', iconName: 'blur_linear', pattern: '1' },
+            { id: 6, route: 'reports', position: 'child', name: 'View Reports', iconName: 'blur_linear', pattern: '1' }
         ];
     }
     MainMenuComponent.prototype.ngOnInit = function () {
@@ -3967,7 +5091,7 @@ var MainMenuComponent = /** @class */ (function () {
 /*!***************************************!*\
   !*** ./src/app/models/data-models.ts ***!
   \***************************************/
-/*! exports provided: LoginResponse, UserRole, SignupResponse, MenuItem, ElectricityBill, WaterBill, TelephoneBill, CreateBillResponse, UpdateBillResponse, User, TempResponse, Profile, Certify, PendingCertification */
+/*! exports provided: LoginResponse, UserRole, SignupResponse, MenuItem, ElectricityBill, WaterBill, TelephoneBill, CreateBillResponse, UpdateBillResponse, User, TempResponse, Profile, Certify, PendingCertification, MonthlyExpenseInYear, LocationExpenseInYear, YearlyExpenseOfMonth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3986,6 +5110,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Profile", function() { return Profile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Certify", function() { return Certify; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PendingCertification", function() { return PendingCertification; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MonthlyExpenseInYear", function() { return MonthlyExpenseInYear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationExpenseInYear", function() { return LocationExpenseInYear; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "YearlyExpenseOfMonth", function() { return YearlyExpenseOfMonth; });
 var LoginResponse = /** @class */ (function () {
     function LoginResponse() {
     }
@@ -4068,6 +5195,24 @@ var PendingCertification = /** @class */ (function () {
     function PendingCertification() {
     }
     return PendingCertification;
+}());
+
+var MonthlyExpenseInYear = /** @class */ (function () {
+    function MonthlyExpenseInYear() {
+    }
+    return MonthlyExpenseInYear;
+}());
+
+var LocationExpenseInYear = /** @class */ (function () {
+    function LocationExpenseInYear() {
+    }
+    return LocationExpenseInYear;
+}());
+
+var YearlyExpenseOfMonth = /** @class */ (function () {
+    function YearlyExpenseOfMonth() {
+    }
+    return YearlyExpenseOfMonth;
 }());
 
 
@@ -4250,7 +5395,14 @@ var ElectricityBillRemoteDataService = /** @class */ (function () {
         this.apiEndpoints = {
             electricitybills: this.apiContext + "/bills/electricitybill",
             insertbill: this.apiContext + "/bills/electricitybill",
-            updatebill: this.apiContext + "/bills/electricitybill"
+            updatebill: this.apiContext + "/bills/electricitybill",
+            electricityBillsByMonth: this.apiContext + "/bills/electricitybill/filtermonth/",
+            electricityBillsByYear: this.apiContext + "/bills/electricitybill/filteryear/",
+            electricityBillsByPeriod: this.apiContext + "/bills/electricitybill/filterperiod/",
+            electricityBillsSummaryByMonth: this.apiContext + "/bills/electricitybill/summary/month/",
+            electricityBillsSummaryByYearandLocation: this.apiContext + "/bills/electricitybill/summary/location/year/",
+            electricityBillsSummaryByMonthandLocation: this.apiContext + "/bills/electricitybill/summary/location/month/",
+            electricityBillsSummaryByYear: this.apiContext + "/bills/electricitybill/summary/year/"
         };
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -4277,15 +5429,41 @@ var ElectricityBillRemoteDataService = /** @class */ (function () {
     // }
     ElectricityBillRemoteDataService.prototype.getElectricityBills = function () {
         this.electricityBillsObservable = this.http.get(this.apiEndpoints['electricitybills'], this.httpOptions);
-        console.log(this.electricityBillsObservable);
         return this.electricityBillsObservable;
     };
     ElectricityBillRemoteDataService.prototype.insertElectricityBill = function (electricityBill) {
         return this.http.post(this.apiEndpoints["insertbill"], electricityBill, this.httpOptions);
     };
     ElectricityBillRemoteDataService.prototype.updateElectricityBill = function (electricityBill) {
-        console.log("Id:" + electricityBill.id);
         return this.http.put(this.apiEndpoints["updatebill"] + "/" + electricityBill.billNo, electricityBill, this.httpOptions);
+    };
+    ElectricityBillRemoteDataService.prototype.getElectricityBillsByMonth = function (month) {
+        this.electricityBillsObservable = this.http.get(this.apiEndpoints['electricityBillsByMonth'].concat(month), this.httpOptions);
+        return this.electricityBillsObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getElectricityBillsByYear = function (year) {
+        this.electricityBillsObservable = this.http.get(this.apiEndpoints['electricityBillsByYear'].concat(year), this.httpOptions);
+        return this.electricityBillsObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getElectricityBillsByPeriod = function (year, month) {
+        this.electricityBillsObservable = this.http.get(this.apiEndpoints['electricityBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions);
+        return this.electricityBillsObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getMonthlyExpenseOfYear = function (year) {
+        this.monthlyExpenseInYearObservable = this.http.get(this.apiEndpoints['electricityBillsSummaryByYear'].concat(year), this.httpOptions);
+        return this.monthlyExpenseInYearObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getLocationExpenseOfYear = function (year) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['electricityBillsSummaryByYearandLocation'].concat(year), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getYearlyExpenseOfMonth = function (month) {
+        this.yearlyExpenseInMonthObservable = this.http.get(this.apiEndpoints['electricityBillsSummaryByMonth'].concat(month), this.httpOptions);
+        return this.yearlyExpenseInMonthObservable;
+    };
+    ElectricityBillRemoteDataService.prototype.getLocationExpenseOfMonth = function (month) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['electricityBillsSummaryByMonthandLocation'].concat(month), this.httpOptions);
+        return this.locationExpenseInYearObservable;
     };
     ElectricityBillRemoteDataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -4403,8 +5581,15 @@ var TelephoneBillRemoteDataService = /** @class */ (function () {
         this.apiContext = this.url.protocol + '//' + this.url.host + '/finance';
         this.apiEndpoints = {
             telephonebills: this.apiContext + "/bills/telephonebills",
-            insertbill: this.apiContext + "/bills/telephonebill",
-            updatebill: this.apiContext + "/bills/telephonebill"
+            insertbill: this.apiContext + "/bills/telephonebills",
+            updatebill: this.apiContext + "/bills/telephonebills",
+            telephoneBillsByMonth: this.apiContext + "/bills/telephonebills/filtermonth/",
+            telephoneBillsByYear: this.apiContext + "/bills/telephonebills/filteryear/",
+            telephoneBillsByPeriod: this.apiContext + "/bills/telephonebills/filterperiod/",
+            telephoneBillsSummaryByMonth: "/bills/telephonebills/summary/month/",
+            telephoneBillsSummaryByYearandLocation: "/bills/telephonebills/summary/location/year/",
+            telephoneBillsSummaryByMonthandLocation: "/bills/telephonebills/summary/location/month/",
+            telephoneBillsSummaryByYear: "/bills/telephonebills/summary/year/"
         };
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -4422,7 +5607,35 @@ var TelephoneBillRemoteDataService = /** @class */ (function () {
     };
     TelephoneBillRemoteDataService.prototype.updateTelephoneBill = function (telephoneBill) {
         console.log("Id:" + telephoneBill.id);
-        return this.http.put(this.apiEndpoints["updatebill"] + "/" + telephoneBill.billNo, telephoneBill, this.httpOptions);
+        return this.http.put(this.apiEndpoints["updatebill"] + "/" + telephoneBill.billId, telephoneBill, this.httpOptions);
+    };
+    TelephoneBillRemoteDataService.prototype.getTelephoneBillsByMonth = function (month) {
+        this.telephoneBillsObservable = this.http.get(this.apiEndpoints['telephoneBillsByMonth'].concat(month), this.httpOptions);
+        return this.telephoneBillsObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getTelephoneBillsByYear = function (year) {
+        this.telephoneBillsObservable = this.http.get(this.apiEndpoints['telephoneBillsByYear'].concat(year), this.httpOptions);
+        return this.telephoneBillsObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getTelephoneBillsByPeriod = function (year, month) {
+        this.telephoneBillsObservable = this.http.get(this.apiEndpoints['telephoneBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions);
+        return this.telephoneBillsObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getMonthlyExpenseOfYear = function (year) {
+        this.monthlyExpenseInYearObservable = this.http.get(this.apiEndpoints['telephoneBillsSummaryByYear'].concat(year), this.httpOptions);
+        return this.monthlyExpenseInYearObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getLocationExpenseOfYear = function (year) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['telephoneBillsSummaryByYearandLocation'].concat(year), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getYearlyExpenseOfMonth = function (month) {
+        this.yearlyExpenseInMonthObservable = this.http.get(this.apiEndpoints['telephoneBillsSummaryByMonth'].concat(month), this.httpOptions);
+        return this.yearlyExpenseInMonthObservable;
+    };
+    TelephoneBillRemoteDataService.prototype.getLocationExpenseOfMonth = function (month) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['telephoneBillsSummaryByMonthandLocation'].concat(month), this.httpOptions);
+        return this.locationExpenseInYearObservable;
     };
     TelephoneBillRemoteDataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -4467,7 +5680,14 @@ var WaterBillRemoteDataService = /** @class */ (function () {
         this.apiEndpoints = {
             waterbills: this.apiContext + "/bills/waterbill",
             insertbill: this.apiContext + "/bills/waterbill",
-            updatebill: this.apiContext + "/bills/waterbill"
+            updatebill: this.apiContext + "/bills/waterbill",
+            waterBillsByMonth: this.apiContext + "/bills/waterbill/filtermonth/",
+            waterBillsByYear: this.apiContext + "/bills/waterbill/filteryear/",
+            waterBillsByPeriod: this.apiContext + "/bills/waterbill/filterperiod/",
+            waterBillsSummaryByMonth: "/bills/waterbill/summary/month/",
+            waterBillsSummaryByYearandLocation: "/bills/waterbill/summary/location/year/",
+            waterBillsSummaryByMonthandLocation: "/bills/waterbill/summary/location/month/",
+            waterBillsSummaryByYear: "/bills/waterbill/summary/year/"
         };
         this.httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpHeaders"]({
@@ -4487,261 +5707,39 @@ var WaterBillRemoteDataService = /** @class */ (function () {
         console.log("Id:" + waterBill.id);
         return this.http.put(this.apiEndpoints["updatebill"] + "/" + waterBill.billNo, waterBill, this.httpOptions);
     };
+    WaterBillRemoteDataService.prototype.getWaterBillsByMonth = function (month) {
+        this.waterBillsObservable = this.http.get(this.apiEndpoints['waterBillsByMonth'].concat(month), this.httpOptions);
+        return this.waterBillsObservable;
+    };
+    WaterBillRemoteDataService.prototype.getWaterBillsByYear = function (year) {
+        this.waterBillsObservable = this.http.get(this.apiEndpoints['waterBillsByYear'].concat(year), this.httpOptions);
+        return this.waterBillsObservable;
+    };
+    WaterBillRemoteDataService.prototype.getWaterBillsByPeriod = function (year, month) {
+        this.waterBillsObservable = this.http.get(this.apiEndpoints['waterBillsByPeriod'].concat(year).concat("-").concat(month), this.httpOptions);
+        return this.waterBillsObservable;
+    };
+    WaterBillRemoteDataService.prototype.getMonthlyExpenseOfYear = function (year) {
+        this.monthlyExpenseInYearObservable = this.http.get(this.apiEndpoints['waterBillsSummaryByYear'].concat(year), this.httpOptions);
+        return this.monthlyExpenseInYearObservable;
+    };
+    WaterBillRemoteDataService.prototype.getLocationExpenseOfYear = function (year) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['waterBillsSummaryByYearandLocation'].concat(year), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
+    WaterBillRemoteDataService.prototype.getYearlyExpenseOfMonth = function (month) {
+        this.yearlyExpenseInMonthObservable = this.http.get(this.apiEndpoints['waterBillsSummaryByMonth'].concat(month), this.httpOptions);
+        return this.yearlyExpenseInMonthObservable;
+    };
+    WaterBillRemoteDataService.prototype.getLocationExpenseOfMonth = function (month) {
+        this.locationExpenseInYearObservable = this.http.get(this.apiEndpoints['waterBillsSummaryByYearandLocation'].concat(month), this.httpOptions);
+        return this.locationExpenseInYearObservable;
+    };
     WaterBillRemoteDataService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], WaterBillRemoteDataService);
     return WaterBillRemoteDataService;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.html":
-/*!**********************************************************************************************************!*\
-  !*** ./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.html ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--<div id=\"chartContainer\" style=\"height: 370px; width: 100%; margin-left:auto;margin-right:auto;\"></div>-->\n<!--<div id=\"chartdivx\" style=\"width: 100%; height: 370px; margin-left:auto;margin-right:auto;\"></div>-->\n\n<mat-grid-list cols=\"2\" gutterSize=\"10px\" rowHeight=\"3:2.5\">\n  <mat-grid-tile>\n    <mat-grid-tile-header>\n      Monthly consumption of the Year\n    </mat-grid-tile-header>\n    <canvas mdbChart\n            [chartType]=\"chartTypeBar\"\n            [datasets]=\"chartDatasetsBar\"\n            [labels]=\"chartLabelsBar\"\n            [colors]=\"chartColorsBar\"\n            [options]=\"chartOptionsBar\"\n            [legend]=\"true\"\n            (chartHover)=\"chartHovered($event)\"\n            (chartClick)=\"chartClicked($event)\">\n    </canvas>\n  </mat-grid-tile>\n  <mat-grid-tile>\n    <mat-grid-tile-header>\n      Consumption by Location\n    </mat-grid-tile-header>\n    <canvas mdbChart\n      [chartType]=\"chartTypePie\"\n      [datasets]=\"chartDatasetsPie\"\n      [labels]=\"chartLabelsPie\"\n      [colors]=\"chartColorsPie\"\n      [options]=\"chartOptionsPie\"\n      [legend]=\"true\"\n      (chartHover)=\"chartHovered($event)\"\n      (chartClick)=\"chartClicked($event)\">\n  </canvas>\n    </mat-grid-tile>\n  <mat-grid-tile>\n    <mat-grid-tile-header>\n      Comparison with Last year\n    </mat-grid-tile-header>\n    <canvas mdbChart\n            [chartType]=\"chartTypeLine\"\n            [datasets]=\"chartDatasetsLine\"\n            [labels]=\"chartLabelsLine\"\n            [colors]=\"chartColorsLine\"\n            [options]=\"chartOptionsLine\"\n            [legend]=\"true\"\n            (chartHover)=\"chartHovered($event)\"\n            (chartClick)=\"chartClicked($event)\">\n    </canvas>\n  </mat-grid-tile>\n  <mat-grid-tile>4</mat-grid-tile>\n</mat-grid-list>"
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.scss":
-/*!**********************************************************************************************************!*\
-  !*** ./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.scss ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "mat-grid-tile {\n  border: 1px;\n  height: 500px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvcmVwb3J0cy9yZXBvcnRzLWJpbGxzL2VsZWN0cmljaXR5L3JlcG9ydHMtZWxlY3RyaWNpdHkvcmVwb3J0cy1lbGVjdHJpY2l0eS5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxjQUFhLEVBQ1oiLCJmaWxlIjoic3JjL2FwcC9yZXBvcnRzL3JlcG9ydHMtYmlsbHMvZWxlY3RyaWNpdHkvcmVwb3J0cy1lbGVjdHJpY2l0eS9yZXBvcnRzLWVsZWN0cmljaXR5LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsibWF0LWdyaWQtdGlsZSB7XG4gIGJvcmRlcjogMXB4O1xuICBoZWlnaHQ6IDUwMHB4O1xuICB9Il19 */"
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.ts":
-/*!********************************************************************************************************!*\
-  !*** ./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.ts ***!
-  \********************************************************************************************************/
-/*! exports provided: ReportsElectricityComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportsElectricityComponent", function() { return ReportsElectricityComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ReportsElectricityComponent = /** @class */ (function () {
-    function ReportsElectricityComponent() {
-    }
-    ReportsElectricityComponent.prototype.ngOnInit = function () {
-        this.createPieChart();
-        this.createBarChart();
-        this.createLineChart();
-    };
-    ReportsElectricityComponent.prototype.createPieChart = function () {
-        this.chartTypePie = 'pie';
-        this.chartDatasetsPie = [
-            { data: [300, 50, 100, 40, 120], label: 'Electricity consumption by Location' }
-        ];
-        this.chartLabelsPie = ['Library', 'Hall 01', 'Hall 02', 'Canteen', 'Auditorium',];
-        this.chartColorsPie = [
-            {
-                backgroundColor: ['#F7464A', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-                hoverBackgroundColor: ['#FF5A5E', '#5AD3D1', '#FFC870', '#A8B3C5', '#616774'],
-                borderWidth: 1,
-            }
-        ];
-        this.chartOptionsPie = {
-            responsive: true
-        };
-    };
-    ReportsElectricityComponent.prototype.createBarChart = function () {
-        this.chartTypeBar = 'bar';
-        this.chartDatasetsBar = [
-            {
-                data: [2105, 3259, 1680, 2181, 1956, 1855, 2105, 3259, 1680, 2181, 1956, 1855],
-                label: 'Electricity Consumption by Rupees'
-            }
-        ];
-        this.chartLabelsBar = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        this.chartColorsBar = [
-            {
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1,
-            }
-        ];
-        this.chartOptionsBar = {
-            responsive: true
-        };
-    };
-    ReportsElectricityComponent.prototype.createLineChart = function () {
-        this.chartTypeLine = 'line';
-        this.chartDatasetsLine = [
-            { data: [65, 59, 80, 81, 56, 55, 40], label: '2017' },
-            { data: [28, 48, 40, 19, 86, 27, 90], label: '2018' }
-        ];
-        this.chartLabelsLine = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-        this.chartColorsLine = [
-            {
-                backgroundColor: 'rgba(105, 0, 132, .2)',
-                borderColor: 'rgba(200, 99, 132, .7)',
-                borderWidth: 2,
-            },
-            {
-                backgroundColor: 'rgba(0, 137, 132, .2)',
-                borderColor: 'rgba(0, 10, 130, .7)',
-                borderWidth: 2,
-            }
-        ];
-        this.chartOptionsLine = {
-            responsive: true
-        };
-    };
-    ReportsElectricityComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-reports-electricity-bill',
-            template: __webpack_require__(/*! ./reports-electricity.component.html */ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.html"),
-            styles: [__webpack_require__(/*! ./reports-electricity.component.scss */ "./src/app/reports/reports-bills/electricity/reports-electricity/reports-electricity.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ReportsElectricityComponent);
-    return ReportsElectricityComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-list/reports-list.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/reports/reports-list/reports-list.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"animated fadeInUp\">\n\n  <div class=\"col-sm-12\">\n    <!--Form Container - START-->\n    <div class=\"form-container billInputContainer\">\n      <div class=\"tbl-header\">\n        View Reports and Charts\n      </div>\n\n      <div class=\"row \">\n        <label class=\"control-label col-sm-2\">Select Bill Type <span>*</span></label>\n        <div class=\"col-sm-2 field-value\">\n          <select class=\"form-control\" (change)=\"onTypeSelected($event)\">\n            <option *ngFor=\"let opt of typeString\" [selected]=\"selectedType == opt\">\n              {{opt}}\n            </option>\n          </select>\n        </div>\n      </div>\n    </div>\n    <div *ngIf=\"isElectricity\">\n      <app-reports-electricity-bill></app-reports-electricity-bill>\n    </div>\n    <!--<div *ngIf=\"isInternet\">-->\n      <!--<app-create-internet-bill></app-create-internet-bill>-->\n    <!--</div>-->\n    <!--<div *ngIf=\"isTelephone\">-->\n      <!--<app-create-telephone-bill></app-create-telephone-bill>-->\n    <!--</div>-->\n    <!--<div *ngIf=\"isWater\">-->\n      <!--<app-create-water-bill></app-create-water-bill>-->\n    <!--</div>-->\n  </div>\n\n  <!--<button (click)=\"showit()\">show</button>-->\n</div>\n"
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-list/reports-list.component.scss":
-/*!******************************************************************!*\
-  !*** ./src/app/reports/reports-list/reports-list.component.scss ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = ":host {\n  display: block;\n  margin-top: 20px; }\n\n.content-div {\n  background-color: #ffffff; }\n\n.tbl-header {\n  color: #E19131; }\n\n.billInputContainer {\n  min-height: 100px;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke; }\n\n.billInputContainer .fields-container div[class^=\"col-\"] {\n    padding-bottom: 10px; }\n\n.billInputContainer .title {\n    font-size: 1.2em;\n    font-weight: 600;\n    color: gray;\n    padding-bottom: 5px; }\n\n.rateForm input {\n  background-color: #dde3ec;\n  height: 43px;\n  color: #8290a3;\n  border: 1px solid #dde3ec; }\n\n.rateForm input:focus {\n    border: 1px solid #c3ccda; }\n\n.error {\n  font-size: 0.9em;\n  color: #f96565; }\n\n/* The switch - the box around the slider */\n\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 34px; }\n\n/* Hide default HTML checkbox */\n\n.switch input {\n  display: none; }\n\n/* The slider */\n\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  transition: .4s; }\n\n.slider:before {\n  position: absolute;\n  content: \"\";\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  transition: .4s; }\n\ninput:checked + .slider {\n  background-color: #2196F3; }\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #2196F3; }\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(26px);\n  transform: translateX(26px); }\n\n/* Rounded sliders */\n\n.slider.round {\n  border-radius: 34px; }\n\n.slider.round:before {\n  border-radius: 50%; }\n\n.info-tooltip {\n  font-size: 1.5em;\n  color: #8E44AD;\n  vertical-align: top;\n  margin-top: 0.3em;\n  cursor: pointer; }\n\n.info-tooltip-view {\n  margin-top: 0em !important;\n  margin-left: 0.5em; }\n\n.modal {\n  top: 10%;\n  outline: none; }\n\n.tbl-header {\n  margin-top: 50px;\n  font-weight: 600;\n  font-size: 1.3em;\n  padding: 5px 0px 30px;\n  color: #E19131;\n  text-transform: uppercase; }\n\n.has-danger .form-control {\n  border-color: #d9534f;\n  color: #d9534f; }\n\n.btn {\n  border-radius: 0px !important; }\n\n.searchFilter {\n  /*overflow: hidden;\n  padding: 10px;\n  background-color: white;\n  border: solid 1px whitesmoke;\n    background-color: #E19131;*/\n  min-height: 78px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #E19131;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  color: #ffffff; }\n\n.searchFilter div[class^=\"col-\"] {\n  padding-bottom: 10px; }\n\n.control-label span {\n  color: #dd0d0d; }\n\n.btnContainer {\n  margin-top: 2%; }\n\n.control-label {\n  text-align: right;\n  font-weight: bold;\n  padding-top: 9px; }\n\n.noreteselect {\n  margin-left: 10%;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  color: #343a40; }\n\n.noreteselect i {\n  font-size: 50px;\n  color: #E19131; }\n\n.viewListForm .control-label {\n  padding-top: 0px !important; }\n\n.sub-control-label {\n  color: #9a9a9a; }\n\n.table {\n  display: table;\n  width: 100%; }\n\n.table .tbl-row {\n    display: table-row;\n    background-color: #f6f6f6;\n    height: 0px; }\n\n.table .tbl-row:nth-of-type(odd) {\n      background-color: white; }\n\n.table .tbl-row.header {\n      background-color: #7788aa;\n      font-weight: 600;\n      color: white; }\n\n.table .tbl-row .tbl-cell {\n      display: table-cell;\n      padding: 10px 10px; }\n\n.table .tbl-row.modified {\n      background-color: #ffffcc; }\n\n.table .tbl-row.open {\n      height: 158px;\n      background-color: #f4f2c9; }\n\n.table .tbl-row.open .action {\n        border-color: black;\n        color: black; }\n\n.table .tbl-row.open.A, .table .tbl-row.open.R {\n        height: 243px; }\n\n.table .tbl-row .more-con {\n      padding: 10px 0px 10px 0px;\n      background-color: #7a8ca5;\n      position: absolute;\n      left: 10px;\n      right: 11px;\n      height: 105px;\n      margin-top: 53px;\n      border: solid 1px #d0d0d0; }\n\n.table .tbl-row .more-con.A, .table .tbl-row .more-con.R {\n        height: 190px; }\n\n.table .tbl-row .more-con .more-row {\n        margin-bottom: 2px; }\n\n.table .tbl-row .more-con .field-name {\n        height: 40px;\n        background-color: #9a9a9a;\n        line-height: 40px;\n        text-align: right;\n        font-weight: 600; }\n\n.table .tbl-row .more-con .field-value {\n        height: 40px;\n        background-color: white;\n        line-height: 40px; }\n\n.table .tbl-row .more-con select, .table .tbl-row .more-con input {\n        margin-top: 2px; }\n\n.table .tbl-row .more-con .btn {\n        margin-top: 10px;\n        padding-top: 5px !important;\n        padding-bottom: 5px !important; }\n\n.table .no-rec-row {\n    position: relative; }\n\n.table .no-rec-row .no-rec {\n      position: absolute;\n      left: 0px;\n      right: 0px;\n      margin: auto;\n      width: 100px;\n      padding-top: 15px;\n      color: #9a9a9a; }\n\n.table .fromcolor {\n    color: #2f9e44; }\n\n.table .tocolor {\n    color: #dd0d0d; }\n\n.open > .dropdown-menu {\n  display: block;\n  height: 100px;\n  overflow-y: scroll; }\n\n.tariff_des {\n  font-size: 9px !important; }\n\n.tariffdropname {\n  color: #660066; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2RpbmluZHUvRG9jdW1lbnRzL1dTTzJfVGVsY29fV29yay9GaW5hbmNlL2ZpbmFuY2UtYXBwL2ZpbmFuY2UtYXBwLXVpL3NyYy9hcHAvcmVwb3J0cy9yZXBvcnRzLWxpc3QvcmVwb3J0cy1saXN0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsZUFBYztFQUNkLGlCQUFnQixFQUNqQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLGVBQWMsRUFDZjs7QUFFRDtFQUNFLGtCQUFpQjtFQUNqQixjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLDZCQUE0QixFQWM3Qjs7QUFsQkQ7SUFRTSxxQkFBb0IsRUFDckI7O0FBVEw7SUFhSSxpQkFBZ0I7SUFDaEIsaUJBQWdCO0lBQ2hCLFlBQVc7SUFDWCxvQkFBbUIsRUFDcEI7O0FBR0g7RUFHSSwwQkFBeUI7RUFDekIsYUFBWTtFQUNaLGVBQWM7RUFDZCwwQkFBeUIsRUFLMUI7O0FBWEg7SUFTTSwwQkFBeUIsRUFDMUI7O0FBSUw7RUFDRSxpQkFBZ0I7RUFDaEIsZUFBYyxFQUNmOztBQUVELDRDQUE0Qzs7QUFDNUM7RUFDRSxtQkFBa0I7RUFDbEIsc0JBQXFCO0VBQ3JCLFlBQVc7RUFDWCxhQUFZLEVBQ2I7O0FBRUQsZ0NBQWdDOztBQUNoQztFQUNFLGNBQWEsRUFDZDs7QUFFRCxnQkFBZ0I7O0FBQ2hCO0VBQ0UsbUJBQWtCO0VBQ2xCLGdCQUFlO0VBQ2YsT0FBTTtFQUNOLFFBQU87RUFDUCxTQUFRO0VBQ1IsVUFBUztFQUNULHVCQUFzQjtFQUV0QixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLG1CQUFrQjtFQUNsQixZQUFXO0VBQ1gsYUFBWTtFQUNaLFlBQVc7RUFDWCxVQUFTO0VBQ1QsWUFBVztFQUNYLHdCQUF1QjtFQUV2QixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLDBCQUF5QixFQUMxQjs7QUFFRDtFQUNFLDRCQUEyQixFQUM1Qjs7QUFFRDtFQUNFLG9DQUFtQztFQUVuQyw0QkFBMkIsRUFDNUI7O0FBRUQscUJBQXFCOztBQUNyQjtFQUNFLG9CQUFtQixFQUNwQjs7QUFFRDtFQUNFLG1CQUFrQixFQUNuQjs7QUFFRDtFQUNFLGlCQUFnQjtFQUNoQixlQUFjO0VBQ2Qsb0JBQW1CO0VBQ25CLGtCQUFpQjtFQUNqQixnQkFBZSxFQUNoQjs7QUFFRDtFQUNFLDJCQUEwQjtFQUMxQixtQkFBa0IsRUFDbkI7O0FBRUQ7RUFDRSxTQUFRO0VBQ1IsY0FBYSxFQUNkOztBQUVEO0VBQ0UsaUJBQWdCO0VBQ2hCLGlCQUFnQjtFQUNoQixpQkFBZ0I7RUFDaEIsc0JBQXFCO0VBQ3JCLGVBQWM7RUFDZCwwQkFBeUIsRUFDMUI7O0FBRUQ7RUFDRSxzQkFBcUI7RUFDckIsZUFBYyxFQUNmOztBQUVEO0VBQU0sOEJBQTZCLEVBQUc7O0FBR3RDO0VBQ0U7Ozs7Z0NBSThCO0VBRTlCLGlCQUFnQjtFQUNoQixjQUFhO0VBQ2Isb0JBQW1CO0VBQ25CLDBCQUF5QjtFQUN6QiwwQkFBeUI7RUFHekIsbUJBQWtCO0VBR2xCLGdEQUErQztFQUMvQyxlQUFjLEVBQ2Y7O0FBRUQ7RUFFSSxxQkFBb0IsRUFDckI7O0FBR0g7RUFBc0IsZUFBYyxFQUFHOztBQUV2QztFQUFlLGVBQWEsRUFBRzs7QUFFL0I7RUFDRSxrQkFBaUI7RUFDakIsa0JBQWlCO0VBQ2pCLGlCQUFnQixFQUNqQjs7QUFFRDtFQUFlLGlCQUFnQjtFQUFFLGVBQWM7RUFBRSxrQkFBaUI7RUFBRSxlQUFjLEVBQUc7O0FBRXJGO0VBQWlCLGdCQUFlO0VBQUUsZUFBYyxFQUFHOztBQUVuRDtFQUE4Qiw0QkFBMkIsRUFBRzs7QUFFNUQ7RUFBb0IsZUFBYyxFQUFHOztBQUdyQztFQUNFLGVBQWM7RUFDZCxZQUFXLEVBcUhaOztBQXZIRDtJQVNJLG1CQUFrQjtJQUNsQiwwQkFBeUI7SUFDekIsWUFBVyxFQXFGWjs7QUFoR0g7TUFjTSx3QkFBdUIsRUFDeEI7O0FBZkw7TUFrQk0sMEJBQXlCO01BQ3pCLGlCQUFnQjtNQUNoQixhQUFZLEVBQ2I7O0FBckJMO01BNEJNLG9CQUFtQjtNQUNuQixtQkFBa0IsRUFJbkI7O0FBakNMO01Bb0NNLDBCQUF5QixFQUMxQjs7QUFyQ0w7TUF3Q00sY0FBYTtNQUNiLDBCQUF5QixFQVUxQjs7QUFuREw7UUE0Q1Esb0JBQW1CO1FBQ25CLGFBQWEsRUFDZDs7QUE5Q1A7UUFpRFEsY0FBYSxFQUNkOztBQWxEUDtNQXNETSwyQkFBeUI7TUFDekIsMEJBQXlCO01BQ3pCLG1CQUFrQjtNQUNsQixXQUFVO01BQ1YsWUFBVztNQUNYLGNBQWE7TUFDYixpQkFBZ0I7TUFDaEIsMEJBQXdCLEVBaUN6Qjs7QUE5Rkw7UUFnRVEsY0FBYSxFQUNkOztBQWpFUDtRQW9FUSxtQkFBa0IsRUFDbkI7O0FBckVQO1FBd0VRLGFBQVk7UUFDWiwwQkFBeUI7UUFDekIsa0JBQWlCO1FBQ2pCLGtCQUFpQjtRQUNqQixpQkFBZ0IsRUFDakI7O0FBN0VQO1FBZ0ZRLGFBQVk7UUFDWix3QkFBdUI7UUFDdkIsa0JBQWlCLEVBQ2xCOztBQW5GUDtRQXNGUSxnQkFBZSxFQUNoQjs7QUF2RlA7UUEwRlEsaUJBQWdCO1FBQ2hCLDRCQUEwQjtRQUMxQiwrQkFBOEIsRUFDL0I7O0FBN0ZQO0lBbUdJLG1CQUFrQixFQVduQjs7QUE5R0g7TUFzR00sbUJBQWtCO01BQ2xCLFVBQVM7TUFDVCxXQUFVO01BQ1YsYUFBWTtNQUNaLGFBQVk7TUFDWixrQkFBaUI7TUFDakIsZUFBYyxFQUNmOztBQTdHTDtJQWlISSxlQUFjLEVBQ2Y7O0FBbEhIO0lBcUhJLGVBQWMsRUFDZjs7QUFHSDtFQUNFLGVBQWM7RUFDZCxjQUFhO0VBQ2IsbUJBQWtCLEVBQ25COztBQUVEO0VBQWEsMEJBQXlCLEVBQUc7O0FBRXpDO0VBQWdCLGVBQWMsRUFBRSIsImZpbGUiOiJzcmMvYXBwL3JlcG9ydHMvcmVwb3J0cy1saXN0L3JlcG9ydHMtbGlzdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIG1hcmdpbi10b3A6IDIwcHg7XG59XG5cbi5jb250ZW50LWRpdiB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XG59XG5cbi50YmwtaGVhZGVyIHtcbiAgY29sb3I6ICNFMTkxMzE7XG59XG5cbi5iaWxsSW5wdXRDb250YWluZXIge1xuICBtaW4taGVpZ2h0OiAxMDBweDtcbiAgcGFkZGluZzogMTBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogc29saWQgMXB4IHdoaXRlc21va2U7XG5cbiAgLmZpZWxkcy1jb250YWluZXIge1xuICAgIGRpdltjbGFzc149XCJjb2wtXCJdIHtcbiAgICAgIHBhZGRpbmctYm90dG9tOiAxMHB4O1xuICAgIH1cbiAgfVxuXG4gIC50aXRsZSB7XG4gICAgZm9udC1zaXplOiAxLjJlbTtcbiAgICBmb250LXdlaWdodDogNjAwO1xuICAgIGNvbG9yOiBncmF5O1xuICAgIHBhZGRpbmctYm90dG9tOiA1cHg7XG4gIH1cbn1cblxuLnJhdGVGb3JtIHtcblxuICBpbnB1dCB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZTNlYztcbiAgICBoZWlnaHQ6IDQzcHg7XG4gICAgY29sb3I6ICM4MjkwYTM7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZTNlYztcblxuICAgICY6Zm9jdXMge1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgI2MzY2NkYTtcbiAgICB9XG4gIH1cbn1cblxuLmVycm9yIHtcbiAgZm9udC1zaXplOiAwLjllbTtcbiAgY29sb3I6ICNmOTY1NjU7XG59XG5cbi8qIFRoZSBzd2l0Y2ggLSB0aGUgYm94IGFyb3VuZCB0aGUgc2xpZGVyICovXG4uc3dpdGNoIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIHdpZHRoOiA2MHB4O1xuICBoZWlnaHQ6IDM0cHg7XG59XG5cbi8qIEhpZGUgZGVmYXVsdCBIVE1MIGNoZWNrYm94ICovXG4uc3dpdGNoIGlucHV0IHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLyogVGhlIHNsaWRlciAqL1xuLnNsaWRlciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIHJpZ2h0OiAwO1xuICBib3R0b206IDA7XG4gIGJhY2tncm91bmQtY29sb3I6ICNjY2M7XG4gIC13ZWJraXQtdHJhbnNpdGlvbjogLjRzO1xuICB0cmFuc2l0aW9uOiAuNHM7XG59XG5cbi5zbGlkZXI6YmVmb3JlIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBjb250ZW50OiBcIlwiO1xuICBoZWlnaHQ6IDI2cHg7XG4gIHdpZHRoOiAyNnB4O1xuICBsZWZ0OiA0cHg7XG4gIGJvdHRvbTogNHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgLXdlYmtpdC10cmFuc2l0aW9uOiAuNHM7XG4gIHRyYW5zaXRpb246IC40cztcbn1cblxuaW5wdXQ6Y2hlY2tlZCArIC5zbGlkZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjE5NkYzO1xufVxuXG5pbnB1dDpmb2N1cyArIC5zbGlkZXIge1xuICBib3gtc2hhZG93OiAwIDAgMXB4ICMyMTk2RjM7XG59XG5cbmlucHV0OmNoZWNrZWQgKyAuc2xpZGVyOmJlZm9yZSB7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDI2cHgpO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoMjZweCk7XG59XG5cbi8qIFJvdW5kZWQgc2xpZGVycyAqL1xuLnNsaWRlci5yb3VuZCB7XG4gIGJvcmRlci1yYWRpdXM6IDM0cHg7XG59XG5cbi5zbGlkZXIucm91bmQ6YmVmb3JlIHtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xufVxuXG4uaW5mby10b29sdGlwIHtcbiAgZm9udC1zaXplOiAxLjVlbTtcbiAgY29sb3I6ICM4RTQ0QUQ7XG4gIHZlcnRpY2FsLWFsaWduOiB0b3A7XG4gIG1hcmdpbi10b3A6IDAuM2VtO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5pbmZvLXRvb2x0aXAtdmlldyB7XG4gIG1hcmdpbi10b3A6IDBlbSAhaW1wb3J0YW50O1xuICBtYXJnaW4tbGVmdDogMC41ZW07XG59XG5cbi5tb2RhbCB7XG4gIHRvcDogMTAlO1xuICBvdXRsaW5lOiBub25lO1xufVxuXG4udGJsLWhlYWRlciB7XG4gIG1hcmdpbi10b3A6IDUwcHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7XG4gIGZvbnQtc2l6ZTogMS4zZW07XG4gIHBhZGRpbmc6IDVweCAwcHggMzBweDtcbiAgY29sb3I6ICNFMTkxMzE7XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5oYXMtZGFuZ2VyIC5mb3JtLWNvbnRyb2x7XG4gIGJvcmRlci1jb2xvcjogI2Q5NTM0ZjtcbiAgY29sb3I6ICNkOTUzNGY7XG59XG5cbi5idG57IGJvcmRlci1yYWRpdXM6IDBweCAhaW1wb3J0YW50O31cblxuXG4uc2VhcmNoRmlsdGVyIHtcbiAgLypvdmVyZmxvdzogaGlkZGVuO1xuICBwYWRkaW5nOiAxMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyOiBzb2xpZCAxcHggd2hpdGVzbW9rZTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRTE5MTMxOyovXG5cbiAgbWluLWhlaWdodDogNzhweDtcbiAgcGFkZGluZzogMTlweDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogI0UxOTEzMTtcbiAgYm9yZGVyOiAxcHggc29saWQgI2UzZTNlMztcbiAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7XG4gIC1tb3otYm9yZGVyLXJhZGl1czogNHB4O1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIC1tb3otYm94LXNoYWRvdzogaW5zZXQgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XG4gIGJveC1zaGFkb3c6IGluc2V0IDAgMXB4IDFweCByZ2JhKDAsIDAsIDAsIDAuMDUpO1xuICBjb2xvcjogI2ZmZmZmZjtcbn1cblxuLnNlYXJjaEZpbHRlciB7XG4gIGRpdltjbGFzc149XCJjb2wtXCJdIHtcbiAgICBwYWRkaW5nLWJvdHRvbTogMTBweDtcbiAgfVxufVxuXG4uY29udHJvbC1sYWJlbCBzcGFuIHsgY29sb3I6ICNkZDBkMGQ7fVxuXG4uYnRuQ29udGFpbmVyeyBtYXJnaW4tdG9wOjIlO31cblxuLmNvbnRyb2wtbGFiZWwge1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIHBhZGRpbmctdG9wOiA5cHg7XG59XG5cbi5ub3JldGVzZWxlY3R7IG1hcmdpbi1sZWZ0OiAxMCU7IG1hcmdpbi10b3A6IDUlOyBtYXJnaW4tYm90dG9tOiA1JTsgY29sb3I6ICMzNDNhNDA7fVxuXG4ubm9yZXRlc2VsZWN0IGl7IGZvbnQtc2l6ZTogNTBweDsgY29sb3I6ICNFMTkxMzE7fVxuXG4udmlld0xpc3RGb3JtIC5jb250cm9sLWxhYmVseyBwYWRkaW5nLXRvcDogMHB4ICFpbXBvcnRhbnQ7fVxuXG4uc3ViLWNvbnRyb2wtbGFiZWx7IGNvbG9yOiAjOWE5YTlhO31cblxuXG4udGFibGUge1xuICBkaXNwbGF5OiB0YWJsZTtcbiAgd2lkdGg6IDEwMCU7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICB9XG5cbiAgLnRibC1yb3cge1xuICAgIGRpc3BsYXk6IHRhYmxlLXJvdztcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xuICAgIGhlaWdodDogMHB4O1xuXG4gICAgJjpudGgtb2YtdHlwZShvZGQpIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgICYuaGVhZGVyIHtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3Nzg4YWE7XG4gICAgICBmb250LXdlaWdodDogNjAwO1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgIH1cblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgICAgIC8vIGRpc3BsYXk6IGJsb2NrO1xuICAgIH1cblxuICAgIC50YmwtY2VsbCB7XG4gICAgICBkaXNwbGF5OiB0YWJsZS1jZWxsO1xuICAgICAgcGFkZGluZzogMTBweCAxMHB4O1xuICAgICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3NjhweCkge1xuICAgICAgICAvLyAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgfVxuXG4gICAgJi5tb2RpZmllZCB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmZmNjO1xuICAgIH1cblxuICAgICYub3BlbiB7XG4gICAgICBoZWlnaHQ6IDE1OHB4O1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2Y0ZjJjOTtcblxuICAgICAgLmFjdGlvbiB7XG4gICAgICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XG4gICAgICAgIGNvbG9yIDogYmxhY2s7XG4gICAgICB9XG5cbiAgICAgICYuQSwmLlJ7XG4gICAgICAgIGhlaWdodDogMjQzcHg7XG4gICAgICB9XG4gICAgfVxuXG4gICAgLm1vcmUtY29ue1xuICAgICAgcGFkZGluZzoxMHB4IDBweCAxMHB4IDBweDtcbiAgICAgIGJhY2tncm91bmQtY29sb3I6ICM3YThjYTU7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAxMHB4O1xuICAgICAgcmlnaHQ6IDExcHg7XG4gICAgICBoZWlnaHQ6IDEwNXB4O1xuICAgICAgbWFyZ2luLXRvcDogNTNweDtcbiAgICAgIGJvcmRlcjpzb2xpZCAxcHggI2QwZDBkMDtcblxuICAgICAgJi5BLCYuUntcbiAgICAgICAgaGVpZ2h0OiAxOTBweDtcbiAgICAgIH1cblxuICAgICAgLm1vcmUtcm93e1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5maWVsZC1uYW1le1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM5YTlhOWE7XG4gICAgICAgIGxpbmUtaGVpZ2h0OiA0MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgICAgIH1cblxuICAgICAgLmZpZWxkLXZhbHVle1xuICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICBsaW5lLWhlaWdodDogNDBweDtcbiAgICAgIH1cblxuICAgICAgc2VsZWN0LGlucHV0e1xuICAgICAgICBtYXJnaW4tdG9wOiAycHg7XG4gICAgICB9XG5cbiAgICAgIC5idG57XG4gICAgICAgIG1hcmdpbi10b3A6IDEwcHg7XG4gICAgICAgIHBhZGRpbmctdG9wOiA1cHghaW1wb3J0YW50O1xuICAgICAgICBwYWRkaW5nLWJvdHRvbTogNXB4ICFpbXBvcnRhbnQ7XG4gICAgICB9XG4gICAgfVxuXG4gIH1cblxuICAubm8tcmVjLXJvdyB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gICAgLm5vLXJlYyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBsZWZ0OiAwcHg7XG4gICAgICByaWdodDogMHB4O1xuICAgICAgbWFyZ2luOiBhdXRvO1xuICAgICAgd2lkdGg6IDEwMHB4O1xuICAgICAgcGFkZGluZy10b3A6IDE1cHg7XG4gICAgICBjb2xvcjogIzlhOWE5YTtcbiAgICB9XG4gIH1cblxuICAuZnJvbWNvbG9ye1xuICAgIGNvbG9yOiAjMmY5ZTQ0O1xuICB9XG5cbiAgLnRvY29sb3J7XG4gICAgY29sb3I6ICNkZDBkMGQ7XG4gIH1cbn1cblxuLm9wZW4+LmRyb3Bkb3duLW1lbnUge1xuICBkaXNwbGF5OiBibG9jaztcbiAgaGVpZ2h0OiAxMDBweDtcbiAgb3ZlcmZsb3cteTogc2Nyb2xsO1xufVxuXG4udGFyaWZmX2Rlc3sgZm9udC1zaXplOiA5cHggIWltcG9ydGFudDt9XG5cbi50YXJpZmZkcm9wbmFtZXtjb2xvcjojNjYwMDY2IH1cbiJdfQ== */"
-
-/***/ }),
-
-/***/ "./src/app/reports/reports-list/reports-list.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/reports/reports-list/reports-list.component.ts ***!
-  \****************************************************************/
-/*! exports provided: ReportsListComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReportsListComponent", function() { return ReportsListComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ReportsListComponent = /** @class */ (function () {
-    function ReportsListComponent() {
-        this.typeString = ["", "Electricity", "Internet", "Telephone", "Water"];
-    }
-    ReportsListComponent.prototype.ngOnInit = function () {
-        this.selectedType = "";
-        this.clearAll();
-    };
-    ReportsListComponent.prototype.onTypeSelected = function (event) {
-        this.selectedType = event.target.value;
-        this.clearAll();
-        switch (this.selectedType) {
-            case "Electricity": {
-                this.isElectricity = true;
-                break;
-            }
-            case "Water": {
-                this.isWater = true;
-                break;
-            }
-            case "Telephone": {
-                this.isTelephone = true;
-                break;
-            }
-            case "Internet": {
-                this.isInternet = true;
-                break;
-            }
-            default: {
-                this.clearAll();
-                break;
-            }
-        }
-    };
-    ReportsListComponent.prototype.clearAll = function () {
-        this.isElectricity = false;
-        this.isInternet = false;
-        this.isWater = false;
-        this.isTelephone = false;
-    };
-    ReportsListComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-reports-list',
-            template: __webpack_require__(/*! ./reports-list.component.html */ "./src/app/reports/reports-list/reports-list.component.html"),
-            styles: [__webpack_require__(/*! ./reports-list.component.scss */ "./src/app/reports/reports-list/reports-list.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], ReportsListComponent);
-    return ReportsListComponent;
 }());
 
 
@@ -5014,6 +6012,62 @@ var ElectricityBillsService = /** @class */ (function () {
             _this._router.navigate(["viewBill"]);
         });
     };
+    ElectricityBillsService.prototype.getElectricityBillsByMonth = function (month, callback) {
+        this._remoteService.getElectricityBillsByMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getElectricityBillsByYear = function (year, callback) {
+        this._remoteService.getElectricityBillsByYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getElectricityBillsByPeriod = function (year, month, callback) {
+        this._remoteService.getElectricityBillsByPeriod(year, month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getMonthlyExpenseOfYear = function (year, callback) {
+        this._remoteService.getMonthlyExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getLocationExpenseOfYear = function (year, callback) {
+        this._remoteService.getLocationExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getYearlyExpenseOfMonth = function (month, callback) {
+        this._remoteService.getYearlyExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    ElectricityBillsService.prototype.getLocationExpenseOfMonth = function (month, callback) {
+        this._remoteService.getLocationExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
     ElectricityBillsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _remote_electricity_bill_remote_service__WEBPACK_IMPORTED_MODULE_2__["ElectricityBillRemoteDataService"]])
@@ -5087,6 +6141,62 @@ var TelephoneBillsService = /** @class */ (function () {
             _this._router.navigate(["viewBill"]);
         });
     };
+    TelephoneBillsService.prototype.getTelephoneBillsByMonth = function (month, callback) {
+        this._remoteService.getTelephoneBillsByMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getTelephoneBillsByYear = function (year, callback) {
+        this._remoteService.getTelephoneBillsByYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getTelephoneBillsByPeriod = function (year, month, callback) {
+        this._remoteService.getTelephoneBillsByPeriod(year, month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getMonthlyExpenseOfYear = function (year, callback) {
+        this._remoteService.getMonthlyExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getLocationExpenseOfYear = function (year, callback) {
+        this._remoteService.getLocationExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getYearlyExpenseOfMonth = function (month, callback) {
+        this._remoteService.getYearlyExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    TelephoneBillsService.prototype.getLocationExpenseOfMonth = function (month, callback) {
+        this._remoteService.getLocationExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
     TelephoneBillsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _remote_telephone_bill_remote_service__WEBPACK_IMPORTED_MODULE_2__["TelephoneBillRemoteDataService"]])
@@ -5158,6 +6268,62 @@ var WaterBillsService = /** @class */ (function () {
             //     this._router.navigate(["singnup"]);
             // }
             _this._router.navigate(["viewBill"]);
+        });
+    };
+    WaterBillsService.prototype.getWaterBillsByMonth = function (month, callback) {
+        this._remoteService.getWaterBillsByMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getWaterBillsByYear = function (year, callback) {
+        this._remoteService.getWaterBillsByYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getWaterBillsByPeriod = function (year, month, callback) {
+        this._remoteService.getWaterBillsByPeriod(year, month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getMonthlyExpenseOfYear = function (year, callback) {
+        this._remoteService.getMonthlyExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getLocationExpenseOfYear = function (year, callback) {
+        this._remoteService.getLocationExpenseOfYear(year)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getYearlyExpenseOfMonth = function (month, callback) {
+        this._remoteService.getYearlyExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
+        });
+    };
+    WaterBillsService.prototype.getLocationExpenseOfMonth = function (month, callback) {
+        this._remoteService.getLocationExpenseOfMonth(month)
+            .subscribe(function (data) {
+            callback(data);
+        }, function (error) {
+            callback(error);
         });
     };
     WaterBillsService = __decorate([

@@ -31,7 +31,7 @@ export class TelephoneBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["home"]);
+                this._router.navigate(["bill/show/telephone"]);
             });
 
     }
@@ -44,7 +44,7 @@ export class TelephoneBillsService {
                 // } else {
                 //     this._router.navigate(["singnup"]);
                 // }
-                this._router.navigate(["viewBill"]);
+                this._router.navigate(["bill/show/telephone"]);
             });
     }
 
@@ -74,6 +74,54 @@ export class TelephoneBillsService {
 
     getTelephoneBillsByPeriod(year: string, month: string, callback: Function) {
         this._remoteService.getTelephoneBillsByPeriod(year,month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getMonthlyExpenseOfYear(year: string, callback: Function) {
+        this._remoteService.getMonthlyExpenseOfYear(year)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getLocationExpenseOfYear(year: string, callback: Function) {
+        this._remoteService.getLocationExpenseOfYear(year)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getYearlyExpenseOfMonth(month: string, callback: Function) {
+        this._remoteService.getYearlyExpenseOfMonth(month)
+            .subscribe(
+                data => {
+                    callback(data);
+                },
+                error => {
+                    callback(error);
+                }
+            );
+    }
+
+    getLocationExpenseOfMonth(month: string, callback: Function) {
+        this._remoteService.getLocationExpenseOfMonth(month)
             .subscribe(
                 data => {
                     callback(data);

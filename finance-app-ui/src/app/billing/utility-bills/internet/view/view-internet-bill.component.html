@@ -1,0 +1,98 @@
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog"
+     [config]="{backdrop: false, ignoreBackdropClick: true}"
+     aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title tbl-header pull-left">{{modalTitle}}</h4>
+                <button type="button" class="close pull-right"
+                        (click)="lgModal.hide(); clearModalContent()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <app-update-internet-bill
+                        *ngIf="showUpdateBill"
+                        [internetBill]="changingBill"
+                        (onUpdateTask)="onUpdateBillHandler($event)"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-update-internet-bill>
+
+                <app-certify-internet-bill
+                        *ngIf="showCertifyBill"
+                        [bill]="changingBill"
+                        (modalClose)="lgModal.hide(); clearModalContent()"></app-certify-internet-bill>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="animated fadeInUp">
+
+    <div class="table-wrapper">
+
+        <div class="form-header">
+            Internet Bill Table
+        </div>
+
+        <div class="row ">
+        <label class="control-label col-sm-2">Select Year</label>
+        <div class="col-sm-2 field-value">
+          <select class="form-control" (change)="onYearSelected($event)">
+            <option *ngFor="let opt of yearString" [selected]="selectedYear == opt">
+              {{opt}}
+            </option>
+          </select>
+        </div>
+            <label class="control-label col-sm-2">Select Month</label>
+            <div class="col-sm-2 field-value">
+                <select class="form-control" (change)="onMonthSelected($event)">
+                    <option *ngFor="let opt of monthString" [selected]="selectedMonth == opt">
+                        {{opt}}
+                    </option>
+                </select>
+            </div>
+      </div>
+
+        <div class="table">
+            <div class="tbl-row header">
+                <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
+            </div>
+            <div class="tbl-row" *ngFor="let item of internetBillList">
+                <div class="tbl-cell">{{item.datetime}}</div>
+                <div class="tbl-cell">{{item.billId}}</div>
+                <div class="tbl-cell">{{item.period}}</div>
+                <div class="tbl-cell">{{item.category}}</div>
+                <div class="tbl-cell">{{item.amount}}</div>
+                <div class="tbl-cell">{{item.location}}</div>
+                <div class="tbl-cell">{{item.certification}}</div>
+                <div class="tbl-cell">
+                    <button class="btn btn-light"
+                            (click)="showUpdateBill=true;changingBill=item;changeDialogTitle();lgModal.show();"
+                            type="button"
+                            tooltip="Update"
+                            placement="top">
+                        <span class="icon material-icons">edit</span>
+                    </button>
+                </div>
+                <div class="tbl-cell" *ngIf="showPendingOnly(item.certification)">
+                    <button class="btn btn-light"
+                            (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
+                            type="button"
+                            tooltip="Certify"
+                            placement="top"
+                            *appHaspermission="1">
+                        <span class="icon material-icons">done</span>
+                    </button>
+                </div>
+            </div>
+            <div class="no-rec-row tbl-row" *ngIf="internetBillList.length == 0">
+                <span class="no-rec">No Records...</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>

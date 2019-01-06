@@ -154,4 +154,12 @@ export class ViewTelephoneBillComponent implements OnInit {
         else
             this.getAllTelephoneBillsByPeriod(this.selectedYear,this.selectedMonth);
     }
+
+    private showPendingOnly(item): boolean {
+        if (item == "pending") {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

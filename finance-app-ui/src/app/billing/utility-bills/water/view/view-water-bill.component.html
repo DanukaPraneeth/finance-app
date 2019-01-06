@@ -60,7 +60,7 @@
             <div class="tbl-row header">
                 <div class="tbl-cell" *ngFor="let field of fieldSet" style="text-transform: capitalize">{{field}}</div>
             </div>
-            <div class="tbl-row" *ngFor="let item of electrictyBillList">
+            <div class="tbl-row" *ngFor="let item of waterBillList">
                 <div class="tbl-cell">{{item.billNo}}</div>
                 <div class="tbl-cell">{{item.previousReading}}</div>
                 <div class="tbl-cell">{{item.currentReading}}</div>
@@ -77,17 +77,18 @@
                         <span class="icon material-icons">edit</span>
                     </button>
                 </div>
-                <div class="tbl-cell" *appHaspermission="1">
+                <div class="tbl-cell" *ngIf="showPendingOnly(item.certification)">
                     <button class="btn btn-light"
                             (click)="showCertifyBill=true;changingBill=item;changeHeading();lgModal.show();"
                             type="button"
                             tooltip="Certify"
-                            placement="top">
+                            placement="top"
+                            *appHaspermission="1">
                         <span class="icon material-icons">done</span>
                     </button>
                 </div>
             </div>
-            <div class="no-rec-row tbl-row" *ngIf="electrictyBillList.length == 0">
+            <div class="no-rec-row tbl-row" *ngIf="waterBillList.length == 0">
                 <span class="no-rec">No Records...</span>
             </div>
 

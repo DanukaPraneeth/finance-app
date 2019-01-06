@@ -33,6 +33,9 @@ export class UpdateElectricityBillComponent implements OnInit {
     @Output()
     private onUpdateTask: EventEmitter<boolean> = new EventEmitter();
 
+    @Output()
+    private modalClose: EventEmitter<boolean> = new EventEmitter();
+
     constructor(private electricityBillsService: ElectricityBillsService, private _router: Router) {
     }
 
@@ -41,7 +44,7 @@ export class UpdateElectricityBillComponent implements OnInit {
     }
 
     ngAfterViewChecked() {
-        console.log("After view loaded : " + this.electricityBill.id);
+        // console.log("After view loaded : " + this.electricityBill.id);
     }
 
     onSubmition(billForm) {
@@ -56,6 +59,7 @@ export class UpdateElectricityBillComponent implements OnInit {
 
             this.electricityBillsService.updateElectricityBill(this.electricityBill);
             this.onUpdateTask.emit(true);
+            this.modalClose.emit(true);
         } else {
             if (this.electricityBill.billNo.length == 0) {
                 this.isAccountNoError = true;

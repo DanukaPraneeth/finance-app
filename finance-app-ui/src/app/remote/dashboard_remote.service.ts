@@ -11,7 +11,7 @@ export class DashboardRemoteService {
   certificationObservable: Observable<PendingCertification[]>;
 
   private url = new URL(window.location.href);
-  private apiContext = this.url.protocol + '//' + this.url.host + '/finance';
+  private apiContext = this.url.protocol + '//' + this.url.host + '/financeo';
 
   private apiEndpoints: Object = {
     pendingBills: this.apiContext + "/bills/pending"
