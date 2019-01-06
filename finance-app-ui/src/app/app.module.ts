@@ -36,8 +36,10 @@ import {
     MatToolbarModule
 } from "@angular/material";
 import {CertifyCountComponent} from "./dashboards/certify-count/certify-count.component";
-import {ReportsListComponent} from "./reports/reports-list/reports-list.component";
-import {ReportsElectricityComponent} from "./reports/reports-bills/electricity/reports-electricity/reports-electricity.component";
+import {ChartsListComponent} from "./charts/charts-list/charts-list.component";
+import {ChartsElectricityComponent} from "./charts/charts-bills/electricity/charts-electricity/charts-electricity.component";
+import {ChartsWaterComponent} from "./charts/charts-bills/water/charts-water/charts-water.component";
+import {ChartsTelephoneComponent} from "./charts/charts-bills/telephone/charts-telephone/charts-telephone.component";
 import {DashboardService} from "./services/dashboard.service";
 import {PermissionModule} from "./directives/permission.module";
 import {ChartsModule} from "angular-bootstrap-md";
@@ -45,6 +47,8 @@ import {WaterBillsService} from "./services/water-bill.service";
 import {WaterBillRemoteDataService} from "./remote/water_bill_remote.service";
 import {TelephoneBillsService} from "./services/telephone-bill.service";
 import {TelephoneBillRemoteDataService} from "./remote/telephone_bill_remote.service";
+import {InternetBillsService} from "./services/internet-bill.service";
+import {InternetBillRemoteDataService} from "./remote/internet_bill_remote.service";
 import {ApprovalService} from "./services/approval.service";
 import {ApprovalRemoteService} from "./remote/approval-remote.service";
 
@@ -62,8 +66,10 @@ import {ApprovalRemoteService} from "./remote/approval-remote.service";
         ChartComponent,
         PiechartComponent,
         CertifyCountComponent,
-        ReportsListComponent,
-        ReportsElectricityComponent
+        ChartsListComponent,
+        ChartsElectricityComponent,
+        ChartsWaterComponent,
+        ChartsTelephoneComponent
     ],
     imports: [
         BrowserModule,
@@ -102,6 +108,8 @@ import {ApprovalRemoteService} from "./remote/approval-remote.service";
         WaterBillRemoteDataService,
         TelephoneBillsService,
         TelephoneBillRemoteDataService,
+        InternetBillsService,
+        InternetBillRemoteDataService,
         LoginRemoteDataService,
         DashboardService,
         ApprovalService,

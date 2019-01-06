@@ -1,18 +1,18 @@
 import {Injectable} from "@angular/core";
 import {Router} from "@angular/router";
-import {TelephoneBillRemoteDataService} from "../remote/telephone_bill_remote.service";
-import {CreateBillResponse, TelephoneBill, UpdateBillResponse} from "../models/data-models";
+import {InternetBillRemoteDataService} from "../remote/internet_bill_remote.service";
+import {CreateBillResponse, InternetBill, UpdateBillResponse} from "../models/data-models";
 
 
 @Injectable()
-export class TelephoneBillsService {
+export class InternetBillsService {
 
-    constructor(private _router: Router, private _remoteService: TelephoneBillRemoteDataService) {
+    constructor(private _router: Router, private _remoteService: InternetBillRemoteDataService) {
 
     }
 
-    getTelephoneBills(callback: Function) {
-        this._remoteService.getTelephoneBills()
+    getInternetBills(callback: Function) {
+        this._remoteService.getInternetBills()
             .subscribe(
                 data => {
                     callback(data);
@@ -23,8 +23,8 @@ export class TelephoneBillsService {
             );
     }
 
-    insertTelephoneBill(telephoneBill: TelephoneBill) {
-        this._remoteService.insertTelephoneBill(telephoneBill)
+    insertInternetBill(internetBill: InternetBill) {
+        this._remoteService.insertInternetBill(internetBill)
             .subscribe((data: CreateBillResponse) => {
                 // if (data["success"] == true) {
                 //     this._router.navigate(["home"]);
@@ -36,8 +36,8 @@ export class TelephoneBillsService {
 
     }
 
-    updateTelephoneBill(telephoneBill: TelephoneBill) {
-        this._remoteService.updateTelephoneBill(telephoneBill)
+    updateInternetBill(internetBill: InternetBill) {
+        this._remoteService.updateInternetBill(internetBill)
             .subscribe((data: UpdateBillResponse) => {
                 // if (data["success"] == true) {
                 //     this._router.navigate(["home"]);
@@ -48,8 +48,8 @@ export class TelephoneBillsService {
             });
     }
 
-    getTelephoneBillsByMonth(month: string, callback: Function) {
-        this._remoteService.getTelephoneBillsByMonth(month)
+    getInternetBillsByMonth(month: string, callback: Function) {
+        this._remoteService.getInternetBillsByMonth(month)
             .subscribe(
                 data => {
                     callback(data);
@@ -60,8 +60,8 @@ export class TelephoneBillsService {
             );
     }
 
-    getTelephoneBillsByYear(year: string, callback: Function) {
-        this._remoteService.getTelephoneBillsByYear(year)
+    getInternetBillsByYear(year: string, callback: Function) {
+        this._remoteService.getInternetBillsByYear(year)
             .subscribe(
                 data => {
                     callback(data);
@@ -72,8 +72,8 @@ export class TelephoneBillsService {
             );
     }
 
-    getTelephoneBillsByPeriod(year: string, month: string, callback: Function) {
-        this._remoteService.getTelephoneBillsByPeriod(year,month)
+    getInternetBillsByPeriod(year: string, month: string, callback: Function) {
+        this._remoteService.getInternetBillsByPeriod(year,month)
             .subscribe(
                 data => {
                     callback(data);

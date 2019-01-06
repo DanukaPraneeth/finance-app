@@ -70,6 +70,19 @@ export class TelephoneBill {
     userKey: number;
 }
 
+export class InternetBill {
+    id: number;
+    period: string;
+    amount: number;
+    billId: string;
+    location: string;
+    certification: string;
+    certifiedDate: string;
+    datetime: string;
+    traineeStaffId: number;
+    userKey: number;
+}
+
 export class CreateBillResponse {
     success: boolean;
 }
@@ -108,6 +121,21 @@ export class PendingCertification {
     count: number;
 }
 
+export class MonthlyExpenseInYear {
+    month: string;
+    expense: number;
+}
+
+export class LocationExpenseInYear {
+    location: string;
+    expense: number;
+}
+
+export class YearlyExpenseOfMonth {
+    year: string;
+    expense: number;
+}
+
 export class BillToApprove {
     billId: string;
     status: string;
@@ -118,4 +146,5 @@ export class BillToApprove {
 
 export class ApprovalResponse {
     success: boolean;
+
 }

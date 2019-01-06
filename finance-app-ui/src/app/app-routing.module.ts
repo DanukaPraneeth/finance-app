@@ -4,7 +4,7 @@ import {LoginComponent} from "./authentication/login/login.component";
 import {HomeComponent} from "./home/home.component";
 import {AppGuard, LoginGuard} from "./app.guard";
 import {SignupComponent} from "./authentication/signup/signup.component";
-import {ReportsListComponent} from "./reports/reports-list/reports-list.component";
+import {ChartsListComponent} from "./charts/charts-list/charts-list.component";
 
 const routes: Routes = [
   {
@@ -18,8 +18,8 @@ const routes: Routes = [
     canActivate: [LoginGuard]
   },
   {
-    path: "reports",
-    component: ReportsListComponent,
+    path: "charts",
+    component: ChartsListComponent,
     canActivate: [AppGuard]
   },
   {

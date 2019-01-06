@@ -1,18 +1,16 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 import {InternetBill} from "../../../../models/data-models";
 import {InternetBillsService} from "../../../../services/internet-bill.service";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: "app-create-internet-bill",
-  templateUrl: "./create-internet-bill.component.html",
-  styleUrls: ["./create-internet-bill.component.scss"]
+    selector: "app-update-internet-bill",
+    templateUrl: "./update-internet-bill.component.html",
+    styleUrls: ["./update-internet-bill.component.scss"]
 })
-export class CreateInternetBillComponent implements OnInit {
+export class UpdateInternetBillComponent implements OnInit {
 
-  model;
-
-  isAccountNoError: boolean;
+    isAccountNoError: boolean;
     isPeriodError: boolean;
     isAmountError: boolean;
     isLocationError: boolean;
@@ -22,51 +20,60 @@ export class CreateInternetBillComponent implements OnInit {
     locationError: string;
     periodError: string;
 
-    private internetBill: InternetBill;
+    @Input()
+    internetBill: InternetBill;
     private disableAddButton: boolean;
 
-  constructor(private internetBillsService: InternetBillsService, private _router: Router) {
+    @Output()
+    private onUpdateTask: EventEmitter<boolean> = new EventEmitter();
 
-  }
+    constructor(private internetBillsService: InternetBillsService, private _router: Router) {
+    }
 
-  ngOnInit() {
-      this.internetBill = new InternetBill();
-      this.clearForm();
-      this.disableAddButton = false;
-  }
+    ngOnInit() {
+        this.disableAddButton = false;
+    }
 
-    onSubmition(internetBillForm) {
+    ngAfterViewChecked() {
+        console.log("After view loaded : " + this.internetBill.id);
+    }
+
+    onSubmition(billForm) {
 //when form is submitted
         if (this.internetBill.billId != null && this.internetBill.billId != "" &&
             this.internetBill.location != null && this.internetBill.location != "" &&
             this.internetBill.amount != null &&
             this.internetBill.location != null && this.internetBill.location != "") {
 
-            this.internetBill.traineeStaffId = 1;
-            this.internetBillsService.insertInternetBill(this.internetBill);
-        }else {
-            if (this.internetBill.billId.length == 0){
+            // this.internetBill.certifiedDate = "2018-01-03 00:00:00.0";
+            // this.internetBill.userKey = 1;
+            // this.internetBill.traineeStaffId = 1;
+            // this.internetBill.certification = "approved";
+            this.internetBillsService.updateInternetBill(this.internetBill);
+            this.onUpdateTask.emit(true);
+        } else {
+            if (this.internetBill.billId.length == 0) {
                 this.isAccountNoError = true;
                 this.accountNoError = "Bill No cannot be empty"
-            }else{
+            } else {
                 this.isAccountNoError = false;
             }
-            if (this.internetBill.period.length == 0){
+            if (this.internetBill.period.length == 0) {
                 this.isPeriodError = true;
                 this.periodError = "Period cannot be empty"
-            }else{
+            } else {
                 this.isPeriodError = false;
             }
-            if (this.internetBill.amount == null){
+            if (this.internetBill.amount == null) {
                 this.isAmountError = true;
                 this.amountError = "Amount cannot be empty"
-            }else{
+            } else {
                 this.isAmountError = false;
             }
-            if (this.internetBill.location.length == 0){
+            if (this.internetBill.location.length == 0) {
                 this.isLocationError = true;
                 this.locationError = "Bill No cannot be empty"
-            }else{
+            } else {
                 this.isLocationError = false;
             }
             this.disableAddButton = false;
@@ -75,7 +82,7 @@ export class CreateInternetBillComponent implements OnInit {
 
     }
 
-  isAccountNoValid(accoutNo) {
+    isAccountNoValid(accoutNo) {
 //when the accout no is ented do the acount no check.
         //shold be a no in the database
         if (accoutNo.length == 0) {
@@ -119,6 +126,9 @@ export class CreateInternetBillComponent implements OnInit {
             this.isLocationError = false;
             this.locationError = '';
         }
+    }
+
+    reloadPage() {
     }
 
     private clearForm() {
